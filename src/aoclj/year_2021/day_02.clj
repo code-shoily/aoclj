@@ -1,3 +1,6 @@
+;;;; --- Year 2021 Day 2: Dive! ---
+;;;; Link: https://adventofcode.com/2021/day/2
+;;;; Solutions: [1660158 1604592846]
 (ns aoclj.year-2021.day-02
   (:require [aoclj.common.reader :as reader]
             [clojure.string :as str]))
@@ -28,11 +31,11 @@
     (vals $)
     (apply * $)))
 
-(defn solve [input]
-  (let [input (parse input)
-        init {:horiz 0 :depth 0 :aim 0}
-        solve-1 (pilot move-1 init input)
-        solve-2 (pilot move-2 init input)]
-    {1 solve-1 2 solve-2}))
+;; Solutions
+(def init {:horiz 0 :depth 0 :aim 0})
+(def solve-1 (partial pilot move-1 init))
+(def solve-2 (partial pilot move-2 init))
+(def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
+;; Run the solution
 (time (solve input))

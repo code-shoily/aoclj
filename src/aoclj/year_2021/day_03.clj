@@ -1,3 +1,6 @@
+;;;; --- Year 2021 Day 3: Binary Diagnostic ---
+;;;; Link: https://adventofcode.com/2021/day/3
+;;;; Solutions: [1540244 4203981]
 (ns aoclj.year-2021.day-03
   (:require [aoclj.common.reader :as reader]
             [clojure.string :as str]))
@@ -62,6 +65,7 @@
 (def get-o2 (partial get-gas o2-hist))
 (def get-co2 (partial get-gas co2-hist))
 
+;; Solutions
 (defn solve-1 [input]
   (->> input
        transposed
@@ -70,8 +74,7 @@
 (defn solve-2 [input]
   (apply * ((juxt get-o2 get-co2) input)))
 
-(defn solve [input]
-  (let [input (parse input)]
-    {1 (solve-1 input) 2 (solve-2 input)}))
+(def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
+;; Run the solutions
 (time (solve input))
