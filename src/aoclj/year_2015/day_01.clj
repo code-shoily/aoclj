@@ -1,3 +1,6 @@
+;;;; Solves year 2015 1
+;;;; Link: https://adventofcode.com/2015/day/1
+;;;; Solution: [232 1783]
 (ns aoclj.year-2015.day-01
   (:require [aoclj.common.reader :as reader]))
 
@@ -13,7 +16,7 @@
 
 (defn solve-1 [instructions] (reduce #(+ %1 (fns %2)) 0 instructions))
 
-(defn solve [input]
-  {1 (solve-1 input) 2 (solve-2 input)})
+(defn solve [input] [(solve-1 input) (solve-2 input)])
 
+;; Run the solution.
 (time (solve input))
