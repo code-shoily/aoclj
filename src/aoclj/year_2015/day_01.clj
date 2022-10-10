@@ -1,4 +1,4 @@
-;;;; Solves year 2015 1
+;;;; --- Year 2015 Day 1: Not Quite Lisp ---
 ;;;; Link: https://adventofcode.com/2015/day/1
 ;;;; Solution: [232 1783]
 (ns aoclj.year-2015.day-01
@@ -8,13 +8,14 @@
 
 (def fns {\( 1 \) -1})
 
+;; Solutions
+(defn solve-1 [instructions] (reduce #(+ %1 (fns %2)) 0 instructions))
+
 (defn solve-2 [instructions]
   (->> instructions
        (reductions #(+ %1 (fns %2)) 0)
        (take-while #(not= % -1))
        count))
-
-(defn solve-1 [instructions] (reduce #(+ %1 (fns %2)) 0 instructions))
 
 (defn solve [input] [(solve-1 input) (solve-2 input)])
 
