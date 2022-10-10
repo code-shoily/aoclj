@@ -1,3 +1,6 @@
+;;;; --- Year 2017 Day 2: Corruption Checksum ---
+;;;; Link: https://adventofcode.com/2017/day/2
+;;;; Solution: [32020 236]
 (ns aoclj.year-2017.day-02
   (:require [aoclj.common.reader :as reader]
             [clojure.string :as str]))
@@ -19,6 +22,7 @@
                             (zero? (mod big small)))]
              (quot big small)))))
 
+;; Solutions
 (defn solve-1 [input]
   (->> input
        (map (comp #(apply - %)
@@ -31,9 +35,7 @@
        (map divides-each-other)
        (apply +)))
 
-(defn solve [input]
-  (let [input (parse input)]
-    {1 (solve-1 input) 2 (solve-2 input)}))
+(def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 (time (solve input))
 

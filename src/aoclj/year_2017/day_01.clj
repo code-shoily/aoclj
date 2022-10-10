@@ -1,3 +1,6 @@
+;;;; --- Year 2017 Day 1: Inverse Captcha ---
+;;;; Link: https://adventofcode.com/2017/day/1
+;;;; Solution: [1089 1156]
 (ns aoclj.year-2017.day-01
   (:require [aoclj.common.reader :as reader]
             [clojure.string :as str]))
@@ -23,15 +26,15 @@
         (apply +)))
   ([captcha] (solve-captcha 1 captcha)))
 
-(defn solve-1 [input]
-  (->> input parse solve-captcha))
+;; Solutions
+(defn solve-1 [input] (solve-captcha input))
 
-(defn solve-2 [input]
-  (let [parsed-input (parse input)
-        pairing-size (/ (count parsed-input) 2)]
-    (solve-captcha pairing-size parsed-input)))
+(defn solve-2 [input] 
+  (-> input
+      count
+      (/ 2)
+      (solve-captcha input)))
 
-(defn solve [input]
-  {1 (solve-1 input) 2 (solve-2 input)})
+(def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 (time (solve input))
