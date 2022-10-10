@@ -1,3 +1,6 @@
+;;;; --- Day 1: No Time for a Taxicab ---
+;;;; Link: https://adventofcode.com/2016/day/1
+;;;; Solution: [253 126]
 (ns aoclj.year-2016.day-01
   (:require [aoclj.common.reader :as reader]
             [clojure.string :as str]))
@@ -56,9 +59,6 @@
 
 (defn distance [[x y]] (+ (abs x) (abs y)))
 
-(defn solve-1 [input]
-  (->> input walk distance))
-
 (defn visit [[origin visits] dir]
   (let [new-origin (step origin dir)]
     (if (contains? visits new-origin)
@@ -68,12 +68,13 @@
 (defn revisits [dirs]
   (reduce visit [[0 0] #{}] dirs))
 
-(defn solve-2 [input]
-  (->> input revisits distance))
+;; Solutions
+(defn solve-1 [input]
+  (distance (walk input)))
 
-(defn solve
-  [input]
-  (let [input (parse input)]
-    {1 (solve-1 input) 2 (solve-2 input)}))
+(defn solve-2 [input]
+  (distance (revisits input)))
+
+(def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 (time (solve input))

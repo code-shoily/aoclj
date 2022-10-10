@@ -1,5 +1,9 @@
+;;;; --- Year 2016 Day 2: Bathroom Security ---
+;;;; Link: https://adventofcode.com/2016/day/2
+;;;; Solution: ["76792" "A7AC3"]
 (ns aoclj.year-2016.day-02
-  (:require [aoclj.common.reader :as reader]))
+  (:require [aoclj.common.reader :as reader]
+            [clojure.string :as str]))
 
 (def input (reader/get-input-lines 2016 2))
 
@@ -39,9 +43,13 @@
               #(crack dialpad pos %))
         input))
 
-(defn solve [input]
-  (let [solve-1 (get-code dialpad-1 [2 2] input)
-        solve-2 (get-code dialpad-2 [3 1] input)]
-    [solve-1 solve-2]))
+(defn solve-1 [input]
+  (str/join (get-code dialpad-1 [2 2] input)))
 
+(defn solve-2 [input]
+  (str/join (get-code dialpad-2 [3 1] input)))
+
+(def solve (partial (juxt solve-1 solve-2)))
+
+;; Solutions
 (time (solve input))
