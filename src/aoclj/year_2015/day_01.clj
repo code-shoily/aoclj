@@ -17,7 +17,7 @@
        (take-while #(not= % -1))
        count))
 
-(defn solve [input] [(solve-1 input) (solve-2 input)])
+(def solve (partial (juxt solve-1 solve-2)))
 
 ;; Run the solution.
 (time (solve input))

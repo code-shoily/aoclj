@@ -30,10 +30,7 @@
 ;; Solutions
 (defn solve-1 [input] (solution-template present input))
 (defn solve-2 [input] (solution-template ribbon input))
-
-(defn solve [input]
-  (let [input (parse input)]
-    [(solve-1 input) (solve-2 input)]))
+(def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run solutions
 (time (solve input))
