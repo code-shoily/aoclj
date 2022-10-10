@@ -3,13 +3,13 @@
 ;;;; Solution: [32020 236]
 (ns aoclj.year-2017.day-02
   (:require [aoclj.common.reader :as reader]
+            [aoclj.common.utils :as u]
             [clojure.string :as str]))
 
 (def input (reader/get-input-lines 2017 2))
 
 (defn parse [input]
-  (mapv (comp (fn [xs] (mapv #(Integer/parseInt %) xs))
-              #(str/split % #"\t"))
+  (mapv (comp u/to-ints #(str/split % #"\t"))
         input))
 
 (defn divides-each-other [xs]
@@ -38,5 +38,5 @@
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run the solution
-(time (solve input))
+; (time (solve input))
 

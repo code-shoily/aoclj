@@ -3,6 +3,7 @@
 ;;;; Solution: [253 126]
 (ns aoclj.year-2016.day-01
   (:require [aoclj.common.reader :as reader]
+            [aoclj.common.utils :as u]
             [clojure.string :as str]))
 
 (def input (reader/get-input-str 2016 1))
@@ -12,7 +13,7 @@
          #(->> %
                rest
                (str/join "")
-               Integer/parseInt))
+               u/to-int))
    instruction))
 
 (defn- change-face [face towards]
@@ -54,10 +55,7 @@
     :east [(+ x steps) y]
     :west [(- x steps) y]))
 
-(defn walk [dirs]
-  (reduce step [0 0] dirs))
-
-(defn distance [[x y]] (+ (abs x) (abs y)))
+(defn walk [dirs] (reduce step [0 0] dirs))
 
 (defn visit [[origin visits] dir]
   (let [new-origin (step origin dir)]
@@ -70,12 +68,12 @@
 
 ;; Solutions
 (defn solve-1 [input]
-  (distance (walk input)))
+  (u/manhattan-distance (walk input)))
 
 (defn solve-2 [input]
-  (distance (revisits input)))
+  (u/manhattan-distance (revisits input)))
 
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run the solution
-(time (solve input))
+; (time (solve input))

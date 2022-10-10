@@ -3,6 +3,7 @@
 ;;;; Solution: [1606483 3842356]
 (ns aoclj.year-2015.day-02
   (:require [aoclj.common.reader :as reader]
+            [aoclj.common.utils :as u]
             [clojure.string :as str]))
 
 (def input (reader/get-input-lines 2015 2))
@@ -10,7 +11,7 @@
 (defn parse-dims [dim]
   (as-> dim $
     (str/split $ #"x")
-    (mapv #(Integer/parseInt %) $)
+    (u/to-ints $)
     (sort $)))
 
 (defn parse [input] (map parse-dims input))
@@ -33,4 +34,4 @@
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run solutions
-(time (solve input))
+; (time (solve input))

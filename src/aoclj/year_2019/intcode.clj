@@ -1,10 +1,11 @@
 (ns aoclj.year-2019.intcode
-  (:require [clojure.string :as str]))
+  (:require [aoclj.common.utils :as u]
+            [clojure.string :as str]))
 
 (defn parse-intcode
   "Parses a string code and returns vector of ints"
   [code]
-  (mapv #(Integer/parseInt %) (str/split code #",")))
+  (u/to-ints (str/split code #",")))
 
 (defn- do-op [op program pointer]
   (let [operand-1 (program (program (inc pointer)))

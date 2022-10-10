@@ -3,13 +3,14 @@
 ;;;; Solution: [607 321]
 (ns aoclj.year-2020.day-02
   (:require [aoclj.common.reader :as reader]
+            [aoclj.common.utils :as u]
             [clojure.string :as str]))
 
 (def input (reader/get-input-lines 2020 2))
 
 (defn parse-policy [policy]
   (let [[pos char chars] (str/split policy #"\s")
-        [x y] (map #(Integer/parseInt %)
+        [x y] (map u/to-int
                    (str/split pos #"-"))
         char (first char)]
     [x y char chars]))
@@ -41,4 +42,4 @@
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run the solution
-(time (solve input))
+; (time (solve input))

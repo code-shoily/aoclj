@@ -23,5 +23,5 @@
 (def solve (partial (juxt solve-1 solve-2)))
 
 ;; Run the solution
-(time (solve input))
+; (time (solve input))
 

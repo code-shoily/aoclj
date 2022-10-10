@@ -3,6 +3,7 @@
 ;;;; Solutions: [1540244 4203981]
 (ns aoclj.year-2021.day-03
   (:require [aoclj.common.reader :as reader]
+            [aoclj.common.utils :as u]
             [clojure.string :as str]))
 
 (def input (reader/get-input-lines 2021 3))
@@ -12,9 +13,6 @@
 (defn freq [direction xs]
   (if (direction (get xs \1 0)
                  (get xs \0 0)) \1 \0))
-
-(defn transposed [bits]
-  (apply mapv vector (mapv vec bits)))
 
 (defn to-num [num]
   (as-> num $
@@ -38,7 +36,7 @@
 
 (defn histogram [cmp-fn input]
   (->> input
-       transposed
+       u/transpose
        (mapv #(cmp-fn (frequencies %)))
        (map-indexed (fn [a b] [a b]))
        (into {})))
@@ -68,7 +66,7 @@
 ;; Solutions
 (defn solve-1 [input]
   (->> input
-       transposed
+       u/transpose
        power-consumption))
 
 (defn solve-2 [input]
@@ -77,4 +75,4 @@
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run the solutions
-(time (solve input))
+; (time (solve input))

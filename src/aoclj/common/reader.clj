@@ -1,5 +1,6 @@
 (ns aoclj.common.reader
-  (:require [clojure.java.io :as io]
+  (:require [aoclj.common.utils :as u]
+            [clojure.java.io :as io]
             [clojure.string :as str]))
 
 (defn- get-file-name
@@ -22,4 +23,4 @@
 (defn get-input-ints
   "Reads the input for `day` of `year` and return the lines as numbers"
   [year day]
-  (mapv #(Integer/parseInt %) (get-input-lines year day)))
+  (u/to-ints (get-input-lines year day)))

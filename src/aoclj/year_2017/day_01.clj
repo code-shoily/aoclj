@@ -3,13 +3,13 @@
 ;;;; Solution: [1089 1156]
 (ns aoclj.year-2017.day-01
   (:require [aoclj.common.reader :as reader]
+            [aoclj.common.utils :as u]
             [clojure.string :as str]))
 
 (def input (reader/get-input-str 2017 1))
 
 (defn parse [captcha]
-  (mapv #(Integer/parseInt %)
-        (str/split captcha #"")))
+  (u/to-ints (str/split captcha #"")))
 
 (defn pair-by [by coll]
   (->> coll
@@ -38,4 +38,4 @@
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run the solution
-(time (solve input))
+; (time (solve input))

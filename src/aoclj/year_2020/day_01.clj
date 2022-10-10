@@ -38,4 +38,4 @@
 (def solve (partial (comp (juxt solve-1 solve-2) sort)))
 
 ;; Run the solution
-(time (solve input))
+; (time (solve input))

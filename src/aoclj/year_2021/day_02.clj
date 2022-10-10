@@ -3,14 +3,15 @@
 ;;;; Solutions: [1660158 1604592846]
 (ns aoclj.year-2021.day-02
   (:require [aoclj.common.reader :as reader]
+            [aoclj.common.utils :as u]
             [clojure.string :as str]))
 
 (def input (reader/get-input-lines 2021 2))
 
 (defn parse [input]
-  (map (comp (fn [[a b]] [a (Integer/parseInt b)])
-             #(str/split % #" "))
-       input))
+  (mapv (comp #(update % 1 u/to-int)
+              #(str/split % #"\s+"))
+        input))
 
 (defn move-1 [course [cmd x]]
   (case cmd
@@ -38,4 +39,4 @@
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
 ;; Run the solution
-(time (solve input))
+; (time (solve input))
