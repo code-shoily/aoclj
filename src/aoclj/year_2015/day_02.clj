@@ -1,3 +1,6 @@
+;;;; --- Year 2015 Day 2: I Was Told There Would Be No Math ---
+;;;; Link: https://adventofcode.com/2015/day/1
+;;;; Solution: [1606483 3842356]
 (ns aoclj.year-2015.day-02
   (:require [aoclj.common.reader :as reader]
             [clojure.string :as str]))
@@ -24,10 +27,13 @@
 
 (defn solution-template [fun input] (->> input (map fun) (apply +)))
 
-(defn solve [input]
-  (let [input (parse input)
-        solve-1 (partial solution-template present)
-        solve-2 (partial solution-template ribbon)]
-    {1 (solve-1 input) 2 (solve-2 input)}))
+;; Solutions
+(defn solve-1 [input] (solution-template present input))
+(defn solve-2 [input] (solution-template ribbon input))
 
+(defn solve [input]
+  (let [input (parse input)]
+    [(solve-1 input) (solve-2 input)]))
+
+;; Run solutions
 (time (solve input))
