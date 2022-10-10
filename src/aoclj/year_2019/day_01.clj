@@ -1,3 +1,6 @@
+;;;; ---  Year 2019 Day 1: The Tyranny of the Rocket Equation ---
+;;;; Link: https://adventofcode.com/2019/day/1
+;;;; Solution: [3421505 5129386]
 (ns aoclj.year-2019.day-01
   (:require [aoclj.common.reader :as reader]))
 
@@ -15,9 +18,9 @@
 (defn solver [fun input] (->> input (map fun) (apply +)))
 
 ;; Solutions
-(defn solve-1 [input] (solver get-fuel input))
-(defn solve-2 [input] (solver get-fuel-corrected input))
-(defn solve [input] ((juxt solve-1 solve-2) input))
+(def solve-1 (partial solver get-fuel))
+(def solve-2 (partial solver get-fuel-corrected))
+(def solve (partial (juxt solve-1 solve-2)))
 
 ;; Run the solution
 (time (solve input))
