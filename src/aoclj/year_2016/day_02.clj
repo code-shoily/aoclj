@@ -43,6 +43,7 @@
               #(crack dialpad pos %))
         input))
 
+;; Solutions
 (defn solve-1 [input]
   (str/join (get-code dialpad-1 [2 2] input)))
 
@@ -51,5 +52,5 @@
 
 (def solve (partial (juxt solve-1 solve-2)))
 
-;; Solutions
+;; Run the solution
 (time (solve input))

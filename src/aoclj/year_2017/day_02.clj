@@ -37,5 +37,6 @@
 
 (def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
+;; Run the solution
 (time (solve input))
 

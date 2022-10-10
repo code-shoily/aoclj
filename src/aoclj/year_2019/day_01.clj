@@ -13,8 +13,11 @@
         (recur new-mass (conj fuels new-mass))))))
 
 (defn solver [fun input] (->> input (map fun) (apply +)))
+
+;; Solutions
 (defn solve-1 [input] (solver get-fuel input))
 (defn solve-2 [input] (solver get-fuel-corrected input))
 (defn solve [input] ((juxt solve-1 solve-2) input))
 
+;; Run the solution
 (time (solve input))

@@ -1,4 +1,4 @@
-;;;; --- Day 2: Inventory Management System ---
+;;;; --- Year 2018 Day 2: Inventory Management System ---
 ;;;; Link: https://adventofcode.com/2018/day/2
 ;;;; Solution: [7221 "mkcdflathzwsvjxrevymbdpoq"]
 (ns aoclj.year-2018.day-02
