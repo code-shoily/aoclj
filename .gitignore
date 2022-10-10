@@ -1,3 +1,6 @@
+.calva/
+.lsp/
+.clj-kondo/
 /target
 /classes
 /checkouts
