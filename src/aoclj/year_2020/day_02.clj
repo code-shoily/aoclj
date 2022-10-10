@@ -1,3 +1,6 @@
+;;;; --- Year 2020 Day 2: Password Philosophy ---
+;;;; Link: https://adventofcode.com/2020/day/2
+;;;; Solution: [607 321]
 (ns aoclj.year-2020.day-02
   (:require [aoclj.common.reader :as reader]
             [clojure.string :as str]))
@@ -14,6 +17,7 @@
 (defn parse [input]
   (map parse-policy input))
 
+;; Solutions
 (defn solve-1 [input]
   (letfn [(password-valid? [[min max char chars]]
             (let [freqs (frequencies chars)
@@ -34,8 +38,7 @@
          (filterv password-valid?)
          count)))
 
-(defn solve [input]
-  (let [input (parse input)]
-    {1 (solve-1 input) 2 (solve-2 input)}))
+(def solve (partial (comp (juxt solve-1 solve-2) parse)))
 
+;; Run the solution
 (time (solve input))

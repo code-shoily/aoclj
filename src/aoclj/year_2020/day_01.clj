@@ -1,3 +1,6 @@
+;;;; --- Year 2020 Day 1: Report Repair ---
+;;;; Link: https://adventofcode.com/2020/day/1
+;;;; Solution: [1014624 80072256]
 (ns aoclj.year-2020.day-01
   (:require [aoclj.common.reader :as reader]))
 
@@ -24,14 +27,15 @@
         (recur (inc idx))
         [val-a val-b val-c]))))
 
-(defn solve-1 [input]
-  (->> input (two-sum 2020) (apply *)))
+;; Solutions
+(defn solution-template [summing-fn input] 
+  (->> input 
+       (summing-fn 2020) 
+       (apply *)))
 
-(defn solve-2 [input]
-  (->> input (three-sum 2020) (apply *)))
+(def solve-1 (partial solution-template two-sum))
+(def solve-2 (partial solution-template three-sum))
+(def solve (partial (comp (juxt solve-1 solve-2) sort)))
 
-(defn solve [input]
-  (let [input (sort input)]
-    {1 (solve-1 input) 2 (solve-2 input)}))
-
+;; Run the solution
 (time (solve input))
