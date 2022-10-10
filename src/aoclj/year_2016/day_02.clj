@@ -36,7 +36,7 @@
 
 (defn get-code [dialpad pos input]
   (pmap (comp #(aget dialpad (first %) (second %))
-              #(crack dialpad pos %)) 
+              #(crack dialpad pos %))
         input))
 
 (defn solve [input]

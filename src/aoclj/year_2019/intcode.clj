@@ -26,7 +26,7 @@
      99 program))
   ([program] (run-cmd program 0)))
 
-(defn- do-op [op program pointer] 
+(defn- do-op [op program pointer]
   (let [operand-1 (program (program (inc pointer)))
         operand-2 (program (program (+ 2 pointer)))
         target (program (+ 3 pointer))]
