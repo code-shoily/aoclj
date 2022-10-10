@@ -1,4 +1,4 @@
-;;;; --- Day 1: No Time for a Taxicab ---
+;;;; ---  Year 2016 Day 1: No Time for a Taxicab ---
 ;;;; Link: https://adventofcode.com/2016/day/1
 ;;;; Solution: [253 126]
 (ns aoclj.year-2016.day-01

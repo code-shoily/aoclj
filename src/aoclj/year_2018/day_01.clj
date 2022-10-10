@@ -1,4 +1,4 @@
-;;;; --- Day 1: Chronal Calibration ---
+;;;; --- Year 2018 Day 1: Chronal Calibration ---
 ;;;; Link: https://adventofcode.com/2018/day/1
 ;;;; Solution: [590 83445]
 (ns aoclj.year-2018.day-01
