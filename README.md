@@ -1,22 +1,14 @@
 # aoclj
 
-A Clojure library designed to ... well, that part is up to you.
+[Advent of Code](https://adventofcode.com/) solutions in Clojure.
 
-## Usage
-
-FIXME
-
-## License
-
-Copyright © 2022 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+## Status
+| Year | Progress |
+| :-----: | :------: |
+| [2015](/src/aoclj/year_2015) | :full_moon: :full_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: |
+| [2016](/src/aoclj/year_2016) |:full_moon: :full_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: |
+| [2017](/src/aoclj/year_2017) |:full_moon: :full_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: |
+| [2018](/src/aoclj/year_2018) | :full_moon: :full_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: |
+| [2019](/src/aoclj/year_2019) |:full_moon: :full_moon::new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: |
+| [2020](/src/aoclj/year_2020) | :full_moon: :full_moon::new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: |
+| [2021](/src/aoclj/year_2021) | :full_moon: :full_moon: :full_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: :new_moon: |
