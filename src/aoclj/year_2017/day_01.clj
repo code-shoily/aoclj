@@ -29,7 +29,7 @@
 ;; Solutions
 (defn solve-1 [input] (solve-captcha input))
 
-(defn solve-2 [input] 
+(defn solve-2 [input]
   (-> input
       count
       (/ 2)
