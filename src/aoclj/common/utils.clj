@@ -19,3 +19,10 @@
   "Computes manhattan distance from origin"
   [[x y]]
   (+ (abs x) (abs y)))
+
+(defn make-board 
+  "Creates an `row` x `col` board filled with value `val`. `#` for default"
+  ([width height val] (vec (repeat height (vec (repeat width val)))))
+  ([width height] (make-board width height \#)))
+
+(make-board 23 2 0)
