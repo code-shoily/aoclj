@@ -1,4 +1,6 @@
-(ns aoclj.common.utils)
+(ns aoclj.common.utils
+  (:import [java.security MessageDigest]
+           [java.math BigInteger]))
 
 (defn to-int
   "Convert a str to  number"
@@ -25,4 +27,9 @@
   ([width height val] (vec (repeat height (vec (repeat width val)))))
   ([width height] (make-board width height \#)))
 
-(make-board 23 2 0)
+(defn md5
+  "Computes MD5 hash of string"
+  [^String s]
+  (let [algorithm (MessageDigest/getInstance "MD5")
+        raw (.digest algorithm (.getBytes s))]
+    (format "%032x" (BigInteger. 1 raw))))

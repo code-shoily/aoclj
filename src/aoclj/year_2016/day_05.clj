@@ -4,16 +4,10 @@
 ;; FIXME: This solution is quite slow (~58 seconds) perhaps should
 ;;        look into improving speed in future.
 (ns aoclj.year-2016.day-05
-  (:require [clojure.string :refer [join starts-with?]])
-  (:import [java.security MessageDigest]
-           [java.math BigInteger]))
+  (:require [clojure.string :refer [join starts-with?]]
+            [aoclj.common.utils :as u]))
 
 (def input "cxdnnyjw")
-
-(defn md5 [^String s]
-  (let [algorithm (MessageDigest/getInstance "MD5")
-        raw (.digest algorithm (.getBytes s))]
-    (format "%032x" (BigInteger. 1 raw))))
 
 (defn- to-char-num [ch] (- (int ch) (int \0)))
 
@@ -25,7 +19,7 @@
 ;; Solutions
 (defn solve-1 [input]
   (->> (iterate inc 0)
-       (map (comp md5 (partial str input)))
+       (map (comp u/md5 (partial str input)))
        (filter #(starts-with? % "00000"))
        (take 8)
        (map #(nth % 5))
@@ -33,7 +27,7 @@
 
 (defn solve-2 [input]
   (->> (iterate inc 0)
-       (map (comp md5 (partial str input)))
+       (map (comp u/md5 (partial str input)))
        (filter #(starts-with? % "00000"))
        (reduce (fn [[left updated :as acc] x]
                  (let [idx (to-char-num (nth x 5))
@@ -50,4 +44,4 @@
 (def solve (juxt solve-1 solve-2))
 
 ;; Run the solution
-; (time (solve input))
+;; (time (solve input))
