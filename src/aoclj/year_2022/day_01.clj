@@ -23,7 +23,11 @@
        (take 3)
        (apply +)))
 
-(def solve (partial (juxt solve-1 solve-2)))
+(def solve 
+  (comp 
+   (partial (juxt solve-1 
+                  solve-2))
+   parse))
 
 ;; Run the solution.
-(time (solve (parse input)))
+;; (time (solve input))
