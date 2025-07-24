@@ -47,10 +47,12 @@
         file-name (.getPath file-obj)
         content (renderer year day)]
     (if (.exists file-obj)
-      (prn (format "File %s already exists" file-name))
+      (do (prn (format "File %s already exists" file-name))
+          false)
       (do
         (spit file-obj content)
-        (prn (format "File %s created" file-name))))))
+        (prn (format "File %s created" file-name))
+        true))))
 
 (defn create-source-stub
   [year day]
@@ -64,3 +66,12 @@
   [year day]
   (stub-creator year day get-input-path fetch-input-content))
 
+(defn create-solution-stub
+  "Creates the stubs for input, source, test if they aren't create already"
+  [year day]
+  (let [input-created? (create-input-stub year day)
+        source-created? (create-source-stub year day)
+        test-created? (create-test-stub year day)]
+    {:input input-created?
+     :source source-created?
+     :test test-created?}))
