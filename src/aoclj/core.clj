@@ -1,6 +1,7 @@
 (ns aoclj.core
   (:require
    [aoclj.utils :as utils]
+   [aoclj.meta.code-org :as g]
    [aoclj.year-2015.solver :as solver-2015]
    [aoclj.year-2016.solver :as solver-2016]
    [aoclj.year-2017.solver :as solver-2017]
@@ -33,7 +34,7 @@
 (defn generate
   "This function generated source and test files for a given year/day"
   [& {:keys [year day]}]
-  (throw (ex-info "Not implemented" {:year year :day day})))
+  (g/create-solution-stub year day))
 
 (defn -main [& {:keys [cmd year day]}]
   (case cmd
