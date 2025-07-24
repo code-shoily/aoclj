@@ -32,8 +32,7 @@
        captcha
        (* 2)))
 
-(def solve
-  (utils/generic-solver part-1 part-2 parse))
+(def solve (utils/generic-solver part-1 part-2 parse))
 
 (comment "REPL Explorations"
          (def raw-input (utils/read-input-data 2017 1))

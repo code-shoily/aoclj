@@ -13,11 +13,9 @@
       (str "[ERROR] Not Solved: " *year* "/" day))))
 
 (defn stats
-  "Returns the stats for the problem of `day` for 2016"
+  "Returns the stats for the problem of `day` for 2017"
   [day]
   (-> (utils/get-ns-string *year* day)
       read-string
       find-ns
       meta))
-
-(solve 1)

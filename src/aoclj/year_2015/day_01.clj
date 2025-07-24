@@ -29,10 +29,7 @@
          new-floor)))
    0 input))
 
-(def solve
-  "Takes a raw input, parses it and returns the pair as string.
-   To be used by external runners."
-  (utils/generic-solver part-1 part-2 parse))
+(def solve (utils/generic-solver part-1 part-2 parse))
 
 
 (comment "Repl Exploration"
