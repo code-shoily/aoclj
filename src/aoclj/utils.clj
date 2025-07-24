@@ -2,6 +2,12 @@
   (:require
    [clojure.java.io :as io]))
 
+(defn get-padded-day
+  "Returns padded day, as represented in various codes/docs
+   1 becomes 01, 10 remains 10"
+  [day]
+  (format "%02d" day))
+
 (defn generic-solver
   "Generic template for solvers. Formats result as string of [part-1 part-2]"
   [part-1 part-2 parse]
@@ -11,7 +17,7 @@
   "Returns the namespace string for a given solution
    (i.e for 2015 1 - aoclj.year-2015.day-01)"
   [year day]
-  (let [padded-day (format "%02d" day)]
+  (let [padded-day (get-padded-day day)]
     (str "aoclj.year-" year ".day-" padded-day)))
 
 (defn valid-year-day?
@@ -26,7 +32,7 @@
   If a prefix is provided, it will be used to construct the file path.
   The default prefix is 'inputs'."
   ([year day prefix]
-   (str prefix "/" year "_" (format "%02d" day) ".txt"))
+   (str prefix "/" year "_" (get-padded-day day) ".txt"))
   ([year day]
    (get-input-file-name year day "inputs")))
 
