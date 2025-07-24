@@ -28,7 +28,6 @@
 
 ;; (comment "<Explore>"
 (def input-data (utils/read-input-data {{year}} {{day}}))
-(time (solve input-data))
 
-(time (solve part-1 part-2))
+(time (solve input-data))
 ;; "</Explore>")
