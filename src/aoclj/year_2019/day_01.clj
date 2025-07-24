@@ -1,9 +1,9 @@
 (ns
- ^{:title ""
+ ^{:title "The Tyranny of the Rocket Equation"
    :doc "Module for solving Advent of Code 2019 Day 1 problem."
    :url "http://www.adventofcode.com/2019/day/1"
-   :difficulty :todo
-   :tags []}
+   :difficulty :xs
+   :tags [:formula :recursion]}
  aoclj.year-2019.day-01
   (:require
    [aoclj.utils :as utils]
