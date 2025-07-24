@@ -2,6 +2,18 @@
   (:require
    [clojure.java.io :as io]))
 
+(defn generic-solver
+  "Generic template for solvers. Formats result as string of [part-1 part-2]"
+  [part-1 part-2 parse]
+  (comp (juxt part-1 part-2) parse))
+
+(defn get-ns-string
+  "Returns the namespace string for a given solution
+   (i.e for 2015 1 - aoclj.year-2015.day-01)"
+  [year day]
+  (let [padded-day (format "%02d" day)]
+    (str "aoclj.year-" year ".day-" padded-day)))
+
 (defn valid-year-day?
   "Check if the year and day are valid.
   Year should be between 2015 and 2024, and day should be between 1 and 25."
