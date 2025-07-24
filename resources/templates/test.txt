@@ -1,0 +1,11 @@
+(ns aoclj.year-{{year}}.day-{{padded-day}}-test
+  (:require
+   [aoclj.year-{{year}}.day-{{padded-day}} :as day-{{padded-day}}]
+   [clojure.test :refer [is deftest]]
+   [aoclj.utils :as utils]))
+
+(def ^:dynamic *result* [])
+(def input (utils/read-input-data {{year}} {{day}}))
+
+(deftest year-{{year}}-day-{{padded-day}}-is-solved
+  (is (= (day-{{padded-day}}/solve input) *result*)))
