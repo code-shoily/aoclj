@@ -1,5 +1,5 @@
 (ns
- ^{:title ""
+ ^{:title "{{title}}"
    :doc "Module for solving Advent of Code {{year}} Day {{day}} problem."
    :url "http://www.adventofcode.com/{{year}}/day/{{day}}"
    :difficulty :todo

@@ -1,5 +1,7 @@
 {:paths [:clj-paths :resource-paths]
- :deps {de.ubercode.clostache/clostache {:mvn/version "1.4.0"}}
+ :deps {de.ubercode.clostache/clostache {:mvn/version "1.4.0"}
+        org.babashka/http-client {:mvn/version "0.4.22"}
+        reaver/reaver {:mvn/version "0.1.3"}}
  :aliases
  {:clj-paths ["src"]
   :resource-paths ["resources"]
