@@ -42,8 +42,6 @@
   [year day]
   (render-content-for year day "templates/test.txt"))
 
-(defn fetch-input-content [_ _] "")
-
 (defn- stub-creator
   [year day path-getter renderer]
   (let [file-obj (path-getter year day)
@@ -67,7 +65,7 @@
 
 (defn create-input-stub
   [year day]
-  (stub-creator year day get-input-path fetch-input-content))
+  (stub-creator year day get-input-path fetcher/get-input-data))
 
 (defn create-solution-stub
   "Creates the stubs for input, source, test if they aren't create already"
