@@ -1,8 +1,9 @@
 (ns aoclj.meta.code-org
   (:require
+   [aoclj.meta.fetcher :as fetcher]
+   [aoclj.utils :as utils]
    [clojure.java.io :as io]
-   [clostache.parser :as parser]
-   [aoclj.utils :as utils]))
+   [clostache.parser :as parser]))
 
 (defn- build-file-path [prefix year day]
   (io/file
@@ -25,16 +26,18 @@
            (str year "_" (utils/get-padded-day day) ".txt")))
 
 (defn- render-content-for
-  [year day template]
+  [year day template & {:keys [title] :or {title ""}}]
   (let [padded-day (utils/get-padded-day day)]
     (parser/render-resource
      template
-     {:year year :day day :padded-day padded-day})))
+     {:year year :day day :padded-day padded-day :title title})))
 
 (defn render-source-content
   [year day]
-  (render-content-for year day "templates/source.txt"))
+  (let [title (fetcher/fetch-problem-title year day)]
+    (render-content-for year day "templates/source.txt" :title title)))
 
+(render-source-content 2016 5)
 (defn render-test-content
   [year day]
   (render-content-for year day "templates/test.txt"))
