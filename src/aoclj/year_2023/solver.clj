@@ -13,7 +13,7 @@
 
 (defn stats
   "Returns the stats for the problem of `day` for 2023"
-  [day] 2015
+  [day]
   (-> (utils/get-ns-string *year* day)
       read-string
       find-ns
