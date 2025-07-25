@@ -11,7 +11,7 @@
 (defn generic-solver
   "Generic template for solvers. Formats result as string of [part-1 part-2]"
   [part-1 part-2 parse]
-  (comp (juxt part-1 part-2) parse))
+  #(->> % parse ((juxt part-1 part-2))))
 
 (defn get-ns-string
   "Returns the namespace string for a given solution
