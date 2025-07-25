@@ -25,9 +25,9 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(comment "<Explore>"
+         (def input-data 
+           (utils/read-input-data {{year}} {{day}}))
 
-;; (comment "<Explore>"
-(def input-data (utils/read-input-data {{year}} {{day}}))
-
-(time (solve input-data))
-;; "</Explore>")
+         (time (solve input-data))
+         ;; "</Explore>")
