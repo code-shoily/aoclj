@@ -30,4 +30,4 @@
            (utils/read-input-data {{year}} {{day}}))
 
          (time (solve input-data))
-         ;; "</Explore>")
+         "</Explore>")
