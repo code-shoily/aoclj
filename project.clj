@@ -12,6 +12,9 @@
   :test-paths ["test"]
   :profiles {:test {:dependencies [[lambdaisland/kaocha "1.91.1392"]]}
              :bench {:dependencies [[criterium "0.4.4"]]}
-             :dev {:plugins [[lein-cljfmt "0.9.2"]]}}
+             :dev {:plugins [[lein-cljfmt "0.9.2"]
+                             [cider/cider-nrepl "0.50.2"]]
+                   :dependencies [[nrepl "1.3.0"]
+                                  [cider/cider-nrepl "0.50.2"]]}}
   :aliases {"test" ["with-profile" "test" "run" "-m" "kaocha.runner"]}
   :repl-options {:init-ns aoclj.core})
