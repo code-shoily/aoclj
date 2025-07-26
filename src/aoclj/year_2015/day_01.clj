@@ -13,7 +13,7 @@
   (->>
    input
    (map #(case % \( 1 \) -1))
-   (map-indexed #(do [%1 %2]))))
+   (map-indexed vector)))
 
 (defn part-1 [input]
   (->> input
