@@ -3,6 +3,7 @@
    :doc "Module for solving Advent of Code 2019 Day 1 problem."
    :url "http://www.adventofcode.com/2019/day/1"
    :difficulty :xs
+   :stars 2
    :tags [:formula :recursion]}
  aoclj.year-2019.day-01
   (:require

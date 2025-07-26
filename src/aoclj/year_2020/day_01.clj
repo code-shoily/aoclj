@@ -3,6 +3,7 @@
    :doc "Module for solving Advent of Code 2020 Day 1 problem."
    :url "http://www.adventofcode.com/2020/day/1"
    :difficulty :xs
+   :stars 2
    :tags [:nsum]}
  aoclj.year-2020.day-01
   (:require

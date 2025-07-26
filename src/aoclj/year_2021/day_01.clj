@@ -3,6 +3,7 @@
    :doc "Module for solving Advent of Code 2021 Day 1 problem."
    :url "http://www.adventofcode.com/2021/day/1"
    :difficulty :xs
+   :stars 2
    :tags [:sequence]}
  aoclj.year-2021.day-01
   (:require

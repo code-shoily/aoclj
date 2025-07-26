@@ -24,6 +24,7 @@
     2023 (solver-2023/stats day)
     2024 (solver-2024/stats day)))
 
+#_{:clojure-lsp/ignore [:clojure-lsp/unused-public-var]}
 (defn summarize
   [year]
   (let [days (range 1 26)

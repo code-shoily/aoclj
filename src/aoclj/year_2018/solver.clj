@@ -12,7 +12,7 @@
       ;; Add cases for days as needed
       (str "[ERROR] Not Solved: " *year* "/" day))))
 
-#_{:clojure-lsp/ignore [:clojure-lsp/unused-public-var]}
+
 (defn stats
   "Returns the stats for the problem of `day` for 2018"
   [day]

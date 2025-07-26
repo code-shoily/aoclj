@@ -3,6 +3,7 @@
    :doc "Module for solving Advent of Code {{year}} Day {{day}} problem."
    :url "http://www.adventofcode.com/{{year}}/day/{{day}}"
    :difficulty :todo
+   :stars 0
    :tags []}
  aoclj.year-{{year}}.day-{{padded-day}}
   (:require 

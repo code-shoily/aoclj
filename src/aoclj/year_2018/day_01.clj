@@ -3,6 +3,7 @@
    :doc "Module for solving Advent of Code 2018 Day 1 problem."
    :url "http://www.adventofcode.com/2018/day/1"
    :difficulty :xs
+   :stars 2
    :tags [:infinite-sequence :set]}
  aoclj.year-2018.day-01
   (:require
