@@ -10,7 +10,6 @@
    [aoclj.utils :as utils]
    [clojure.string :as str]))
 
-
 (defn parse
   [input]
   (->> input
@@ -24,7 +23,6 @@
   (->> (zipmap (sort left) (sort right))
        (map (fn [[a b]] (abs (- b a))))
        (reduce +)))
-
 
 (defn part-2
   [[left right]]

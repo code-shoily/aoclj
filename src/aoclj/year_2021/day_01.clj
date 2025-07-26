@@ -42,6 +42,5 @@
 
          (def input (parse input-data))
 
-
          (time (solve input-data))
          "</Explore>")

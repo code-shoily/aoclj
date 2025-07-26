@@ -8,7 +8,6 @@
  aoclj.year-2015.day-01
   (:require [aoclj.utils :as utils]))
 
-
 (defn parse
   [input]
   (->>

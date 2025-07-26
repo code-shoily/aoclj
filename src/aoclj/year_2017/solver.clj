@@ -12,7 +12,6 @@
       ;; Add cases for days as needed
       (str "[ERROR] Not Solved: " *year* "/" day))))
 
-
 (defn stats
   "Returns the stats for the problem of `day` for 2017"
   [day]
