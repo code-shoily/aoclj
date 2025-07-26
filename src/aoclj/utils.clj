@@ -2,6 +2,11 @@
   (:require
    [clojure.java.io :as io]))
 
+(defn transpose
+  "Transposes vector `mat`"
+  [mat]
+  (apply mapv vector mat))
+
 (defn get-padded-day
   "Returns padded day, as represented in various codes/docs
    1 becomes 01, 10 remains 10"
