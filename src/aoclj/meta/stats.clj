@@ -32,4 +32,5 @@
                       (mapv (partial get-stat-for year))
                       (remove nil?))]
     {:completed (count metadata)
+     :stars (reduce + (map :stars metadata))
      :solutions metadata}))
