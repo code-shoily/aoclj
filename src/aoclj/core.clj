@@ -17,7 +17,7 @@
 (defn solve
   "Solve the Advent of Code problem for a given year and day and 
    return the solution as a string."
-  [& {:keys [year day]}]
+  [year day]
   {:pre [(utils/valid-year-day? year day)]}
   (case year
     2015 (solver-2015/solve day)
@@ -34,7 +34,7 @@
 
 (defn generate
   "This function generated source and test files for a given year/day"
-  [& {:keys [year day]}] (g/create-solution-stub year day))
+  [year day] (g/create-solution-stub year day))
 
 (defn update-stats
   "This functions updates the readmes to reflect the most recent solution status"
@@ -43,10 +43,11 @@
   (renderer/generate-readme)
   "Status updated for all readmes")
 
-(defn -main [& {:keys [cmd year day]}]
-  (case cmd
-    :update-stats (println (update-stats))
-    :solve (println (solve :year year :day day))
-    :gen (generate :year year :day day)
-    (println "Unknown command. Use 'solve' or 'generate'.")))
+(defn -main [cmd & args]
+  (letfn [(extract-year-day [[year day]] [(Integer/parseInt year) (Integer/parseInt day)])]
+    (case cmd
+      "update-stats" (println (update-stats))
+      "solve" (println (apply solve (extract-year-day args)))
+      "gen" (apply generate  (extract-year-day args))
+      (println (format "Unknown command %s . Use :update-stats :solve or :gen." cmd)))))
 

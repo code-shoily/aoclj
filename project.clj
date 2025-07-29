@@ -10,6 +10,7 @@
   :source-paths ["src"]
   :resource-paths ["resources"]
   :test-paths ["test"]
+  :main aoclj.core
   :profiles {:test {:dependencies [[lambdaisland/kaocha "1.91.1392"]]}
              :bench {:dependencies [[criterium "0.4.4"]]}
              :dev {:plugins [[lein-cljfmt "0.9.2"]
