@@ -2,6 +2,7 @@
   (:require
    [aoclj.utils :as utils]
    [aoclj.meta.code-org :as g]
+   [aoclj.meta.doc-renderer :as renderer]
    [aoclj.year-2015.solver :as solver-2015]
    [aoclj.year-2016.solver :as solver-2016]
    [aoclj.year-2017.solver :as solver-2017]
@@ -33,11 +34,19 @@
 
 (defn generate
   "This function generated source and test files for a given year/day"
-  [& {:keys [year day]}]
-  (g/create-solution-stub year day))
+  [& {:keys [year day]}] (g/create-solution-stub year day))
+
+(defn update-stats
+  "This functions updates the readmes to reflect the most recent solution status"
+  []
+  (renderer/generate-yearwise-readmes)
+  (renderer/generate-readme)
+  "Status updated for all readmes")
 
 (defn -main [& {:keys [cmd year day]}]
   (case cmd
-    :s (println (solve :year year :day day))
-    :g (generate :year year :day day)
+    :update-stats (println (update-stats))
+    :solve (println (solve :year year :day day))
+    :gen (generate :year year :day day)
     (println "Unknown command. Use 'solve' or 'generate'.")))
+
