@@ -1,0 +1,34 @@
+# aoclj -- AdventOfCode with Clojure
+
+[Advent of Code](http://www.adventofcode.com) puzzle solutions in Clojure (2015 - 2024).
+
+## Progress
+### :star: /500 :dart:  :trophy: /250 :dart: 
+
+| Day | [2015](src/aoclj/year_2015) | [2016](src/aoclj/year_2016) | [2017](src/aoclj/year_2017) | [2018](src/aoclj/year_2018) | [2019](src/aoclj/year_2019) | [2020](src/aoclj/year_2020) | [2021](src/aoclj/year_2021) | [2022](src/aoclj/year_2022) | [2023](src/aoclj/year_2023) | [2024](src/aoclj/year_2024) |
+|:---:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |
+| 2 |   |   |   |   |   |   |   |   |   |   |
+| 3 |   |   |   |   |   |   |   |   |   |   |
+| 4 |   |   |   |   |   |   |   |   |   |   |
+| 5 |   |   |   |   |   |   |   |   |   |   |
+| 6 |   |   |   |   |   |   |   |   |   |   |
+| 7 |   |   |   |   |   |   |   |   |   |   |
+| 8 |   |   |   |   |   |   |   |   |   |   |
+| 9 |   |   |   |   |   |   |   |   |   |   |
+| 10 |   |   |   |   |   |   |   |   |   |   |
+| 11 |   |   |   |   |   |   |   |   |   |   |
+| 12 |   |   |   |   |   |   |   |   |   |   |
+| 13 |   |   |   |   |   |   |   |   |   |   |
+| 14 |   |   |   |   |   |   |   |   |   |   |
+| 15 |   |   |   |   |   |   |   |   |   |   |
+| 16 |   |   |   |   |   |   |   |   |   |   |
+| 17 |   |   |   |   |   |   |   |   |   |   |
+| 18 |   |   |   |   |   |   |   |   |   |   |
+| 19 |   |   |   |   |   |   |   |   |   |   |
+| 20 |   |   |   |   |   |   |   |   |   |   |
+| 21 |   |   |   |   |   |   |   |   |   |   |
+| 22 |   |   |   |   |   |   |   |   |   |   |
+| 23 |   |   |   |   |   |   |   |   |   |   |
+| 24 |   |   |   |   |   |   |   |   |   |   |
+| 25 |   |   |   |   |   |   |   |   |   |   |

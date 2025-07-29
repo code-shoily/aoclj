@@ -2,6 +2,8 @@
  ^{:title "No Time for a Taxicab"
    :doc "Module for solving Advent of Code 2016 Day 1 problem."
    :url "http://www.adventofcode.com/2016/day/1"
+   :year 2016
+   :day 1
    :difficulty :s
    :stars 2
    :tags [:grid :set]}

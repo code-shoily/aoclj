@@ -2,6 +2,10 @@
   (:require
    [clojure.java.io :as io]))
 
+(def current-year 2024)
+
+(def aoc-years (range 2015 (inc current-year)))
+
 (defn transpose
   "Transposes vector `mat`"
   [mat]
@@ -29,7 +33,7 @@
   "Check if the year and day are valid.
   Year should be between 2015 and 2024, and day should be between 1 and 25."
   [year day]
-  (and (<= 2015 year 2024)
+  (and (<= 2015 year current-year)
        (<= 1 day 25)))
 
 (defn get-input-file-name
