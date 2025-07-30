@@ -2,12 +2,13 @@
  ^{:title "Not Quite Lisp"
    :doc "Module for solving Advent of Code 2015 Day 1 problem."
    :url "http://www.adventofcode.com/2015/day/1"
+   :year 2015
+   :day 1
    :difficulty :xs
    :stars 2
    :tags [:sequence :reduction]}
  aoclj.year-2015.day-01
   (:require [aoclj.utils :as utils]))
-
 
 (defn parse
   [input]

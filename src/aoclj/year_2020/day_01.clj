@@ -2,6 +2,8 @@
  ^{:title "Report Repair"
    :doc "Module for solving Advent of Code 2020 Day 1 problem."
    :url "http://www.adventofcode.com/2020/day/1"
+   :year 2020
+   :day 1
    :difficulty :xs
    :stars 2
    :tags [:nsum]}
@@ -48,11 +50,8 @@
 (def part-2 (solver three-sum))
 (def solve (utils/generic-solver part-1 part-2 parse))
 
-
-;; (comment "<Explore>"
-(def input-data (utils/read-input-data 2020 1))
-(def input (parse input-data))
-
-(part-1 input)
-(time (solve input-data))
-;; "</Explore>")
+(comment "<Explore>"
+         (def input-data (utils/read-input-data 2020 1))
+         (def input (parse input-data))
+         (time (solve input-data))
+         "</Explore>")

@@ -2,6 +2,8 @@
  ^{:title "Sonar Sweep"
    :doc "Module for solving Advent of Code 2021 Day 1 problem."
    :url "http://www.adventofcode.com/2021/day/1"
+   :year 2021
+   :day 1
    :difficulty :xs
    :stars 2
    :tags [:sequence]}
@@ -41,7 +43,6 @@
          (def input-data (utils/read-input-data 2021 1))
 
          (def input (parse input-data))
-
 
          (time (solve input-data))
          "</Explore>")

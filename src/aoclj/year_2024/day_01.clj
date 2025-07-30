@@ -2,6 +2,8 @@
  ^{:title "Historian Hysteria"
    :doc "Module for solving Advent of Code 2024 Day 1 problem."
    :url "http://www.adventofcode.com/2024/day/1"
+   :year 2024
+   :day 1
    :difficulty :xs
    :stars 2
    :tags [:sequence]}
@@ -9,7 +11,6 @@
   (:require
    [aoclj.utils :as utils]
    [clojure.string :as str]))
-
 
 (defn parse
   [input]
@@ -24,7 +25,6 @@
   (->> (zipmap (sort left) (sort right))
        (map (fn [[a b]] (abs (- b a))))
        (reduce +)))
-
 
 (defn part-2
   [[left right]]
