@@ -129,14 +129,26 @@
          (map to-table-row)
          (str/join "\n"))))
 
+(defn get-completion-metrics
+  []
+  (let [total-stars utils/total-stars
+        total-trophies utils/total-trophies]
+    (as-> utils/aoc-years x
+      (mapv (comp #(select-keys % [:stars :completed]) stats/summarize) x)
+      (reduce (partial merge-with +) x)
+      (assoc x :target-stars (- total-stars (:stars x)))
+      (assoc x :target-trophies (- total-trophies (:completed x)))
+      (merge x {:total-stars total-stars :total-trophies total-trophies}))))
+
 (defrecord
  Readme
  [template-file]
   IRender
   (render [{:keys [template-file]}]
-    (let [table (render-table-md)]
+    (let [table (render-table-md)
+          completion-metrics (get-completion-metrics)]
       (-> (format "templates/%s.md" template-file)
-          (parser/render-resource {:table table}))))
+          (parser/render-resource (merge completion-metrics {:table table})))))
   IGenerator
   (generate [this]
     (->> this
