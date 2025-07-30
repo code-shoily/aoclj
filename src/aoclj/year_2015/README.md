@@ -7,4 +7,4 @@
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
 [Not Quite Lisp](http://www.adventofcode.com/2015/day/1)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_01.clj](/src/aoclj/year_2015/day_01.clj) <br /> :small_orange_diamond: [day_01_test.clj](/test/aoclj/year_2015/day_01_test.clj)|sequence,reduction
-[I Was Told There Would Be No Math](http://www.adventofcode.com/2015/day/2)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_null.clj](/src/aoclj/year_null/day_null.clj) <br /> :small_orange_diamond: [day_null_test.clj](/test/aoclj/year_null/day_null_test.clj)|geometry
+[I Was Told There Would Be No Math](http://www.adventofcode.com/2015/day/2)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_02.clj](/src/aoclj/year_2015/day_02.clj) <br /> :small_orange_diamond: [day_02_test.clj](/test/aoclj/year_2015/day_02_test.clj)|geometry
