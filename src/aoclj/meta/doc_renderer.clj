@@ -103,22 +103,29 @@
          (spit (format "src/aoclj/year_%s/README.md"
                        year)))))
 
-(defn generate-table-structure
+(defn generate-solution-matrix
+  "Get a score mapping of all data in a matrix format"
   []
   (let [completed (->> utils/aoc-years
-                       (map (comp (fn
-                                    [{:keys [solutions]}]
-                                    (mapcat (juxt :year :day :stars)
-                                            solutions))
-                                  stats/summarize))
+                       (map stats/summarize)
+                       (map (fn [{:keys [solutions]}] (mapcat (juxt :year :day :stars)
+                                                              solutions)))
                        (group-by (juxt first second))
                        (map (fn [[k [[_ _ v]]]] [k v]))
-                       (into {}))
-        to-table-row #(->> % (str/join " | ") (format "| %s |"))]
+                       (into {}))]
     (->> (range 1 26)
-         (map #(map (fn [year] (render-trophy (get completed [year %] 0)))
-                    utils/aoc-years))
-         (map-indexed (fn [idx row] (cons (inc idx) row)))
+         (map #(map (fn [year] (get completed [year %] 0))
+                    utils/aoc-years)))))
+
+(defn render-table-md
+  "Render the data only part of the table as markdown"
+  []
+  (let [solution-matrix (generate-solution-matrix)
+        yearwise-total (->> solution-matrix utils/transpose (map #(reduce + %)))
+        to-table-row #(->> % (str/join " | ") (format "| %s |"))]
+    (->> solution-matrix
+         (map-indexed (fn [idx row] (cons (inc idx) (map render-trophy row))))
+         (cons (cons ":star:" yearwise-total))
          (map to-table-row)
          (str/join "\n"))))
 
@@ -127,7 +134,7 @@
  [template-file]
   IRender
   (render [{:keys [template-file]}]
-    (let [table (generate-table-structure)]
+    (let [table (render-table-md)]
       (-> (format "templates/%s.md" template-file)
           (parser/render-resource {:table table}))))
   IGenerator
