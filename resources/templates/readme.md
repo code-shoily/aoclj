@@ -2,6 +2,12 @@
 
 [Advent of Code](http://www.adventofcode.com) puzzle solutions in Clojure (2015 - 2024).
 
+## Commands
+
+* To run a solution: `lein run solve <year> <day>` Will display error if the day is not solved yet
+* To generate artifacts to solve a new problem:  `lein run gen <year> <day>` Will not over-write if file existed.
+* To update the READMEs with latest progress/stars: `lein run update-stats`
+
 ## Progress
 ### :star: {{stars}}/500 :dart: {{target-stars}} :trophy: {{completed}}/250 :dart: {{target-trophies}}
 
