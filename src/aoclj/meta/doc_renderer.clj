@@ -108,7 +108,7 @@
   []
   (let [completed (->> utils/aoc-years
                        (map stats/summarize)
-                       (map (fn [{:keys [solutions]}] (mapcat (juxt :year :day :stars)
+                       (mapcat (fn [{:keys [solutions]}] (map (juxt :year :day :stars)
                                                               solutions)))
                        (group-by (juxt first second))
                        (map (fn [[k [[_ _ v]]]] [k v]))
@@ -170,6 +170,7 @@
   (generate (->Readme "readme")))
 
 (comment "<Explore>"
+         (generate-solution-matrix)
          (generate-yearwise-readmes)
          (generate-readme)
          "</Explore>")

@@ -11,6 +11,7 @@
             [aoclj.year-2024.solver :as solver-2024]))
 
 (defn get-stat-for
+  "Get stat for a particular year/day challenge"
   [year day]
   (case year
     2015 (solver-2015/stats day)
@@ -24,8 +25,8 @@
     2023 (solver-2023/stats day)
     2024 (solver-2024/stats day)))
 
-#_{:clojure-lsp/ignore [:clojure-lsp/unused-public-var]}
 (defn summarize
+  "Get summary of all years"
   [year]
   (let [days (range 1 26)
         metadata (->> days
