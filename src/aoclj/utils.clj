@@ -3,6 +3,8 @@
    [clojure.java.io :as io]))
 
 (def current-year 2024)
+(def total-stars 500)
+(def total-trophies 250)
 
 (def aoc-years (range 2015 (inc current-year)))
 
