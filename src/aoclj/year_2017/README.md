@@ -7,3 +7,4 @@
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
 [Inverse Captcha](http://www.adventofcode.com/2017/day/1)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_01.clj](/src/aoclj/year_2017/day_01.clj) <br /> :small_orange_diamond: [day_01_test.clj](/test/aoclj/year_2017/day_01_test.clj)|arithmetic
+[Corruption Checksum](http://www.adventofcode.com/2017/day/2)||:skull:|:small_orange_diamond: [day_02.clj](/src/aoclj/year_2017/day_02.clj) <br /> :small_orange_diamond: [day_02_test.clj](/test/aoclj/year_2017/day_02_test.clj)|
