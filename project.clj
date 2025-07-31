@@ -6,6 +6,8 @@
   :dependencies [[org.clojure/clojure "1.12.0"]
                  [de.ubercode.clostache/clostache "1.4.0"]
                  [org.babashka/http-client "0.4.22"]
+                 [org.clj-commons/digest "1.4.100"]
+                 [dev.weavejester/medley "1.8.1"]
                  [reaver "0.1.3"]]
   :source-paths ["src"]
   :resource-paths ["resources"]
