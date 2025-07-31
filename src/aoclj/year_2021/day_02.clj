@@ -53,18 +53,16 @@
 
 (defn multiply [{:keys [horizon depth]}] (* horizon depth))
 
-(defn interpret-for [type] (fn [cmds] (->> cmds
-                                           (reduce run-command type)
-                                           multiply)))
+(defn interpret-for
+  [type]
+  (comp multiply #(reduce run-command type %)))
 
 (defn parse-command
   [line]
   (->> (str/split line #" ")
        ((fn [[a b]] [a (Integer/parseInt b)]))))
 
-(defn parse
-  [input]
-  (mapv parse-command (str/split-lines input)))
+(defn parse [input] (mapv parse-command (str/split-lines input)))
 
 (def part-1 (interpret-for (->Submarine 0 0)))
 
