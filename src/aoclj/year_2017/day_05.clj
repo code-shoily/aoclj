@@ -6,28 +6,31 @@
    :year 2017
    :day 5
    :stars 2
-   :tags [:slow :array]}
+   :tags [:array]}
  aoclj.year-2017.day-05
   (:require
    [aoclj.utils :as utils]
    [clojure.string :as str]))
 
 (defn jump-1 [coll]
-  (loop [idx 0 steps 0 coll' coll]
-    (if (or (neg? idx) (>= idx (count coll)))
-      steps
-      (recur (+ idx (coll' idx))
-             (inc steps)
-             (update-in coll' [idx] inc)))))
+  (let [arr (int-array coll)
+        len (alength arr)]
+    (loop [idx 0 steps 0]
+      (if (or (neg? idx) (>= idx len))
+        steps
+        (let [jump-val (aget arr idx)]
+          (aset arr idx (inc jump-val))
+          (recur (+ idx jump-val) (inc steps)))))))
 
 (defn jump-2 [coll]
-  (loop [idx 0 steps 0 coll' coll]
-    (if (or (neg? idx) (>= idx (count coll)))
-      steps
-      (recur (+ idx (coll' idx))
-             (inc steps)
-             (update-in coll' [idx]
-                        (fn [v] (if (>= v 3) (dec v) (inc v))))))))
+  (let [arr (int-array coll)
+        len (alength arr)]
+    (loop [idx 0 steps 0]
+      (if (or (neg? idx) (>= idx len))
+        steps
+        (let [jump-val (aget arr idx)]
+          (aset arr idx (if (>= jump-val 3) (dec jump-val) (inc jump-val)))
+          (recur (+ idx jump-val) (inc steps)))))))
 
 (defn parse
   [input]

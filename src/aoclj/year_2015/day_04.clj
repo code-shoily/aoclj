@@ -39,6 +39,5 @@
          (def input-data (utils/read-input-data 2015 4))
          (def input (parse input-data))
 
-         #_((comp #(subs % (count input)) first first))
          (time (solve input-data))
          "</Explore>")
