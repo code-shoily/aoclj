@@ -1,6 +1,7 @@
 (ns aoclj.year-2016.solver
   (:require
    [aoclj.year-2016.day-01 :as day-01]
+   [aoclj.year-2016.day-03 :as day-03]
    [aoclj.year-2016.day-05 :as day-05]
    [aoclj.utils :as utils]))
 
@@ -10,6 +11,7 @@
   (let [read-input (partial utils/read-input-data *year*)]
     (case day
       1 (day-01/solve (read-input 1))
+      3 (day-03/solve (read-input 3))
       5 (day-05/solve (read-input 5))
       ;; Add cases for days as needed
       (str "[ERROR] Not Solved: " *year* "/" day))))
