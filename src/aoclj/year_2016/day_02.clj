@@ -2,11 +2,11 @@
  ^{:title "Bathroom Security"
    :doc "Module for solving Advent of Code 2016 Day 2 problem."
    :url "http://www.adventofcode.com/2016/day/2"
-   :difficulty :todo
+   :difficulty :xs
    :year 2016
    :day 2
-   :stars 0
-   :tags []}
+   :stars 2
+   :tags [:grid :decode]}
  aoclj.year-2016.day-02
   (:require
    [aoclj.utils :as utils]
