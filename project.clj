@@ -8,6 +8,7 @@
                  [org.babashka/http-client "0.4.22"]
                  [org.clj-commons/digest "1.4.100"]
                  [dev.weavejester/medley "1.8.1"]
+                 [org.clojure/core.match "1.1.0"]
                  [reaver "0.1.3"]]
   :source-paths ["src"]
   :resource-paths ["resources"]

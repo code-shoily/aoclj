@@ -4,6 +4,7 @@
    [aoclj.year-2017.day-02 :as day-02]
    [aoclj.year-2017.day-04 :as day-04]
    [aoclj.year-2017.day-05 :as day-05]
+   [aoclj.year-2017.day-09 :as day-09]
    [aoclj.utils :as utils]))
 
 (def ^:dynamic *year* 2017)
@@ -15,6 +16,7 @@
       2 (day-02/solve (read-input 2))
       4 (day-04/solve (read-input 4))
       5 (day-05/solve (read-input 5))
+      9 (day-09/solve (read-input 9))
       ;; Add cases for days as needed
       (str "[ERROR] Not Solved: " *year* "/" day))))
 
