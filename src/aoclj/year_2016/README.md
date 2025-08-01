@@ -7,5 +7,6 @@
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
 [No Time for a Taxicab](http://www.adventofcode.com/2016/day/1)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_01.clj](/src/aoclj/year_2016/day_01.clj) <br /> :small_orange_diamond: [day_01_test.clj](/test/aoclj/year_2016/day_01_test.clj)|grid,set
+[Bathroom Security](http://www.adventofcode.com/2016/day/2)||:skull:|:small_orange_diamond: [day_02.clj](/src/aoclj/year_2016/day_02.clj) <br /> :small_orange_diamond: [day_02_test.clj](/test/aoclj/year_2016/day_02_test.clj)|
 [Squares With Three Sides](http://www.adventofcode.com/2016/day/3)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_03.clj](/src/aoclj/year_2016/day_03.clj) <br /> :small_orange_diamond: [day_03_test.clj](/test/aoclj/year_2016/day_03_test.clj)|transpose,geometry
 [How About a Nice Game of Chess?](http://www.adventofcode.com/2016/day/5)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_05.clj](/src/aoclj/year_2016/day_05.clj) <br /> :small_orange_diamond: [day_05_test.clj](/test/aoclj/year_2016/day_05_test.clj)|slow,md5
