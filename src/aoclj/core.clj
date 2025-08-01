@@ -47,7 +47,7 @@
   (letfn [(extract-year-day [[year day]] [(Integer/parseInt year) (Integer/parseInt day)])]
     (case cmd
       "update-stats" (println (update-stats))
-      "solve" (println (apply solve (extract-year-day args)))
+      "solve" (time (println (apply solve (extract-year-day args))))
       "gen" (apply generate  (extract-year-day args))
       (println (format "Unknown command %s . Use :update-stats :solve or :gen." cmd)))))
 
