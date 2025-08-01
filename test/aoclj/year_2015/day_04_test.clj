@@ -7,5 +7,5 @@
 (def ^:dynamic *result* ["254575" "1038736"])
 (def input (utils/read-input-data 2015 4))
 
-(deftest year-2015-day-04-is-solved
+(deftest ^:slow year-2015-day-04-is-solved
   (is (= (day-04/solve input) *result*)))
