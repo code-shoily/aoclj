@@ -1,6 +1,7 @@
 (ns aoclj.year-2022.solver
   (:require [aoclj.utils :as utils]
             [aoclj.year-2022.day-01 :as day-01]
+            [aoclj.year-2022.day-03 :as day-03]
             [aoclj.year-2022.day-04 :as day-04]))
 
 (def ^:dynamic *year* 2022)
