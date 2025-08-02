@@ -9,13 +9,13 @@
 * To update the READMEs with latest progress/stars: `lein run update-stats`
 
 ## Progress
-### :star: 54/500 :dart: 446 :trophy: 27/250 :dart: 223
+### :star: 56/500 :dart: 444 :trophy: 28/250 :dart: 222
 
 | Day | [2015](src/aoclj/year_2015) | [2016](src/aoclj/year_2016) | [2017](src/aoclj/year_2017) | [2018](src/aoclj/year_2018) | [2019](src/aoclj/year_2019) | [2020](src/aoclj/year_2020) | [2021](src/aoclj/year_2021) | [2022](src/aoclj/year_2022) | [2023](src/aoclj/year_2023) | [2024](src/aoclj/year_2024) |
 |:---:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| :star: | 10 | 10 | 10 | 2 | 2 | 4 | 4 | 6 | 2 | 4 |
+| :star: | 10 | 10 | 10 | 4 | 2 | 4 | 4 | 6 | 2 | 4 |
 | 1 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |
-| 2 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   |   | :1st_place_medal: |   |   | :1st_place_medal: |
+| 2 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   |   | :1st_place_medal: |
 | 3 | :1st_place_medal: | :1st_place_medal: |   |   |   |   |   | :1st_place_medal: |   |   |
 | 4 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   |   |   | :1st_place_medal: |   |   |
 | 5 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   |   |   |   |   |   |

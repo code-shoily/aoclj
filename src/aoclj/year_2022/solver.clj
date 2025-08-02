@@ -10,6 +10,7 @@
   (let [read-input (partial utils/read-input-data *year*)]
     (case day
       1 (day-01/solve (read-input 1))
+      3 (day-03/solve (read-input 3))
       4 (day-04/solve (read-input 4))
       ;; Add cases for days as needed
       (format "[ERROR] %s/%s was not solved" *year* day))))
