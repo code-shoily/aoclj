@@ -30,7 +30,7 @@
     2022 (solver-2022/solve day)
     2023 (solver-2023/solve day)
     2024 (solver-2024/solve day)
-    (throw (ex-info "Unsupported year" {:year year}))))
+    (throw (ex-info "Unsupported year/day" {:year year :day day}))))
 
 (defn generate
   "This function generated source and test files for a given year/day"

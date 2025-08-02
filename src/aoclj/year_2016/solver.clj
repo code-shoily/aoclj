@@ -16,7 +16,7 @@
       3 (day-03/solve (read-input 3))
       4 (day-04/solve (read-input 4))
       5 (day-05/solve (read-input 5))
-      (throw (ex-info "Unsupported day" {:day day})))))
+      (format "[ERROR] %s/%s was not solved" *year* day))))
 
 (defn stats
   "Returns the stats for the problem of `day` for 2016"

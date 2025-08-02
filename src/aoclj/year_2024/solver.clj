@@ -11,7 +11,7 @@
       1 (day-01/solve (read-input 1))
       2 (day-02/solve (read-input 2))
       ;; Add cases for days as needed
-      (str "[ERROR] Not Solved: " *year* "/" day))))
+      (format "[ERROR] %s/%s was not solved" *year* day))))
 
 (defn stats
   "Returns the stats for the problem of `day` for 2024"

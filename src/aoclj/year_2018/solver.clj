@@ -1,7 +1,6 @@
 (ns aoclj.year-2018.solver
-  (:require
-   [aoclj.year-2018.day-01 :as day-01]
-   [aoclj.utils :as utils]))
+  (:require [aoclj.year-2018.day-01 :as day-01]
+            [aoclj.utils :as utils]))
 
 (def ^:dynamic *year* 2018)
 
@@ -10,7 +9,7 @@
     (case day
       1 (day-01/solve (read-input 1))
       ;; Add cases for days as needed
-      (str "[ERROR] Not Solved: " *year* "/" day))))
+      (format "[ERROR] %s/%s was not solved" *year* day))))
 
 (defn stats
   "Returns the stats for the problem of `day` for 2018"
