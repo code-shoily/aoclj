@@ -8,9 +8,8 @@
    :stars 0
    :tags []}
  aoclj.year-{{year}}.day-{{padded-day}}
-  (:require 
-    [aoclj.utils :as utils]
-    [clojure.string :as str]))
+  (:require [aoclj.utils :as utils]
+            [clojure.string :as str]))
 
 (defn parse
   [input]
@@ -31,6 +30,8 @@
 (comment "<Explore>"
          (def input-data 
            (utils/read-input-data {{year}} {{day}}))
+
+        (def input (parse input-data))
 
          (time (solve input-data))
          "</Explore>")
