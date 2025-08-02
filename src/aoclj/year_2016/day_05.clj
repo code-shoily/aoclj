@@ -8,18 +8,17 @@
    :stars 2
    :tags [:slow :md5]}
  aoclj.year-2016.day-05
-  (:require
-   [aoclj.utils :as utils]
-   [clojure.string :as str]
-   [medley.core :as m]
-   [digest]))
+  (:require [aoclj.algorithms.hash :as hash]
+            [aoclj.utils :as utils]
+            [clojure.string :as str]
+            [medley.core :as m]))
 
 (def parse str/trim)
 
 (defn find-password-1 [code]
   (transduce
    (comp
-    (map #(digest/md5 (str code %)))
+    (map #(hash/md5 (str code %)))
     (filter #(= "00000" (subs % 0 5)))
     (map #(nth % 5))
     (take 8))
@@ -30,7 +29,7 @@
 (defn find-password-2 [code]
   (transduce
    (comp
-    (map #(digest/md5 (str code %)))
+    (map #(hash/md5 (str code %)))
     (filter #(and (= "00000" (subs % 0 5))
                   (> 8 (Integer/parseInt (subs % 5 6) 16))))
     (map (juxt #(Integer/parseInt (str (nth % 5)))

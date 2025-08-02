@@ -8,11 +8,10 @@
    :stars 2
    :tags [:md5 :slow]}
  aoclj.year-2015.day-04
-  (:require
-   [aoclj.utils :as utils]
-   [clojure.string :as str]
-   [digest]
-   [medley.core :as m]))
+  (:require [aoclj.utils :as utils]
+            [aoclj.algorithms.hash :as hash]
+            [clojure.string :as str]
+            [medley.core :as m]))
 
 (def parse str/trim-newline)
 
@@ -22,7 +21,7 @@
         extract-prefix
         #(subs (first %) (count secret))
         hash-per-secret-seq
-        (map (juxt identity digest/md5)
+        (map (juxt identity hash/md5)
              (map-indexed #(str %2 %1) (repeat secret)))]
     (->> (m/find-first #(= zeroes
                            (subs (second %) 0 size))
