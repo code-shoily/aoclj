@@ -4,7 +4,7 @@
    [clojure.test :refer [is deftest]]
    [aoclj.utils :as utils]))
 
-(def ^:dynamic *result* [])
+(def ^:dynamic *result* [7221 "mkcdflathzwsvjxrevymbdpoq"])
 (def input (utils/read-input-data 2018 2))
 
 (deftest year-2018-day-02-is-solved
