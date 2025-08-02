@@ -4,7 +4,8 @@
             [aoclj.year-2016.day-02 :as day-02]
             [aoclj.year-2016.day-03 :as day-03]
             [aoclj.year-2016.day-04 :as day-04]
-            [aoclj.year-2016.day-05 :as day-05]))
+            [aoclj.year-2016.day-05 :as day-05]
+            [aoclj.year-2016.day-06 :as day-06]))
 
 (def ^:dynamic *year* 2016)
 
@@ -16,6 +17,7 @@
       3 (day-03/solve (read-input 3))
       4 (day-04/solve (read-input 4))
       5 (day-05/solve (read-input 5))
+      6 (day-06/solve (read-input 6))
       (format "[ERROR] %s/%s was not solved" *year* day))))
 
 (defn stats
