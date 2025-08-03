@@ -3,7 +3,7 @@
    [aoclj.meta.fetcher :as fetcher]
    [aoclj.utils :as utils]
    [clojure.java.io :as io]
-   [clostache.parser :as parser]))
+   [selmer.parser :as parser]))
 
 (defn- build-file-path [prefix year day]
   (io/file
@@ -28,7 +28,7 @@
 (defn- render-content-for
   [year day template & {:keys [title] :or {title ""}}]
   (let [padded-day (utils/get-padded-day day)]
-    (parser/render-resource
+    (parser/render-file
      template
      {:year year :day day :padded-day padded-day :title title})))
 

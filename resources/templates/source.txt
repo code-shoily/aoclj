@@ -31,7 +31,9 @@
          (def input-data 
            (utils/read-input-data {{year}} {{day}}))
 
-        (def input (parse input-data))
+         (def input (parse input-data))
 
+         (->> input)
+         
          (time (solve input-data))
          "</Explore>")

@@ -1,7 +1,7 @@
 (ns aoclj.meta.doc-renderer
   (:require [aoclj.meta.stats :as stats]
             [aoclj.utils :as utils]
-            [clostache.parser :as parser]
+            [selmer.parser :as parser]
             [clojure.string :as str]))
 
 ;; ----------------------------------------------------- Protocols
@@ -93,7 +93,7 @@
     (let [summary (stats/summarize year)
           nav-links (render-navlinks year)
           table (render (map->YearwiseTable summary))]
-      (parser/render-resource
+      (parser/render-file
        (format "templates/%s.md" template-file)
        {:year year :nav-links nav-links :stars (:stars summary) :table table})))
   IGenerator
@@ -148,7 +148,7 @@
     (let [table (render-table-md)
           completion-metrics (get-completion-metrics)]
       (-> (format "templates/%s.md" template-file)
-          (parser/render-resource (merge completion-metrics {:table table})))))
+          (parser/render-file (merge completion-metrics {:table table})))))
   IGenerator
   (generate [this]
     (->> this

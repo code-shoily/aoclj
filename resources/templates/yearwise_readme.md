@@ -4,4 +4,4 @@
 
 ## :trophy: {{stars}}/50
 
-{{&table}}
+{{ table|safe }}
