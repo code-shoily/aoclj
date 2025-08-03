@@ -1,20 +1,18 @@
 (ns aoclj.meta.code-org
-  (:require
-   [aoclj.meta.fetcher :as fetcher]
-   [aoclj.utils :as utils]
-   [clojure.java.io :as io]
-   [selmer.parser :as parser]))
+  (:require [aoclj.meta.fetcher :as fetcher]
+            [aoclj.utils :as utils]
+            [clojure.java.io :as io]
+            [selmer.parser :as parser]))
 
-(defn- build-file-path [prefix year day]
-  (io/file
-   prefix
-   "aoclj"
-   (str "year_" year)
-   (str
-    "day_"
-    (utils/get-padded-day day)
-    (if (= prefix "test") "_test" "")
-    ".clj")))
+(defn- build-file-path
+  [prefix year day]
+  (io/file prefix
+           "aoclj"
+           (str "year_" year)
+           (str "day_"
+                (utils/get-padded-day day)
+                (if (= prefix "test") "_test" "")
+                ".clj")))
 
 (def get-source-path (partial build-file-path "src"))
 (def get-test-path (partial build-file-path "test"))
@@ -26,11 +24,11 @@
            (str year "_" (utils/get-padded-day day) ".txt")))
 
 (defn- render-content-for
-  [year day template & {:keys [title] :or {title ""}}]
+  [year day template & {:keys [title], :or {title ""}}]
   (let [padded-day (utils/get-padded-day day)]
     (parser/render-file
-     template
-     {:year year :day day :padded-day padded-day :title title})))
+      template
+      {:year year, :day day, :padded-day padded-day, :title title})))
 
 (defn render-source-content
   [year day]
@@ -48,12 +46,10 @@
         file-name (.getPath file-obj)
         content (renderer year day)]
     (if (.exists file-obj)
-      (do (prn (format "File %s already exists" file-name))
-          false)
-      (do
-        (spit file-obj content)
-        (prn (format "File %s created" file-name))
-        true))))
+      (do (prn (format "File %s already exists" file-name)) false)
+      (do (spit file-obj content)
+          (prn (format "File %s created" file-name))
+          true))))
 
 (defn create-source-stub
   [year day]
@@ -73,6 +69,4 @@
   (let [input-created? (create-input-stub year day)
         source-created? (create-source-stub year day)
         test-created? (create-test-stub year day)]
-    {:input input-created?
-     :source source-created?
-     :test test-created?}))
+    {:input input-created?, :source source-created?, :test test-created?}))

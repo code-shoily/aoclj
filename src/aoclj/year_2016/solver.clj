@@ -9,7 +9,8 @@
 
 (def ^:dynamic *year* 2016)
 
-(defn solve [day]
+(defn solve
+  [day]
   (let [read-input #(utils/read-input-data 2016 %)]
     (case day
       1 (day-01/solve (read-input 1))

@@ -1,27 +1,19 @@
-(ns
- ^{:title "Bathroom Security"
-   :doc "Module for solving Advent of Code 2016 Day 2 problem."
-   :url "http://www.adventofcode.com/2016/day/2"
-   :difficulty :xs
-   :year 2016
-   :day 2
-   :stars 2
-   :tags [:grid :decode]}
- aoclj.year-2016.day-02
-  (:require
-   [aoclj.utils :as utils]
-   [clojure.string :as str]))
+(ns ^{:title "Bathroom Security",
+      :doc "Module for solving Advent of Code 2016 Day 2 problem.",
+      :url "http://www.adventofcode.com/2016/day/2",
+      :difficulty :xs,
+      :year 2016,
+      :day 2,
+      :stars 2,
+      :tags [:grid :decode]}
+    aoclj.year-2016.day-02
+  (:require [aoclj.utils :as utils]
+            [clojure.string :as str]))
 
-(def keypad1
-  [[1 2 3]
-   [4 5 6]
-   [7 8 9]])
+(def keypad1 [[1 2 3] [4 5 6] [7 8 9]])
 
 (def keypad2
-  [[nil nil \1 nil nil]
-   [nil \2 \3 \4 nil]
-   [\5 \6 \7 \8 \9]
-   [nil \A \B \C nil]
+  [[nil nil \1 nil nil] [nil \2 \3 \4 nil] [\5 \6 \7 \8 \9] [nil \A \B \C nil]
    [nil nil \D nil nil]])
 
 (defn move
@@ -37,11 +29,10 @@
 
 (defn decode-keypad
   [init grid directions]
-  (letfn [(decode-key
-            [directions]
+  (letfn [(decode-key [directions]
             (->> directions
                  (reduce (fn [[cur _] dir] (move dir cur grid))
-                         [init (get-in grid init)])
+                   [init (get-in grid init)])
                  second))]
     (->> directions
          (map decode-key)
@@ -53,10 +44,9 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
-(comment "<Explore>"
-         (def input-data
-           (utils/read-input-data 2016 2))
-
-         (def input (parse input-data))
-         (time (solve input-data))
-         "</Explore>")
+(comment
+  "<Explore>"
+  (def input-data (utils/read-input-data 2016 2))
+  (def input (parse input-data))
+  (time (solve input-data))
+  "</Explore>")

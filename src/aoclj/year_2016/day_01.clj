@@ -1,21 +1,24 @@
-(ns
- ^{:title "No Time for a Taxicab"
-   :doc "Module for solving Advent of Code 2016 Day 1 problem."
-   :url "http://www.adventofcode.com/2016/day/1"
-   :year 2016
-   :day 1
-   :difficulty :s
-   :stars 2
-   :tags [:grid :set]}
- aoclj.year-2016.day-01
-  (:require
-   [aoclj.utils :as utils]
-   [clojure.set :as set]
-   [clojure.string :as str]))
+(ns ^{:title "No Time for a Taxicab",
+      :doc "Module for solving Advent of Code 2016 Day 1 problem.",
+      :url "http://www.adventofcode.com/2016/day/1",
+      :year 2016,
+      :day 1,
+      :difficulty :s,
+      :stars 2,
+      :tags [:grid :set]}
+    aoclj.year-2016.day-01
+  (:require [aoclj.utils :as utils]
+            [clojure.set :as set]
+            [clojure.string :as str]))
 
-(defn parse-directions [[x & xs]]
-  (let [direction (case x \L :left \R :right)
-        steps (-> xs str/join Integer/parseInt)]
+(defn parse-directions
+  [[x & xs]]
+  (let [direction (case x
+                    \L :left
+                    \R :right)
+        steps (-> xs
+                  str/join
+                  Integer/parseInt)]
     [direction steps]))
 
 (defn parse
@@ -25,7 +28,8 @@
 
 (defrecord Traveller [position facing])
 
-(defn next-facing [facing direction]
+(defn next-facing
+  [facing direction]
   (case [facing direction]
     [:north :left] :west
     [:north :right] :east
@@ -54,16 +58,18 @@
 (defonce traveller (->Traveller [0 0] :north))
 (defn distance-from-origin [[i f]] (+ (abs i) (abs f)))
 
-(defn a-to-z [a z]
+(defn a-to-z
+  [a z]
   (let [comparison (compare z a)
         incr (if (pos? comparison) inc dec)]
     (range a (incr z) comparison)))
 
 (defn get-interim-locations
   [[[x1 y1] [x2 y2]]]
-  (into #{} (next (if (= x1 x2)
-                    (for [i (a-to-z y1 y2)] [x1 i])
-                    (for [i (a-to-z x1 x2)] [i y1])))))
+  (into #{}
+        (next (if (= x1 x2)
+                (for [i (a-to-z y1 y2)] [x1 i])
+                (for [i (a-to-z x1 x2)] [i y1])))))
 
 (defn part-1
   [instructions]
@@ -72,7 +78,8 @@
        :position
        distance-from-origin))
 
-(defn part-2 [instructions]
+(defn part-2
+  [instructions]
   (->> instructions
        (reductions follow traveller)
        (map :position)
@@ -80,15 +87,14 @@
        (map get-interim-locations)
        (reduce (fn [acc x]
                  (let [repeat? (set/intersection acc x)]
-                   (if (empty? repeat?)
-                     (set/union acc x)
-                     (reduced repeat?)))))
+                   (if (empty? repeat?) (set/union acc x) (reduced repeat?)))))
        first
        distance-from-origin))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
-(comment "Repl Exploration"
-         (def raw-input (utils/read-input-data 2016 1))
-         (time (solve raw-input))
-         "End Repl Exploration")
+(comment
+  "Repl Exploration"
+  (def raw-input (utils/read-input-data 2016 1))
+  (time (solve raw-input))
+  "End Repl Exploration")
