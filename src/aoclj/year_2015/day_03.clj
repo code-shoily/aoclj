@@ -1,11 +1,11 @@
-(ns ^{:title "Perfectly Spherical Houses in a Vacuum",
-      :doc "Module for solving Advent of Code 2015 Day 3 problem.",
-      :url "http://www.adventofcode.com/2015/day/3",
+(ns ^{:title      "Perfectly Spherical Houses in a Vacuum",
+      :doc        "Module for solving Advent of Code 2015 Day 3 problem.",
+      :url        "http://www.adventofcode.com/2015/day/3",
       :difficulty :xs,
-      :year 2015,
-      :day 3,
-      :stars 2,
-      :tags [:set]}
+      :year       2015,
+      :day        3,
+      :stars      2,
+      :tags       [:set]}
     aoclj.year-2015.day-03
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]))
@@ -28,7 +28,7 @@
        (reduce (fn [{:keys [pos visits]} dir]
                  (let [new-pos (next-pos pos dir)]
                    (->House new-pos (conj visits new-pos))))
-         (->House [0 0] #{[0 0]}))))
+               (->House [0 0] #{[0 0]}))))
 
 (defn count-visited [{:keys [visits]}] (count visits))
 
@@ -44,7 +44,7 @@
   [input]
   (let [[santa robot] (divide-directions input)
         [{santa-visits :visits} {robo-visits :visits}]
-          [(deliver-presents santa) (deliver-presents robot)]]
+        [(deliver-presents santa) (deliver-presents robot)]]
     (count (set/union santa-visits robo-visits))))
 
 (def solve (utils/generic-solver part-1 part-2 parse))

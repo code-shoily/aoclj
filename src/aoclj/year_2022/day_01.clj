@@ -1,11 +1,11 @@
-(ns ^{:title "Calorie Counting",
-      :doc "Module for solving Advent of Code 2022 Day 1 problem.",
-      :url "http://www.adventofcode.com/2022/day/1",
-      :year 2022,
-      :day 1,
+(ns ^{:title      "Calorie Counting",
+      :doc        "Module for solving Advent of Code 2022 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2022/day/1",
+      :year       2022,
+      :day        1,
       :difficulty :xs,
-      :stars 2,
-      :tags [:section-parse :take-n]}
+      :stars      2,
+      :tags       [:section-parse :take-n]}
     aoclj.year-2022.day-01
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))

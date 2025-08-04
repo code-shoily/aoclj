@@ -1,11 +1,11 @@
-(ns ^{:title "How About a Nice Game of Chess?",
-      :doc "Module for solving Advent of Code 2016 Day 5 problem.",
-      :url "http://www.adventofcode.com/2016/day/5",
+(ns ^{:title      "How About a Nice Game of Chess?",
+      :doc        "Module for solving Advent of Code 2016 Day 5 problem.",
+      :url        "http://www.adventofcode.com/2016/day/5",
       :difficulty :m,
-      :year 2016,
-      :day 5,
-      :stars 2,
-      :tags [:slow :md5]}
+      :year       2016,
+      :day        5,
+      :stars      2,
+      :tags       [:slow :md5]}
     aoclj.year-2016.day-05
   (:require [aoclj.algorithms.hash :as hash]
             [aoclj.utils :as utils]

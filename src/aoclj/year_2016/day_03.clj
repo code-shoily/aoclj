@@ -1,11 +1,11 @@
-(ns ^{:title "Squares With Three Sides",
-      :doc "Module for solving Advent of Code 2016 Day 3 problem.",
-      :url "http://www.adventofcode.com/2016/day/3",
+(ns ^{:title      "Squares With Three Sides",
+      :doc        "Module for solving Advent of Code 2016 Day 3 problem.",
+      :url        "http://www.adventofcode.com/2016/day/3",
       :difficulty :xs,
-      :year 2016,
-      :day 3,
-      :stars 2,
-      :tags [:transpose :geometry]}
+      :year       2016,
+      :day        3,
+      :stars      2,
+      :tags       [:transpose :geometry]}
     aoclj.year-2016.day-03
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))

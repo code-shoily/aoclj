@@ -1,11 +1,11 @@
-(ns ^{:title "Inverse Captcha",
-      :doc "Module for solving Advent of Code 2017 Day 1 problem.",
-      :url "http://www.adventofcode.com/2017/day/1",
-      :year 2017,
-      :day 1,
+(ns ^{:title      "Inverse Captcha",
+      :doc        "Module for solving Advent of Code 2017 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2017/day/1",
+      :year       2017,
+      :day        1,
       :difficulty :xs,
-      :stars 2,
-      :tags [:arithmetic]}
+      :stars      2,
+      :tags       [:arithmetic]}
     aoclj.year-2017.day-01
   (:require [aoclj.utils :as utils]))
 

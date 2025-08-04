@@ -1,11 +1,11 @@
-(ns ^{:title "Historian Hysteria",
-      :doc "Module for solving Advent of Code 2024 Day 1 problem.",
-      :url "http://www.adventofcode.com/2024/day/1",
-      :year 2024,
-      :day 1,
+(ns ^{:title      "Historian Hysteria",
+      :doc        "Module for solving Advent of Code 2024 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2024/day/1",
+      :year       2024,
+      :day        1,
       :difficulty :xs,
-      :stars 2,
-      :tags [:sequence]}
+      :stars      2,
+      :tags       [:sequence]}
     aoclj.year-2024.day-01
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))

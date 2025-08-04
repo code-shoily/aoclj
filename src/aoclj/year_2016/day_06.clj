@@ -1,11 +1,11 @@
-(ns ^{:title "Signals and Noise",
-      :doc "Module for solving Advent of Code 2016 Day 6 problem.",
-      :url "http://www.adventofcode.com/2016/day/6",
+(ns ^{:title      "Signals and Noise",
+      :doc        "Module for solving Advent of Code 2016 Day 6 problem.",
+      :url        "http://www.adventofcode.com/2016/day/6",
       :difficulty :xs,
-      :year 2016,
-      :day 6,
-      :stars 2,
-      :tags [:transpose :frequency]}
+      :year       2016,
+      :day        6,
+      :stars      2,
+      :tags       [:transpose :frequency]}
     aoclj.year-2016.day-06
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -15,7 +15,7 @@
   (->> freqs
        (reduce (fn [[[_ minv :as min] [_ maxv :as max]] [_ v :as kv]]
                  [(if (< v minv) kv min) (if (> v maxv) kv max)])
-         [[nil Integer/MAX_VALUE] [nil Integer/MIN_VALUE]])
+               [[nil Integer/MAX_VALUE] [nil Integer/MIN_VALUE]])
        ((fn [[[kmin _] [kmax _]]] [kmin kmax]))))
 
 (defn solve

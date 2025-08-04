@@ -1,11 +1,11 @@
-(ns ^{:title "Internet Protocol Version 7",
-      :doc "Module for solving Advent of Code 2016 Day 7 problem.",
-      :url "http://www.adventofcode.com/2016/day/7",
+(ns ^{:title      "Internet Protocol Version 7",
+      :doc        "Module for solving Advent of Code 2016 Day 7 problem.",
+      :url        "http://www.adventofcode.com/2016/day/7",
       :difficulty :s,
-      :year 2016,
-      :day 7,
-      :stars 2,
-      :tags [:set :partition]}
+      :year       2016,
+      :day        7,
+      :stars      2,
+      :tags       [:set :partition]}
     aoclj.year-2016.day-07
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]

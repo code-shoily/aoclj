@@ -1,11 +1,11 @@
-(ns ^{:title "Dive!",
-      :doc "Module for solving Advent of Code 2021 Day 2 problem.",
-      :url "http://www.adventofcode.com/2021/day/2",
+(ns ^{:title      "Dive!",
+      :doc        "Module for solving Advent of Code 2021 Day 2 problem.",
+      :url        "http://www.adventofcode.com/2021/day/2",
       :difficulty :xs,
-      :year 2021,
-      :day 2,
-      :stars 2,
-      :tags [:simulation :cmd]}
+      :year       2021,
+      :day        2,
+      :stars      2,
+      :tags       [:simulation :cmd]}
     aoclj.year-2021.day-02
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -34,8 +34,8 @@
   [submarine [direction steps]]
   (case direction
     "forward" (forward submarine steps)
-    "down" (down submarine steps)
-    "up" (up submarine steps)))
+    "down"    (down submarine steps)
+    "up"      (up submarine steps)))
 
 (defn multiply [{:keys [horizon depth]}] (* horizon depth))
 

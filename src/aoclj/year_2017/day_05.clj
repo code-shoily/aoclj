@@ -1,11 +1,11 @@
-(ns ^{:title "A Maze of Twisty Trampolines, All Alike",
-      :doc "Module for solving Advent of Code 2017 Day 5 problem.",
-      :url "http://www.adventofcode.com/2017/day/5",
+(ns ^{:title      "A Maze of Twisty Trampolines, All Alike",
+      :doc        "Module for solving Advent of Code 2017 Day 5 problem.",
+      :url        "http://www.adventofcode.com/2017/day/5",
       :difficulty :s,
-      :year 2017,
-      :day 5,
-      :stars 2,
-      :tags [:array]}
+      :year       2017,
+      :day        5,
+      :stars      2,
+      :tags       [:array]}
     aoclj.year-2017.day-05
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -14,7 +14,7 @@
   [coll]
   (let [arr (int-array coll)
         len (alength arr)]
-    (loop [idx 0
+    (loop [idx   0
            steps 0]
       (if (or (neg? idx) (>= idx len))
         steps
@@ -26,7 +26,7 @@
   [coll]
   (let [arr (int-array coll)
         len (alength arr)]
-    (loop [idx 0
+    (loop [idx   0
            steps 0]
       (if (or (neg? idx) (>= idx len))
         steps

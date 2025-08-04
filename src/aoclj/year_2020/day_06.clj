@@ -1,11 +1,11 @@
-(ns ^{:title "Custom Customs",
-      :doc "Module for solving Advent of Code 2020 Day 6 problem.",
-      :url "http://www.adventofcode.com/2020/day/6",
+(ns ^{:title      "Custom Customs",
+      :doc        "Module for solving Advent of Code 2020 Day 6 problem.",
+      :url        "http://www.adventofcode.com/2020/day/6",
       :difficulty :xs,
-      :year 2020,
-      :day 6,
-      :stars 2,
-      :tags [:set]}
+      :year       2020,
+      :day        6,
+      :stars      2,
+      :tags       [:set]}
     aoclj.year-2020.day-06
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]

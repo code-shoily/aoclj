@@ -1,11 +1,11 @@
-(ns ^{:title "Password Philosophy",
-      :doc "Module for solving Advent of Code 2020 Day 2 problem.",
-      :url "http://www.adventofcode.com/2020/day/2",
+(ns ^{:title      "Password Philosophy",
+      :doc        "Module for solving Advent of Code 2020 Day 2 problem.",
+      :url        "http://www.adventofcode.com/2020/day/2",
       :difficulty :xs,
-      :year 2020,
-      :day 2,
-      :stars 2,
-      :tags [:frequency :nil]}
+      :year       2020,
+      :day        2,
+      :stars      2,
+      :tags       [:frequency :nil]}
     aoclj.year-2020.day-02
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))

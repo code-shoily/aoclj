@@ -1,11 +1,11 @@
-(ns ^{:title "No Time for a Taxicab",
-      :doc "Module for solving Advent of Code 2016 Day 1 problem.",
-      :url "http://www.adventofcode.com/2016/day/1",
-      :year 2016,
-      :day 1,
+(ns ^{:title      "No Time for a Taxicab",
+      :doc        "Module for solving Advent of Code 2016 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2016/day/1",
+      :year       2016,
+      :day        1,
       :difficulty :s,
-      :stars 2,
-      :tags [:grid :set]}
+      :stars      2,
+      :tags       [:grid :set]}
     aoclj.year-2016.day-01
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]
@@ -16,9 +16,9 @@
   (let [direction (case x
                     \L :left
                     \R :right)
-        steps (-> xs
-                  str/join
-                  Integer/parseInt)]
+        steps     (-> xs
+                      str/join
+                      Integer/parseInt)]
     [direction steps]))
 
 (defn parse
@@ -31,27 +31,27 @@
 (defn next-facing
   [facing direction]
   (case [facing direction]
-    [:north :left] :west
+    [:north :left]  :west
     [:north :right] :east
-    [:south :left] :east
+    [:south :left]  :east
     [:south :right] :west
-    [:east :left] :north
-    [:east :right] :south
-    [:west :left] :south
-    [:west :right] :north))
+    [:east :left]   :north
+    [:east :right]  :south
+    [:west :left]   :south
+    [:west :right]  :north))
 
 (defn next-position
   [[x y] direction steps]
   (case direction
     :north [x (+ y steps)]
     :south [x (- y steps)]
-    :east [(+ x steps) y]
-    :west [(- x steps) y]))
+    :east  [(+ x steps) y]
+    :west  [(- x steps) y]))
 
 (defn follow
   [{:keys [position facing]} [direction steps]]
-  (let [[x y] position
-        next-facing (next-facing facing direction)
+  (let [[x y]         position
+        next-facing   (next-facing facing direction)
         next-position (next-position [x y] next-facing steps)]
     (->Traveller next-position next-facing)))
 
@@ -61,7 +61,7 @@
 (defn a-to-z
   [a z]
   (let [comparison (compare z a)
-        incr (if (pos? comparison) inc dec)]
+        incr       (if (pos? comparison) inc dec)]
     (range a (incr z) comparison)))
 
 (defn get-interim-locations

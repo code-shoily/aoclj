@@ -1,11 +1,11 @@
-(ns ^{:title "Report Repair",
-      :doc "Module for solving Advent of Code 2020 Day 1 problem.",
-      :url "http://www.adventofcode.com/2020/day/1",
-      :year 2020,
-      :day 1,
+(ns ^{:title      "Report Repair",
+      :doc        "Module for solving Advent of Code 2020 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2020/day/1",
+      :year       2020,
+      :day        1,
       :difficulty :xs,
-      :stars 2,
-      :tags [:nsum]}
+      :stars      2,
+      :tags       [:nsum]}
     aoclj.year-2020.day-01
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -20,16 +20,16 @@
 (defn two-sum
   "Given sorted vector, returns the two values that sum to target"
   [target coll]
-  (loop [idx-left 0
+  (loop [idx-left  0
          idx-right (dec (count coll))]
     (when (<= idx-left idx-right)
-      (let [left (coll idx-left)
+      (let [left  (coll idx-left)
             right (coll idx-right)
             total (+ left right)]
         (case (compare total target)
           -1 (recur (inc idx-left) idx-right)
-          1 (recur idx-left (dec idx-right))
-          0 [left right])))))
+          1  (recur idx-left (dec idx-right))
+          0  [left right])))))
 
 (defn three-sum
   "Given sorted vector, returns the three values that sum to target"

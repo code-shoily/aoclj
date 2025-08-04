@@ -1,11 +1,11 @@
-(ns ^{:title "Camp Cleanup",
-      :doc "Module for solving Advent of Code 2022 Day 4 problem.",
-      :url "http://www.adventofcode.com/2022/day/4",
+(ns ^{:title      "Camp Cleanup",
+      :doc        "Module for solving Advent of Code 2022 Day 4 problem.",
+      :url        "http://www.adventofcode.com/2022/day/4",
       :difficulty :xs,
-      :year 2022,
-      :day 4,
-      :stars 2,
-      :tags [:interval]}
+      :year       2022,
+      :day        4,
+      :stars      2,
+      :tags       [:interval]}
     aoclj.year-2022.day-04
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))

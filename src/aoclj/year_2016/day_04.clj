@@ -1,11 +1,11 @@
-(ns ^{:title "Security Through Obscurity",
-      :doc "Module for solving Advent of Code 2016 Day 4 problem.",
-      :url "http://www.adventofcode.com/2016/day/4",
+(ns ^{:title      "Security Through Obscurity",
+      :doc        "Module for solving Advent of Code 2016 Day 4 problem.",
+      :url        "http://www.adventofcode.com/2016/day/4",
       :difficulty :s,
-      :year 2016,
-      :day 4,
-      :stars 2,
-      :tags [:checksum :ascii]}
+      :year       2016,
+      :day        4,
+      :stars      2,
+      :tags       [:checksum :ascii]}
     aoclj.year-2016.day-04
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]

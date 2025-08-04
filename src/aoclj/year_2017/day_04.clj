@@ -1,11 +1,11 @@
-(ns ^{:title "High-Entropy Passphrases",
-      :doc "Module for solving Advent of Code 2017 Day 4 problem.",
-      :url "http://www.adventofcode.com/2017/day/4",
+(ns ^{:title      "High-Entropy Passphrases",
+      :doc        "Module for solving Advent of Code 2017 Day 4 problem.",
+      :url        "http://www.adventofcode.com/2017/day/4",
       :difficulty :xs,
-      :year 2017,
-      :day 4,
-      :stars 2,
-      :tags [:frequency :string]}
+      :year       2017,
+      :day        4,
+      :stars      2,
+      :tags       [:frequency :string]}
     aoclj.year-2017.day-04
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))

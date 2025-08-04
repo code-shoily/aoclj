@@ -1,11 +1,11 @@
-(ns ^{:title "Trebuchet?!",
-      :doc "Module for solving Advent of Code 2023 Day 1 problem.",
-      :url "http://www.adventofcode.com/2023/day/1",
-      :year 2023,
-      :day 1,
+(ns ^{:title      "Trebuchet?!",
+      :doc        "Module for solving Advent of Code 2023 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2023/day/1",
+      :year       2023,
+      :day        1,
       :difficulty :s,
-      :stars 2,
-      :tags [:regex :tricky]}
+      :stars      2,
+      :tags       [:regex :tricky]}
     aoclj.year-2023.day-01
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -30,21 +30,21 @@
 
 (defn parse-line
   [line]
-  (let [numbers {"zero" 0,
-                 "one" 1,
-                 "two" 2,
+  (let [numbers {"zero"  0,
+                 "one"   1,
+                 "two"   2,
                  "three" 3,
-                 "four" 4,
-                 "five" 5,
-                 "six" 6,
+                 "four"  4,
+                 "five"  5,
+                 "six"   6,
                  "seven" 7,
                  "eight" 8,
-                 "nine" 9}
+                 "nine"  9}
         regex ; #"(?=(one|two..|\d))"
-          (re-pattern (str "(?=(" (str/join "|" (keys numbers)) "|\\d))"))
-        to-num #(if-let [num (get numbers %)]
-                  num
-                  (Integer/parseInt %))]
+        (re-pattern (str "(?=(" (str/join "|" (keys numbers)) "|\\d))"))
+        to-num  #(if-let [num (get numbers %)]
+                   num
+                   (Integer/parseInt %))]
     (->> (re-seq regex line)
          (mapv (comp to-num second))
          ((juxt first last)))))

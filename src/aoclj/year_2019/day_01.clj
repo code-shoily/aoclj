@@ -1,11 +1,11 @@
-(ns ^{:title "The Tyranny of the Rocket Equation",
-      :doc "Module for solving Advent of Code 2019 Day 1 problem.",
-      :url "http://www.adventofcode.com/2019/day/1",
-      :year 2019,
-      :day 1,
+(ns ^{:title      "The Tyranny of the Rocket Equation",
+      :doc        "Module for solving Advent of Code 2019 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2019/day/1",
+      :year       2019,
+      :day        1,
       :difficulty :xs,
-      :stars 2,
-      :tags [:formula :recursion]}
+      :stars      2,
+      :tags       [:formula :recursion]}
     aoclj.year-2019.day-01
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -31,7 +31,7 @@
 (defn get-fuel-2
   [mass]
   (loop [fuel-part mass
-         total 0]
+         total     0]
     (let [new-fuel-part (get-fuel-1 fuel-part)]
       (if (< new-fuel-part 1)
         total

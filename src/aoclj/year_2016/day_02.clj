@@ -1,11 +1,11 @@
-(ns ^{:title "Bathroom Security",
-      :doc "Module for solving Advent of Code 2016 Day 2 problem.",
-      :url "http://www.adventofcode.com/2016/day/2",
+(ns ^{:title      "Bathroom Security",
+      :doc        "Module for solving Advent of Code 2016 Day 2 problem.",
+      :url        "http://www.adventofcode.com/2016/day/2",
       :difficulty :xs,
-      :year 2016,
-      :day 2,
-      :stars 2,
-      :tags [:grid :decode]}
+      :year       2016,
+      :day        2,
+      :stars      2,
+      :tags       [:grid :decode]}
     aoclj.year-2016.day-02
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -32,7 +32,7 @@
   (letfn [(decode-key [directions]
             (->> directions
                  (reduce (fn [[cur _] dir] (move dir cur grid))
-                   [init (get-in grid init)])
+                         [init (get-in grid init)])
                  second))]
     (->> directions
          (map decode-key)

@@ -1,11 +1,11 @@
-(ns ^{:title "Red-Nosed Reports",
-      :doc "Module for solving Advent of Code 2024 Day 2 problem.",
-      :url "http://www.adventofcode.com/2024/day/2",
+(ns ^{:title      "Red-Nosed Reports",
+      :doc        "Module for solving Advent of Code 2024 Day 2 problem.",
+      :url        "http://www.adventofcode.com/2024/day/2",
       :difficulty :s,
-      :year 2024,
-      :day 2,
-      :stars 2,
-      :tags [:brute-force :revisit]}
+      :year       2024,
+      :day        2,
+      :stars      2,
+      :tags       [:brute-force :revisit]}
     aoclj.year-2024.day-02
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -28,7 +28,7 @@
                   (every? f)))]
     (let [increasing? (growth-by pos?)
           decreasing? (growth-by neg?)
-          pairs (partitionv 2 1 coll)
+          pairs       (partitionv 2 1 coll)
           growing-or-shrinking? (or (increasing? pairs) (decreasing? pairs))]
       (when growing-or-shrinking?
         (->> pairs

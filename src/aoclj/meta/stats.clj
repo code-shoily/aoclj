@@ -28,10 +28,10 @@
 (defn summarize
   "Get summary of all years"
   [year]
-  (let [days (range 1 26)
+  (let [days     (range 1 26)
         metadata (->> days
                       (mapv (partial get-stat-for year))
                       (remove nil?))]
     {:completed (count metadata),
-     :stars (reduce + (map :stars metadata)),
+     :stars     (reduce + (map :stars metadata)),
      :solutions metadata}))

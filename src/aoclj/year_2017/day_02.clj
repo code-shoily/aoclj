@@ -1,11 +1,11 @@
-(ns ^{:title "Corruption Checksum",
-      :doc "Module for solving Advent of Code 2017 Day 2 problem.",
-      :url "http://www.adventofcode.com/2017/day/2",
+(ns ^{:title      "Corruption Checksum",
+      :doc        "Module for solving Advent of Code 2017 Day 2 problem.",
+      :url        "http://www.adventofcode.com/2017/day/2",
       :difficulty :xs,
-      :year 2017,
-      :day 2,
-      :stars 2,
-      :tags [:checksum]}
+      :year       2017,
+      :day        2,
+      :stars      2,
+      :tags       [:checksum]}
     aoclj.year-2017.day-02
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))

@@ -1,11 +1,11 @@
-(ns ^{:title "Rucksack Reorganization",
-      :doc "Module for solving Advent of Code 2022 Day 3 problem.",
-      :url "http://www.adventofcode.com/2022/day/3",
+(ns ^{:title      "Rucksack Reorganization",
+      :doc        "Module for solving Advent of Code 2022 Day 3 problem.",
+      :url        "http://www.adventofcode.com/2022/day/3",
       :difficulty :xs,
-      :year 2022,
-      :day 3,
-      :stars 2,
-      :tags [:set :partition]}
+      :year       2022,
+      :day        3,
+      :stars      2,
+      :tags       [:set :partition]}
     aoclj.year-2022.day-03
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]

@@ -32,27 +32,27 @@
   [level]
   (let [repetition (case level
                      :xs 1
-                     :s 2
-                     :m 3
-                     :l 4
-                     xl 5
+                     :s  2
+                     :m  3
+                     :l  4
+                     xl  5
                      0)]
     (str/join " " (repeat repetition ":snowflake:"))))
 
 (defn code-metadata
   [year day type]
-  (let [padded-day (utils/get-padded-day day)
+  (let [padded-day      (utils/get-padded-day day)
         source-filename (format "day_%s.clj" padded-day)
-        source-path (format "/src/aoclj/year_%s/%s" year source-filename)
-        test-filename (format "day_%s_test.clj" padded-day)
-        test-path (format "/test/aoclj/year_%s/%s" year test-filename)]
+        source-path     (format "/src/aoclj/year_%s/%s" year source-filename)
+        test-filename   (format "day_%s_test.clj" padded-day)
+        test-path       (format "/test/aoclj/year_%s/%s" year test-filename)]
     (case type
-      :source {:name source-filename,
-               :path source-path,
+      :source {:name    source-filename,
+               :path    source-path,
                :md-link (render-md-link source-filename source-path)}
-      :test {:name test-filename,
-             :path test-path,
-             :md-link (render-md-link test-filename test-path)})))
+      :test   {:name    test-filename,
+               :path    test-path,
+               :md-link (render-md-link test-filename test-path)})))
 
 (defn source-md-link [year day] ((code-metadata year day :source) :md-link))
 
@@ -75,9 +75,9 @@
     (render [{:keys [year day title url tags stars difficulty]}]
       (letfn [(formatted-link [year day]
                 (format
-                  ":small_orange_diamond: %s <br /> :small_orange_diamond: %s"
-                  (source-md-link year day)
-                  (test-md-link year day)))
+                 ":small_orange_diamond: %s <br /> :small_orange_diamond: %s"
+                 (source-md-link year day)
+                 (test-md-link year day)))
               (render-tags [tags] (str/join "," (mapv name tags)))]
         (format "[%s](%s)|%s|%s|%s|%s"
                 title
@@ -101,14 +101,14 @@
 (defrecord YearwisePage [template-file year]
   IRender
     (render [{:keys [template-file year]}]
-      (let [summary (stats/summarize year)
+      (let [summary   (stats/summarize year)
             nav-links (render-navlinks year)
-            table (render (map->YearwiseTable summary))]
+            table     (render (map->YearwiseTable summary))]
         (parser/render-file (format "templates/%s.md" template-file)
-                            {:year year,
+                            {:year      year,
                              :nav-links nav-links,
-                             :stars (:stars summary),
-                             :table table})))
+                             :stars     (:stars summary),
+                             :table     table})))
   IGenerator
     (generate [{:keys [year], :as this}]
       (->> this
@@ -132,12 +132,12 @@
   "Render the data only part of the table as markdown"
   []
   (let [solution-matrix (generate-solution-matrix)
-        yearwise-total (->> solution-matrix
-                            utils/transpose
-                            (map #(reduce + %)))
-        to-table-row #(->> %
-                           (str/join " | ")
-                           (format "| %s |"))]
+        yearwise-total  (->> solution-matrix
+                             utils/transpose
+                             (map #(reduce + %)))
+        to-table-row    #(->> %
+                              (str/join " | ")
+                              (format "| %s |"))]
     (->> solution-matrix
          (map-indexed (fn [idx row] (cons (inc idx) (map render-trophy row))))
          (cons (cons ":star:" yearwise-total))
@@ -146,7 +146,7 @@
 
 (defn get-completion-metrics
   []
-  (let [total-stars utils/total-stars
+  (let [total-stars    utils/total-stars
         total-trophies utils/total-trophies]
     (as-> utils/aoc-years x
       (mapv (comp #(select-keys % [:stars :completed]) stats/summarize) x)

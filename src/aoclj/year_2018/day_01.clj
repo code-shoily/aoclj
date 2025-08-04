@@ -1,11 +1,11 @@
-(ns ^{:title "Chronal Calibration",
-      :doc "Module for solving Advent of Code 2018 Day 1 problem.",
-      :url "http://www.adventofcode.com/2018/day/1",
-      :year 2018,
-      :day 1,
+(ns ^{:title      "Chronal Calibration",
+      :doc        "Module for solving Advent of Code 2018 Day 1 problem.",
+      :url        "http://www.adventofcode.com/2018/day/1",
+      :year       2018,
+      :day        1,
       :difficulty :xs,
-      :stars 2,
-      :tags [:infinite-sequence :set]}
+      :stars      2,
+      :tags       [:infinite-sequence :set]}
     aoclj.year-2018.day-01
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -28,7 +28,7 @@
                        (reduced new-freq)
                        [new-freq (conj visited new-freq)]))
                    [x (conj visited x)]))
-         [nil #{}])))
+               [nil #{}])))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 

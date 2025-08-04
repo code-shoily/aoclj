@@ -1,11 +1,11 @@
-(ns ^{:title "The Ideal Stocking Stuffer",
-      :doc "Module for solving Advent of Code 2015 Day 4 problem.",
-      :url "http://www.adventofcode.com/2015/day/4",
+(ns ^{:title      "The Ideal Stocking Stuffer",
+      :doc        "Module for solving Advent of Code 2015 Day 4 problem.",
+      :url        "http://www.adventofcode.com/2015/day/4",
       :difficulty :s,
-      :year 2015,
-      :day 4,
-      :stars 2,
-      :tags [:md5 :slow]}
+      :year       2015,
+      :day        4,
+      :stars      2,
+      :tags       [:md5 :slow]}
     aoclj.year-2015.day-04
   (:require [aoclj.utils :as utils]
             [aoclj.algorithms.hash :as hash]
@@ -16,10 +16,10 @@
 
 (defn find-first-prefix
   [size secret]
-  (let [zeroes (apply str (repeat size "0"))
+  (let [zeroes         (apply str (repeat size "0"))
         extract-prefix #(subs (first %) (count secret))
         hash-per-secret-seq (map (juxt identity hash/md5)
-                              (map-indexed #(str %2 %1) (repeat secret)))]
+                                 (map-indexed #(str %2 %1) (repeat secret)))]
     (->> (m/find-first #(= zeroes (subs (second %) 0 size)) hash-per-secret-seq)
          extract-prefix)))
 

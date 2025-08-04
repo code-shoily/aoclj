@@ -1,11 +1,11 @@
-(ns ^{:title "Doesn't He Have Intern-Elves For This?",
-      :doc "Module for solving Advent of Code 2015 Day 5 problem.",
-      :url "http://www.adventofcode.com/2015/day/5",
+(ns ^{:title      "Doesn't He Have Intern-Elves For This?",
+      :doc        "Module for solving Advent of Code 2015 Day 5 problem.",
+      :url        "http://www.adventofcode.com/2015/day/5",
       :difficulty :s,
-      :year 2015,
-      :day 5,
-      :stars 2,
-      :tags [:partition]}
+      :year       2015,
+      :day        5,
+      :stars      2,
+      :tags       [:partition]}
     aoclj.year-2015.day-05
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -33,9 +33,10 @@
        (partitionv 2 1)
        (reduce (fn [[pairs last-pair] current-pair]
                  (cond (= last-pair current-pair) [pairs nil]
-                       (pairs current-pair) (reduced true)
-                       :else [(conj pairs current-pair) current-pair]))
-         [#{} nil])
+                       (pairs current-pair)       (reduced true)
+                       :else                      [(conj pairs current-pair)
+                                                   current-pair]))
+               [#{} nil])
        true?))
 
 (def is-nice-v1?

@@ -1,11 +1,11 @@
-(ns ^{:title "I Was Told There Would Be No Math",
-      :doc "Module for solving Advent of Code 2015 Day 2 problem.",
-      :url "http://www.adventofcode.com/2015/day/2",
-      :year 2015,
-      :day 2,
+(ns ^{:title      "I Was Told There Would Be No Math",
+      :doc        "Module for solving Advent of Code 2015 Day 2 problem.",
+      :url        "http://www.adventofcode.com/2015/day/2",
+      :year       2015,
+      :day        2,
       :difficulty :xs,
-      :stars 2,
-      :tags [:geometry]}
+      :stars      2,
+      :tags       [:geometry]}
     aoclj.year-2015.day-02
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
