@@ -2,11 +2,11 @@
   ^{:title      "Passport Processing",
     :doc        "Module for solving Advent of Code 2020 Day 4 problem.",
     :url        "http://www.adventofcode.com/2020/day/4",
-    :difficulty :todo,
+    :difficulty :xs,
     :year       2020,
     :day        4,
-    :stars      0,
-    :tags       []}
+    :stars      2,
+    :tags       [:schema :validation]}
   aoclj.year-2020.day-04
   (:require [aoclj.utils :as utils]
             [clojure.spec.alpha :as s]
@@ -29,14 +29,11 @@
 (s/def :v2/hcl
   (s/and #(= \# (first %))
          #(every? (fn [ch]
-                    (or (Character/isDigit ch)
-                        (#{\a \b \c \d \e \f} ch)))
+                    (or (Character/isDigit ch) (#{\a \b \c \d \e \f} ch)))
                   (rest %))))
 
 (s/def :v2/ecl #{"amb" "blu" "brn" "gry" "grn" "hzl" "oth"})
-(s/def :v2/pid
-  (s/and #(= (count %) 9)
-         #(every? Character/isDigit %)))
+(s/def :v2/pid (s/and #(= (count %) 9) #(every? Character/isDigit %)))
 
 (s/def ::passport-v2
   (s/keys :req-un [:v2/byr
