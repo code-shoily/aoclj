@@ -2,7 +2,7 @@
   (:require [aoclj.utils :as utils]
             [aoclj.year-2024.day-01 :as day-01]
             [aoclj.year-2024.day-02 :as day-02]
-            [aoclj.year-2015.day-03 :as day-03]))
+            [aoclj.year-2024.day-03 :as day-03]))
 
 (def ^:dynamic *year* 2024)
 
