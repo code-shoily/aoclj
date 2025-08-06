@@ -30,24 +30,27 @@
   [dir-f grid]
   (let [rows (count grid)
         cols (count (first grid))]
-    (->>
-      (for [r     (range rows)
-            c     (range cols)
-            :let  [pos  (dir-f r c)
-                   word (->> pos
-                             (map (comp str (partial get-in grid)))
-                             (apply str))]
-            :when (is-xmas word)]
-        true)
-      count)))
+    (count
+     (for [r     (range rows)
+           c     (range cols)
+           :let  [pos  (dir-f r c)
+                  word (->> pos
+                            (map (comp str (partial get-in grid)))
+                            (apply str))]
+           :when (is-xmas word)]
+       true))))
 
 (defn x-mas?
   [grid [r c]]
-  (let [lr [[(dec r) (dec c)] [r c] [(inc r) (inc c)]]
-        rl [[(dec r) (inc c)] [r c] [(inc r) (dec c)]]]
-    (not-any? nil?
-              [(is-mas (apply str (map #(get-in grid %) rl)))
-               (is-mas (apply str (map #(get-in grid %) lr)))])))
+  (let [lr #(vector [(dec r) (dec c)] % [(inc r) (inc c)])
+        rl #(vector [(dec r) (inc c)] % [(inc r) (dec c)])]
+
+    (->> [r c]
+         ((juxt lr rl))
+         (map #(is-xmas (apply str (map (partial get-in grid %) %)))))
+    #_(not-any? nil?
+                [(is-mas (apply str (map #(get-in grid %) rl)))
+                 (is-mas (apply str (map #(get-in grid %) lr)))])))
 
 (defn parse
   [input]
