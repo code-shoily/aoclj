@@ -1,7 +1,8 @@
 (ns aoclj.year-2024.solver
   (:require [aoclj.utils :as utils]
             [aoclj.year-2024.day-01 :as day-01]
-            [aoclj.year-2024.day-02 :as day-02]))
+            [aoclj.year-2024.day-02 :as day-02]
+            [aoclj.year-2015.day-03 :as day-03]))
 
 (def ^:dynamic *year* 2024)
 
@@ -11,6 +12,7 @@
     (case day
       1 (day-01/solve (read-input 1))
       2 (day-02/solve (read-input 2))
+      3 (day-03/solve (read-input 3))
       ;; Add cases for days as needed
       (format "[ERROR] %s/%s was not solved" *year* day))))
 
