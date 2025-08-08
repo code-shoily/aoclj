@@ -10,8 +10,9 @@
   (:require [aoclj.utils :as utils]))
 
 (defn parse
-  [input]
-  (->> input
+  "( means climbing up (+1) while ) means moving down (-1)"
+  [raw-input]
+  (->> raw-input
        (map #(case %
                \( 1
                \) -1))
@@ -35,6 +36,6 @@
 
 (comment
   "Repl Exploration"
-  (def input-data (utils/read-input-data 2015 1))
-  (time (solve input-data))
+  (def raw-input (utils/read-input-data 2015 1))
+  (time (solve raw-input))
   "End Repl Exploration")

@@ -63,6 +63,6 @@
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2015 5))
-  (time (solve input-data))
+  (def raw-input (utils/read-input-data 2015 5))
+  (time (solve raw-input))
   "</Explore>")

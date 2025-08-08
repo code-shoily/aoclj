@@ -10,7 +10,7 @@
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]))
 
-(defn parse [input] (seq input))
+(def parse seq)
 
 (defrecord House [pos visits])
 
@@ -23,6 +23,8 @@
     \> [(inc x) y]))
 
 (defn deliver-presents
+  "Returns the state of the present delivery after all houses were
+   visited following dirs"
   [dirs]
   (->> dirs
        (reduce (fn [{:keys [pos visits]} dir]
@@ -30,15 +32,18 @@
                    (->House new-pos (conj visits new-pos))))
                (->House [0 0] #{[0 0]}))))
 
-(defn count-visited [{:keys [visits]}] (count visits))
-
 (defn part-1
   [input]
   (->> input
        deliver-presents
-       count-visited))
+       :visits
+       count))
 
-(defn divide-directions [dirs] [(take-nth 2 dirs) (take-nth 2 (rest dirs))])
+(defn divide-directions
+  "Given [santa robot santa robot santa robot ...] this groups
+   instructions for santa and robot as separate sequences"
+  [dirs]
+  [(take-nth 2 dirs) (take-nth 2 (rest dirs))])
 
 (defn part-2
   [input]
@@ -51,7 +56,7 @@
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2015 3))
-  (def input (parse input-data))
-  (time (solve input-data))
+  (def raw-input (utils/read-input-data 2015 3))
+  (def input (parse raw-input))
+  (time (solve raw-input))
   "</Explore>")

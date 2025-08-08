@@ -11,6 +11,7 @@
             [clojure.string :as str]))
 
 (defn parse
+  "Parse wxhxl as [w h l] for all inputs given"
   [input]
   (letfn [(extract-dims [s] (mapv Integer/parseInt (str/split s #"x")))]
     (->> (str/split-lines input)
@@ -47,8 +48,8 @@
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2015 2))
-  (def input (parse input-data))
+  (def raw-input (utils/read-input-data 2015 2))
+  (def input (parse raw-input))
   input
-  (time (solve input-data))
+  (time (solve raw-input))
   "</Explore>")

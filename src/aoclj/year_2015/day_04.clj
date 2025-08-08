@@ -31,7 +31,7 @@
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2015 4))
-  (def input (parse input-data))
-  (time (solve input-data))
+  (def raw-input (utils/read-input-data 2015 4))
+  (def input (parse raw-input))
+  (time (solve raw-input))
   "</Explore>")
