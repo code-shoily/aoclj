@@ -42,15 +42,15 @@
 
 (defn x-mas?
   [grid [r c]]
-  (let [lr #(vector [(dec r) (dec c)] % [(inc r) (inc c)])
-        rl #(vector [(dec r) (inc c)] % [(inc r) (dec c)])]
-
-    (->> [r c]
-         ((juxt lr rl))
-         (map #(is-xmas (apply str (map (partial get-in grid %) %)))))
-    #_(not-any? nil?
-                [(is-mas (apply str (map #(get-in grid %) rl)))
-                 (is-mas (apply str (map #(get-in grid %) lr)))])))
+  (let [lr [[(dec r) (dec c)]
+            [r c]
+            [(inc r) (inc c)]]
+        rl [[(dec r) (inc c)]
+            [r c]
+            [(inc r) (dec c)]]]
+    (not-any? nil?
+              [(is-mas (apply str (map #(get-in grid %) rl)))
+               (is-mas (apply str (map #(get-in grid %) lr)))])))
 
 (defn parse
   [input]
