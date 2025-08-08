@@ -2,7 +2,7 @@
   ^{:title      "Supply Stacks",
     :doc        "Module for solving Advent of Code 2022 Day 5 problem.",
     :url        "http://www.adventofcode.com/2022/day/5",
-    :difficulty :todo,
+    :difficulty :m,
     :year       2022,
     :day        5,
     :stars      2,
