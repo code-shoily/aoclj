@@ -1,37 +1,40 @@
 (ns
- ^{:title "{{title}}"
-   :doc "Module for solving Advent of Code {{year}} Day {{day}} problem."
-   :url "http://www.adventofcode.com/{{year}}/day/{{day}}"
+ ^{:title      "{{title}}"
+   :doc        "Module for solving Advent of Code {{year}} Day {{day}} problem."
+   :url        "http://www.adventofcode.com/{{year}}/day/{{day}}"
    :difficulty :todo
-   :year {{year}}
-   :day {{day}}
-   :stars 0
-   :tags []}
+   :year       {{year}}
+   :day        {{day}}
+   :stars      0
+   :tags       []}
  aoclj.year-{{year}}.day-{{padded-day}}
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
 
 (defn parse
-  [input]
+  "Parse raw string input into a processable data structure"
+  [raw-input]
   (->>
-   input
+   raw-input
    str/split-lines))
 
 (defn part-1 
+  "Solve part 1 -"
   [input]
   (->> input count))
 
 (defn part-2 
+  "Solve part 2 -"
   [input]
   (->> input count))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
 (comment "<Explore>"
-         (def input-data 
+         (def raw-input 
            (utils/read-input-data {{year}} {{day}}))
 
-         (def input (parse input-data))
+         (def input (parse raw-input))
 
          (->> input)
          
