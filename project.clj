@@ -17,6 +17,7 @@
                    :bench {:dependencies [[criterium "0.4.4"]]},
                    :dev
                    {:plugins      [[lein-cljfmt "0.9.2"]
+                                   [lein-marginalia "0.9.2"]
                                    [cider/cider-nrepl "0.50.2"]],
                     :zprint       {:old? false},
                     :dependencies [[nrepl "1.3.0"]

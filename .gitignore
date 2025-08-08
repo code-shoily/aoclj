@@ -30,3 +30,4 @@ profiles.clj
 
 /.shadow-cljs/
 node_modules/
+docs/
