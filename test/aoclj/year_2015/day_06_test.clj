@@ -1,8 +1,8 @@
 (ns aoclj.year-2015.day-06-test
   (:require
-   [aoclj.year-2015.day-06 :as day-06]
-   [clojure.test :refer [is deftest]] 
-   [aoclj.utils :as utils]))
+    [aoclj.year-2015.day-06 :as day-06]
+    [clojure.test :refer [is deftest]]
+    [aoclj.utils :as utils]))
 
 (def ^:dynamic *result* [377891 14110788])
 

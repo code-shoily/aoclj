@@ -1,13 +1,13 @@
 (ns
- ^{:title      "Probably a Fire Hazard",
-   :doc        "Module for solving Advent of Code 2015 Day 6 problem.",
-   :url        "http://www.adventofcode.com/2015/day/6",
-   :difficulty :l,
-   :year       2015,
-   :day        6,
-   :stars      2,
-   :tags       [:array :slow]}
- aoclj.year-2015.day-06
+  ^{:title      "Probably a Fire Hazard",
+    :doc        "Module for solving Advent of Code 2015 Day 6 problem.",
+    :url        "http://www.adventofcode.com/2015/day/6",
+    :difficulty :l,
+    :year       2015,
+    :day        6,
+    :stars      2,
+    :tags       [:array :slow]}
+  aoclj.year-2015.day-06
   (:require [aoclj.utils :as utils]
             [clojure.core.async :as async]
             [clojure.spec.alpha :as s]
