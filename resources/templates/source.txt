@@ -14,19 +14,20 @@
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
-  (->>
-   raw-input
-   str/split-lines))
+  (->> raw-input
+       str/split-lines))
 
 (defn part-1 
   "Solve part 1 -"
   [input]
-  (->> input count))
+  (->> input 
+       count))
 
 (defn part-2 
   "Solve part 2 -"
   [input]
-  (->> input count))
+  (->> input 
+       count))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
@@ -39,5 +40,5 @@
 
   (->> input)
          
-  (time (solve raw-data))
+  (time (solve raw-input))
   "</Explore>")
