@@ -4,6 +4,7 @@
   :license        {:name "MIT", :url "https://opensource.org/licenses/MIT"}
   :dependencies   [[org.clojure/clojure "1.12.0"]
                    [org.clojure/core.async "1.6.681"]
+                   [org.clojure/math.combinatorics "0.3.0"]
                    [org.babashka/http-client "0.4.22"]
                    [dev.weavejester/medley "1.8.1"]
                    [org.clojure/core.match "1.1.0"]
