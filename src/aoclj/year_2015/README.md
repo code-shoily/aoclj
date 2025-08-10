@@ -2,7 +2,7 @@
 
 [Main Page](https://adventofcode.com/2015) | 2015 | [Year 2016](/src/aoclj/year_2016/) | [Year 2017](/src/aoclj/year_2017/) | [Year 2018](/src/aoclj/year_2018/) | [Year 2019](/src/aoclj/year_2019/) | [Year 2020](/src/aoclj/year_2020/) | [Year 2021](/src/aoclj/year_2021/) | [Year 2022](/src/aoclj/year_2022/) | [Year 2023](/src/aoclj/year_2023/) | [Year 2024](/src/aoclj/year_2024/)
 
-## :trophy: 16/50
+## :trophy: 18/50
 
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
@@ -14,3 +14,4 @@
 [Probably a Fire Hazard](http://www.adventofcode.com/2015/day/6)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_06.clj](/src/aoclj/year_2015/day_06.clj) <br /> :small_orange_diamond: [day_06_test.clj](/test/aoclj/year_2015/day_06_test.clj)|array,slow
 [Matchsticks](http://www.adventofcode.com/2015/day/8)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_08.clj](/src/aoclj/year_2015/day_08.clj) <br /> :small_orange_diamond: [day_08_test.clj](/test/aoclj/year_2015/day_08_test.clj)|chars
 [All in a Single Night](http://www.adventofcode.com/2015/day/9)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2015/day_09.clj) <br /> :small_orange_diamond: [day_09_test.clj](/test/aoclj/year_2015/day_09_test.clj)|graph,combinatorics,travelling-salesman,brute-force
+[Elves Look, Elves Say](http://www.adventofcode.com/2015/day/10)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2015/day_10.clj) <br /> :small_orange_diamond: [day_10_test.clj](/test/aoclj/year_2015/day_10_test.clj)|brute-force,count
