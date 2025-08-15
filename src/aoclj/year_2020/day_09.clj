@@ -19,6 +19,7 @@
        (split-at 25)))
 
 (defn valid?
+  "If this is a valid number, basically two-sum algorithm"
   [xs n]
   (let [coll (vec (sort xs))]
     (loop [left-idx  0
@@ -30,7 +31,8 @@
             (< sum n) (recur (inc left-idx) right-idx)
             (= sum n) true))))))
 
-(defn consecutive-sums-to
+(defn subvec-sum-to
+  "Uses sliding window to find a subvector of `coll` that sums to `target`."
   [coll target]
   (let [nums (vec coll)]
     (loop [left  0
@@ -70,7 +72,7 @@
   (let [[init nums] (parse raw-input)
         all-nums    (concat init nums)
         part-1      (get-first-invalid [init nums])
-        part-2      (find-weakness (consecutive-sums-to all-nums part-1))]
+        part-2      (find-weakness (subvec-sum-to all-nums part-1))]
     [part-1 part-2]))
 
 (comment
