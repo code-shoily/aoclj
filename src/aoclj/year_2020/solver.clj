@@ -6,6 +6,7 @@
             [aoclj.year-2020.day-05 :as day-05]
             [aoclj.year-2020.day-06 :as day-06]
             [aoclj.year-2020.day-07 :as day-07]
+            [aoclj.year-2020.day-09 :as day-09]
             [aoclj.utils :as utils]))
 
 (def ^:dynamic *year* 2020)
@@ -21,6 +22,7 @@
       5 (day-05/solve (read-input day))
       6 (day-06/solve (read-input day))
       7 (day-07/solve (read-input day))
+      9 (day-09/solve (read-input day))
       ;; Add cases for days as needed
       (format "[ERROR] %s/%s was not solved" *year* day))))
 

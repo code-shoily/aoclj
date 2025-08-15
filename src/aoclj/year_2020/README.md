@@ -2,7 +2,7 @@
 
 [Main Page](https://adventofcode.com/2020) | [Year 2015](/src/aoclj/year_2015/) | [Year 2016](/src/aoclj/year_2016/) | [Year 2017](/src/aoclj/year_2017/) | [Year 2018](/src/aoclj/year_2018/) | [Year 2019](/src/aoclj/year_2019/) | 2020 | [Year 2021](/src/aoclj/year_2021/) | [Year 2022](/src/aoclj/year_2022/) | [Year 2023](/src/aoclj/year_2023/) | [Year 2024](/src/aoclj/year_2024/)
 
-## :trophy: 14/50
+## :trophy: 16/50
 
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
@@ -13,3 +13,4 @@
 [Binary Boarding](http://www.adventofcode.com/2020/day/5)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_05.clj](/src/aoclj/year_2020/day_05.clj) <br /> :small_orange_diamond: [day_05_test.clj](/test/aoclj/year_2020/day_05_test.clj)|number-system
 [Custom Customs](http://www.adventofcode.com/2020/day/6)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_06.clj](/src/aoclj/year_2020/day_06.clj) <br /> :small_orange_diamond: [day_06_test.clj](/test/aoclj/year_2020/day_06_test.clj)|set
 [Handy Haversacks](http://www.adventofcode.com/2020/day/7)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_07.clj](/src/aoclj/year_2020/day_07.clj) <br /> :small_orange_diamond: [day_07_test.clj](/test/aoclj/year_2020/day_07_test.clj)|graph-traversal
+[Encoding Error](http://www.adventofcode.com/2020/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2020/day_09.clj) <br /> :small_orange_diamond: [day_09_test.clj](/test/aoclj/year_2020/day_09_test.clj)|sliding-window,two-sum
