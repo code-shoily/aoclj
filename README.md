@@ -11,17 +11,17 @@
 view the documentation in literate programming style with the command `lein marge -m`
 
 ## Progress
-### :star: 100/500 :dart: 400 :trophy: 50/250 :dart: 200
+### :star: 102/500 :dart: 398 :trophy: 51/250 :dart: 199
 
 | Day | [2015](src/aoclj/year_2015) | [2016](src/aoclj/year_2016) | [2017](src/aoclj/year_2017) | [2018](src/aoclj/year_2018) | [2019](src/aoclj/year_2019) | [2020](src/aoclj/year_2020) | [2021](src/aoclj/year_2021) | [2022](src/aoclj/year_2022) | [2023](src/aoclj/year_2023) | [2024](src/aoclj/year_2024) |
 |:---:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| :star: | 18 | 16 | 12 | 4 | 4 | 16 | 8 | 10 | 4 | 8 |
+| :star: | 18 | 16 | 12 | 4 | 4 | 16 | 8 | 12 | 4 | 8 |
 | 1 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |
 | 2 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |
 | 3 | :1st_place_medal: | :1st_place_medal: |   |   |   | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   | :1st_place_medal: |
 | 4 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   | :1st_place_medal: |
 | 5 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   | :1st_place_medal: |   |   |
-| 6 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   |   |   |   |
+| 6 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   | :1st_place_medal: |   |   |
 | 7 |   | :1st_place_medal: |   |   |   | :1st_place_medal: |   |   |   |   |
 | 8 | :1st_place_medal: | :1st_place_medal: |   |   |   |   |   |   |   |   |
 | 9 | :1st_place_medal: |   | :1st_place_medal: |   |   | :1st_place_medal: |   |   |   |   |

@@ -1,0 +1,42 @@
+(ns
+  ^{:title      "Tuning Trouble",
+    :doc        "Module for solving Advent of Code 2022 Day 6 problem.",
+    :url        "http://www.adventofcode.com/2022/day/6",
+    :difficulty :s,
+    :year       2022,
+    :day        6,
+    :stars      2,
+    :tags       [:subseq]}
+  aoclj.year-2022.day-06
+  (:require [aoclj.utils :as utils]))
+
+(defn parse
+  "Parse raw string input into a processable data structure"
+  [raw-input]
+  (->> raw-input
+       vec))
+
+(defn get-packet
+  [packet-size coll]
+  (letfn [(unique? [xs] (= (count xs) (count (into #{} xs))))]
+    (loop [start 0
+           size  packet-size]
+      (let [prefix (subvec coll start size)]
+        (if (unique? prefix)
+          size
+          (recur (inc start) (inc size)))))))
+
+(def part-1 (partial get-packet 4))
+(def part-2 (partial get-packet 14))
+(def solve (utils/generic-solver part-1 part-2 parse))
+
+(comment
+  "<Explore>"
+  (def raw-input
+    (utils/read-input-data 2022 6))
+
+  (def input (parse raw-input))
+
+  (time (solve raw-input))
+  "</Explore>"
+)
