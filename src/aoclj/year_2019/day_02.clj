@@ -2,11 +2,11 @@
   ^{:title      "1202 Program Alarm",
     :doc        "Module for solving Advent of Code 2019 Day 2 problem.",
     :url        "http://www.adventofcode.com/2019/day/2",
-    :difficulty :todo,
+    :difficulty :xs,
     :year       2019,
     :day        2,
-    :stars      0,
-    :tags       []}
+    :stars      2,
+    :tags       [:intcode :array]}
   aoclj.year-2019.day-02
   (:require [aoclj.utils :as utils]
             [clojure.core.match :refer [match]]
