@@ -10,24 +10,22 @@
   aoclj.year-2022.day-06
   (:require [aoclj.utils :as utils]))
 
-(defn parse
-  "Parse raw string input into a processable data structure"
-  [raw-input]
-  (->> raw-input
-       vec))
+(def parse vec)
 
-(defn get-packet
-  [packet-size coll]
-  (letfn [(unique? [xs] (= (count xs) (count (into #{} xs))))]
-    (loop [start 0
-           size  packet-size]
-      (let [prefix (subvec coll start size)]
+(defn start-of-packet
+  [len buffer]
+  (letfn [(unique?
+            [xs]
+            (= (count xs) (count (into #{} xs))))]
+    (loop [start  0
+           marker len]
+      (let [prefix (subvec buffer start marker)]
         (if (unique? prefix)
-          size
-          (recur (inc start) (inc size)))))))
+          marker
+          (recur (inc start) (inc marker)))))))
 
-(def part-1 (partial get-packet 4))
-(def part-2 (partial get-packet 14))
+(def part-1 (partial start-of-packet 4))
+(def part-2 (partial start-of-packet 14))
 (def solve (utils/generic-solver part-1 part-2 parse))
 
 (comment
