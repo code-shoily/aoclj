@@ -11,7 +11,7 @@
 view the documentation in literate programming style with the command `lein marge -m`
 
 ## Progress
-### :star: 104/500 :dart: 396 :trophy: 52/250 :dart: 198
+### :star: 104/500 :dart: 396 :trophy: 53/250 :dart: 197
 
 | Day | [2015](src/aoclj/year_2015) | [2016](src/aoclj/year_2016) | [2017](src/aoclj/year_2017) | [2018](src/aoclj/year_2018) | [2019](src/aoclj/year_2019) | [2020](src/aoclj/year_2020) | [2021](src/aoclj/year_2021) | [2022](src/aoclj/year_2022) | [2023](src/aoclj/year_2023) | [2024](src/aoclj/year_2024) |
 |:---:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
