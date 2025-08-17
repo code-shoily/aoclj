@@ -48,6 +48,8 @@
        (map (fn [[k _]] [k 1]))
        (into {})))
 
+(defn count-cards [m] (reduce + (vals m)))
+
 (defn part-2
   "Solve part 2 - calculate total cards when each matching numbers
    get you subsequent cards"
@@ -55,7 +57,7 @@
   (loop [cur   1
          tally (tally-keys winning-picks)]
     (if (nil? (winning-picks cur))
-      tally
+      (count-cards tally)
       (recur (inc cur)
              (->> (range cur (+ cur (winning-picks cur)))
                   (map #(vector (inc %) (tally cur)))
