@@ -5,6 +5,7 @@
             [aoclj.year-2017.day-05 :as day-05]
             [aoclj.year-2017.day-06 :as day-06]
             [aoclj.year-2017.day-07 :as day-07]
+            [aoclj.year-2017.day-08 :as day-08]
             [aoclj.year-2017.day-09 :as day-09]
             [aoclj.utils :as utils]))
 
@@ -20,6 +21,7 @@
       5 (day-05/solve (read-input day))
       6 (day-06/solve (read-input day))
       7 (day-07/solve (read-input day))
+      8 (day-08/solve (read-input day))
       9 (day-09/solve (read-input day))
       ;; Add cases for days as needed
       (format "[ERROR] %s/%s was not solved" *year* day))))
