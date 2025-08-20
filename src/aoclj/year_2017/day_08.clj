@@ -1,11 +1,11 @@
-(ns ^{:title "I Heard You Like Registers",
-      :doc "Module for solving Advent of Code 2017 Day 8 problem.",
-      :url "http://www.adventofcode.com/2017/day/8",
+(ns ^{:title      "I Heard You Like Registers",
+      :doc        "Module for solving Advent of Code 2017 Day 8 problem.",
+      :url        "http://www.adventofcode.com/2017/day/8",
       :difficulty :xs,
-      :year 2017,
-      :day 8,
-      :stars 2,
-      :tags [:op-code]}
+      :year       2017,
+      :day        8,
+      :stars      2,
+      :tags       [:op-code]}
     aoclj.year-2017.day-08
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
@@ -15,7 +15,7 @@
   (case sym
     "inc" +
     "dec" -
-    "!=" not=
+    "!="  not=
     (resolve (symbol sym))))
 
 (defn parse-line
@@ -43,7 +43,7 @@
   (->> input
        (reduce (fn [regs [key & _ :as v]]
                  (assoc regs key (update-register regs v)))
-         {})
+               {})
        vals
        (apply max)))
 
