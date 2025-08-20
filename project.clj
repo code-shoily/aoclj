@@ -22,7 +22,8 @@
                    {:plugins      [[lein-cljfmt "0.9.2"]
                                    [lein-marginalia "0.9.2"]
                                    [cider/cider-nrepl "0.50.2"]],
-                    :zprint       {:old? false},
+                    :zprint       {:old?  false,
+                                   :style [:community :respect-nl :justified]},
                     :dependencies [[nrepl "1.3.0"]
                                    [cider/cider-nrepl "0.50.2"]]}}
   :plugins        [[lein-zprint "1.3.0"]]
