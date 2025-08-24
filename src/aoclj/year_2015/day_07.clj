@@ -13,10 +13,11 @@
             [medley.core :as m]
             [clojure.core.match :refer [match]]))
 
+;;----------------------------------------- Evaluation Utils & Helpers
+
 (defn numeric-string? [s] (boolean (re-matches #"\d+" s)))
 
 (defn bit-not-16 [n] (bit-and (bit-not n) 0xFFFF))
-
 
 (defn evaluate
   [k [params _] table]
@@ -30,6 +31,8 @@
         [f a b]     (f (at table a)
                        (at table b))))))
 
+;;----------------------------------------------------- Parse Utils
+
 (defn parse-rule
   [tokens]
   (match tokens
@@ -42,23 +45,9 @@
                      [[:val (Integer/parseInt a)] #{}]
                      [[:assign a] #{a}])))
 
-(defn parse-assignment
-  [[lhs [rhs]]]
-  [rhs (parse-rule lhs)])
+(defn parse-assignment [[lhs [rhs]]] [rhs (parse-rule lhs)])
 
-(defn build-dependent-graph
-  "Build a graph with outgoing wires"
-  [input]
-  (reduce
-   (fn [graph [node-a [_ depends-on]]]
-     (->> depends-on
-          (reduce (fn [acc node-b]
-                    (if (numeric-string? node-b)
-                      acc
-                      (update acc node-b conj node-a)))
-                  graph)))
-   {}
-   input))
+(declare build-dependent-graph)
 
 (defn parse
   [raw-input]
@@ -76,6 +65,22 @@
   (into {}
         (map (fn [[k [_ v]]] [k (count (remove numeric-string? v))])
              graph)))
+
+;;----------------------------------------------------- Graph Utils
+
+(defn build-dependent-graph
+  "Build a graph with outgoing wires"
+  [input]
+  (reduce
+   (fn [graph [node-a [_ depends-on]]]
+     (->> depends-on
+          (reduce (fn [acc node-b]
+                    (if (numeric-string? node-b)
+                      acc
+                      (update acc node-b conj node-a)))
+                  graph)))
+   {}
+   input))
 
 (defn get-roots
   "Get wires that have no incoming wires"
@@ -113,6 +118,7 @@
        (reduce (fn [table v] (assoc table v (evaluate v (graph v) table)))
                init)))
 
+;;----------------------------------------------------- Solver
 
 (defn solve
   [raw-input]
@@ -125,14 +131,12 @@
                    (get "a"))]
     [part-1 part-2]))
 
-
 (comment
   "<Explore>"
   (def raw-input
     (utils/read-input-data 2015 7))
 
   (def input (parse raw-input))
-
 
   (time (solve raw-input))
   "</Explore>"
