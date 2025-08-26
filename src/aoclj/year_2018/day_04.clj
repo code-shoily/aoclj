@@ -1,13 +1,13 @@
 (ns
- ^{:title      "Repose Record",
-   :doc        "Module for solving Advent of Code 2018 Day 4 problem.",
-   :url        "http://www.adventofcode.com/2018/day/4",
-   :difficulty :m,
-   :year       2018,
-   :day        4,
-   :stars      2,
-   :tags       [:time :nil-issue :revisit :groups]}
- aoclj.year-2018.day-04
+  ^{:title      "Repose Record",
+    :doc        "Module for solving Advent of Code 2018 Day 4 problem.",
+    :url        "http://www.adventofcode.com/2018/day/4",
+    :difficulty :m,
+    :year       2018,
+    :day        4,
+    :stars      2,
+    :tags       [:time :nil-issue :revisit :groups]}
+  aoclj.year-2018.day-04
   (:require [aoclj.utils :as utils]
             [clojure.core.match :refer [match]]
             [clojure.instant :as instant]
