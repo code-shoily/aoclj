@@ -1,13 +1,13 @@
 (ns
- ^{:title      "Print Queue",
-   :doc        "Module for solving Advent of Code 2024 Day 5 problem.",
-   :url        "http://www.adventofcode.com/2024/day/5",
-   :difficulty :m,
-   :year       2024,
-   :day        5,
-   :stars      2,
-   :tags       [:sort]}
- aoclj.year-2024.day-05
+  ^{:title      "Print Queue",
+    :doc        "Module for solving Advent of Code 2024 Day 5 problem.",
+    :url        "http://www.adventofcode.com/2024/day/5",
+    :difficulty :m,
+    :year       2024,
+    :day        5,
+    :stars      2,
+    :tags       [:sort]}
+  aoclj.year-2024.day-05
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
 
