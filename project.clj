@@ -28,4 +28,5 @@
                                    [cider/cider-nrepl "0.50.2"]]}}
   :plugins        [[lein-zprint "1.3.0"]]
   :aliases        {"test" ["with-profile" "test" "run" "-m" "kaocha.runner"]}
-  :repl-options   {:init-ns aoclj.core})
+  :repl-options   {:init-ns aoclj.core}
+  :jvm-opts       ["-Djdk.attach.allowAttachSelf"])
