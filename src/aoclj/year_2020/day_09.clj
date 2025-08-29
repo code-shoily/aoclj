@@ -15,7 +15,7 @@
   [raw-input]
   (->> raw-input
        str/split-lines
-       (mapv Long/parseLong)
+       (mapv parse-long)
        (split-at 25)))
 
 (defn valid?
