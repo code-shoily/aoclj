@@ -16,11 +16,10 @@
   (format "%02d" day))
 
 (defn generic-solver
-  "Generic template for solvers. Formats result as string of [part-1 part-2]"
+  "Generic template for solvers. Formats result as string of [part-1 part-2] in parallel"
   [part-1 part-2 parse]
-  #(->> %
-        parse
-        ((juxt part-1 part-2))))
+  (fn [input]
+    (vec (pmap #(% (parse input)) [part-1 part-2]))))
 
 (defn get-ns-string
   "Returns the namespace string for a given solution
