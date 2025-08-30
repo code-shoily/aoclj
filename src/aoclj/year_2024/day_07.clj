@@ -1,13 +1,13 @@
 (ns
-  ^{:title      "Bridge Repair",
-    :doc        "Module for solving Advent of Code 2024 Day 7 problem.",
-    :url        "http://www.adventofcode.com/2024/day/7",
-    :difficulty :l,
-    :year       2024,
-    :day        7,
-    :stars      2,
-    :tags       [:revisit :backtrack :equation]}
-  aoclj.year-2024.day-07
+ ^{:title      "Bridge Repair",
+   :doc        "Module for solving Advent of Code 2024 Day 7 problem.",
+   :url        "http://www.adventofcode.com/2024/day/7",
+   :difficulty :l,
+   :year       2024,
+   :day        7,
+   :stars      2,
+   :tags       [:revisit :backtrack :equation]}
+ aoclj.year-2024.day-07
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
 
@@ -56,5 +56,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")
