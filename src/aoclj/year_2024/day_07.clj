@@ -7,7 +7,7 @@
    :day        7,
    :stars      2,
    :tags       [:revisit :backtrack :equation]}
- aoclj.year-2024.day-07
+
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
 
@@ -47,13 +47,3 @@
   [raw-input]
   (let [input (parse raw-input)]
     (vec (pmap #(% input) [part-1 part-2]))))
-
-(comment
-  "<Explore>"
-  (def raw-input
-    (utils/read-input-data 2024 7))
-
-  (def input (parse raw-input))
-
-  (time (solve raw-input))
-  "</Explore>")
