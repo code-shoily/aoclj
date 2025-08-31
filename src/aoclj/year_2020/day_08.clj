@@ -19,7 +19,7 @@
   [input]
   (->> input
        (map (comp to-instruction #(str/split % #"\s")))
-       (map-indexed (fn [i v] [i v]))
+       (map-indexed vector)
        (into {})))
 
 (defn run-one
