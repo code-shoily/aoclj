@@ -9,6 +9,7 @@
     :tags       [:regex :pattern-matching]}
   aoclj.year-2016.day-09
   (:require [aoclj.utils :as utils]
+            [clojure.string :as str]
             [clojure.core.match :refer [match]]))
 
 (defn find-pattern
@@ -36,7 +37,9 @@
        (recur remaining seen v2?))
      len (+ curr-len len)))) ;;<------ base case :D
 
-(def solve #(mapv (partial decompress %) [false true]))
+(defn solve 
+  [raw-input]
+  (mapv (partial decompress (str/trim raw-input)) [false true]))
 
 (comment
   "<Explore>"
