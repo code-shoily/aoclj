@@ -54,7 +54,7 @@
     [nums bytes]))
 
 (defn part-1
-  [[_ nums]]
+  [[nums _]]
   (->> (hash-round nums [(vec (range 256)) 0 0])
        first
        (take 2)
