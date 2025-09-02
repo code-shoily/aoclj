@@ -37,7 +37,7 @@
        (recur remaining seen v2?))
      len (+ curr-len len)))) ;;<------ base case :D
 
-(defn solve 
+(defn solve
   [raw-input]
   (mapv (partial decompress (str/trim raw-input)) [false true]))
 
