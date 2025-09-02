@@ -2,7 +2,7 @@
 
 [Main Page](https://adventofcode.com/2020) | [Year 2015](/src/aoclj/year_2015/) | [Year 2016](/src/aoclj/year_2016/) | [Year 2017](/src/aoclj/year_2017/) | [Year 2018](/src/aoclj/year_2018/) | [Year 2019](/src/aoclj/year_2019/) | 2020 | [Year 2021](/src/aoclj/year_2021/) | [Year 2022](/src/aoclj/year_2022/) | [Year 2023](/src/aoclj/year_2023/) | [Year 2024](/src/aoclj/year_2024/)
 
-## :trophy: 18/50
+## :trophy: 20/50
 
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
@@ -15,4 +15,4 @@
 [Handy Haversacks](http://www.adventofcode.com/2020/day/7)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_07.clj](/src/aoclj/year_2020/day_07.clj) <br /> :small_orange_diamond: [day_07_test.clj](/test/aoclj/year_2020/day_07_test.clj)|graph-traversal
 [Handheld Halting](http://www.adventofcode.com/2020/day/8)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_08.clj](/src/aoclj/year_2020/day_08.clj) <br /> :small_orange_diamond: [day_08_test.clj](/test/aoclj/year_2020/day_08_test.clj)|op-code
 [Encoding Error](http://www.adventofcode.com/2020/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2020/day_09.clj) <br /> :small_orange_diamond: [day_09_test.clj](/test/aoclj/year_2020/day_09_test.clj)|sliding-window,two-sum
-[Adapter Array](http://www.adventofcode.com/2020/day/10)|:snowflake: :snowflake: :snowflake: :snowflake:|:skull:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2020/day_10.clj) <br /> :small_orange_diamond: [day_10_test.clj](/test/aoclj/year_2020/day_10_test.clj)|dynamic-programming
+[Adapter Array](http://www.adventofcode.com/2020/day/10)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2020/day_10.clj) <br /> :small_orange_diamond: [day_10_test.clj](/test/aoclj/year_2020/day_10_test.clj)|dynamic-programming

@@ -5,7 +5,7 @@
     :difficulty :l,
     :year       2020,
     :day        10,
-    :stars      0,
+    :stars      2,
     :tags       [:dynamic-programming]}
   aoclj.year-2020.day-10
   (:require [aoclj.utils :as utils]

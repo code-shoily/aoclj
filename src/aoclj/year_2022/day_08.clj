@@ -2,11 +2,11 @@
   ^{:title      "Treetop Tree House",
     :doc        "Module for solving Advent of Code 2022 Day 8 problem.",
     :url        "http://www.adventofcode.com/2022/day/8",
-    :difficulty :todo,
+    :difficulty :m,
     :year       2022,
     :day        8,
-    :stars      0,
-    :tags       []}
+    :stars      2,
+    :tags       [:matrix]}
   aoclj.year-2022.day-08
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
