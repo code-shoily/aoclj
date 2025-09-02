@@ -8,7 +8,8 @@
             [aoclj.year-2016.day-06 :as day-06]
             [aoclj.year-2016.day-07 :as day-07]
             [aoclj.year-2016.day-08 :as day-08]
-            [aoclj.year-2016.day-09 :as day-09]))
+            [aoclj.year-2016.day-09 :as day-09]
+            [aoclj.year-2016.day-10 :as day-10]))
 
 (def ^:dynamic *year* 2016)
 
@@ -16,15 +17,16 @@
   [day]
   (let [read-input #(utils/read-input-data 2016 %)]
     (case day
-      1 (day-01/solve (read-input day))
-      2 (day-02/solve (read-input day))
-      3 (day-03/solve (read-input day))
-      4 (day-04/solve (read-input day))
-      5 (day-05/solve (read-input day))
-      6 (day-06/solve (read-input day))
-      7 (day-07/solve (read-input day))
-      8 (day-08/solve (read-input day))
-      9 (day-09/solve (read-input day))
+      1  (day-01/solve (read-input day))
+      2  (day-02/solve (read-input day))
+      3  (day-03/solve (read-input day))
+      4  (day-04/solve (read-input day))
+      5  (day-05/solve (read-input day))
+      6  (day-06/solve (read-input day))
+      7  (day-07/solve (read-input day))
+      8  (day-08/solve (read-input day))
+      9  (day-09/solve (read-input day))
+      10 (day-10/solve (read-input day))
       (format "[ERROR] %s/%s was not solved" *year* day))))
 
 (defn stats
