@@ -15,7 +15,8 @@
 ;; Disclaimer: I used copilot to convert my own F# code to Clojure.
 ;; The F# code is here:
 ;; https://github.com/code-shoily/AdventOfFSharp/blob/master/Year2024/Day08.fs
-;; I never thought of using `comb/cartesian-product` in place of F# `allPairs` -
+;; I never thought of using `comb/cartesian-product` in place of F# `allPairs`
+;; -
 ;; nice to know!
 
 (defn solves?
