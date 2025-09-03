@@ -6,7 +6,7 @@
     :year       2016,
     :day        8,
     :stars      2,
-    :tags       [:grid :parse-heavy :displayed-result]}
+    :tags       [:grid :parse-heavy :visual-output]}
   aoclj.year-2016.day-08
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
