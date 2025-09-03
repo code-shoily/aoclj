@@ -11,11 +11,11 @@
 view the documentation in literate programming style with the command `lein marge -m`
 
 ## Progress
-### :star: 154/500 :dart: 346 :trophy: 77/250 :dart: 173
+### :star: 156/500 :dart: 344 :trophy: 78/250 :dart: 172
 
 | Day | [2015](src/aoclj/year_2015) | [2016](src/aoclj/year_2016) | [2017](src/aoclj/year_2017) | [2018](src/aoclj/year_2018) | [2019](src/aoclj/year_2019) | [2020](src/aoclj/year_2020) | [2021](src/aoclj/year_2021) | [2022](src/aoclj/year_2022) | [2023](src/aoclj/year_2023) | [2024](src/aoclj/year_2024) |
 |:---:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| :star: | 20 | 20 | 20 | 10 | 8 | 20 | 10 | 20 | 8 | 18 |
+| :star: | 20 | 20 | 20 | 10 | 8 | 20 | 10 | 20 | 8 | 20 |
 | 1 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |
 | 2 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |
 | 3 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |
@@ -25,7 +25,7 @@ view the documentation in literate programming style with the command `lein marg
 | 7 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   | :1st_place_medal: |   | :1st_place_medal: |
 | 8 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   | :1st_place_medal: |   | :1st_place_medal: |
 | 9 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   | :1st_place_medal: |   | :1st_place_medal: |
-| 10 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   | :1st_place_medal: |   |   |
+| 10 | :1st_place_medal: | :1st_place_medal: | :1st_place_medal: |   |   | :1st_place_medal: |   | :1st_place_medal: |   | :1st_place_medal: |
 | 11 |   |   |   |   |   |   |   |   |   |   |
 | 12 |   |   |   |   |   |   |   |   |   |   |
 | 13 |   |   |   |   |   |   |   |   |   |   |

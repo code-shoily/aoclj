@@ -1,12 +1,12 @@
-(ns aoclj.year-2024.day-10
-  ^{:title      "Hoof It",
-    :doc        "Module for solving Advent of Code 2024 Day 10 problem.",
-    :url        "http://www.adventofcode.com/2024/day/10",
-    :difficulty :s,
-    :year       2024,
-    :day        10,
-    :stars      2,
-    :tags       [:graph-traversal :map-grid]}
+(ns ^{:title      "Hoof It",
+      :doc        "Module for solving Advent of Code 2024 Day 10 problem.",
+      :url        "http://www.adventofcode.com/2024/day/10",
+      :difficulty :s,
+      :year       2024,
+      :day        10,
+      :stars      2,
+      :tags       [:graph-traversal :map-grid]}
+    aoclj.year-2024.day-10
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
 
