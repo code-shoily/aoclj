@@ -126,8 +126,6 @@
   (def raw-input
     (utils/read-input-data 2024 8))
 
-  (->> input)
-
   (time (solve raw-input))
   "</Explore>"
 )
