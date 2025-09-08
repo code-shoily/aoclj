@@ -1,4 +1,4 @@
-(ns aoclj.year-2016.day-25
+(ns
   ^{:title      "Clock Signal",
     :doc        "Module for solving Advent of Code 2016 Day 25 problem.",
     :url        "http://www.adventofcode.com/2016/day/25",
@@ -7,6 +7,7 @@
     :day        25,
     :stars      2,
     :tags       [:assembly :pen-and-paper]}
+  aoclj.year-2016.day-25
   (:require [aoclj.utils :as utils]))
 
 (def explanation
@@ -51,7 +52,7 @@
 (comment
   "<Explore>"
   (def raw-input (utils/read-input-data 2016 25))
-  
+
   (time (solve raw-input))
   "</Explore>"
 )
