@@ -10,6 +10,7 @@
   aoclj.year-2016.day-25
   (:require [aoclj.utils :as utils]))
 
+#_{:clojure-lsp/ignore [:clojure-lsp/unused-public-var]}
 (def explanation
   "This involved some manual tinckering as I remembered from this implementation
    https://github.com/code-shoily/aocgo/blob/main/year16/day25/main.go
