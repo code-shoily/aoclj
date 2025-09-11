@@ -2,7 +2,7 @@
   ^{:title      "The Halting Problem",
     :doc        "Module for solving Advent of Code 2017 Day 25 problem.",
     :url        "http://www.adventofcode.com/2017/day/25",
-    :difficulty :s,
+    :difficulty :todo,
     :year       2017,
     :day        25,
     :stars      2,
@@ -83,7 +83,7 @@
        (conj! tape pos)) next-pos]))
 
 (defn part-1
-  [[{:keys [init steps]} rules]] 
+  [[{:keys [init steps]} rules]]
   (loop [state     init
          tape      (transient #{})
          pos       0
