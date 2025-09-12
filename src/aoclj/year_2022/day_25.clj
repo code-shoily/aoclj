@@ -11,7 +11,7 @@
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
 
-(defn snafu->dec
+(defn snafu->decimal
   "Converts a base-5 variant (snafu) to decimal"
   [snafu]
   (->> (reverse snafu)
@@ -24,11 +24,7 @@
        (reduce +)
        long))
 
-(defn parse
-  "Parse raw string input into a processable data structure"
-  [raw-input]
-  (->> (str/split-lines raw-input)
-       (map snafu->dec)))
+(defn parse [raw-input] (map snafu->decimal (str/split-lines raw-input)))
 
 (defn decimal->snafu
   "Convert a decimal number to snafu - mind the = and - padding when dividing"
@@ -58,4 +54,5 @@
 
   (time (solve raw-input))
 
-  "</Explore>")
+  "</Explore>"
+)
