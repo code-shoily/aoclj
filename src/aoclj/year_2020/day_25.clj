@@ -6,24 +6,27 @@
     :year       2020,
     :day        25,
     :stars      2,
-    :tags       [:cryptography :modular-algebra :revisit]}
+    :tags       [:cryptography :modular-algebra]}
   aoclj.year-2020.day-25
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]))
 
-(defn parse
-  [raw-input]
-  (mapv parse-long (str/split-lines raw-input)))
+;; Yes I converted this by hand:
+;; github.com/code-shoily/advent_of_code/blob/master/lib/2020/day_25.ex
+
+(set! *unchecked-math* true)
+
+(defn parse [raw-input] (map parse-long (str/split-lines raw-input)))
 
 (defn t1 [^long x ^long p] (rem (* x p) 20201227))
 
 (defn t
-  [x ^long p ^long s]
-  (if (zero? s) x (recur (t1 x p) p (dec s))))
+  [^long x ^long p ^long s]
+  (if (zero? s) x (recur (long (t1 x p)) p (dec s))))
 
 (defn lp
-  [x ^long k ^long s]
-  (let [r (t1 x 7)]
+  [^long x ^long k ^long s]
+  (let [r (long (t1 x 7))]
     (if (= k r) s (recur r k (inc s)))))
 
 (defn solve
