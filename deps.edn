@@ -11,7 +11,7 @@
             :main-opts  ["-m" "marginalia.main" "-n" "YourProjectName"
                          "src" "test"]}},
  :deps
- {org.clojure/clojure      {:mvn/version "1.12.0"},
+ {org.clojure/clojure      {:mvn/version "1.12.2"},
   org.clojure/core.async   {:mvn/version "1.6.681"},
   org.clojure/math.combinatorics {:mvn/version "0.3.0"},
   instaparse/instaparse    {:mvn/version "1.5.0"},

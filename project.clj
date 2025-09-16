@@ -2,7 +2,7 @@
   :description    "Advent of Code solutions in Clojure"
   :url            "https://github.com/code-shoily/aoclj"
   :license        {:name "MIT", :url "https://opensource.org/licenses/MIT"}
-  :dependencies   [[org.clojure/clojure "1.12.0"]
+  :dependencies   [[org.clojure/clojure "1.12.2"]
                    [org.clojure/core.async "1.6.681"]
                    [org.clojure/math.combinatorics "0.3.0"]
                    [instaparse "1.5.0"]
