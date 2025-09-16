@@ -26,10 +26,9 @@
   "Create a graph from component connectivity"
   [raw-input]
   (->> (str/split-lines raw-input)
-       (mapv (comp
-              vec
-              (partial remove str/blank?)
-              #(str/split % #":|\s")))
+       (map (comp
+             (partial remove str/blank?)
+             #(str/split % #":|\s")))
        build-graph))
 
 (defn update-edges
