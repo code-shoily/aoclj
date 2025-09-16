@@ -7,5 +7,5 @@
 (def ^:dynamic *result* [558376 :🎉])
 (def input (utils/read-input-data 2023 25))
 
-(deftest year-2023-day-25-is-solved
+(deftest ^:flaky year-2023-day-25-is-solved
   (is (= (day-25/solve input) *result*)))

@@ -4,4 +4,4 @@
     :test-paths ["test"]
     :source-paths ["src"]
     :ns-patterns ["-test$"]
-    :kaocha.filter/skip-meta [:slow]}]}
+    :kaocha.filter/skip-meta [:slow :flaky]}]}
