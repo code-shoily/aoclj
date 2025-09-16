@@ -25,60 +25,47 @@
                        (into {}))]
     [cucumbers height width]))
 
-(defn move-right
-  [cucumbers width]
-  (->> cucumbers
-       (r/filter (fn [[_ cucumber]] (= \> cucumber)))
+(defn movement
+  [dir grid len]
+  (->> grid
+       (r/filter (fn [[_ x]] (= dir x)))
        (r/reduce (fn [acc [[v h] _]]
-                   (let [next-h (rem (inc h) width)]
-                     (if-not (cucumbers [v next-h])
+                   (let [h>       (rem (inc h) len)
+                         v>       (rem (inc v) len)
+                         next-pos (cond (= \> dir) [v h>]
+                                        (= \v dir) [v> h])]
+                     (if (nil? (grid next-pos))
                        (-> acc
                            (dissoc! [v h])
-                           (assoc! [v next-h] \>))
+                           (assoc! next-pos dir))
                        acc)))
-                 (transient cucumbers))
-       persistent!))
-
-(defn move-down
-  [cucumbers height]
-  (->> cucumbers
-       (r/filter (fn [[_ cucumber]] (= \v cucumber)))
-       (r/reduce (fn [acc [[v h] _]]
-                   (let [next-v (rem (inc v) height)]
-                     (if-not (cucumbers [next-v h])
-                       (-> acc
-                           (dissoc! [v h])
-                           (assoc! [next-v h] \v))
-                       acc)))
-                 (transient cucumbers))
+                 (transient grid))
        persistent!))
 
 (defn simulate
   [[grid height width]]
   (loop [grid* grid
          iter  0]
-    (let [after-right (move-right grid* width)
-          after-down  (move-down after-right height)
+    (let [after-right (movement \> grid* width)
+          after-down  (movement \v after-right height)
           stopped?    (= after-down grid*)]
       (if stopped? (inc iter) (recur after-down (inc iter))))))
 
 (defn parse
   [raw-input]
-  (->> (str/split-lines raw-input)
-       (mapv #(mapv identity %))
-       to-grid-map))
+  (to-grid-map (mapv vec (str/split-lines raw-input))))
 
 (defn solve
   [raw-input]
-  (let [input (parse raw-input)]
-    [(simulate input) :🎉]))
+  (let [part-1 (-> raw-input parse simulate)]
+    [part-1 :🎉]))
 
 (comment
   "<Explore>"
   (def raw-input
     (utils/read-input-data 2021 25))
-
+  
   (time (solve raw-input))
 
   "</Explore>"
-)
+  )
