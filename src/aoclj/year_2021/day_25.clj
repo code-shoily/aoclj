@@ -57,15 +57,17 @@
 
 (defn solve
   [raw-input]
-  (let [part-1 (-> raw-input parse simulate)]
+  (let [part-1 (-> raw-input
+                   parse
+                   simulate)]
     [part-1 :🎉]))
 
 (comment
   "<Explore>"
   (def raw-input
     (utils/read-input-data 2021 25))
-  
+
   (time (solve raw-input))
 
   "</Explore>"
-  )
+)
