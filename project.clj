@@ -5,6 +5,7 @@
   :dependencies   [[org.clojure/clojure "1.12.2"]
                    [org.clojure/core.async "1.6.681"]
                    [org.clojure/math.combinatorics "0.3.0"]
+                   [cheshire/cheshire "6.1.0"]
                    [instaparse "1.5.0"]
                    [org.babashka/http-client "0.4.22"]
                    [dev.weavejester/medley "1.8.1"]

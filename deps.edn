@@ -14,6 +14,7 @@
  {org.clojure/clojure      {:mvn/version "1.12.2"},
   org.clojure/core.async   {:mvn/version "1.6.681"},
   org.clojure/math.combinatorics {:mvn/version "0.3.0"},
+  cheshire/cheshire        {:mvn/version "6.1.0"},
   instaparse/instaparse    {:mvn/version "1.5.0"},
   dev.weavejester/medley   {:mvn/version "1.8.1"},
   org.babashka/http-client {:mvn/version "0.4.22"},
