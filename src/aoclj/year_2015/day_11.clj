@@ -72,8 +72,8 @@
 (defn solve
   [raw-input]
   (let [init-passphrase (parse raw-input)
-        part-1 (get-next-valid-password init-passphrase)
-        part-2 (get-next-valid-password part-1)]
+        part-1          (get-next-valid-password init-passphrase)
+        part-2          (get-next-valid-password part-1)]
     [part-1 part-2]))
 
 (comment
