@@ -12,6 +12,7 @@
             [clojure.string :as str]))
 
 ;; ---------------------------------------- DIR RELATIONS
+
 (def dir-mapping
   {"N" :north,
    "S" :south,
@@ -21,38 +22,68 @@
    "L" :left,
    "R" :right})
 
-(def rotations
+(def rot-mapping
   {:north {:right [:east :south :west], :left [:west :south :east]},
    :south {:right [:west :north :east], :left [:east :north :west]},
    :east  {:right [:south :west :north], :left [:north :west :south]},
    :west  {:right [:north :east :south], :left [:south :east :north]}})
 
+;; --------------------------------------- PARSING
+
+(defn parse-direction
+  [s]
+  (let [[ins amt] (str/split s #"" 2)]
+    [(dir-mapping ins) (parse-long amt)]))
+
+(defn parse
+  "Parse raw string input into a processable data structure"
+  [raw-input]
+  (->> (str/split-lines raw-input)
+       (mapv parse-direction)))
+
+(defn manhattan-distance [[a b]] (+ (abs a) (abs b)))
+
 ;; --------------------------------------- SHIP MOVEMENTS
-(defn ship-rot
-  ([[facing _] [direction degrees]]
-   (get-in rotations [facing direction ({90 0, 180 1, 270 2} degrees)])))
+
+(defn ship-rotate
+  ([[facing _] [dir deg]]
+   (get-in rot-mapping [facing dir ({90 0, 180 1, 270 2} deg)])))
 
 (defn ship-move
-  [[_ [v h]] [direction amt]]
-  (case direction
+  [[_ [v h]] [dir amt]]
+  (case dir
     :north [(+ v amt) h]
     :east  [v (+ h amt)]
     :south [(- v amt) h]
     :west  [v (- h amt)]))
 
 (defn ship-forward
-  [[facing _ :as cur] [_ amt]]
-  (ship-move cur [facing amt]))
+  [[facing _ :as ship] [_ amt]]
+  (ship-move ship [facing amt]))
+
+(defn part-1
+  "Solve without Waypoint"
+  [input]
+  (->> input
+       (reduce (fn [[facing pos :as ship] cmd]
+                 (case (first cmd)
+                   (:left :right) [(ship-rotate ship cmd) pos]
+                   :forward       [facing (ship-forward ship cmd)]
+                   [facing (ship-move ship cmd)]))
+               [:east [0 0]])
+       second
+       manhattan-distance))
 
 ;; --------------------------------------- WAYPOINT MOVEMENTS
+
 (defn waypoint-rotate
   [[ship [wv wh] :as pos] [dir deg]]
   (if (zero? deg)
     pos
-    (let [next-pos (case dir
+    (let [waypoint (case dir
                      :right [(* -1 wh) wv]
                      :left  [wh (* -1 wv)])]
-      (recur [ship next-pos] [dir (- deg 90)]))))
+      (recur [ship waypoint] [dir (- deg 90)]))))
 
 (defn waypoint-forward
   [[[sv sh] [wv wh :as waypoint]] [_ amt]]
@@ -67,42 +98,17 @@
     :east  [ship [wv (+ wh amt)]]
     :west  [ship [wv (- wh amt)]]))
 
-;; --------------------------------------- PARSING
-(defn parse-direction
-  [s]
-  (let [[ins amt] (str/split s #"" 2)]
-    [(dir-mapping ins) (parse-long amt)]))
-
-(defn parse
-  "Parse raw string input into a processable data structure"
-  [raw-input]
-  (->> (str/split-lines raw-input)
-       (mapv parse-direction)))
-
-(defn manhattan-distance [[a b]] (+ (abs a) (abs b)))
-
-(defn part-1
-  "Solve without Waypoint"
-  [input]
-  (->> input
-       (reduce (fn [[facing pos :as cur] [dir _ :as ins]]
-                 (case dir
-                   (:left :right) [(ship-rot cur ins) pos]
-                   :forward       [facing (ship-forward cur ins)]
-                   [facing (ship-move cur ins)]))
-               [:east [0 0]])
-       second
-       manhattan-distance))
-
 (defn part-2
   "Solve with Waypoint"
   [input]
   (->> input
-       (reduce (fn [cur ins]
-                 (case (first ins)
-                   (:left :right) (waypoint-rotate cur ins)
-                   :forward       (waypoint-forward cur ins)
-                   (waypoint-move cur ins)))
+       (reduce (fn [pos cmd]
+                 ((case (first cmd)
+                    (:left :right) waypoint-rotate
+                    :forward       waypoint-forward
+                    waypoint-move)
+                  pos
+                  cmd))
                [[0 0] [1 10]])
        first
        manhattan-distance))
