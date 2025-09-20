@@ -11,6 +11,7 @@
             [aoclj.year-2016.day-09 :as day-09]
             [aoclj.year-2016.day-10 :as day-10]
             [aoclj.year-2016.day-18 :as day-18]
+            [aoclj.year-2016.day-19 :as day-19]
             [aoclj.year-2016.day-25 :as day-25]))
 
 (def ^:dynamic *year* 2016)
@@ -30,6 +31,7 @@
       9  (day-09/solve (read-input day))
       10 (day-10/solve (read-input day))
       18 (day-18/solve (read-input day))
+      19 (day-19/solve (read-input day))
       25 (day-25/solve (read-input day))
       (format "[ERROR] %s/%s was not solved" *year* day))))
 
