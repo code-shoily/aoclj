@@ -4,8 +4,8 @@
     [clojure.test :refer [is deftest]]
     [aoclj.utils :as utils]))
 
-(def ^:dynamic *result* [115 :👀]) ;; EFEYKFRFIJ
+(def ^:const result [115 :👀]) ;; EFEYKFRFIJ
 (def input (utils/read-input-data 2016 8))
 
 (deftest year-2016-day-08-is-solved
-  (is (= (day-08/solve input) *result*)))
+  (is (= (day-08/solve input) result)))

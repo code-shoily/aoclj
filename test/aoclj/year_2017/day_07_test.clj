@@ -4,8 +4,8 @@
     [clojure.test :refer [is deftest]]
     [aoclj.utils :as utils]))
 
-(def ^:dynamic *result* ["hmvwl" 1853])
+(def ^:const result ["hmvwl" 1853])
 (def input (utils/read-input-data 2017 7))
 
 (deftest year-2017-day-07-is-solved
-  (is (= (day-07/solve input) *result*)))
+  (is (= (day-07/solve input) result)))
