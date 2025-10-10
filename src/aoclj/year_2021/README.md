@@ -2,7 +2,7 @@
 
 [Main Page](https://adventofcode.com/2021) | [Year 2015](/src/aoclj/year_2015/) | [Year 2016](/src/aoclj/year_2016/) | [Year 2017](/src/aoclj/year_2017/) | [Year 2018](/src/aoclj/year_2018/) | [Year 2019](/src/aoclj/year_2019/) | [Year 2020](/src/aoclj/year_2020/) | 2021 | [Year 2022](/src/aoclj/year_2022/) | [Year 2023](/src/aoclj/year_2023/) | [Year 2024](/src/aoclj/year_2024/)
 
-## :trophy: 20/50
+## :trophy: 22/50
 
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
@@ -15,4 +15,5 @@
 [The Treachery of Whales](http://www.adventofcode.com/2021/day/7)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_07.clj](/src/aoclj/year_2021/day_07.clj) <br /> :small_orange_diamond: [day_07_test.clj](/test/aoclj/year_2021/day_07_test.clj)|statistics,formulaic
 [Seven Segment Search](http://www.adventofcode.com/2021/day/8)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_08.clj](/src/aoclj/year_2021/day_08.clj) <br /> :small_orange_diamond: [day_08_test.clj](/test/aoclj/year_2021/day_08_test.clj)|set
 [Smoke Basin](http://www.adventofcode.com/2021/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2021/day_09.clj) <br /> :small_orange_diamond: [day_09_test.clj](/test/aoclj/year_2021/day_09_test.clj)|flood-fill,grid
+[Syntax Scoring](http://www.adventofcode.com/2021/day/10)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2021/day_10.clj) <br /> :small_orange_diamond: [day_10_test.clj](/test/aoclj/year_2021/day_10_test.clj)|stack,parens
 [Sea Cucumber](http://www.adventofcode.com/2021/day/25)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_25.clj](/src/aoclj/year_2021/day_25.clj) <br /> :small_orange_diamond: [day_25_test.clj](/test/aoclj/year_2021/day_25_test.clj)|simulation,slow

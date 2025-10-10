@@ -15,12 +15,9 @@
 (defn parse
   "Get a 2D array representing all heights"
   [raw-input]
-  (let [grid (->> raw-input
-                  str/split-lines
-                  (mapv (comp #(mapv Character/getNumericValue %) seq)))
-        xdim (count grid)
-        ydim (count (first grid))]
-    [grid xdim ydim]))
+  (->> raw-input
+       str/split-lines
+       (mapv (comp #(mapv Character/getNumericValue %) seq))))
 
 ;; Movement Functions
 
@@ -41,20 +38,17 @@
                         (every? #(< height %)))]
     (if low-point? [pos (inc height)] nil)))
 
-(defn part-1
-  [[grid xdim ydim]]
-  (->> (cartesian-product (range xdim) (range ydim))
-       (keep #(risk-level grid %))
-       (map second)
-       (reduce +)))
+(defn get-low-points
+  [grid]
+  (let [height (count grid)
+        width  (count (first grid))]
+    (->> (cartesian-product (range height) (range width))
+         (keep #(risk-level grid %)))))
 
 (defn same-basin?
-  [grid ref-height pos]
+  [grid src pos]
   (let [height (get-in grid pos)]
-    (and
-     (not (nil? height))
-     (not (= 9 height))
-     (> height ref-height))))
+    (and height (> 9 height src))))
 
 (defn flood-fill
   [grid pos]
@@ -75,17 +69,16 @@
       (fill pos)
       @flooded)))
 
+(defn part-1 [grid] (reduce + (map second (get-low-points grid))))
+
 (defn part-2
-  [[grid xdim ydim]]
-  (let [low-points (->> (cartesian-product (range xdim) (range ydim))
-                        (keep #(risk-level grid %))
-                        (mapv first))]
-    (->> low-points
-         (map (partial flood-fill grid))
-         (sort-by count >)
-         (take 3)
-         (map count)
-         (reduce *))))
+  [grid]
+  (->> (get-low-points grid)
+       (map (comp (partial flood-fill grid) first))
+       (sort-by count >)
+       (take 3)
+       (map count)
+       (reduce *)))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
