@@ -6,11 +6,11 @@
             [aoclj.year-2018.day-05 :as day-05]
             [aoclj.utils :as utils]))
 
-(def ^:dynamic *year* 2018)
+(def ^:const year 2018)
 
 (defn solve
   [day]
-  (let [read-input (partial utils/read-input-data *year*)]
+  (let [read-input (partial utils/read-input-data year)]
     (case day
       1 (day-01/solve (read-input day))
       2 (day-02/solve (read-input day))
@@ -18,12 +18,12 @@
       4 (day-04/solve (read-input day))
       5 (day-05/solve (read-input day))
       ;; Add cases for days as needed
-      (format "[ERROR] %s/%s was not solved" *year* day))))
+      (format "[ERROR] %s/%s was not solved" year day))))
 
 (defn stats
   "Returns the stats for the problem of `day` for 2018"
   [day]
-  (-> (utils/get-ns-string *year* day)
+  (-> (utils/get-ns-string year day)
       read-string
       find-ns
       meta))
