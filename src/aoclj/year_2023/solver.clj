@@ -4,6 +4,7 @@
             [aoclj.year-2023.day-02 :as day-02]
             [aoclj.year-2023.day-03 :as day-03]
             [aoclj.year-2023.day-04 :as day-04]
+            [aoclj.year-2023.day-05 :as day-05]
             [aoclj.year-2023.day-06 :as day-06]
             [aoclj.year-2023.day-09 :as day-09]
             [aoclj.year-2023.day-25 :as day-25]))
@@ -18,6 +19,7 @@
       2  (day-02/solve (read-input day))
       3  (day-03/solve (read-input day))
       4  (day-04/solve (read-input day))
+      5  (day-05/solve (read-input day))
       6  (day-06/solve (read-input day))
       9  (day-09/solve (read-input day))
       25 (day-25/solve (read-input day))
