@@ -5,14 +5,13 @@
   :dependencies   [[org.clojure/clojure "1.12.2"]
                    [org.clojure/core.async "1.6.681"]
                    [org.clojure/math.combinatorics "0.3.0"]
-                   [cheshire/cheshire "6.1.0"]
-                   [instaparse "1.5.0"]
                    [org.babashka/http-client "0.4.22"]
+                   [cheshire/cheshire "6.1.0"]
                    [dev.weavejester/medley "1.8.1"]
+                   [instaparse "1.5.0"]
                    [org.clojure/core.match "1.1.0"]
-                   [zprint "1.3.0"]
-                   [selmer "1.12.62"]
-                   [reaver "0.1.3"]]
+                   [reaver "0.1.3"]
+                   [selmer "1.12.62"]]
   :source-paths   ["src"]
   :resource-paths ["resources"]
   :test-paths     ["test"]
@@ -25,8 +24,10 @@
                                    [cider/cider-nrepl "0.50.2"]],
                     :zprint       {:old?  false,
                                    :style [:community :respect-nl :justified]},
-                    :dependencies [[nrepl "1.3.0"]
-                                   [cider/cider-nrepl "0.50.2"]]}}
+                    :dependencies [[cider/cider-nrepl "0.50.2"]
+                                   [io.github.nextjournal/clerk "0.18.1150"]
+                                   [nrepl "1.3.0"]
+                                   [zprint "1.3.0"]]}}
   :plugins        [[lein-zprint "1.3.0"]]
   :aliases        {"test" ["with-profile" "test" "run" "-m" "kaocha.runner"]}
   :repl-options   {:init-ns aoclj.core}
