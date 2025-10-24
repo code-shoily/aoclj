@@ -1,24 +1,24 @@
 (ns
-  ^{:title      "The Sum of Its Parts",
-    :doc        "Module for solving Advent of Code 2018 Day 7 problem.",
-    :url        "http://www.adventofcode.com/2018/day/7",
-    :difficulty :xl,
-    :year       2018,
-    :day        7,
-    :stars      1,
-    :tags       [:topological-sort]}
-  aoclj.year-2018.day-07
+ ^{:title      "The Sum of Its Parts",
+   :doc        "Module for solving Advent of Code 2018 Day 7 problem.",
+   :url        "http://www.adventofcode.com/2018/day/7",
+   :difficulty :xl,
+   :year       2018,
+   :day        7,
+   :stars      1,
+   :tags       [:topological-sort]}
+ aoclj.year-2018.day-07
   (:require [aoclj.utils :as utils]
             [clojure.data.priority-map :as pm]
             [clojure.string :as str]))
 
-;; ----------------------------- Priority Queue(ish)
+;; ### Priority Queue(ish)
 ;; We are for now using `priority-map` because somehow that was included
 ;; with this project as dep.
 ;; One option would be to do it with Java's PriorityQueue but wanted to
 ;; stay in immutable land.
 ;;
-;; TODO: Refactor this.
+;; _TODO: Refactor this._
 ;;
 ;; Initially had [task task] as the [key value] for the map but upon
 ;; unlocking `part-2`, I realized that there is a task value associated
@@ -44,7 +44,7 @@
   [pq]
   ((juxt (comp first peek) pop) pq))
 
-;; ----------------------------- Graph Functions
+;; ### Graph Functions
 (defn to-graph
   "Adjacency set graph u->v where u must finish before any elem of v 
    can start."
@@ -109,7 +109,6 @@
 (defn part-1 [input] (apply str (topological-sort input)))
 
 (defn part-2
-  "Solve part 2 -"
   [input]
   (->> input
        count))
