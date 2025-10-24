@@ -1,13 +1,13 @@
 (ns
- ^{:title      "The Sum of Its Parts",
-   :doc        "Module for solving Advent of Code 2018 Day 7 problem.",
-   :url        "http://www.adventofcode.com/2018/day/7",
-   :difficulty :xl,
-   :year       2018,
-   :day        7,
-   :stars      1,
-   :tags       [:topological-sort]}
- aoclj.year-2018.day-07
+  ^{:title      "The Sum of Its Parts",
+    :doc        "Module for solving Advent of Code 2018 Day 7 problem.",
+    :url        "http://www.adventofcode.com/2018/day/7",
+    :difficulty :xl,
+    :year       2018,
+    :day        7,
+    :stars      1,
+    :tags       [:topological-sort]}
+  aoclj.year-2018.day-07
   (:require [aoclj.utils :as utils]
             [clojure.data.priority-map :as pm]
             [clojure.string :as str]))
