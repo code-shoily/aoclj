@@ -8,7 +8,7 @@
 * To generate artifacts to solve a new problem:  `lein run gen <year> <day>` Will not over-write if file existed.
 * To update the READMEs with latest progress/stars: `lein run update-stats`
 * I've tried to document important pieces of the code, you can
-view the documentation in literate programming style with the command `lein marge -m`
+view the documentation in literate programming style with the command `lein marg -m`
 
 ## Progress
 ### :star: {{stars}}/{{total-stars}} :dart: {{target-stars}} :trophy: {{completed}}/{{total-trophies}} :dart: {{target-trophies}}
