@@ -8,7 +8,10 @@
                    [org.babashka/http-client "0.4.22"]
                    [cheshire/cheshire "6.1.0"]
                    [dev.weavejester/medley "1.8.1"]
-                   [generateme/fastmath "2.4.0"]
+                   [generateme/fastmath
+                    "2.4.0"
+                    :exclusions
+                    [com.github.haifengl/smile-mkl]]
                    [instaparse "1.5.0"]
                    [org.clojure/core.match "1.1.0"]
                    [reaver "0.1.3"]
