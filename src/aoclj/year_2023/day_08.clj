@@ -9,7 +9,7 @@
     :tags       [:map :lcm :tricky]}
   aoclj.year-2023.day-08
   (:require [aoclj.utils :as utils]
-            [clojure.math.numeric-tower :as math]
+            [fastmath.core :as math]
             [clojure.string :as str]))
 
 (defn parse-edges
