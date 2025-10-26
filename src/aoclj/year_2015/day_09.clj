@@ -32,7 +32,7 @@
   [dist-map path]
   (->> path
        (partition 2 1)
-       (map (comp Integer/parseInt #(get-in dist-map %)))
+       (map (comp parse-long #(get-in dist-map %)))
        (reduce +)))
 
 (defn all-distances

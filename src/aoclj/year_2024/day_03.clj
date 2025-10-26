@@ -16,7 +16,7 @@
   (->> input
        (re-seq #"mul\((\d+),(\d+)\)")
        (map (comp (partial apply *)
-                  #(map Integer/parseInt %)
+                  #(map parse-long %)
                   rest))
        (reduce +)))
 
@@ -25,7 +25,7 @@
   (letfn [(multiply [s]
             (->> (re-seq #"mul\((\d+),(\d+)\)" s)
                  (mapcat rest)
-                 (map Integer/parseInt)
+                 (map parse-long)
                  (apply *)))]
     (->> input
          (re-seq #"do\(\)|don't\(\)|mul\(\d+,\d+\)")

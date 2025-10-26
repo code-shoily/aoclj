@@ -49,7 +49,7 @@
         (map get-dir-at)))
   ([n] (take n (encoded-movements))))
 
-(def parse (comp Integer/parseInt str/trim))
+(def parse (comp parse-long str/trim))
 
 (defn part-1
   [input]

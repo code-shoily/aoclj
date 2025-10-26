@@ -19,7 +19,7 @@
   (->> (range start end)
        (reduce
         (fn [acc x]
-          (assoc acc [row x] [[row start end] (Integer/parseInt number)]))
+          (assoc acc [row x] [[row start end] (parse-long number)]))
         m)))
 
 (defn mark-symbol-positions

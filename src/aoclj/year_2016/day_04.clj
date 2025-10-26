@@ -15,7 +15,7 @@
 
 (defn- make-room
   [[name [sector-id checksum]]]
-  (->Room name (Integer/parseInt sector-id) checksum))
+  (->Room name (parse-long sector-id) checksum))
 
 (defn- parse-room
   [line]

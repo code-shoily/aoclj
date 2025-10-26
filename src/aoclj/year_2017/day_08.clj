@@ -22,8 +22,8 @@
   "src inc/dec upd if dep pred? comp-val becomes a quadruplet with functions
    turning into closures."
   [[src op upd _ dep pred? val]]
-  [src (as-fun op) (Integer/parseInt upd) dep (as-fun pred?)
-   (Integer/parseInt val)])
+  [src (as-fun op) (parse-long upd) dep (as-fun pred?)
+   (parse-long val)])
 
 (defn update-register
   "Resolves the statement and updates the src to either correct

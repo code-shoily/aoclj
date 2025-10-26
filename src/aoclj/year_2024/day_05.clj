@@ -15,7 +15,7 @@
   "Parse each line to get rules or page info."
   [sep lines]
   (->> (str/split-lines lines)
-       (mapv (comp #(mapv Integer/parseInt %)
+       (mapv (comp #(mapv parse-long %)
                    #(str/split % sep)))))
 
 (defn parse-rules

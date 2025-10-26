@@ -48,7 +48,7 @@
   "Parse raw string input into a processable data structure"
   [raw-input]
   (let [nums  (->> (str/split (str/trim raw-input) #",")
-                   (mapv Integer/parseInt))
+                   (mapv parse-long))
         bytes (->> (str/trim raw-input)
                    (mapv int))]
     [nums bytes]))

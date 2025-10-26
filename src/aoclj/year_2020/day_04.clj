@@ -48,14 +48,14 @@
 (defn str->hgt
   [line]
   (->> (re-find #"(\d+)(in|cm)" line)
-       (#(vector (Integer/parseInt (second %)) (last %)))))
+       (#(vector (parse-long (second %)) (last %)))))
 
 (defn map->passport
   [{:keys [byr iyr eyr hgt], :as line}]
   (try (merge line
-              {:byr (Integer/parseInt byr),
-               :iyr (Integer/parseInt iyr),
-               :eyr (Integer/parseInt eyr),
+              {:byr (parse-long byr),
+               :iyr (parse-long iyr),
+               :eyr (parse-long eyr),
                :hgt (str->hgt hgt)})
        (catch Exception _ line)))
 

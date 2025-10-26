@@ -12,7 +12,7 @@
             [clojure.core.match :refer [match]]
             [clojure.string :as str]))
 
-(defn to-instruction [[i a]] [i (Integer/parseInt a)])
+(defn to-instruction [[i a]] [i (parse-long a)])
 
 (defn instruction-map
   "Parses into an instruction map where in the form of `ptr -> [cmd, val]`"

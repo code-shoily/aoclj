@@ -14,7 +14,7 @@
   [raw-input]
   (->> raw-input
        str/split-lines
-       (map Integer/parseInt)))
+       (map parse-long)))
 
 (defn part-1 [input] (reduce + input))
 

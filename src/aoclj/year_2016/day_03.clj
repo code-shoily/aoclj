@@ -13,7 +13,7 @@
 (defn parse
   [input]
   (->> (str/split-lines input)
-       (mapv (comp #(mapv Integer/parseInt %) #(str/split % #"\s+") str/trim))))
+       (mapv (comp #(mapv parse-long %) #(str/split % #"\s+") str/trim))))
 
 (defn triangle? [[a b c]] (and (> (+ a b) c) (> (+ b c) a) (> (+ c a) b)))
 

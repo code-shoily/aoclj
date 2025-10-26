@@ -14,7 +14,7 @@
   [input]
   (->> input
        str/split-lines
-       (mapv #(mapv Integer/parseInt (str/split % #"\s+")))
+       (mapv #(mapv parse-long (str/split % #"\s+")))
        utils/transpose))
 
 (defn part-1

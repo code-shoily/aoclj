@@ -15,7 +15,7 @@
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
-  (mapv Integer/parseInt (str/split (str/trim raw-input) #",\s*")))
+  (mapv parse-long (str/split (str/trim raw-input) #",\s*")))
 
 (defn run-command
   [^longs arr ctr]

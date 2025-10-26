@@ -9,6 +9,7 @@
     :tags       [:navigation]}
   aoclj.year-2020.day-12
   (:require [aoclj.utils :as utils]
+            [fastmath.distance :as dist]
             [clojure.string :as str]))
 
 ;; ---------------------------------------- DIR RELATIONS
@@ -41,8 +42,6 @@
   (->> (str/split-lines raw-input)
        (mapv parse-direction)))
 
-(defn manhattan-distance [[a b]] (+ (abs a) (abs b)))
-
 ;; --------------------------------------- SHIP MOVEMENTS
 
 (defn ship-rotate
@@ -72,7 +71,8 @@
                    [facing (ship-move ship cmd)]))
                [:east [0 0]])
        second
-       manhattan-distance))
+       (dist/manhattan [0 0])
+       long))
 
 ;; --------------------------------------- WAYPOINT MOVEMENTS
 
@@ -111,7 +111,8 @@
                   cmd))
                [[0 0] [1 10]])
        first
-       manhattan-distance))
+       (dist/manhattan [0 0])
+       long))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 

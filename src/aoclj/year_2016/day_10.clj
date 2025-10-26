@@ -54,14 +54,14 @@
   [line]
   (match (str/split line #"\s")
     [_ src _ _ _ lo-type lo _ _ _ hi-type hi]
-    {:src  (Integer/parseInt src),
+    {:src  (parse-long src),
      :type :send,
-     :lo   [(keyword lo-type) (Integer/parseInt lo)],
-     :hi   [(keyword hi-type) (Integer/parseInt hi)]}
+     :lo   [(keyword lo-type) (parse-long lo)],
+     :hi   [(keyword hi-type) (parse-long hi)]}
     ["value" val _ _ "bot" bot]
-    {:src   (Integer/parseInt bot),
+    {:src   (parse-long bot),
      :type  :receive,
-     :value (Integer/parseInt val)}))
+     :value (parse-long val)}))
 
 
 (defn parse

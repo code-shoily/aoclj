@@ -25,7 +25,7 @@
   [input]
   (calibration-value (->> input
                           (map #(->> (re-seq #"\d" %)
-                                     (mapv Integer/parseInt)
+                                     (mapv parse-long)
                                      ((juxt first last)))))))
 
 (defn parse-line
@@ -44,7 +44,7 @@
         (re-pattern (str "(?=(" (str/join "|" (keys numbers)) "|\\d))"))
         to-num  #(if-let [num (get numbers %)]
                    num
-                   (Integer/parseInt %))]
+                   (parse-long %))]
     (->> (re-seq regex line)
          (mapv (comp to-num second))
          ((juxt first last)))))

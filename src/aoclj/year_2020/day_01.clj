@@ -13,7 +13,7 @@
 (defn parse
   [input]
   (->> (str/split-lines input)
-       (map Integer/parseInt)
+       (map parse-long)
        sort
        vec))
 

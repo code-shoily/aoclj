@@ -52,7 +52,7 @@
 
 (defn parse
   [raw-input]
-  (map Integer/parseInt
+  (map parse-long
        (-> raw-input
            str/trim
            (str/split #"-"))))

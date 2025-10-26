@@ -14,7 +14,7 @@
   [input]
   (->> input
        str/split-lines
-       (mapv (comp (partial mapv Integer/parseInt) #(str/split % #" ")))))
+       (mapv (comp (partial mapv parse-long) #(str/split % #" ")))))
 
 (defn remove-at-index
   [idx coll]

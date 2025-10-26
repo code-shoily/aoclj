@@ -17,7 +17,7 @@
   [s]
   (->> (re-find #"\((\d+)\)" s)
        second
-       Integer/parseInt))
+       parse-long))
 
 (defn list-deps
   "Extracts the dependencies from '-> d1, d2, ..' part of the 

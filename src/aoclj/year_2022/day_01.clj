@@ -18,7 +18,7 @@
        str/split-lines
        (partition-by (partial = ""))
        (filter (complement (comp str/blank? first)))
-       (map (comp (partial reduce +) (partial map Integer/parseInt)))
+       (map (comp (partial reduce +) (partial map parse-long)))
        (sort >)))
 
 (defn part-1 [input] (first input))

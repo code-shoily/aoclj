@@ -21,7 +21,7 @@
   [bag]
   (->> bag
        (re-find #"(\d+) (.+)")
-       ((fn [[_ c b]] [(to-bag-label b) (Integer/parseInt c)]))))
+       ((fn [[_ c b]] [(to-bag-label b) (parse-long c)]))))
 
 (defn parse-contained-bags
   "Parses the contained bags to a list of (bag count) tuples"

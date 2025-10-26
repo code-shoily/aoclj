@@ -12,14 +12,14 @@
             [clojure.string :as str]
             [medley.core :as m]))
 
-(defn parse-draws [s] (mapv Integer/parseInt (str/split s #",")))
+(defn parse-draws [s] (mapv parse-long (str/split s #",")))
 
 (defn parse-row
   "Turns a space alined set of strings into vector of ints"
   [row]
   (->> (str/split row #"\s+")
        (remove str/blank?)
-       (mapv Integer/parseInt)))
+       (mapv parse-long)))
 
 (defn parse-boards
   "Converts a line spaced set of strings into a matrix of ints"

@@ -48,7 +48,7 @@
             (->> line
                  (re-find #"move (\d+) from (\d+) to (\d+)")
                  rest
-                 (mapv Integer/parseInt)))]
+                 (mapv parse-long)))]
     (map to-vec moves)))
 
 (defn parse

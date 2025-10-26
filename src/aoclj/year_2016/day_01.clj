@@ -18,7 +18,7 @@
                     \R :right)
         steps     (-> xs
                       str/join
-                      Integer/parseInt)]
+                      parse-long)]
     [direction steps]))
 
 (defn parse

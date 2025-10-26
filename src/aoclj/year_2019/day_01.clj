@@ -14,7 +14,7 @@
   [input]
   (->> input
        str/split-lines
-       (map Integer/parseInt)))
+       (map parse-long)))
 
 (defn get-fuel-1
   [mass]

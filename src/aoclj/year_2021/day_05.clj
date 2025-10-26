@@ -33,7 +33,7 @@
 
 (def get-range
   (partial mapv
-           (comp #(mapv Integer/parseInt %)
+           (comp #(mapv parse-long %)
                  #(str/split % #","))))
 
 (defn parse

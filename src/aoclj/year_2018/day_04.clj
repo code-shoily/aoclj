@@ -28,7 +28,7 @@
   (let [guard-id (->> log
                       (re-find #"Guard #(\d+) begins shift")
                       last
-                      Integer/parseInt)]
+                      parse-long)]
     {:guard guard-id, :status :awake}))
 
 (defn to-state-1

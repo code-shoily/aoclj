@@ -9,7 +9,7 @@
     aoclj.year-2017.day-01
   (:require [aoclj.utils :as utils]))
 
-(defn parse [input] (mapv (comp Integer/parseInt str) input))
+(defn parse [input] (mapv (comp parse-long str) input))
 
 (defn- captcha
   [data]

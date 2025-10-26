@@ -25,7 +25,7 @@
 (defn transform
   [parse-tree]
   (->> parse-tree
-       (insta/transform {:Num   Integer/parseInt,
+       (insta/transform {:Num   parse-long,
                          :Color keyword,
                          :Combs (fn ([[_ cnt _ col] & _] [col cnt])),
                          :Rest  (fn [& tokens]

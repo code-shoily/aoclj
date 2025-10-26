@@ -15,8 +15,8 @@
 (defn make-password-policy
   [line]
   (let [[_ lo hi ch pwd] (re-matches #"(\d+)-(\d+) (.): (.+)" line)]
-    (->PasswordPolicy (Integer/parseInt lo)
-                      (Integer/parseInt hi)
+    (->PasswordPolicy (parse-long lo)
+                      (parse-long hi)
                       (first ch)
                       pwd)))
 

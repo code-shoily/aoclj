@@ -45,8 +45,8 @@
 
 (defn -main
   [cmd & args]
-  (letfn [(extract-year-day [[year day]] [(Integer/parseInt year)
-                                          (Integer/parseInt day)])]
+  (letfn [(extract-year-day [[year day]] [(parse-long year)
+                                          (parse-long day)])]
     (case cmd
       "update-stats" (println (update-stats))
       "solve"        (time (println (apply solve (extract-year-day args))))

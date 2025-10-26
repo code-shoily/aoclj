@@ -14,7 +14,7 @@
   [input]
   (->> input
        str/split-lines
-       (mapv (comp #(mapv Integer/parseInt %) #(str/split % #"\t")))))
+       (mapv (comp #(mapv parse-long %) #(str/split % #"\t")))))
 
 (defn checksum-1
   [coll]

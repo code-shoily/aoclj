@@ -13,7 +13,7 @@
 (defn parse
   [input]
   (let [get-range #(->> (str/split % #"-")
-                        (mapv Integer/parseInt))]
+                        (mapv parse-long))]
     (->> input
          str/split-lines
          (map #(str/split % #","))

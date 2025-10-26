@@ -15,8 +15,8 @@
 (defn parse-line
   [line]
   (let [[_ id left right] (re-find #"Card\s+(\d+):\s+(.+)\s+\|\s+(.+)" line)
-        to-ints #(mapv Integer/parseInt (str/split % #"\s+"))]
-    [(Integer/parseInt id)
+        to-ints #(mapv parse-long (str/split % #"\s+"))]
+    [(parse-long id)
      [(into #{} (to-ints left)) (into #{} (to-ints right))]]))
 
 

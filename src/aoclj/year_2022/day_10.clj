@@ -18,7 +18,7 @@
    (fn [acc line]
      (let [[instr amt] (str/split line #" ")]
        (if (= instr "addx")
-         (conj acc 0 (Integer/parseInt amt))
+         (conj acc 0 (parse-long amt))
          (conj acc 0))))
    []
    lines))

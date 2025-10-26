@@ -44,7 +44,7 @@
 (defn parse-command
   [line]
   (->> (str/split line #" ")
-       ((fn [[a b]] [a (Integer/parseInt b)]))))
+       ((fn [[a b]] [a (parse-long b)]))))
 
 (defn parse [input] (mapv parse-command (str/split-lines input)))
 

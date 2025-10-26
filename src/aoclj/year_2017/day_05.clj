@@ -34,7 +34,7 @@
           (aset arr idx (if (>= jump-val 3) (dec jump-val) (inc jump-val)))
           (recur (+ idx jump-val) (inc steps)))))))
 
-(defn parse [input] (mapv Integer/parseInt (str/split-lines input)))
+(defn parse [input] (mapv parse-long (str/split-lines input)))
 
 (defn part-1 [input] (jump-1 input))
 (defn part-2 [input] (jump-2 input))

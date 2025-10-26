@@ -21,7 +21,7 @@
 
 (defn evaluate
   [k [params _] table]
-  (letfn [(at [tab a] (if (numeric-string? a) (Integer/parseInt a) (tab a)))]
+  (letfn [(at [tab a] (if (numeric-string? a) (parse-long a) (tab a)))]
     (if-let [assigned-val (table k)]
       assigned-val
       (match params
@@ -42,7 +42,7 @@
     [a "RSHIFT" b] [[bit-shift-right a b] #{a b}]
     ["NOT" a]      [[bit-not-16 a] #{a}]
     [a]            (if (numeric-string? a)
-                     [[:val (Integer/parseInt a)] #{}]
+                     [[:val (parse-long a)] #{}]
                      [[:assign a] #{a}])))
 
 (defn parse-assignment [[lhs [rhs]]] [rhs (parse-rule lhs)])

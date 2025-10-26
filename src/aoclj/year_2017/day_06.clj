@@ -18,7 +18,7 @@
   (as-> raw-input _
     (str/trim _)
     (str/split _ #"\t")
-    (mapv Integer/parseInt _)))
+    (mapv parse-long _)))
 
 (defn max-index
   "Returns the index of the largest value. In case of multiple largest

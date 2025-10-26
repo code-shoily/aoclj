@@ -34,7 +34,7 @@
 
 (defn transform-numbers
   [parsed-int]
-  (insta/transform {:N Integer/parseInt} parsed-int))
+  (insta/transform {:N parse-long} parsed-int))
 
 (defn extract-info
   [parsed-data]

@@ -9,13 +9,14 @@
     :tags       [:geometry :grid]}
   aoclj.year-2019.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [fastmath.distance :as dist]))
 
 (defn parse-direction
   [s]
   (let [dir-map     {"L" :left, "R" :right, "U" :up, "D" :down}
         [_ dir val] (re-find #"(L|R|U|D)(\d+)" s)]
-    [(dir-map dir) (Integer/parseInt val)]))
+    [(dir-map dir) (parse-long val)]))
 
 (defn get-next-state
   "Compute the next state given previous state where a state is
@@ -81,8 +82,6 @@
   [lines-1 lines-2]
   (for [i lines-1 j lines-2] [i j]))
 
-(defn manhattan-from-origin [[a b]] (+ (abs a) (abs b)))
-
 (defn all-pairs
   "Given two paths of two wires, finds all pairs of wire segments drawn by
    them - in polarized orientation (i.e h x v and v x h)"
@@ -94,8 +93,9 @@
   [[wire-1 wire-2]]
   (->> (all-pairs wire-1 wire-2)
        (keep (fn [[[_ line-1] [_ line-2]]] (find-intersections line-1 line-2)))
-       (map manhattan-from-origin)
-       (apply min)))
+       (map (partial dist/manhattan [0 0]))
+       (apply min)
+       long))
 
 (defn get-steps-to-point
   "If [a,b].......[x,y]...[a*,b*]<step-at-end> then what was the

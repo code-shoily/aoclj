@@ -14,7 +14,7 @@
 (defn parse-fabric
   [line]
   (let [[_ id x y w h] (re-find #"#(\d+) @ (\d+),(\d+): (\d+)x(\d+)" line)]
-    (mapv Integer/parseInt [id x y w h])))
+    (mapv parse-long [id x y w h])))
 
 (defn parse
   [raw-input]

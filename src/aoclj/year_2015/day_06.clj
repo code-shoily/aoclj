@@ -25,8 +25,8 @@
      "toggle"   :toggle
      "turn on"  :on
      "turn off" :off)
-   [(Integer/parseInt fx) (Integer/parseInt fy)]
-   [(Integer/parseInt tx) (Integer/parseInt ty)]])
+   [(parse-long fx) (parse-long fy)]
+   [(parse-long tx) (parse-long ty)]])
 
 (defn parse
   "Parse raw string input into a processable data structure"

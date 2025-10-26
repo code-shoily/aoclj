@@ -13,7 +13,7 @@
 (defn parse
   "Parse wxhxl as [w h l] for all inputs given"
   [input]
-  (letfn [(extract-dims [s] (mapv Integer/parseInt (str/split s #"x")))]
+  (letfn [(extract-dims [s] (mapv parse-long (str/split s #"x")))]
     (->> (str/split-lines input)
          (mapv extract-dims))))
 
