@@ -28,7 +28,7 @@
   [code]
   (transduce (comp (map #(hash/md5 (str code %)))
                    (filter #(and (= "00000" (subs % 0 5))
-                                 (> 8 (parse-long (subs % 5 6) 16))))
+                                 (> 8 (Integer/parseInt (subs % 5 6) 16))))
                    (map (juxt #(parse-long (str (nth % 5))) #(nth % 6)))
                    (m/distinct-by first)
                    (take 8))
