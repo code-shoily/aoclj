@@ -6,14 +6,14 @@
 
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
-[Sonar Sweep](http://www.adventofcode.com/2021/day/1)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_01.clj](/src/aoclj/year_2021/day_01.clj) <br /> :small_orange_diamond: [day_01_test.clj](/test/aoclj/year_2021/day_01_test.clj)|sequence
-[Dive!](http://www.adventofcode.com/2021/day/2)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_02.clj](/src/aoclj/year_2021/day_02.clj) <br /> :small_orange_diamond: [day_02_test.clj](/test/aoclj/year_2021/day_02_test.clj)|simulation,cmd
-[Binary Diagnostic](http://www.adventofcode.com/2021/day/3)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_03.clj](/src/aoclj/year_2021/day_03.clj) <br /> :small_orange_diamond: [day_03_test.clj](/test/aoclj/year_2021/day_03_test.clj)|transpose
-[Giant Squid](http://www.adventofcode.com/2021/day/4)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_04.clj](/src/aoclj/year_2021/day_04.clj) <br /> :small_orange_diamond: [day_04_test.clj](/test/aoclj/year_2021/day_04_test.clj)|grid,reduction,parse-heavy
-[Hydrothermal Venture](http://www.adventofcode.com/2021/day/5)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_05.clj](/src/aoclj/year_2021/day_05.clj) <br /> :small_orange_diamond: [day_05_test.clj](/test/aoclj/year_2021/day_05_test.clj)|range-math
-[Lanternfish](http://www.adventofcode.com/2021/day/6)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_06.clj](/src/aoclj/year_2021/day_06.clj) <br /> :small_orange_diamond: [day_06_test.clj](/test/aoclj/year_2021/day_06_test.clj)|simulation,frequency
-[The Treachery of Whales](http://www.adventofcode.com/2021/day/7)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_07.clj](/src/aoclj/year_2021/day_07.clj) <br /> :small_orange_diamond: [day_07_test.clj](/test/aoclj/year_2021/day_07_test.clj)|statistics,formulaic
-[Seven Segment Search](http://www.adventofcode.com/2021/day/8)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_08.clj](/src/aoclj/year_2021/day_08.clj) <br /> :small_orange_diamond: [day_08_test.clj](/test/aoclj/year_2021/day_08_test.clj)|set
-[Smoke Basin](http://www.adventofcode.com/2021/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2021/day_09.clj) <br /> :small_orange_diamond: [day_09_test.clj](/test/aoclj/year_2021/day_09_test.clj)|flood-fill,grid
-[Syntax Scoring](http://www.adventofcode.com/2021/day/10)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2021/day_10.clj) <br /> :small_orange_diamond: [day_10_test.clj](/test/aoclj/year_2021/day_10_test.clj)|stack,parens
-[Sea Cucumber](http://www.adventofcode.com/2021/day/25)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_25.clj](/src/aoclj/year_2021/day_25.clj) <br /> :small_orange_diamond: [day_25_test.clj](/test/aoclj/year_2021/day_25_test.clj)|simulation,slow
+[Sonar Sweep](http://www.adventofcode.com/2021/day/1)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_01.clj](/src/aoclj/year_2021/day_01.clj) <br />|sequence
+[Dive!](http://www.adventofcode.com/2021/day/2)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_02.clj](/src/aoclj/year_2021/day_02.clj) <br />|simulation,cmd
+[Binary Diagnostic](http://www.adventofcode.com/2021/day/3)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_03.clj](/src/aoclj/year_2021/day_03.clj) <br />|transpose
+[Giant Squid](http://www.adventofcode.com/2021/day/4)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_04.clj](/src/aoclj/year_2021/day_04.clj) <br />|grid,reduction,parse-heavy
+[Hydrothermal Venture](http://www.adventofcode.com/2021/day/5)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_05.clj](/src/aoclj/year_2021/day_05.clj) <br />|range-math
+[Lanternfish](http://www.adventofcode.com/2021/day/6)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_06.clj](/src/aoclj/year_2021/day_06.clj) <br />|simulation,frequency
+[The Treachery of Whales](http://www.adventofcode.com/2021/day/7)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_07.clj](/src/aoclj/year_2021/day_07.clj) <br />|statistics,formulaic
+[Seven Segment Search](http://www.adventofcode.com/2021/day/8)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_08.clj](/src/aoclj/year_2021/day_08.clj) <br />|set
+[Smoke Basin](http://www.adventofcode.com/2021/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2021/day_09.clj) <br />|flood-fill,grid
+[Syntax Scoring](http://www.adventofcode.com/2021/day/10)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2021/day_10.clj) <br />|stack,parens
+[Sea Cucumber](http://www.adventofcode.com/2021/day/25)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_25.clj](/src/aoclj/year_2021/day_25.clj) <br />|simulation,slow
