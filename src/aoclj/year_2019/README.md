@@ -5,7 +5,7 @@
 ## :trophy: 8/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [The Tyranny of the Rocket Equation](http://www.adventofcode.com/2019/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2019/day_01.clj)|formula,recursion
 [1202 Program Alarm](http://www.adventofcode.com/2019/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2019/day_02.clj)|intcode,array
 [Crossed Wires](http://www.adventofcode.com/2019/day/3)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2019/day_03.clj)|geometry,grid

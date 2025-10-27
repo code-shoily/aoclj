@@ -5,7 +5,7 @@
 ## :trophy: 22/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Sonar Sweep](http://www.adventofcode.com/2021/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2021/day_01.clj)|sequence
 [Dive!](http://www.adventofcode.com/2021/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2021/day_02.clj)|simulation,cmd
 [Binary Diagnostic](http://www.adventofcode.com/2021/day/3)|:snowflake: :snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2021/day_03.clj)|transpose

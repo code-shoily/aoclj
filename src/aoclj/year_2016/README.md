@@ -5,7 +5,7 @@
 ## :trophy: 28/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [No Time for a Taxicab](http://www.adventofcode.com/2016/day/1)|:snowflake: :snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2016/day_01.clj)|grid,set
 [Bathroom Security](http://www.adventofcode.com/2016/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2016/day_02.clj)|grid,decode
 [Squares With Three Sides](http://www.adventofcode.com/2016/day/3)|:snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2016/day_03.clj)|transpose,geometry

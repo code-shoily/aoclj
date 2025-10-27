@@ -5,7 +5,7 @@
 ## :trophy: 22/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Calorie Counting](http://www.adventofcode.com/2022/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2022/day_01.clj)|section-parse,take-n
 [Rock Paper Scissors](http://www.adventofcode.com/2022/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2022/day_02.clj)|tabular
 [Rucksack Reorganization](http://www.adventofcode.com/2022/day/3)|:snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2022/day_03.clj)|set,partition

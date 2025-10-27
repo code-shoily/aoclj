@@ -81,7 +81,7 @@
     (render [{:keys [solutions]}]
       (let [header (str/join "\n"
                              ["| Day | Difficulty | Stars | Links | Tags |"
-                              "|:---: | :---: | :---: | :--- | :----: |"])]
+                              "|:---: | :---: | :---: | :---: | :----: |"])]
         (->> solutions
              (map (comp render map->YearwiseRow))
              (cons header)

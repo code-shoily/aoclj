@@ -5,7 +5,7 @@
 ## :trophy: 22/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Inverse Captcha](http://www.adventofcode.com/2017/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2017/day_01.clj)|arithmetic
 [Corruption Checksum](http://www.adventofcode.com/2017/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2017/day_02.clj)|checksum
 [Spiral Memory](http://www.adventofcode.com/2017/day/3)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2017/day_03.clj)|spiral-coords

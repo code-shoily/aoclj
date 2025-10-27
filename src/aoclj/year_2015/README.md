@@ -5,7 +5,7 @@
 ## :trophy: 26/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Not Quite Lisp](http://www.adventofcode.com/2015/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2015/day_01.clj)|sequence,reduction
 [I Was Told There Would Be No Math](http://www.adventofcode.com/2015/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2015/day_02.clj)|geometry
 [Perfectly Spherical Houses in a Vacuum](http://www.adventofcode.com/2015/day/3)|:snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2015/day_03.clj)|set

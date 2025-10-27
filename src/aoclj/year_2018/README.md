@@ -5,7 +5,7 @@
 ## :trophy: 11/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Chronal Calibration](http://www.adventofcode.com/2018/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2018/day_01.clj)|infinite-sequence,set
 [Inventory Management System](http://www.adventofcode.com/2018/day/2)|:snowflake: :snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2018/day_02.clj)|set,match
 [No Matter How You Slice It](http://www.adventofcode.com/2018/day/3)|:snowflake: :snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2018/day_03.clj)|brute-force,range-math,grid

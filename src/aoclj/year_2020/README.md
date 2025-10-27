@@ -5,7 +5,7 @@
 ## :trophy: 24/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Report Repair](http://www.adventofcode.com/2020/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2020/day_01.clj)|nsum
 [Password Philosophy](http://www.adventofcode.com/2020/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2020/day_02.clj)|frequency,nil
 [Toboggan Trajectory](http://www.adventofcode.com/2020/day/3)|:snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2020/day_03.clj)|grid

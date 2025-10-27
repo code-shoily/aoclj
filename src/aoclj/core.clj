@@ -51,6 +51,9 @@
       "update-stats" (println (update-stats))
       "solve"        (time (println (apply solve (extract-year-day args))))
       "gen"          (apply generate (extract-year-day args))
-      (println (format "Unknown command %s . Use :update-stats :solve or :gen."
-                       cmd)))))
+      (println
+       (format
+        (str "[Usage]\n\tGenerate Stub: clj -M -m aoclj.core gen <year> <day>"
+             "\n\tRun Solution: clj -M -m aoclj.core solve <year> <day>"
+             "\n\tUpdate READMEs: clj -M -m aoclj.core update-stats"))))))
 

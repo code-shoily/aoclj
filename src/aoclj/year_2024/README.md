@@ -5,7 +5,7 @@
 ## :trophy: 24/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Historian Hysteria](http://www.adventofcode.com/2024/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2024/day_01.clj)|sequence
 [Red-Nosed Reports](http://www.adventofcode.com/2024/day/2)|:snowflake: :snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2024/day_02.clj)|brute-force,revisit
 [Mull It Over](http://www.adventofcode.com/2024/day/3)|:snowflake: :snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2024/day_03.clj)|state-machine,regex

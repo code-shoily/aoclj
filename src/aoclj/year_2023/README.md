@@ -5,7 +5,7 @@
 ## :trophy: 20/50
 
 | Day | Difficulty | Stars | Links | Tags |
-|:---: | :---: | :---: | :--- | :----: |
+|:---: | :---: | :---: | :---: | :----: |
 [Trebuchet?!](http://www.adventofcode.com/2023/day/1)|:snowflake: :snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2023/day_01.clj)|regex,tricky
 [Cube Conundrum](http://www.adventofcode.com/2023/day/2)|:snowflake: :snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2023/day_02.clj)|parse-heavy
 [Gear Ratios](http://www.adventofcode.com/2023/day/3)|:snowflake: :snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2023/day_03.clj)|reduction,regex,grid
