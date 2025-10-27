@@ -10,7 +10,8 @@
   aoclj.year-2023.day-08
   (:require [aoclj.utils :as utils]
             [fastmath.core :as math]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn parse-edges
   [edges]
@@ -59,3 +60,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+(tests
+ (def input (utils/read-input-data 2023 8))
+ (solve input)
+ :=
+ [20093 22103062509257])

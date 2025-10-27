@@ -11,7 +11,8 @@
   (:require [aoclj.utils :as utils]
             [clojure.core.async :as async]
             [clojure.spec.alpha :as s]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (s/def ::setting #{:toggle :on :off})
 (s/def ::point (s/tuple int? int?))
@@ -101,3 +102,9 @@
   (time (solve raw-input))
 
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2015 6))
+ (solve input)
+ :=
+ [377891 14110788])

@@ -8,7 +8,8 @@
       :tags       [:partition]}
     aoclj.year-2015.day-05
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn enough-vowels? [s] (>= (count (filter #{\a \e \i \o \u} s)) 3))
 
@@ -66,3 +67,9 @@
   (def raw-input (utils/read-input-data 2015 5))
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2015 5))
+ (solve input)
+ :=
+ [255 55])

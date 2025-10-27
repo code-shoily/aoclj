@@ -8,7 +8,8 @@
       :tags       [:set]}
     aoclj.year-2015.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.set :as set]))
+            [clojure.set :as set]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (def parse seq)
 
@@ -60,3 +61,9 @@
   (def input (parse raw-input))
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2015 3))
+ (solve input)
+ :=
+ [2081 2341])

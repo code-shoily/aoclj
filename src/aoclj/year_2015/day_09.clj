@@ -10,7 +10,8 @@
   aoclj.year-2015.day-09
   (:require [aoclj.utils :as utils]
             [clojure.math.combinatorics :as combinatorics]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn parse
   "Parse raw string to a graph in a map format where (get-in [A B]) is
@@ -64,3 +65,10 @@
   (time (solve raw-input))
   "</Explore>")
 
+
+
+(tests
+ (def input (utils/read-input-data 2015 9))
+ (solve input)
+ :=
+ [117 909])

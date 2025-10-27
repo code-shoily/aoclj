@@ -1,7 +1,10 @@
 #kaocha/v1
  {:tests
-  [{:id :unit
-    :test-paths ["test"]
-    :source-paths ["src"]
-    :ns-patterns ["-test$"]
+  [{:id          :unit,
+    :test-paths  ["test"],
+    :ns-patterns ["-test$"],
+    :kaocha.filter/skip-meta [:slow :flaky]}
+   {:id          :inline,
+    :test-paths  ["src"],
+    :ns-patterns ["aoclj.year-2015.day-\\d{2}$"],
     :kaocha.filter/skip-meta [:slow :flaky]}]}

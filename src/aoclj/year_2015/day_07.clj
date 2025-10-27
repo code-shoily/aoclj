@@ -11,7 +11,8 @@
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
             [medley.core :as m]
-            [clojure.core.match :refer [match]]))
+            [clojure.core.match :refer [match]]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 ;;----------------------------------------- Evaluation Utils & Helpers
 
@@ -141,3 +142,9 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (def input (utils/read-input-data 2015 7))
+ (solve input)
+ :=
+ [46065 14134])

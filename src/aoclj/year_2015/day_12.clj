@@ -11,7 +11,8 @@
   (:require [aoclj.utils :as utils]
             [cheshire.core :as json]
             [clojure.string :as str]
-            [clojure.walk :refer [postwalk]]))
+            [clojure.walk :refer [postwalk]]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (def parse str/trim)
 
@@ -45,3 +46,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2015 12))
+ :=
+ [119433 68466])

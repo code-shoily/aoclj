@@ -8,7 +8,8 @@
       :tags       [:geometry]}
     aoclj.year-2015.day-02
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn parse
   "Parse wxhxl as [w h l] for all inputs given"
@@ -53,3 +54,9 @@
   input
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2015 2))
+ (solve input)
+ :=
+ [1606483 3842356])

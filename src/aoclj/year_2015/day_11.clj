@@ -10,7 +10,8 @@
   aoclj.year-2015.day-11
   (:require [aoclj.utils :as utils]
             [medley.core :as m]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -87,3 +88,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2015 11))
+ :=
+ ["cqjxxyzz" "cqkaabcc"])
