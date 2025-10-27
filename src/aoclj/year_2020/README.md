@@ -6,15 +6,15 @@
 
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :--- | :----: |
-[Report Repair](http://www.adventofcode.com/2020/day/1)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_01.clj](/src/aoclj/year_2020/day_01.clj) <br />|nsum
-[Password Philosophy](http://www.adventofcode.com/2020/day/2)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_02.clj](/src/aoclj/year_2020/day_02.clj) <br />|frequency,nil
-[Toboggan Trajectory](http://www.adventofcode.com/2020/day/3)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_03.clj](/src/aoclj/year_2020/day_03.clj) <br />|grid
-[Passport Processing](http://www.adventofcode.com/2020/day/4)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_04.clj](/src/aoclj/year_2020/day_04.clj) <br />|schema,validation
-[Binary Boarding](http://www.adventofcode.com/2020/day/5)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_05.clj](/src/aoclj/year_2020/day_05.clj) <br />|number-system
-[Custom Customs](http://www.adventofcode.com/2020/day/6)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_06.clj](/src/aoclj/year_2020/day_06.clj) <br />|set
-[Handy Haversacks](http://www.adventofcode.com/2020/day/7)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_07.clj](/src/aoclj/year_2020/day_07.clj) <br />|graph-traversal
-[Handheld Halting](http://www.adventofcode.com/2020/day/8)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_08.clj](/src/aoclj/year_2020/day_08.clj) <br />|op-code
-[Encoding Error](http://www.adventofcode.com/2020/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2020/day_09.clj) <br />|sliding-window,two-sum
-[Adapter Array](http://www.adventofcode.com/2020/day/10)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2020/day_10.clj) <br />|dynamic-programming
-[Rain Risk](http://www.adventofcode.com/2020/day/12)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_12.clj](/src/aoclj/year_2020/day_12.clj) <br />|navigation
-[Combo Breaker](http://www.adventofcode.com/2020/day/25)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_25.clj](/src/aoclj/year_2020/day_25.clj) <br />|cryptography,modular-algebra
+[Report Repair](http://www.adventofcode.com/2020/day/1)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_01.clj](/src/aoclj/year_2020/day_01.clj)|nsum
+[Password Philosophy](http://www.adventofcode.com/2020/day/2)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_02.clj](/src/aoclj/year_2020/day_02.clj)|frequency,nil
+[Toboggan Trajectory](http://www.adventofcode.com/2020/day/3)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_03.clj](/src/aoclj/year_2020/day_03.clj)|grid
+[Passport Processing](http://www.adventofcode.com/2020/day/4)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_04.clj](/src/aoclj/year_2020/day_04.clj)|schema,validation
+[Binary Boarding](http://www.adventofcode.com/2020/day/5)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_05.clj](/src/aoclj/year_2020/day_05.clj)|number-system
+[Custom Customs](http://www.adventofcode.com/2020/day/6)|:snowflake:|:star2: :star2:|:small_orange_diamond: [day_06.clj](/src/aoclj/year_2020/day_06.clj)|set
+[Handy Haversacks](http://www.adventofcode.com/2020/day/7)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_07.clj](/src/aoclj/year_2020/day_07.clj)|graph-traversal
+[Handheld Halting](http://www.adventofcode.com/2020/day/8)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_08.clj](/src/aoclj/year_2020/day_08.clj)|op-code
+[Encoding Error](http://www.adventofcode.com/2020/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_09.clj](/src/aoclj/year_2020/day_09.clj)|sliding-window,two-sum
+[Adapter Array](http://www.adventofcode.com/2020/day/10)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_10.clj](/src/aoclj/year_2020/day_10.clj)|dynamic-programming
+[Rain Risk](http://www.adventofcode.com/2020/day/12)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_12.clj](/src/aoclj/year_2020/day_12.clj)|navigation
+[Combo Breaker](http://www.adventofcode.com/2020/day/25)|:snowflake: :snowflake:|:star2: :star2:|:small_orange_diamond: [day_25.clj](/src/aoclj/year_2020/day_25.clj)|cryptography,modular-algebra
