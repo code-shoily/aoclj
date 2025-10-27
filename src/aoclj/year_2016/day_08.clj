@@ -12,6 +12,7 @@
             [clojure.string :as str]
             [clojure.spec.alpha :as s]
             [clojure.core.match :refer [match]]
+            [hyperfiddle.rcf :refer [tests]]
             [instaparse.core :as insta]))
 
 (s/def ::cmd #{:draw :rot-row :rot-col})
@@ -120,3 +121,9 @@
   (time (solve raw-input))
 
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2016 8))
+ (solve input)
+ :=
+ [115 :👀])

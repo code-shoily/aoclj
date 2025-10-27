@@ -10,7 +10,8 @@
   aoclj.year-2017.day-07
   (:require [aoclj.utils :as utils]
             [clojure.core.match :refer [match]]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn to-weight
   "(weight) becomes weight"
@@ -161,3 +162,9 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (def input (utils/read-input-data 2017 7))
+ (solve input)
+ :=
+ ["hmvwl" 1853])

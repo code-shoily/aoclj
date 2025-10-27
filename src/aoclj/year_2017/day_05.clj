@@ -8,7 +8,8 @@
       :tags       [:array]}
     aoclj.year-2017.day-05
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn jump-1
   [coll]
@@ -47,3 +48,9 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2017 5))
+ (solve input)
+ :=
+ [372671 25608480])

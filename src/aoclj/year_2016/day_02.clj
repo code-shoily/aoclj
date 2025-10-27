@@ -8,7 +8,8 @@
       :tags       [:grid :decode]}
     aoclj.year-2016.day-02
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (def keypad1 [[1 2 3] [4 5 6] [7 8 9]])
 
@@ -50,3 +51,9 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2016 2))
+ (solve input)
+ :=
+ ["76792" "A7AC3"])

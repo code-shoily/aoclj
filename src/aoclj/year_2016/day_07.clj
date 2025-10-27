@@ -9,7 +9,8 @@
     aoclj.year-2016.day-07
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [clojure.set :as set]))
+            [clojure.set :as set]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defrecord IP [super hyper])
 (defn parse-ip
@@ -72,3 +73,9 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2016 7))
+ (solve input)
+ :=
+ [105 258])

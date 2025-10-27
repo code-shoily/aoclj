@@ -9,7 +9,8 @@
     aoclj.year-2016.day-01
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-directions
   [[x & xs]]
@@ -98,3 +99,9 @@
   (def raw-input (utils/read-input-data 2016 1))
   (time (solve raw-input))
   "End Repl Exploration")
+
+(tests
+ (def input (utils/read-input-data 2016 1))
+ (solve input)
+ :=
+ [253 126])

@@ -8,7 +8,8 @@
       :tags       [:op-code]}
     aoclj.year-2017.day-08
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn as-fun
   [sym]
@@ -64,3 +65,9 @@
   (def input (parse raw-input))
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2017 8))
+ (solve input)
+ :=
+ [2971 4254])

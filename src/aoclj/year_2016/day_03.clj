@@ -8,7 +8,8 @@
       :tags       [:transpose :geometry]}
     aoclj.year-2016.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -45,3 +46,9 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2016 3))
+ (solve input)
+ :=
+ [993 1849])

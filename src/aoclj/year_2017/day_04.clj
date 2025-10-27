@@ -8,7 +8,8 @@
       :tags       [:frequency :string]}
     aoclj.year-2017.day-04
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -50,3 +51,9 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2017 4))
+ (solve input)
+ :=
+ [455 186])

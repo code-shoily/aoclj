@@ -9,7 +9,8 @@
     :tags       [:slow :partition :revisit]}
   aoclj.year-2016.day-18
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            #_[hyperfiddle.rcf :refer [tests]]))
 
 ;; This one is slow, should use the bit-math version
 ;; See:
@@ -61,3 +62,9 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+#_(tests
+   (def input (utils/read-input-data 2016 18))
+   (solve input)
+   :=
+   [1951 20002936])

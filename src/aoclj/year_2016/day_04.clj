@@ -9,6 +9,7 @@
     aoclj.year-2016.day-04
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))
 
 (defrecord Room [name sector-id checksum])
@@ -68,3 +69,9 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2016 4))
+ (solve input)
+ :=
+ [158835 993])

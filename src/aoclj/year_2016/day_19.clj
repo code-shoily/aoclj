@@ -9,7 +9,8 @@
     :tags       [:arithmetic :bit-math :revisit]}
   aoclj.year-2016.day-19
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (def parse (comp parse-long str/trim))
 
@@ -41,3 +42,9 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2016 19))
+ (solve input)
+ :=
+ [1842613 1424135])

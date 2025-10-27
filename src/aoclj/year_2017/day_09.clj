@@ -9,7 +9,8 @@
     aoclj.year-2017.day-09
   (:require [aoclj.utils :as utils]
             [clojure.core.match :refer [match]]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse [input] (str/split input #""))
 
@@ -44,3 +45,9 @@
   (def input-data (utils/read-input-data 2017 9))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2017 9))
+ (solve input)
+ :=
+ [7616 3838])

@@ -11,7 +11,7 @@
             [aoclj.algorithms.hash :as hash]
             [clojure.string :as str]
             [medley.core :as m]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            #_[hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (def parse str/trim-newline)
 
@@ -37,8 +37,8 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
- (def input (utils/read-input-data 2015 4))
- (solve input)
- :=
- ["254575" "1038736"])
+#_(tests
+   (def input (utils/read-input-data 2015 4))
+   (solve input)
+   :=
+   ["254575" "1038736"])

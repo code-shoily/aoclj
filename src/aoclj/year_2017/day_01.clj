@@ -7,7 +7,8 @@
       :stars      2,
       :tags       [:arithmetic]}
     aoclj.year-2017.day-01
-  (:require [aoclj.utils :as utils]))
+  (:require [aoclj.utils :as utils]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse [input] (mapv (comp parse-long str) input))
 
@@ -41,3 +42,9 @@
   (def input (parse raw-input))
   (time (solve input))
   "End REPL Explorations")
+
+(tests
+ (def input (utils/read-input-data 2017 1))
+ (solve input)
+ :=
+ [1089 1156])

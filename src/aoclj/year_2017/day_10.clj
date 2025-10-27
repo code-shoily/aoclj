@@ -9,7 +9,8 @@
     :tags       [:revisit :hash :array]}
   aoclj.year-2017.day-10
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn inplace-reverse
   [x pos length]
@@ -76,3 +77,8 @@
   (time (solve raw-input))
   "</Explore>")
 
+(tests
+ (def input (utils/read-input-data 2017 10))
+ (solve input)
+ :=
+ [9656 "20b7b54c92bf73cf3e5631458a715149"])

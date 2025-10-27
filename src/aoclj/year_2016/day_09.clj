@@ -10,7 +10,8 @@
   aoclj.year-2016.day-09
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [clojure.core.match :refer [match]]))
+            [clojure.core.match :refer [match]]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn find-pattern
   "Scans the string for a (NxM) and returns the values:
@@ -49,3 +50,9 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (def input (utils/read-input-data 2016 9))
+ (solve input)
+ :=
+ [102239 10780403063])

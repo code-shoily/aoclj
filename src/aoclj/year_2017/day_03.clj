@@ -9,7 +9,8 @@
     :tags       [:spiral-coords]}
   aoclj.year-2017.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn next-pos
   "Returns the next position based on the direction and unit step."
@@ -89,3 +90,9 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (def input (utils/read-input-data 2017 3))
+ (solve input)
+ :=
+ [430 312453])

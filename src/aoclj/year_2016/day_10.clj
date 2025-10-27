@@ -12,6 +12,7 @@
             [clojure.core.match :refer [match]]
             [clojure.set :as set]
             [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))
 
 (defn build-graph
@@ -172,3 +173,9 @@
 
   "</Explore>"
 )
+
+(tests
+ (def input (utils/read-input-data 2016 10))
+ (solve input)
+ :=
+ [56 7847])

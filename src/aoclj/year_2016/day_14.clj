@@ -11,7 +11,8 @@
   (:require [aoclj.utils :as utils]
             [aoclj.algorithms.hash :refer [md5]]
             [medley.core :as m]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            #_[hyperfiddle.rcf :refer [tests]]))
 
 (def parse str/trim)
 
@@ -69,3 +70,9 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+#_(tests
+   (def input (utils/read-input-data 2016 14))
+   (solve input)
+   :=
+   [15168 20864])
