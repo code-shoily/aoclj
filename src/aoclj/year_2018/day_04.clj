@@ -11,7 +11,8 @@
   (:require [aoclj.utils :as utils]
             [clojure.core.match :refer [match]]
             [clojure.instant :as instant]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 
 (defn parse-timestamp
@@ -139,3 +140,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2018 4))
+ :=
+ [74743 132484])

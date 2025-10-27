@@ -10,7 +10,8 @@
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]
             [clojure.string :as str]
-            [clojure.core.match :refer [match]]))
+            [clojure.core.match :refer [match]]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn two-or-three-times
   [s]
@@ -62,3 +63,8 @@
   (def input-data (utils/read-input-data 2018 2))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2018 2))
+ :=
+ [7221 "mkcdflathzwsvjxrevymbdpoq"])

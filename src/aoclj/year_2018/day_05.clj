@@ -9,7 +9,8 @@
     :tags       [:stack :brute-force]}
   aoclj.year-2018.day-05
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse [raw-input] (map int (str/trim raw-input)))
 
@@ -58,3 +59,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2018 5))
+ :=
+ [10496 5774])

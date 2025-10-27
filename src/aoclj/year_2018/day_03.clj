@@ -9,7 +9,8 @@
     :tags       [:brute-force :range-math :grid]}
   aoclj.year-2018.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-fabric
   [line]
@@ -67,3 +68,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2018 3))
+ :=
+ [110389 552])

@@ -10,7 +10,8 @@
   aoclj.year-2018.day-07
   (:require [aoclj.utils :as utils]
             [clojure.data.priority-map :as pm]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 ;; ### Priority Queue(ish)
 ;; We are for now using `priority-map` because somehow that was included
@@ -124,3 +125,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2018 7))
+ :=
+ ["BCADPVTJFZNRWXHEKSQLUYGMIO" 101])

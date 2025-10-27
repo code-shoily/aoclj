@@ -8,7 +8,8 @@
       :tags       [:infinite-sequence :set]}
     aoclj.year-2018.day-01
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [raw-input]
@@ -38,3 +39,8 @@
   (def input (parse raw-input))
   (time (solve raw-input))
   "REPL Exploration end")
+
+(tests
+ (solve (utils/read-input-data 2018 1))
+ :=
+ [590 83445])
