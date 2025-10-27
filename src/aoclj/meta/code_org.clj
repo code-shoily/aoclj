@@ -4,18 +4,14 @@
             [clojure.java.io :as io]
             [selmer.parser :as parser]))
 
-(defn- build-file-path
-  [prefix year day]
-  (io/file prefix
+(defn- get-source-path
+  [year day]
+  (io/file "src"
            "aoclj"
            (str "year_" year)
            (str "day_"
                 (utils/get-padded-day day)
-                (if (= prefix "test") "_test" "")
                 ".clj")))
-
-(def get-source-path (partial build-file-path "src"))
-(def get-test-path (partial build-file-path "test"))
 
 (defn get-input-path
   [year day]
@@ -35,11 +31,6 @@
   (let [title (fetcher/fetch-problem-title year day)]
     (render-content-for year day "templates/source.txt" :title title)))
 
-(render-source-content 2016 5)
-(defn render-test-content
-  [year day]
-  (render-content-for year day "templates/test.txt"))
-
 (defn- stub-creator
   [year day path-getter renderer]
   (let [file-obj  (path-getter year day)
@@ -55,10 +46,6 @@
   [year day]
   (stub-creator year day get-source-path render-source-content))
 
-(defn create-test-stub
-  [year day]
-  (stub-creator year day get-test-path render-test-content))
-
 (defn create-input-stub
   [year day]
   (stub-creator year day get-input-path fetcher/get-input-data))
@@ -67,6 +54,5 @@
   "Creates the stubs for input, source, test if they aren't create already"
   [year day]
   (let [input-created?  (create-input-stub year day)
-        source-created? (create-source-stub year day)
-        test-created?   (create-test-stub year day)]
-    {:input input-created?, :source source-created?, :test test-created?}))
+        source-created? (create-source-stub year day)]
+    {:input input-created?, :source source-created?}))

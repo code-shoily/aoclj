@@ -40,23 +40,15 @@
     (str/join " " (repeat repetition ":snowflake:"))))
 
 (defn code-metadata
-  [year day type]
+  [year day]
   (let [padded-day      (utils/get-padded-day day)
         source-filename (format "day_%s.clj" padded-day)
-        source-path     (format "/src/aoclj/year_%s/%s" year source-filename)
-        test-filename   (format "day_%s_test.clj" padded-day)
-        test-path       (format "/test/aoclj/year_%s/%s" year test-filename)]
-    (case type
-      :source {:name    source-filename,
-               :path    source-path,
-               :md-link (render-md-link source-filename source-path)}
-      :test   {:name    test-filename,
-               :path    test-path,
-               :md-link (render-md-link test-filename test-path)})))
+        source-path     (format "/src/aoclj/year_%s/%s" year source-filename)]
+    {:name    source-filename,
+     :path    source-path,
+     :md-link (render-md-link source-filename source-path)}))
 
-(defn source-md-link [year day] ((code-metadata year day :source) :md-link))
-
-(defn test-md-link [year day] ((code-metadata year day :test) :md-link))
+(defn source-md-link [year day] ((code-metadata year day) :md-link))
 
 (defn render-navlinks
   [year]
@@ -74,10 +66,7 @@
   IRender
     (render [{:keys [year day title url tags stars difficulty]}]
       (letfn [(formatted-link [year day]
-                (format
-                 ":small_orange_diamond: %s <br /> :small_orange_diamond: %s"
-                 (source-md-link year day)
-                 (test-md-link year day)))
+                (format (source-md-link year day)))
               (render-tags [tags] (str/join "," (mapv name tags)))]
         (format "[%s](%s)|%s|%s|%s|%s"
                 title

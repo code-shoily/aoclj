@@ -9,7 +9,8 @@
    :tags       []}
  aoclj.year-{{year}}.day-{{padded-day}}
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -42,3 +43,6 @@
          
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+  (solve (utils/read-input-data {{year}} {{day}})) := [0 0])
