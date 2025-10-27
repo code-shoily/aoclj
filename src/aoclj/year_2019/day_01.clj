@@ -8,7 +8,8 @@
       :tags       [:formula :recursion]}
     aoclj.year-2019.day-01
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -50,3 +51,6 @@
   (def input-data (utils/read-input-data 2019 1))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2019 1) := [3421505 5129386]))

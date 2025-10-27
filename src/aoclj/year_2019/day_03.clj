@@ -10,7 +10,8 @@
   aoclj.year-2019.day-03
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [fastmath.distance :as dist]))
+            [fastmath.distance :as dist]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-direction
   [s]
@@ -126,3 +127,6 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2019 3) := [1195 91518]))

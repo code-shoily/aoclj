@@ -9,7 +9,8 @@
     :tags       [:arithmetic]}
   aoclj.year-2019.day-04
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn divmod
   "Returns division and remainder as a tuple. 
@@ -82,3 +83,6 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2019 4) := [1099 710]))
