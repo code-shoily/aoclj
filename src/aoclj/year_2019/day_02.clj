@@ -73,4 +73,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2019 2) := [3562624 8298]))
+ (solve (utils/read-input-data 2019 2))
+ :=
+ [3562624 8298])

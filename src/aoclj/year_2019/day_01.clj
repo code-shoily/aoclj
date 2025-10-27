@@ -44,6 +44,7 @@
        (map get-fuel-2)
        (reduce +)))
 
+
 (def solve (utils/generic-solver part-1 part-2 parse))
 
 (comment
@@ -53,4 +54,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2019 1) := [3421505 5129386]))
+ (solve (utils/read-input-data 2019 1))
+ :=
+ [3421505 5129386])

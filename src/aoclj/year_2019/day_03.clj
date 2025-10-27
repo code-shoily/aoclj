@@ -129,4 +129,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2019 3) := [1195 91518]))
+ (solve (utils/read-input-data 2019 3))
+ :=
+ [1195 91518])

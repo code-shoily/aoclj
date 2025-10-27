@@ -85,4 +85,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2019 4) := [1099 710]))
+ (solve (utils/read-input-data 2019 4))
+ :=
+ [1099 710])
