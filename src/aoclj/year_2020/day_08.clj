@@ -10,7 +10,8 @@
   aoclj.year-2020.day-08
   (:require [aoclj.utils :as utils]
             [clojure.core.match :refer [match]]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn to-instruction [[i a]] [i (parse-long a)])
 
@@ -78,3 +79,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 8))
+ :=
+ [2080 2477])

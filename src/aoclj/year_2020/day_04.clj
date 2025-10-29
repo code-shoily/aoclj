@@ -10,7 +10,8 @@
   aoclj.year-2020.day-04
   (:require [aoclj.utils :as utils]
             [clojure.spec.alpha :as s]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (s/def ::passport-v1
   (s/keys :req-un [::byr ::iyr ::eyr ::hgt ::hcl ::ecl ::pid]
@@ -91,3 +92,8 @@
   input
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 4))
+ :=
+ [233 111])

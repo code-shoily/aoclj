@@ -11,7 +11,8 @@
   (:require [aoclj.utils :as utils]
             [clojure.core.reducers :as r]
             [clojure.math.combinatorics :refer [cartesian-product]]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn to-grid-map
   [cucumbers]
@@ -71,3 +72,8 @@
 
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2021 25))
+ :=
+ [504 :🎉])

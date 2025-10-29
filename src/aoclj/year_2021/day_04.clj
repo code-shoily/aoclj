@@ -10,6 +10,7 @@
   aoclj.year-2021.day-04
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))
 
 (defn parse-draws [s] (mapv parse-long (str/split s #",")))
@@ -119,3 +120,8 @@
   (time (solve raw-input))
 
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2021 4))
+ :=
+ [11774 4495])

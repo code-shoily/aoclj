@@ -9,7 +9,8 @@
     :tags       [:cryptography :modular-algebra]}
   aoclj.year-2020.day-25
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 ;; Yes I converted this by hand:
 ;; github.com/code-shoily/advent_of_code/blob/master/lib/2020/day_25.ex
@@ -46,3 +47,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2020 25))
+ :=
+ [3286137 :🎉])

@@ -10,7 +10,8 @@
   aoclj.year-2021.day-09
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [clojure.math.combinatorics :refer [cartesian-product]]))
+            [clojure.math.combinatorics :refer [cartesian-product]]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   "Get a 2D array representing all heights"
@@ -91,3 +92,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2021 9))
+ :=
+ [528 920448])

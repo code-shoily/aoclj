@@ -9,7 +9,8 @@
     :tags       [:grid :revisit]}
   aoclj.year-2022.day-09
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn to-dir
   [s]
@@ -127,3 +128,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2022 9))
+ :=
+ [5907 2303])

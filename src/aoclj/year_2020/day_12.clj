@@ -10,7 +10,8 @@
   aoclj.year-2020.day-12
   (:require [aoclj.utils :as utils]
             [fastmath.distance :as dist]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 ;; ---------------------------------------- DIR RELATIONS
 
@@ -125,3 +126,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 12))
+ :=
+ [439 12385])

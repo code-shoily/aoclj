@@ -9,7 +9,8 @@
     :tags       [:dynamic-programming]}
   aoclj.year-2020.day-10
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -59,3 +60,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2020 10))
+ :=
+ [2030 42313823813632])

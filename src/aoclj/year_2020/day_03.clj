@@ -9,7 +9,8 @@
     :tags       [:grid]}
   aoclj.year-2020.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defprotocol IToboggan
   (update-slope [this [v h]])
@@ -74,3 +75,8 @@
 
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 3))
+ :=
+ [272 3898725600])

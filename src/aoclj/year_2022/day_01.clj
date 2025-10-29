@@ -8,7 +8,8 @@
       :tags       [:section-parse :take-n]}
     aoclj.year-2022.day-01
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn calories-per-elf
   "Parses the input and gets the total calories for each elf in descending 
@@ -35,3 +36,8 @@
   (def input-data (utils/read-input-data 2022 1))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2022 1))
+ :=
+ [70720 207148])

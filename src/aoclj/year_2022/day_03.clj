@@ -9,7 +9,8 @@
     aoclj.year-2022.day-03
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn compartmentalize [rucksack] (split-at (quot (count rucksack) 2) rucksack))
 
@@ -44,3 +45,8 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2022 3))
+ :=
+ [8233 2821])

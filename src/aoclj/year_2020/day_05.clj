@@ -10,6 +10,7 @@
   aoclj.year-2020.day-05
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))
 
 (defn encode
@@ -55,3 +56,8 @@
 
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 5))
+ :=
+ [930 515])

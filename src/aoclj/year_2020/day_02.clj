@@ -8,7 +8,8 @@
       :tags       [:frequency :nil]}
     aoclj.year-2020.day-02
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defrecord PasswordPolicy [lo hi ch pwd])
 
@@ -47,3 +48,8 @@
   input
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 2))
+ :=
+ [607 321])

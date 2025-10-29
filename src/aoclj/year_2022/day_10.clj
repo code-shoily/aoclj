@@ -9,7 +9,8 @@
     :tags       [:modular-algebra :grid :visual-output]}
   aoclj.year-2022.day-10
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-cmds
   "Pad `0` in between to set the values apart to their cycle interval"
@@ -62,3 +63,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2022 10))
+ :=
+ [11820 nil])

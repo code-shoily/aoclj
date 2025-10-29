@@ -9,7 +9,8 @@
     :tags       [:range-math]}
   aoclj.year-2021.day-05
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn diagonals
   "Returns diagonal points between two points (inclusive)
@@ -80,3 +81,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2021 5))
+ :=
+ [4655 20500])

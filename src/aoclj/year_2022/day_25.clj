@@ -9,7 +9,8 @@
     :tags       [:number-system :modular-algebra]}
   aoclj.year-2022.day-25
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn snafu->decimal
   "Converts a base-5 variant (snafu) to decimal"
@@ -56,3 +57,8 @@
 
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2022 25))
+ :=
+ ["2-==10===-12=2-1=-=0" :🎉])

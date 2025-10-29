@@ -9,7 +9,8 @@
     :tags       [:stack :parens]}
   aoclj.year-2021.day-10
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse [raw-input] (str/split-lines raw-input))
 
@@ -73,3 +74,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2021 10))
+ :=
+ [339411 2289754624])

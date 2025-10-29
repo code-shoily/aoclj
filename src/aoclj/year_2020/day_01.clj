@@ -8,7 +8,8 @@
       :tags       [:nsum]}
     aoclj.year-2020.day-01
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -57,3 +58,8 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 1))
+ :=
+ [1014624 80072256])

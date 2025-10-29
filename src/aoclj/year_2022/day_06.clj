@@ -8,7 +8,8 @@
     :stars      2,
     :tags       [:subseq]}
   aoclj.year-2022.day-06
-  (:require [aoclj.utils :as utils]))
+  (:require [aoclj.utils :as utils]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (def parse vec)
 
@@ -38,3 +39,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2022 6))
+ :=
+ [1651 3837])

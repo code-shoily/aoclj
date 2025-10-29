@@ -9,7 +9,8 @@
     :tags       [:graph-traversal]}
   aoclj.year-2020.day-07
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn to-bag-label
   "Prettifies a bag label by removing space and making it keyword"
@@ -109,3 +110,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2020 7))
+ :=
+ [355 5312])

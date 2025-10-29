@@ -9,7 +9,8 @@
     :tags       [:matrix]}
   aoclj.year-2022.day-08
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   "Create a NxN grid of heights"
@@ -69,3 +70,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2022 8))
+ :=
+ [1763 671160])

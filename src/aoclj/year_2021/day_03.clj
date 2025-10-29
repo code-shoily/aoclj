@@ -9,7 +9,8 @@
     :tags       [:transpose]}
   aoclj.year-2021.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (def binvec->int
   "Return binary number given sequence of 0s and 1s
@@ -81,3 +82,8 @@
   (time (solve raw-input))
   "</Explore>"
 )
+
+(tests
+ (solve (utils/read-input-data 2021 3))
+ :=
+ [1540244 4203981])

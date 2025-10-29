@@ -9,7 +9,8 @@
     :tags       [:statistics :formulaic]}
   aoclj.year-2021.day-07
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -52,3 +53,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2021 7))
+ :=
+ [344138 94862124])

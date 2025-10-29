@@ -10,7 +10,8 @@
   aoclj.year-2021.day-08
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [clojure.set :refer [difference subset?]]))
+            [clojure.set :refer [difference subset?]]
+            [hyperfiddle.rcf :refer [tests]]))
 
 
 (defn as-sets
@@ -82,3 +83,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2021 8))
+ :=
+ [534 1070188])

@@ -8,7 +8,8 @@
       :tags       [:simulation :cmd]}
     aoclj.year-2021.day-02
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defprotocol ICommand
   (forward [this x])
@@ -60,3 +61,8 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2021 2))
+ :=
+ [1660158 1604592846])

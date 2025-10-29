@@ -9,7 +9,8 @@
     :tags       [:parse-heavy :stack :string-result]}
   aoclj.year-2022.day-05
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn pad-placeholder
   "Given padding of 4, [A B C] becomes [A B C \"\"]"
@@ -104,3 +105,8 @@
 
   (time (solve raw-input))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2022 5))
+ :=
+ ["VPCDMSLWJ" "TPWCGNCCG"])

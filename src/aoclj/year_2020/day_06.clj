@@ -9,7 +9,8 @@
     aoclj.year-2020.day-06
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [clojure.set :as set]))
+            [clojure.set :as set]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -38,3 +39,8 @@
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
+
+(tests
+ (solve (utils/read-input-data 2020 6))
+ :=
+ [6885 3550])
