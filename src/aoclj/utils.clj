@@ -50,53 +50,21 @@
    (slurp (io/resource (get-input-file-name year day prefix))))
   ([year day] (read-input-data year day "inputs")))
 
+;!zprint {:format :off}
 (tests
- (get-input-file-name 2015 1)
- :=
- "inputs/2015_01.txt"
-
- (get-input-file-name 2024 12)
- :=
- "inputs/2024_12.txt"
-
- (get-input-file-name 2015 1 "test")
- :=
- "test/2015_01.txt"
-
- (get-input-file-name 2024 12 "test")
- :=
- "test/2024_12.txt")
+ (get-input-file-name 2015 1) := "inputs/2015_01.txt"
+ (get-input-file-name 2024 12) := "inputs/2024_12.txt"
+ (get-input-file-name 2015 1 "test") := "test/2015_01.txt"
+ (get-input-file-name 2024 12 "test") := "test/2024_12.txt")
 
 (tests
- (read-input-data 2015 1 "test_inputs")
- :=
- "data for 2015_01"
-
- (read-input-data 2024 12 "test_inputs")
- :=
- "data for 2024_12")
+ (read-input-data 2015 1 "test_inputs") := "data for 2015_01"
+ (read-input-data 2024 12 "test_inputs") := "data for 2024_12")
 
 (tests
- (valid-year-day? 2015 1)
- :=
- true
-
- (valid-year-day? 2024 12)
- :=
- true
-
- (valid-year-day? 2024 13)
- :=
- true
-
- (valid-year-day? 2011 1)
- :=
- false
-
- (valid-year-day? 2015 1)
- :=
- true
-
- (valid-year-day? 2024 0)
- :=
- false)
+ (valid-year-day? 2015 1) := true
+ (valid-year-day? 2024 12) := true
+ (valid-year-day? 2024 13) := true
+ (valid-year-day? 2011 1) := false
+ (valid-year-day? 2015 1) := true
+ (valid-year-day? 2024 0) := false)
