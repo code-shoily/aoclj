@@ -32,6 +32,11 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+;!zprint {:format :off}
+(tests
+  (solve (utils/read-input-data {{year}} {{day}})) := [0 0])
+;!zprint {:format :on}
+
 (comment 
   "<Explore>"
   (def raw-input 
@@ -43,6 +48,3 @@
          
   (time (solve raw-input))
   "</Explore>")
-
-(tests
-  (solve (utils/read-input-data {{year}} {{day}})) := [0 0])
