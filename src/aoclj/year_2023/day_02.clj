@@ -10,6 +10,7 @@
   aoclj.year-2023.day-02
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]
             [instaparse.core :as insta]))
 
 (def parser
@@ -80,6 +81,12 @@
        (reduce +)))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
+
+(tests
+ (def input-data (utils/read-input-data 2023 2))
+ (solve input-data)
+ :=
+ [2085 79315])
 
 (comment
   "<Explore>"

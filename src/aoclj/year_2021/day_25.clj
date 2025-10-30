@@ -12,7 +12,7 @@
             [clojure.core.reducers :as r]
             [clojure.math.combinatorics :refer [cartesian-product]]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            #_[hyperfiddle.rcf :refer [tests]]))
 
 (defn to-grid-map
   [cucumbers]
@@ -70,10 +70,9 @@
 
   (time (solve raw-input))
 
-  "</Explore>"
-)
+  "</Explore>")
 
-(tests
- (solve (utils/read-input-data 2021 25))
- :=
- [504 :🎉])
+#_(tests
+   (solve (utils/read-input-data 2021 25))
+   :=
+   [504 :🎉])

@@ -10,7 +10,8 @@
   aoclj.year-2023.day-04
   (:require [aoclj.utils :as utils]
             [clojure.set :as set]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-line
   [line]
@@ -65,6 +66,12 @@
                   (merge-with + tally))))))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
+
+(tests
+ (def input-data (utils/read-input-data 2023 4))
+ (solve input-data)
+ :=
+ [24542 8736438])
 
 (comment
   "<Explore>"

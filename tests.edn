@@ -13,4 +13,6 @@
                   "aoclj.year-2019.day-\\d{2}$"
                   "aoclj.year-2020.day-\\d{2}$"
                   "aoclj.year-2021.day-\\d{2}$"
-                  "aoclj.year-2022.day-\\d{2}$"]}]}
+                  "aoclj.year-2022.day-\\d{2}$"
+                  "aoclj.year-2023.day-\\d{2}$"
+                  "aoclj.year-2024.day-\\d{2}$"]}]}

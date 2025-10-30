@@ -9,7 +9,8 @@
     :tags       [:reduction :regex :grid]}
   aoclj.year-2023.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn mark-number-positions
   "Expands a range into [row n] for n in x...y. The values are a tuple of
@@ -115,6 +116,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2023 3))
+ (solve input-data)
+ :=
+ [539713 84159075])
+
 (comment
   "<Explore>"
   (def raw-input
@@ -123,5 +130,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

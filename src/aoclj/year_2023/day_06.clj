@@ -10,7 +10,8 @@
   aoclj.year-2023.day-06
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [clojure.core.reducers :as r]))
+            [clojure.core.reducers :as r]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [raw-input]
@@ -50,6 +51,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2023 6))
+ (solve input-data)
+ :=
+ [440000 26187338])
+
 (comment
   "<Explore>"
 
@@ -59,5 +66,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

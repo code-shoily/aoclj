@@ -9,7 +9,8 @@
     :tags       [:series]}
   aoclj.year-2023.day-09
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -46,6 +47,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2023 9))
+ (solve input-data)
+ :=
+ [1939607039 1041])
+
 (comment
   "<Explore>"
   (def raw-input
@@ -54,5 +61,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

@@ -9,7 +9,8 @@
     :tags       [:sort]}
   aoclj.year-2024.day-05
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-each-by
   "Parse each line to get rules or page info."
@@ -51,6 +52,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2024 5))
+ (solve input-data)
+ :=
+ [5391 6142])
+
 (comment
   "<Explore>"
   (def raw-input
@@ -61,5 +68,4 @@
   input
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

@@ -8,7 +8,8 @@
       :tags       [:regex :tricky]}
     aoclj.year-2023.day-01
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -52,6 +53,12 @@
 (defn part-2 [input] (calibration-value (mapv parse-line input)))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
+
+(tests
+ (def input-data (utils/read-input-data 2023 1))
+ (solve input-data)
+ :=
+ [53194 54249])
 
 (comment
   "<Explore>"

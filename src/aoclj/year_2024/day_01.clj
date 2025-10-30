@@ -8,7 +8,8 @@
       :tags       [:sequence]}
     aoclj.year-2024.day-01
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -31,6 +32,12 @@
          (reduce +))))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
+
+(tests
+ (def input-data (utils/read-input-data 2024 1))
+ (solve input-data)
+ :=
+ [2742123 21328497])
 
 (comment
   "<Explore>"

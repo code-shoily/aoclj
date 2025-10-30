@@ -11,7 +11,8 @@
   (:require [aoclj.utils :as utils]
             [clojure.math :refer [floor log10 pow]]
             [clojure.core.match :refer [match]]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   "Returns a frequency map of initial pebbles"
@@ -76,6 +77,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2024 11))
+ (solve input-data)
+ :=
+ [172484 205913561055242])
+
 (comment
   "<Explore>"
   (def raw-input
@@ -84,5 +91,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

@@ -9,7 +9,8 @@
     :tags       [:grid]}
   aoclj.year-2024.day-04
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (def is-xmas #{"SAMX" "XMAS"})
 (def is-mas #{"SAM" "MAS"})
@@ -79,6 +80,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2024 4))
+ (solve input-data)
+ :=
+ [2575 2041])
+
 (comment
   "<Explore>"
   (def input-data
@@ -87,5 +94,4 @@
   (def input (parse input-data))
 
   (time (solve input-data))
-  "</Explore>"
-)
+  "</Explore>")

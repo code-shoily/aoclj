@@ -9,7 +9,8 @@
     :tags       [:state-machine :regex]}
   aoclj.year-2024.day-03
   (:require [aoclj.utils :as utils]
-            [clojure.core.match :refer [match]]))
+            [clojure.core.match :refer [match]]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn part-1
   [input]
@@ -41,6 +42,12 @@
          second)))
 
 (def solve (utils/generic-solver part-1 part-2 identity))
+
+(tests
+ (def input-data (utils/read-input-data 2024 3))
+ (solve input-data)
+ :=
+ [190604937 82857512])
 
 (comment
   "<Explore>"

@@ -9,7 +9,8 @@
     :tags       [:revisit :backtrack :equation]}
   aoclj.year-2024.day-07
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-input
   [line]
@@ -48,6 +49,12 @@
   (let [input (parse raw-input)]
     (vec (pmap #(% input) [part-1 part-2]))))
 
+(tests
+ (def input-data (utils/read-input-data 2024 7))
+ (solve input-data)
+ :=
+ [882304362421 145149066755184])
+
 (comment
   "<Explore>"
   (def raw-input
@@ -56,5 +63,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

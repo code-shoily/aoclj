@@ -9,7 +9,8 @@
     :tags       [:revisit :range]}
   aoclj.year-2023.day-05
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse-seeds
   [seeds]
@@ -112,6 +113,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2023 5))
+ (solve input-data)
+ :=
+ [3374647 6082852])
+
 (comment
   "<Explore>"
   (def raw-input
@@ -120,5 +127,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

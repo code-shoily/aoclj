@@ -10,7 +10,8 @@
   aoclj.year-2024.day-08
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [clojure.math.combinatorics :as comb]))
+            [clojure.math.combinatorics :as comb]
+            [hyperfiddle.rcf :refer [tests]]))
 
 ;; Disclaimer: I used copilot to convert my own F# code to Clojure.
 ;; The F# code is here:
@@ -121,11 +122,16 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2024 8))
+ (solve input-data)
+ :=
+ [291 1015])
+
 (comment
   "<Explore>"
   (def raw-input
     (utils/read-input-data 2024 8))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

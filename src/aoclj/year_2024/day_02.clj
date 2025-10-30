@@ -8,7 +8,8 @@
       :tags       [:brute-force :revisit]}
     aoclj.year-2024.day-02
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse
   [input]
@@ -52,6 +53,12 @@
 (def part-2 (count-safe safe-after-removal?))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
+
+(tests
+ (def input-data (utils/read-input-data 2024 2))
+ (solve input-data)
+ :=
+ [486 540])
 
 (comment
   "<Explore>"

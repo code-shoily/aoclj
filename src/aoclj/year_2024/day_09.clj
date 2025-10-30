@@ -10,7 +10,8 @@
   aoclj.year-2024.day-09
   (:require [aoclj.utils :as utils]
             [clojure.string :as str]
-            [medley.core :as m]))
+            [medley.core :as m]
+            [hyperfiddle.rcf :refer [tests]]))
 
 ;; Thanks to https://adventofcode.com/2024/day/9#part2 <3 TIL: `reduce-kv`
 
@@ -105,6 +106,12 @@
   (calc-checksum-2 (defragment-2 input)))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
+
+(tests
+ (def input-data (utils/read-input-data 2024 9))
+ (solve input-data)
+ :=
+ [6446899523367 6478232739671])
 
 (comment
   "<Explore>"

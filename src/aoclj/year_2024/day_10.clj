@@ -8,7 +8,8 @@
       :tags       [:graph-traversal :map-grid]}
     aoclj.year-2024.day-10
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn get-neighbours
   "Get valid neighboring positions that are exactly 1 height higher"
@@ -73,6 +74,12 @@
        (reduce +)))
 
 (def solve (utils/generic-solver part-1 part-2 parse))
+
+(tests
+ (def input-data (utils/read-input-data 2024 10))
+ (solve input-data)
+ :=
+ [617 1477])
 
 (comment
   "<Explore>"

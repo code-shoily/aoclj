@@ -10,7 +10,8 @@
   aoclj.year-2024.day-25
   (:require [aoclj.utils :as utils]
             [clojure.math.combinatorics :as comb]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn extract-components
   [line]
@@ -59,6 +60,12 @@
        parse
        fitting-pairs) :🎉])
 
+(tests
+ (def input-data (utils/read-input-data 2024 25))
+ (solve input-data)
+ :=
+ [3146 :🎉])
+
 (comment
   "<Explore>"
   (def raw-input
@@ -67,5 +74,4 @@
   (def input (parse raw-input))
 
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")

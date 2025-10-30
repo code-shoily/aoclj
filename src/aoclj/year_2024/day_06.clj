@@ -9,7 +9,8 @@
     :tags       [:grid :traversal]}
   aoclj.year-2024.day-06
   (:require [aoclj.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [hyperfiddle.rcf :refer [tests]]))
 
 (defn to-grid-2d
   "Converts a string grid to vector grid.
@@ -103,6 +104,12 @@
 
 (def solve (utils/generic-solver part-1 part-2 parse))
 
+(tests
+ (def input-data (utils/read-input-data 2024 6))
+ (solve input-data)
+ :=
+ [4982 1663])
+
 (comment
   "<Explore>"
 
@@ -113,7 +120,3 @@
 
   (time (solve raw-input))
   "</Explore>")
-
-
-
-
