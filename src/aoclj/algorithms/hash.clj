@@ -13,6 +13,7 @@
     (format "%032x" (BigInteger. 1 raw))))
 
 ;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (md5 "") := "d41d8cd98f00b204e9800998ecf8427e"
  (md5 "Hello World!") := "ed076287532e86365e841e92bfc50d8c"

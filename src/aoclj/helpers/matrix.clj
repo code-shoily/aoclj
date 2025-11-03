@@ -7,6 +7,7 @@
   (apply mapv vector mat))
 
 ;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (transpose [[]]) := []
  (transpose [[1 2 3]]) := [[1] [2] [3]]

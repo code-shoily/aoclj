@@ -1,7 +1,7 @@
 (ns aoclj.helpers.io
   (:require [clojure.java.io :as io]
             [aoclj.helpers.meta :refer [get-input-file-name]]
-            [hyperfiddle.rcf :as hf]
+            [hyperfiddle.rcf :as rcf]
             [clojure.string :as str]))
 
 (defn read-input-data
@@ -35,12 +35,12 @@
     (vec (pmap #(% (parse input)) [part-1 part-2]))))
 
 ;!zprint {:format :off}
-(hf/enable! false)
-(hf/tests
+(rcf/enable! false)
+(rcf/tests
  (read-input-data 2015 1 "test_inputs") := "data for 2015_01"
  (read-input-data 2024 12 "test_inputs") := "data for 2024_12")
 
-(hf/tests
+(rcf/tests
  (lines "a\nb\nc\n") := ["a" "b" "c"]
  (lines parse-long "1\n10\n100\n") := [1 10 100]
  (lines parse-long "a\n1\nb\n2") := [nil 1 nil 2]

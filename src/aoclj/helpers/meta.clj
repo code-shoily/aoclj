@@ -34,6 +34,7 @@
   ([year day] (get-input-file-name year day "inputs")))
 
 ;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (get-input-file-name 2015 1) := "inputs/2015_01.txt"
  (get-input-file-name 2024 12) := "inputs/2024_12.txt"

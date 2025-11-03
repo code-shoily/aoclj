@@ -42,7 +42,7 @@
   (io/line raw-input)
   (time (solve raw-input))
   "</Explore>"
-  )
+)
 
 ;!zprint {:format :off}
 (rcf/enable! false)
