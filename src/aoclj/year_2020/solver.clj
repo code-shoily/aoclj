@@ -1,6 +1,5 @@
 (ns aoclj.year-2020.solver
   (:require [aoclj.helpers.io :refer [read-input-data]]
-            [aoclj.helpers.meta :refer [get-ns-string]]
             [aoclj.year-2020.day-01 :as day-01]
             [aoclj.year-2020.day-02 :as day-02]
             [aoclj.year-2020.day-03 :as day-03]
@@ -34,11 +33,3 @@
       25 (day-25/solve (read-input day))
       ;; Add cases for days as needed
       (format "[ERROR] %s/%s was not solved" year day))))
-
-(defn stats
-  "Returns the stats for the problem of `day` for 2020"
-  [day]
-  (-> (get-ns-string year day)
-      read-string
-      find-ns
-      meta))
