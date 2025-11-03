@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.core.match :refer [match]]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn find-pattern
   "Scans the string for a (NxM) and returns the values:
@@ -51,7 +51,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 9))
  (solve input)
  :=

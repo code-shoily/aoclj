@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-command
   "Create command vector from string.
@@ -83,7 +83,7 @@
   " </Explore> "
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 7))
  :=
  [1297159 3866390])

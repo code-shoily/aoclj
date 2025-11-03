@@ -12,7 +12,7 @@
             [clojure.math :refer [floor log10 pow]]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Returns a frequency map of initial pebbles"
@@ -77,7 +77,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 11))
  (solve input-data)
  :=

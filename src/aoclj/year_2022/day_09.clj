@@ -10,7 +10,7 @@
   aoclj.year-2022.day-09
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn to-dir
   [s]
@@ -129,7 +129,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 9))
  :=
  [5907 2303])

@@ -9,7 +9,7 @@
     aoclj.year-2022.day-04
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   [input]
@@ -42,7 +42,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 4))
  :=
  [518 909])

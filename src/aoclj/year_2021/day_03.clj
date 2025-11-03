@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (def binvec->int
   "Return binary number given sequence of 0s and 1s
@@ -84,7 +84,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2021 3))
  :=
  [1540244 4203981])

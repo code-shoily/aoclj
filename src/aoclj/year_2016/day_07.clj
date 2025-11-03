@@ -10,7 +10,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.set :as set]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defrecord IP [super hyper])
 (defn parse-ip
@@ -74,7 +74,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 7))
  (solve input)
  :=

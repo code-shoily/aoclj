@@ -9,7 +9,7 @@
     aoclj.year-2015.day-03
   (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (def parse seq)
 
@@ -62,7 +62,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2015 3))
  (solve input)
  :=

@@ -9,7 +9,7 @@
     aoclj.year-2016.day-04
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]
+            [hyperfiddle.rcf :as rcf]
             [medley.core :as m]))
 
 (defrecord Room [name sector-id checksum])
@@ -70,7 +70,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 4))
  (solve input)
  :=

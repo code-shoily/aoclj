@@ -9,7 +9,7 @@
     aoclj.year-2017.day-05
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn jump-1
   [coll]
@@ -49,7 +49,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2017 5))
  (solve input)
  :=

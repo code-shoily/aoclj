@@ -10,7 +10,7 @@
   aoclj.year-2016.day-19
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (def parse (comp parse-long str/trim))
 
@@ -43,7 +43,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 19))
  (solve input)
  :=

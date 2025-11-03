@@ -9,7 +9,7 @@
     aoclj.year-2015.day-05
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn enough-vowels? [s] (>= (count (filter #{\a \e \i \o \u} s)) 3))
 
@@ -68,7 +68,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2015 5))
  (solve input)
  :=

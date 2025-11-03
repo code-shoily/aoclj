@@ -9,7 +9,7 @@
     :tags       [:subseq]}
   aoclj.year-2022.day-06
   (:require [aoclj.helpers.io :as io]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (def parse vec)
 
@@ -40,7 +40,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 6))
  :=
  [1651 3837])

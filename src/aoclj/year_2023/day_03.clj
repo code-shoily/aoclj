@@ -10,7 +10,7 @@
   aoclj.year-2023.day-03
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn mark-number-positions
   "Expands a range into [row n] for n in x...y. The values are a tuple of
@@ -116,7 +116,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2023 3))
  (solve input-data)
  :=

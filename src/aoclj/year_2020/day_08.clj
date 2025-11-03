@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn to-instruction [[i a]] [i (parse-long a)])
 
@@ -80,7 +80,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 8))
  :=
  [2080 2477])

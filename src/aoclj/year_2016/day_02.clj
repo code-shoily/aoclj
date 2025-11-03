@@ -9,7 +9,7 @@
     aoclj.year-2016.day-02
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (def keypad1 [[1 2 3] [4 5 6] [7 8 9]])
 
@@ -52,7 +52,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 2))
  (solve input)
  :=

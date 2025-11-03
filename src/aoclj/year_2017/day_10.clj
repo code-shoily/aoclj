@@ -10,7 +10,7 @@
   aoclj.year-2017.day-10
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn inplace-reverse
   [x pos length]
@@ -77,7 +77,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2017 10))
  (solve input)
  :=

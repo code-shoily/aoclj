@@ -10,7 +10,7 @@
   aoclj.year-2020.day-03
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defprotocol IToboggan
   (update-slope [this [v h]])
@@ -76,7 +76,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 3))
  :=
  [272 3898725600])

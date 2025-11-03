@@ -2,7 +2,7 @@
   (:import [java.security MessageDigest]
            [java.math BigInteger])
   (:require
-    [hyperfiddle.rcf :refer [tests]]))
+    [hyperfiddle.rcf :as rcf]))
 
 (defn md5
   "Returns md5 hash. Currently using digest but keeping it here for easy
@@ -13,7 +13,7 @@
     (format "%032x" (BigInteger. 1 raw))))
 
 ;!zprint {:format :off}
-(tests
+(rcf/tests
  (md5 "") := "d41d8cd98f00b204e9800998ecf8427e"
  (md5 "Hello World!") := "ed076287532e86365e841e92bfc50d8c"
  (md5 "test") := "098f6bcd4621d373cade4e832627b4f6"

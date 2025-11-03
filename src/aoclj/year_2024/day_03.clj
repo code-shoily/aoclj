@@ -10,7 +10,7 @@
   aoclj.year-2024.day-03
   (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn part-1
   [input]
@@ -43,7 +43,7 @@
 
 (def solve (io/generic-solver part-1 part-2 identity))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 3))
  (solve input-data)
  :=

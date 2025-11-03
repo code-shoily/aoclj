@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.math.combinatorics :as comb]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 ;; Disclaimer: I used copilot to convert my own F# code to Clojure.
 ;; The F# code is here:
@@ -122,7 +122,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 8))
  (solve input-data)
  :=

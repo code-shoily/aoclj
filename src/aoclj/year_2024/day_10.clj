@@ -9,7 +9,7 @@
     aoclj.year-2024.day-10
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn get-neighbours
   "Get valid neighboring positions that are exactly 1 height higher"
@@ -75,7 +75,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 10))
  (solve input-data)
  :=

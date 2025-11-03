@@ -12,7 +12,7 @@
             [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
             [clojure.core.reducers :as r]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   [raw-input]
@@ -52,7 +52,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2023 6))
  (solve input-data)
  :=

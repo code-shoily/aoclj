@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.math.combinatorics :as combinatorics]
             [clojure.string :as str]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Parse raw string to a graph in a map format where (get-in [A B]) is
@@ -67,7 +67,7 @@
 
 
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2015 9))
  (solve input)
  :=

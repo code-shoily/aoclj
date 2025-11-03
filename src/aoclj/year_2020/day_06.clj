@@ -10,7 +10,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.set :as set]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   [input]
@@ -40,7 +40,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 6))
  :=
  [6885 3550])

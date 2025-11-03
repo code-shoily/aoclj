@@ -12,7 +12,7 @@
             [aoclj.algorithms.hash :refer [md5]]
             [medley.core :as m]
             [clojure.string :as str]
-            #_[hyperfiddle.rcf :refer [tests]]))
+            #_[hyperfiddle.rcf :as rcf]))
 
 (def parse str/trim)
 
@@ -71,7 +71,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-#_(tests
+#_(rcf/tests
    (def input (io/read-input-data 2016 14))
    (solve input)
    :=

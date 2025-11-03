@@ -10,7 +10,7 @@
   aoclj.year-2022.day-25
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn snafu->decimal
   "Converts a base-5 variant (snafu) to decimal"
@@ -58,7 +58,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 25))
  :=
  ["2-==10===-12=2-1=-=0" :🎉])

@@ -10,7 +10,7 @@
   aoclj.year-2015.day-25
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -57,7 +57,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2015 25))
  :=
  [19980801 :🎉])

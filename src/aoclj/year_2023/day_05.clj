@@ -10,7 +10,7 @@
   aoclj.year-2023.day-05
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-seeds
   [seeds]
@@ -113,7 +113,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2023 5))
  (solve input-data)
  :=

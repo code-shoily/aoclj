@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-line
   [line]
@@ -67,7 +67,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2023 4))
  (solve input-data)
  :=

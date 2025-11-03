@@ -10,7 +10,7 @@
   aoclj.year-2022.day-10
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-cmds
   "Pad `0` in between to set the values apart to their cycle interval"
@@ -64,7 +64,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 10))
  :=
  [11820 nil])

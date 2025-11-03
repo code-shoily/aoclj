@@ -10,7 +10,7 @@
   aoclj.year-2021.day-05
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn diagonals
   "Returns diagonal points between two points (inclusive)
@@ -82,7 +82,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2021 5))
  :=
  [4655 20500])

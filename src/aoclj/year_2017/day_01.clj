@@ -8,7 +8,7 @@
       :tags       [:arithmetic]}
     aoclj.year-2017.day-01
   (:require [aoclj.helpers.io :as io]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse [input] (mapv (comp parse-long str) input))
 
@@ -43,7 +43,7 @@
   (time (solve input))
   "End REPL Explorations")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2017 1))
  (solve input)
  :=

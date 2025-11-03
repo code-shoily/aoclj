@@ -13,7 +13,7 @@
             [clojure.string :as str]
             [clojure.spec.alpha :as s]
             [clojure.core.match :refer [match]]
-            [hyperfiddle.rcf :refer [tests]]
+            [hyperfiddle.rcf :as rcf]
             [instaparse.core :as insta]))
 
 (s/def ::cmd #{:draw :rot-row :rot-col})
@@ -123,7 +123,7 @@
 
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 8))
  (solve input)
  :=

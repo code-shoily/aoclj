@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [fastmath.core :as math]
             [clojure.string :as str]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-edges
   [edges]
@@ -60,7 +60,7 @@
   (time (solve raw-input))
   "</Explore>"
 )
-(tests
+(rcf/tests
  (def input (io/read-input-data 2023 8))
  (solve input)
  :=

@@ -9,7 +9,7 @@
     aoclj.year-2020.day-02
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defrecord PasswordPolicy [lo hi ch pwd])
 
@@ -49,7 +49,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 2))
  :=
  [607 321])

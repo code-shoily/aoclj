@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [fastmath.distance :as dist]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 ;; ---------------------------------------- DIR RELATIONS
 
@@ -127,7 +127,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 12))
  :=
  [439 12385])

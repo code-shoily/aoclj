@@ -10,7 +10,7 @@
   aoclj.year-2024.day-07
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-input
   [line]
@@ -49,7 +49,7 @@
   (let [input (parse raw-input)]
     (vec (pmap #(% input) [part-1 part-2]))))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 7))
  (solve input-data)
  :=

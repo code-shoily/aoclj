@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.set :refer [difference subset?]]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 
 (defn as-sets
@@ -84,7 +84,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2021 8))
  :=
  [534 1070188])

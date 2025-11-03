@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.data.priority-map :as pm]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 ;; ### Priority Queue(ish)
 ;; We are for now using `priority-map` because somehow that was included
@@ -126,7 +126,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2018 7))
  :=
  ["BCADPVTJFZNRWXHEKSQLUYGMIO" 101])

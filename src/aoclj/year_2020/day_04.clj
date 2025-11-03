@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.spec.alpha :as s]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (s/def ::passport-v1
   (s/keys :req-un [::byr ::iyr ::eyr ::hgt ::hcl ::ecl ::pid]
@@ -93,7 +93,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 4))
  :=
  [233 111])

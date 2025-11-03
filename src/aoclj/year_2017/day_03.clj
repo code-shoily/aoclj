@@ -10,7 +10,7 @@
   aoclj.year-2017.day-03
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn next-pos
   "Returns the next position based on the direction and unit step."
@@ -91,7 +91,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2017 3))
  (solve input)
  :=

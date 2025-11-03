@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [fastmath.distance :as dist]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-direction
   [s]
@@ -128,7 +128,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2019 3))
  :=
  [1195 91518])

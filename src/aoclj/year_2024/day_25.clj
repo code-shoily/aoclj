@@ -12,7 +12,7 @@
             [aoclj.helpers.matrix :as mat]
             [clojure.math.combinatorics :as comb]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn extract-components
   [line]
@@ -61,7 +61,7 @@
        parse
        fitting-pairs) :🎉])
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 25))
  (solve input-data)
  :=

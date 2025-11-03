@@ -10,7 +10,7 @@
   aoclj.year-2020.day-07
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn to-bag-label
   "Prettifies a bag label by removing space and making it keyword"
@@ -111,7 +111,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 7))
  :=
  [355 5312])

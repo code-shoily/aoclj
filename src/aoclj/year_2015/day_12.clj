@@ -12,7 +12,7 @@
             [cheshire.core :as json]
             [clojure.string :as str]
             [clojure.walk :refer [postwalk]]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (def parse str/trim)
 
@@ -47,7 +47,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2015 12))
  :=
  [119433 68466])

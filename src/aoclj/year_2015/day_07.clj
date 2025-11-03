@@ -12,7 +12,7 @@
             [clojure.string :as str]
             [medley.core :as m]
             [clojure.core.match :refer [match]]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 ;;----------------------------------------- Evaluation io & Helpers
 
@@ -143,7 +143,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2015 7))
  (solve input)
  :=

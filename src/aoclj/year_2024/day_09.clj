@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [medley.core :as m]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 ;; Thanks to https://adventofcode.com/2024/day/9#part2 <3 TIL: `reduce-kv`
 
@@ -107,7 +107,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 9))
  (solve input-data)
  :=

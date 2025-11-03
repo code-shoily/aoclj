@@ -10,7 +10,7 @@
   aoclj.year-2017.day-25
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            #_[hyperfiddle.rcf :refer [tests]]))
+            #_[hyperfiddle.rcf :as rcf]))
 
 (defn partition-by-sections
   [lines]
@@ -109,7 +109,7 @@
   "</Explore>"
 )
 
-#_(tests
+#_(rcf/tests
    (def input (io/read-input-data 2017 25))
    (solve input)
    :=

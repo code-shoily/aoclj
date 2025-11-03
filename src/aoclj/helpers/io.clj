@@ -33,7 +33,7 @@
  (read-input-data 2015 1 "test_inputs") := "data for 2015_01"
  (read-input-data 2024 12 "test_inputs") := "data for 2024_12")
 
-(hf/tests 
+(hf/tests
  (lines "a\nb\nc\n") := ["a" "b" "c"]
  (lines parse-long "1\n10\n100\n") := [1 10 100]
  (lines parse-long "a\n1\nb\n2") := [nil 1 nil 2]

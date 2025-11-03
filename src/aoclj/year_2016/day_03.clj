@@ -10,7 +10,7 @@
   (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   [input]
@@ -48,7 +48,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 3))
  (solve input)
  :=

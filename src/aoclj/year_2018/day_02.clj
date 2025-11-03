@@ -11,7 +11,7 @@
             [clojure.set :as set]
             [clojure.string :as str]
             [clojure.core.match :refer [match]]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn two-or-three-times
   [s]
@@ -64,7 +64,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2018 2))
  :=
  [7221 "mkcdflathzwsvjxrevymbdpoq"])

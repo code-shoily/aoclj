@@ -10,7 +10,7 @@
   aoclj.year-2020.day-25
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 ;; Yes I converted this by hand:
 ;; github.com/code-shoily/advent_of_code/blob/master/lib/2020/day_25.ex
@@ -48,7 +48,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2020 25))
  :=
  [3286137 :🎉])

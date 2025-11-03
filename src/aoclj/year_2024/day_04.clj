@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (def is-xmas #{"SAMX" "XMAS"})
 (def is-mas #{"SAM" "MAS"})
@@ -81,7 +81,7 @@
 
 (def solve (io/generic-solver part-1 part-2 parse))
 
-(tests
+(rcf/tests
  (def input-data (io/read-input-data 2024 4))
  (solve input-data)
  :=

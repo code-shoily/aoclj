@@ -1,5 +1,5 @@
 (ns aoclj.helpers.meta
-  (:require [hyperfiddle.rcf :refer [tests]]))
+  (:require [hyperfiddle.rcf :as rcf]))
 
 (def current-year 2024)
 (def total-stars 500)
@@ -34,13 +34,13 @@
   ([year day] (get-input-file-name year day "inputs")))
 
 ;!zprint {:format :off}
-(tests
+(rcf/tests
  (get-input-file-name 2015 1) := "inputs/2015_01.txt"
  (get-input-file-name 2024 12) := "inputs/2024_12.txt"
  (get-input-file-name 2015 1 "test") := "test/2015_01.txt"
  (get-input-file-name 2024 12 "test") := "test/2024_12.txt")
 
-(tests
+(rcf/tests
  (valid-year-day? 2015 1) := true
  (valid-year-day? 2024 12) := true
  (valid-year-day? 2024 13) := true

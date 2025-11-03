@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [medley.core :refer [queue]]
             [clojure.string :as str]
-            #_[hyperfiddle.rcf :refer [tests]]))
+            #_[hyperfiddle.rcf :as rcf]))
 
 (defn build-graph
   "Builds an adjacency list represented graph from components"
@@ -93,7 +93,7 @@
   [(part-1 (parse raw-input)) :🎉])
 
 ;; Flaky Test! See `non-deterministic` tag above
-#_(tests
+#_(rcf/tests
    (def input-data (io/read-input-data 2023 25))
    (solve input-data)
    :=

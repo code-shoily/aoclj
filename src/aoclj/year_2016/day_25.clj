@@ -9,7 +9,7 @@
     :tags       [:assembly :pen-and-paper]}
   aoclj.year-2016.day-25
   (:require [aoclj.helpers.io :as io]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 #_{:clojure-lsp/ignore [:clojure-lsp/unused-public-var]}
 (def explanation
@@ -59,7 +59,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 25))
  (solve input)
  :=

@@ -12,7 +12,7 @@
             [clojure.core.match :refer [match]]
             [clojure.set :as set]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]
+            [hyperfiddle.rcf :as rcf]
             [medley.core :as m]))
 
 (defn build-graph
@@ -174,7 +174,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 10))
  (solve input)
  :=

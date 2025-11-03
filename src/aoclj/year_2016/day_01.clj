@@ -10,7 +10,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse-directions
   [[x & xs]]
@@ -100,7 +100,7 @@
   (time (solve raw-input))
   "End Repl Exploration")
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2016 1))
  (solve input)
  :=

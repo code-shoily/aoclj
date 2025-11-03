@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Create a NxN grid of heights"
@@ -72,7 +72,7 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 8))
  :=
  [1763 671160])

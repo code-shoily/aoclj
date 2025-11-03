@@ -10,7 +10,7 @@
  aoclj.year-{{year}}.day-{{padded-day}}
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -33,7 +33,7 @@
 (def solve (io/generic-solver part-1 part-2 parse))
 
 ;!zprint {:format :off}
-(tests
+(rcf/tests
   (solve (io/read-input-data {{year}} {{day}})) := [0 0])
 ;!zprint {:format :on}
 

@@ -12,7 +12,7 @@
             [clojure.core.async :as async]
             [clojure.spec.alpha :as s]
             [clojure.string :as str]
-            #_[hyperfiddle.rcf :as rcf :refer [tests]]))
+            #_[hyperfiddle.rcf :as rcf]))
 
 (s/def ::setting #{:toggle :on :off})
 (s/def ::point (s/tuple int? int?))
@@ -103,7 +103,7 @@
 
   "</Explore>")
 
-#_(tests
+#_(rcf/tests
    (def input (io/read-input-data 2015 6))
    (solve input)
    :=

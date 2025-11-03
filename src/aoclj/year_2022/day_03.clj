@@ -10,7 +10,7 @@
   (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn compartmentalize [rucksack] (split-at (quot (count rucksack) 2) rucksack))
 
@@ -46,7 +46,7 @@
   (time (solve input-data))
   "</Explore>")
 
-(tests
+(rcf/tests
  (solve (io/read-input-data 2022 3))
  :=
  [8233 2821])

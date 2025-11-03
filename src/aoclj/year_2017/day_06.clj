@@ -10,7 +10,7 @@
   aoclj.year-2017.day-06
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :refer [tests]]
+            [hyperfiddle.rcf :as rcf]
             [medley.core :as m]))
 
 (defn parse
@@ -82,7 +82,7 @@
   "</Explore>"
 )
 
-(tests
+(rcf/tests
  (def input (io/read-input-data 2017 6))
  (solve input)
  :=
