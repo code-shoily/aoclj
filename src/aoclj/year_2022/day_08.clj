@@ -9,6 +9,7 @@
     :tags       [:matrix]}
   aoclj.year-2022.day-08
   (:require [aoclj.helpers.io :as utils]
+            [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -43,7 +44,7 @@
    Thanks to narimiran/AdventOfCode2022 for inspiration."
   [grid]
   (let [h-grid grid
-        v-grid (utils/transpose grid)]
+        v-grid (transpose grid)]
     (for [[y row] (map-indexed vector h-grid)      ;; <--- y --->
           [x col] (map-indexed vector v-grid)      ;; ^--- x ---v
           :let    [dirs   [(rseq (subvec row 0 x)) ;; <---(x ...

@@ -8,6 +8,7 @@
       :tags       [:transpose :geometry]}
     aoclj.year-2016.day-03
   (:require [aoclj.helpers.io :as utils]
+            [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -21,7 +22,7 @@
 (defn transpose-triplets
   [triplets]
   (->> triplets
-       utils/transpose
+       transpose
        (apply concat)
        (partition 3)))
 

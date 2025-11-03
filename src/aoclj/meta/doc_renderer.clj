@@ -1,6 +1,7 @@
 (ns aoclj.meta.doc-renderer
   (:require [aoclj.meta.stats :as stats]
             [aoclj.helpers.meta :as utils]
+            [aoclj.helpers.seq :refer [transpose]]
             [selmer.parser :as parser]
             [clojure.string :as str]))
 
@@ -122,7 +123,7 @@
   []
   (let [solution-matrix (generate-solution-matrix)
         yearwise-total  (->> solution-matrix
-                             utils/transpose
+                             transpose
                              (map #(reduce + %)))
         to-table-row    #(->> %
                               (str/join " | ")

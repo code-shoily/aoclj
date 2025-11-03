@@ -9,6 +9,7 @@
     :tags       [:grid]}
   aoclj.year-2024.day-04
   (:require [aoclj.helpers.io :as utils]
+            [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -64,7 +65,7 @@
   [input]
   (reduce +
           ((juxt get-vh-count
-                 #(get-vh-count (utils/transpose %))
+                 #(get-vh-count (transpose %))
                  #(get-diag-count tl-br %)
                  #(get-diag-count tr-bl %))
            input))

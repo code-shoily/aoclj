@@ -8,6 +8,7 @@
       :tags       [:sequence]}
     aoclj.year-2024.day-01
   (:require [aoclj.helpers.io :as utils]
+            [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -16,7 +17,7 @@
   (->> input
        str/split-lines
        (mapv #(mapv parse-long (str/split % #"\s+")))
-       utils/transpose))
+       transpose))
 
 (defn part-1
   [[left right]]

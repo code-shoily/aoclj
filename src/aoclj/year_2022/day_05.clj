@@ -9,6 +9,7 @@
     :tags       [:parse-heavy :stack :string-result]}
   aoclj.year-2022.day-05
   (:require [aoclj.helpers.io :as utils]
+            [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -37,7 +38,7 @@
   [crates]
   (->> (butlast crates)
        (map parse-crate)
-       utils/transpose
+       transpose
        (map #(drop-while str/blank? %))
        (map-indexed (fn [i v] [(inc i) v]))
        (into {})))
