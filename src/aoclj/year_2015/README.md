@@ -6,16 +6,16 @@
 
 | Day | Difficulty | Stars | Links | Tags |
 |:---: | :---: | :---: | :---: | :----: |
-[Not Quite Lisp](http://www.adventofcode.com/2015/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2015/day_01.clj)|sequence,reduction
+[Not Quite Lisp](http://www.adventofcode.com/2015/day/1)|:snowflake:|:star2: :star2:|[day_01.clj](/src/aoclj/year_2015/day_01.clj)|reduction
 [I Was Told There Would Be No Math](http://www.adventofcode.com/2015/day/2)|:snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2015/day_02.clj)|geometry
-[Perfectly Spherical Houses in a Vacuum](http://www.adventofcode.com/2015/day/3)|:snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2015/day_03.clj)|set
+[Perfectly Spherical Houses in a Vacuum](http://www.adventofcode.com/2015/day/3)|:snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2015/day_03.clj)|set,simulation
 [The Ideal Stocking Stuffer](http://www.adventofcode.com/2015/day/4)|:snowflake: :snowflake:|:star2: :star2:|[day_04.clj](/src/aoclj/year_2015/day_04.clj)|md5,slow
-[Doesn't He Have Intern-Elves For This?](http://www.adventofcode.com/2015/day/5)|:snowflake: :snowflake:|:star2: :star2:|[day_05.clj](/src/aoclj/year_2015/day_05.clj)|partition
-[Probably a Fire Hazard](http://www.adventofcode.com/2015/day/6)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_06.clj](/src/aoclj/year_2015/day_06.clj)|array,slow
-[Some Assembly Required](http://www.adventofcode.com/2015/day/7)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_07.clj](/src/aoclj/year_2015/day_07.clj)|graph,topological-sort,revisit
-[Matchsticks](http://www.adventofcode.com/2015/day/8)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_08.clj](/src/aoclj/year_2015/day_08.clj)|chars
-[All in a Single Night](http://www.adventofcode.com/2015/day/9)|:snowflake: :snowflake:|:star2: :star2:|[day_09.clj](/src/aoclj/year_2015/day_09.clj)|graph,combinatorics,travelling-salesman,brute-force
+[Doesn't He Have Intern-Elves For This?](http://www.adventofcode.com/2015/day/5)|:snowflake: :snowflake:|:star2: :star2:|[day_05.clj](/src/aoclj/year_2015/day_05.clj)|string,validation
+[Probably a Fire Hazard](http://www.adventofcode.com/2015/day/6)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_06.clj](/src/aoclj/year_2015/day_06.clj)|grid
+[Some Assembly Required](http://www.adventofcode.com/2015/day/7)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_07.clj](/src/aoclj/year_2015/day_07.clj)|graph,needs-improvement,topological-sort
+[Matchsticks](http://www.adventofcode.com/2015/day/8)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_08.clj](/src/aoclj/year_2015/day_08.clj)|string
+[All in a Single Night](http://www.adventofcode.com/2015/day/9)|:snowflake: :snowflake:|:star2: :star2:|[day_09.clj](/src/aoclj/year_2015/day_09.clj)|combinatorics,graph,travelling-salesman
 [Elves Look, Elves Say](http://www.adventofcode.com/2015/day/10)|:snowflake: :snowflake:|:star2: :star2:|[day_10.clj](/src/aoclj/year_2015/day_10.clj)|brute-force,count
-[Corporate Policy](http://www.adventofcode.com/2015/day/11)|:snowflake: :snowflake:|:star2: :star2:|[day_11.clj](/src/aoclj/year_2015/day_11.clj)|sequence,ascii,slow
+[Corporate Policy](http://www.adventofcode.com/2015/day/11)|:snowflake: :snowflake:|:star2: :star2:|[day_11.clj](/src/aoclj/year_2015/day_11.clj)|sequence,slow,string
 [JSAbacusFramework.io](http://www.adventofcode.com/2015/day/12)|:snowflake: :snowflake:|:star2: :star2:|[day_12.clj](/src/aoclj/year_2015/day_12.clj)|json,walk
-[Let It Snow](http://www.adventofcode.com/2015/day/25)|:snowflake:|:star2: :star2:|[day_25.clj](/src/aoclj/year_2015/day_25.clj)|reduction,grid,one-off
+[Let It Snow](http://www.adventofcode.com/2015/day/25)|:snowflake:|:star2: :star2:|[day_25.clj](/src/aoclj/year_2015/day_25.clj)|reduction,grid
