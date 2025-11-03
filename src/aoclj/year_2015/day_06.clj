@@ -6,13 +6,12 @@
     :year       2015,
     :day        6,
     :stars      2,
-    :tags       [:array :slow]}
+    :tags       [:grid]}
   aoclj.year-2015.day-06
   (:require [aoclj.helpers.io :as io]
             [clojure.core.async :as async]
             [clojure.spec.alpha :as s]
-            [clojure.string :as str]
-            #_[hyperfiddle.rcf :as rcf]))
+            [hyperfiddle.rcf :as rcf]))
 
 (s/def ::setting #{:toggle :on :off})
 (s/def ::point (s/tuple int? int?))
@@ -33,12 +32,12 @@
   "Parse raw string input into a processable data structure"
   [raw-input]
   {:post [(s/valid? ::input %)]}
-  (->> (str/split-lines raw-input)
-       (map (partial
-             re-find
-             #"(toggle|turn on|turn off) (\d+),(\d+) through (\d+),(\d+)"))
-       (map rest)
-       (map parse-line)))
+  (let [line-pattern
+        #"(toggle|turn on|turn off) (\d+),(\d+) through (\d+),(\d+)"]
+    (->> raw-input
+         (io/lines (partial re-find line-pattern))
+         (map rest)
+         (map parse-line))))
 
 (s/fdef parse :args string? :ret ::input)
 
@@ -103,8 +102,8 @@
 
   "</Explore>")
 
-#_(rcf/tests
+;!zprint {:format :off}
+(rcf/enable! false)
+(rcf/tests
    (def input (io/read-input-data 2015 6))
-   (solve input)
-   :=
-   [377891 14110788])
+   (solve input) := [377891 14110788])

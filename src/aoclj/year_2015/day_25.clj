@@ -6,18 +6,16 @@
     :year       2015,
     :day        25,
     :stars      2,
-    :tags       [:reduction :grid :one-off]}
+    :tags       [:reduction :grid]}
   aoclj.year-2015.day-25
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
   (->> raw-input
-       str/trim
-       (re-find #"[^0-9]+(\d+)[^0-9]+(\d+)\.")
+       (io/line (partial re-find #"[^0-9]+(\d+)[^0-9]+(\d+)\."))
        rest
        (map parse-long)))
 
@@ -57,7 +55,7 @@
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
- (solve (io/read-input-data 2015 25))
- :=
- [19980801 :🎉])
+ (solve (io/read-input-data 2015 25)) := [19980801 :🎉])

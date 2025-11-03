@@ -55,7 +55,7 @@
   "</Explore>")
 
 ;!zprint {:format :off}
-#_(rcf/enable!)
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2015 2))
  (solve input) := [1606483 3842356])

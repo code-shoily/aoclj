@@ -5,10 +5,9 @@
       :year       2015,
       :day        5,
       :stars      2,
-      :tags       [:partition]}
+      :tags       [:string :validation]}
     aoclj.year-2015.day-05
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn enough-vowels? [s] (>= (count (filter #{\a \e \i \o \u} s)) 3))
@@ -46,8 +45,6 @@
 (def is-nice-v2?
   (check-niceness-for [has-non-overlapping-twins? has-sandwitched-letters?]))
 
-(def parse str/split-lines)
-
 (defn part-1
   [input]
   (->> input
@@ -60,7 +57,7 @@
        (filter is-nice-v2?)
        count))
 
-(def solve (io/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 io/lines))
 
 (comment
   "<Explore>"
@@ -68,8 +65,8 @@
   (time (solve raw-input))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2015 5))
- (solve input)
- :=
- [255 55])
+ (solve input) := [255 55])

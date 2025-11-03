@@ -9,13 +9,13 @@
     :tags       [:brute-force :count]}
   aoclj.year-2015.day-10
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
-  (map #(- (int %) (int \0)) (str/trim raw-input)))
+  (->> (io/line raw-input)
+       (map #(- (int %) (int \0)))))
 
 (defn look-and-say
   [line]
@@ -37,14 +37,15 @@
 
 (comment
   "<Explore>"
-  (def raw-input
-    (io/read-input-data 2015 10))
+  (def raw-input (io/read-input-data 2015 10))
+
+  (io/line raw-input)
   (time (solve raw-input))
   "</Explore>"
-)
+  )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2015 10))
- (solve input)
- :=
- [360154 5103798])
+ (solve input) := [360154 5103798])

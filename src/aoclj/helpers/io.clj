@@ -20,6 +20,13 @@
         (mapv by)))
   ([s] (lines identity s)))
 
+(defn line
+  "Extracts the single line of s. If `by` is given, then it
+   transforms each lines accordingly"
+  ([by s]
+   (by (str/trim s)))
+  ([s] (line identity s)))
+
 (defn generic-solver
   "Generic template for solvers. 
    Formats result as string of [part-1 part-2] in parallel"
@@ -28,7 +35,7 @@
     (vec (pmap #(% (parse input)) [part-1 part-2]))))
 
 ;!zprint {:format :off}
-#_(hf/enable!)
+(hf/enable! false)
 (hf/tests
  (read-input-data 2015 1 "test_inputs") := "data for 2015_01"
  (read-input-data 2024 12 "test_inputs") := "data for 2024_12")

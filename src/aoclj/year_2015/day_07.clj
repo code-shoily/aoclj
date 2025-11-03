@@ -6,7 +6,7 @@
     :year       2015,
     :day        7,
     :stars      2,
-    :tags       [:graph :topological-sort :revisit]}
+    :tags       [:graph :needs-improvement :topological-sort]}
   aoclj.year-2015.day-07
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
@@ -54,9 +54,9 @@
   [raw-input]
   (let [graph
         (->> raw-input
-             str/split-lines
-             (map #(str/split % #" -> "))
-             (map (comp parse-assignment (partial map #(str/split % #"\s+"))))
+             (io/lines (comp parse-assignment
+                             (partial map #(str/split % #"\s+"))
+                             #(str/split % #" -> ")))
              (into {}))]
     {:graph graph, :deps (build-dependent-graph graph)}))
 
@@ -143,8 +143,8 @@
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2015 7))
- (solve input)
- :=
- [46065 14134])
+ (solve input) := [46065 14134])

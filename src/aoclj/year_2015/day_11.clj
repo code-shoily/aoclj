@@ -6,17 +6,16 @@
     :year       2015,
     :day        11,
     :stars      2,
-    :tags       [:sequence :ascii :slow]}
+    :tags       [:sequence :slow :string]}
   aoclj.year-2015.day-11
   (:require [aoclj.helpers.io :as io]
             [medley.core :as m]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
-  (str/trim raw-input))
+  (io/line raw-input))
 
 (defn increasing-triplet?
   [ch]
@@ -90,5 +89,6 @@
   "</Explore>")
 
 ;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (solve (io/read-input-data 2015 11)) := ["cqjxxyzz" "cqkaabcc"])

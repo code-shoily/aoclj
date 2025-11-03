@@ -6,11 +6,10 @@
     :year       2015,
     :day        9,
     :stars      2,
-    :tags       [:graph :combinatorics :travelling-salesman :brute-force]}
+    :tags       [:combinatorics :graph :travelling-salesman]}
   aoclj.year-2015.day-09
   (:require [aoclj.helpers.io :as io]
             [clojure.math.combinatorics :as combinatorics]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn parse
@@ -18,8 +17,8 @@
    the distance between A -> B or B -> A. Upon each encounter of A and
    B, both [A, B] and [B, A] keys are added."
   [raw-input]
-  (->> (str/split-lines raw-input)
-       (map (comp rest #(re-find #"(\w+) to (\w+) = (\d+)" %)))
+  (->> raw-input
+       (io/lines (comp rest #(re-find #"(\w+) to (\w+) = (\d+)" %)))
        (reduce
         (fn [acc [from to dist]]
           (when (nil? (get-in acc [from to]))
@@ -54,21 +53,13 @@
 
 (comment
   "<Explore>"
-  (def raw-input
-    (io/read-input-data 2015 9))
-
+  (def raw-input (io/read-input-data 2015 9))
   (def input (parse raw-input))
-
-
-
-  (keys input)
   (time (solve raw-input))
   "</Explore>")
 
-
-
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2015 9))
- (solve input)
- :=
- [117 909])
+ (solve input) := [117 909])

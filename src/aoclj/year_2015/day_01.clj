@@ -5,7 +5,7 @@
       :day        1,
       :difficulty :xs,
       :stars      2,
-      :tags       [:sequence :reduction]}
+      :tags       [:reduction]}
     aoclj.year-2015.day-01
   (:require [aoclj.helpers.io :as io]
             [hyperfiddle.rcf :as rcf]))
@@ -42,6 +42,6 @@
   "End Repl Exploration")
 
 ;!zprint {:format :off}
-#_(rcf/enable!)
+(rcf/enable! false)
 (rcf/tests
  (solve (io/read-input-data 2015 1)) := [232 1783])

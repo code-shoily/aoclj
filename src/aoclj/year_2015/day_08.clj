@@ -6,18 +6,10 @@
     :year       2015,
     :day        8,
     :stars      2,
-    :tags       [:chars]}
+    :tags       [:string]}
   aoclj.year-2015.day-08
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
-
-(defn parse
-  "Parse raw string input into a processable data structure"
-  [raw-input]
-  (->>
-    raw-input
-    str/split-lines))
 
 (defn truncate
   "We inspect the first two characters, if they are escaped, then drop
@@ -66,23 +58,17 @@
 (def part-1 (len-diff count truncated-len))
 (def part-2 (len-diff expanded-len count))
 
-(def solve (io/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 io/lines))
 
 (comment
   "<Explore>"
-  (def raw-input
-    (io/read-input-data 2015 8))
-
-  (def input (parse raw-input))
-
-  input
-
+  (def raw-input (io/read-input-data 2015 8))
   (time (solve raw-input))
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2015 8))
- (solve input)
- :=
- [1333 2046])
+ (solve input) := [1333 2046])

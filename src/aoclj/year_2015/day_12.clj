@@ -10,11 +10,8 @@
   aoclj.year-2015.day-12
   (:require [aoclj.helpers.io :as io]
             [cheshire.core :as json]
-            [clojure.string :as str]
             [clojure.walk :refer [postwalk]]
             [hyperfiddle.rcf :as rcf]))
-
-(def parse str/trim)
 
 (defn red? [m] (some #((set %) "red") m))
 
@@ -34,20 +31,19 @@
        (filter number?)
        (reduce +)))
 
-(def solve (io/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 io/line))
 
 (comment
   "<Explore>"
   (def raw-input
     (io/read-input-data 2015 12))
 
-  (def input (parse raw-input))
-
   (time (solve raw-input))
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
- (solve (io/read-input-data 2015 12))
- :=
- [119433 68466])
+ (def input (io/read-input-data 2015 12))
+ (solve input) := [119433 68466])
