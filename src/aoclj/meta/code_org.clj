@@ -1,6 +1,6 @@
 (ns aoclj.meta.code-org
   (:require [aoclj.meta.fetcher :as fetcher]
-            [aoclj.helpers.meta :refer [get-padded-day]]
+            [aoclj.helpers.meta :as meta]
             [clojure.java.io :as io]
             [selmer.parser :as parser]))
 
@@ -10,18 +10,18 @@
            "aoclj"
            (str "year_" year)
            (str "day_"
-                (get-padded-day day)
+                (meta/get-padded-day day)
                 ".clj")))
 
 (defn get-input-path
   [year day]
   (io/file "resources"
            "inputs"
-           (str year "_" (get-padded-day day) ".txt")))
+           (str year "_" (meta/get-padded-day day) ".txt")))
 
 (defn- render-content-for
   [year day template & {:keys [title], :or {title ""}}]
-  (let [padded-day (get-padded-day day)]
+  (let [padded-day (meta/get-padded-day day)]
     (parser/render-file
      template
      {:year year, :day day, :padded-day padded-day, :title title})))

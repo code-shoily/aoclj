@@ -1,5 +1,5 @@
 (ns aoclj.meta.stats
-  (:require [aoclj.helpers.meta :refer [get-ns-string]]
+  (:require [aoclj.helpers.meta :as meta]
             [aoclj.year-2015.solver]
             [aoclj.year-2016.solver]
             [aoclj.year-2017.solver]
@@ -14,7 +14,7 @@
 (defn get-stat-for
   "Get stat for a particular year/day challenge"
   [year day]
-  (-> (get-ns-string year day)
+  (-> (meta/get-ns-string year day)
       read-string
       find-ns
       meta))
