@@ -10,7 +10,7 @@
             [aoclj.year-2021.day-09 :as day-09]
             [aoclj.year-2021.day-10 :as day-10]
             [aoclj.year-2021.day-25 :as day-25]
-            [aoclj.utils :as utils]))
+            [aoclj.helpers.io :as utils]))
 
 (def ^:const year 2021)
 

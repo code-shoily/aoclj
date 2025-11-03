@@ -3,5 +3,5 @@
   [{:id          :inline,
     :test-paths  ["src"],
     :ns-patterns ["aoclj.year-20\\d\\d.day-\\d{2}$"
-                  "aoclj.utils"
+                  "aoclj.helpers"
                   "aoclj.algorithms"]}]}

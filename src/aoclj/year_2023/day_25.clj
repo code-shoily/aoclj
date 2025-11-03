@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:graph :partition :non-deterministic :revisit]}
   aoclj.year-2023.day-25
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [medley.core :refer [queue]]
             [clojure.string :as str]
             #_[hyperfiddle.rcf :refer [tests]]))

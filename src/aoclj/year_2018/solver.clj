@@ -5,7 +5,7 @@
             [aoclj.year-2018.day-04 :as day-04]
             [aoclj.year-2018.day-05 :as day-05]
             [aoclj.year-2018.day-07 :as day-07]
-            [aoclj.utils :as utils]))
+            [aoclj.helpers.io :as utils]))
 
 (def ^:const year 2018)
 

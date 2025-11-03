@@ -1,5 +1,5 @@
 (ns aoclj.core
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [aoclj.meta.code-org :as g]
             [aoclj.meta.doc-renderer :as renderer]
             [aoclj.year-2015.solver :as solver-2015]

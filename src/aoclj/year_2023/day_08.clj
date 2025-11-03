@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:map :lcm :tricky]}
   aoclj.year-2023.day-08
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [fastmath.core :as math]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf :refer [tests]]))

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:subseq]}
   aoclj.year-2022.day-06
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [hyperfiddle.rcf :refer [tests]]))
 
 (def parse vec)

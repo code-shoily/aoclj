@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:navigation]}
   aoclj.year-2020.day-12
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [fastmath.distance :as dist]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:schema :validation]}
   aoclj.year-2020.day-04
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.spec.alpha :as s]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))

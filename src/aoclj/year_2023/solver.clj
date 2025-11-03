@@ -1,5 +1,5 @@
 (ns aoclj.year-2023.solver
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [aoclj.year-2023.day-01 :as day-01]
             [aoclj.year-2023.day-02 :as day-02]
             [aoclj.year-2023.day-03 :as day-03]

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:intcode :array]}
   aoclj.year-2019.day-02
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))

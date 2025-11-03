@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:revisit :geometry]}
   aoclj.year-2024.day-08
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [clojure.math.combinatorics :as comb]
             [hyperfiddle.rcf :refer [tests]]))

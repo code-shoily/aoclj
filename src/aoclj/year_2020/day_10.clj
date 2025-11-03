@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:dynamic-programming]}
   aoclj.year-2020.day-10
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 

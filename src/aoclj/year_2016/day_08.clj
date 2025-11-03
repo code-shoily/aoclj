@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid :parse-heavy :visual-output]}
   aoclj.year-2016.day-08
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [clojure.spec.alpha :as s]
             [clojure.core.match :refer [match]]

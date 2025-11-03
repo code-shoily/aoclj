@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid :traversal]}
   aoclj.year-2024.day-06
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 

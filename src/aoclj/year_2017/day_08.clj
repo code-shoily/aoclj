@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:op-code]}
     aoclj.year-2017.day-08
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 

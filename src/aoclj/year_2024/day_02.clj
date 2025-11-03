@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:brute-force :revisit]}
     aoclj.year-2024.day-02
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 

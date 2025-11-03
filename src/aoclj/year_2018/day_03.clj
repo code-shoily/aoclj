@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:brute-force :range-math :grid]}
   aoclj.year-2018.day-03
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 

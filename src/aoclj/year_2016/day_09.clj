@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:regex :pattern-matching]}
   aoclj.year-2016.day-09
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [clojure.core.match :refer [match]]
             [hyperfiddle.rcf :refer [tests]]))

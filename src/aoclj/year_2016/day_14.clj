@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:slow :md5 :memoization]}
   aoclj.year-2016.day-14
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [aoclj.algorithms.hash :refer [md5]]
             [medley.core :as m]
             [clojure.string :as str]

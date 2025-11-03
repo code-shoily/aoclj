@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:revisit :backtrack :equation]}
   aoclj.year-2024.day-07
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 

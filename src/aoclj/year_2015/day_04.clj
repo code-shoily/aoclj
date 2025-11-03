@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:md5 :slow]}
     aoclj.year-2015.day-04
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [aoclj.algorithms.hash :as hash]
             [clojure.string :as str]
             [medley.core :as m]

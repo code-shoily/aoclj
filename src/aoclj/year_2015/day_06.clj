@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:array :slow]}
   aoclj.year-2015.day-06
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.async :as async]
             [clojure.spec.alpha :as s]
             [clojure.string :as str]

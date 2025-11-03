@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:state-machine :regex]}
   aoclj.year-2024.day-03
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.match :refer [match]]
             [hyperfiddle.rcf :refer [tests]]))
 

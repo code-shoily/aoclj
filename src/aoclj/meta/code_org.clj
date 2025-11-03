@@ -1,6 +1,6 @@
 (ns aoclj.meta.code-org
   (:require [aoclj.meta.fetcher :as fetcher]
-            [aoclj.utils :as utils]
+            [aoclj.helpers.meta :as utils]
             [clojure.java.io :as io]
             [selmer.parser :as parser]))
 

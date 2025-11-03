@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:sequence :ascii :slow]}
   aoclj.year-2015.day-11
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [medley.core :as m]
             [clojure.string :as str]
             #_[hyperfiddle.rcf :as rcf :refer [tests]]))

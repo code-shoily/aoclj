@@ -8,7 +8,7 @@
       :tags       [:slow :md5]}
     aoclj.year-2016.day-05
   (:require [aoclj.algorithms.hash :as hash]
-            [aoclj.utils :as utils]
+            [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             #_[hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))

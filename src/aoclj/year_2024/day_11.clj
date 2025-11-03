@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:frequency :bignum :memoization]}
   aoclj.year-2024.day-11
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.math :refer [floor log10 pow]]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]

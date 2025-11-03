@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:checksum]}
     aoclj.year-2017.day-02
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 

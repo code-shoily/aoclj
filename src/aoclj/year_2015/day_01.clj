@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:sequence :reduction]}
     aoclj.year-2015.day-01
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn parse

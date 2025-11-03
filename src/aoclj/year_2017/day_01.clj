@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:arithmetic]}
     aoclj.year-2017.day-01
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse [input] (mapv (comp parse-long str) input))

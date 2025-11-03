@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:pattern-matching :ranking]}
   aoclj.year-2023.day-07
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))

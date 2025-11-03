@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:simulation :slow]}
   aoclj.year-2021.day-25
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.reducers :as r]
             [clojure.math.combinatorics :refer [cartesian-product]]
             [clojure.string :as str]

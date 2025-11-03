@@ -1,6 +1,5 @@
-(ns aoclj.utils
-  (:require [clojure.java.io :as io]
-            [hyperfiddle.rcf :refer [tests]]))
+(ns aoclj.helpers.meta
+  (:require [hyperfiddle.rcf :refer [tests]]))
 
 (def current-year 2024)
 (def total-stars 500)
@@ -8,19 +7,11 @@
 
 (def aoc-years (range 2015 (inc current-year)))
 
-(defn transpose "Transposes vector `mat`" [mat] (apply mapv vector mat))
-
 (defn get-padded-day
   "Returns padded day, as represented in various codes/docs
    1 becomes 01, 10 remains 10"
   [day]
   (format "%02d" day))
-
-(defn generic-solver
-  "Generic template for solvers. Formats result as string of [part-1 part-2] in parallel"
-  [part-1 part-2 parse]
-  (fn [input]
-    (vec (pmap #(% (parse input)) [part-1 part-2]))))
 
 (defn get-ns-string
   "Returns the namespace string for a given solution
@@ -42,24 +33,12 @@
   ([year day prefix] (str prefix "/" year "_" (get-padded-day day) ".txt"))
   ([year day] (get-input-file-name year day "inputs")))
 
-(defn read-input-data
-  "Read the input data for a given year and day.
-  If a prefix is provided, it will be used to construct the file path.
-  The default prefix is 'inputs'."
-  ([year day prefix]
-   (slurp (io/resource (get-input-file-name year day prefix))))
-  ([year day] (read-input-data year day "inputs")))
-
 ;!zprint {:format :off}
 (tests
  (get-input-file-name 2015 1) := "inputs/2015_01.txt"
  (get-input-file-name 2024 12) := "inputs/2024_12.txt"
  (get-input-file-name 2015 1 "test") := "test/2015_01.txt"
  (get-input-file-name 2024 12 "test") := "test/2024_12.txt")
-
-(tests
- (read-input-data 2015 1 "test_inputs") := "data for 2015_01"
- (read-input-data 2024 12 "test_inputs") := "data for 2024_12")
 
 (tests
  (valid-year-day? 2015 1) := true

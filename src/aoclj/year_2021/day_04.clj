@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid :reduction :parse-heavy]}
   aoclj.year-2021.day-04
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))

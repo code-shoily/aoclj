@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:json :walk]}
   aoclj.year-2015.day-12
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [cheshire.core :as json]
             [clojure.string :as str]
             [clojure.walk :refer [postwalk]]

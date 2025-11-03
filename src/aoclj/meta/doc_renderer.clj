@@ -1,6 +1,6 @@
 (ns aoclj.meta.doc-renderer
   (:require [aoclj.meta.stats :as stats]
-            [aoclj.utils :as utils]
+            [aoclj.helpers.meta :as utils]
             [selmer.parser :as parser]
             [clojure.string :as str]))
 

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:op-code]}
   aoclj.year-2020.day-08
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))

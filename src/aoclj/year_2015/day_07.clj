@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:graph :topological-sort :revisit]}
   aoclj.year-2015.day-07
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [medley.core :as m]
             [clojure.core.match :refer [match]]

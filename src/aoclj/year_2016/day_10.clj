@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:topological-sort :revisit]}
   aoclj.year-2016.day-10
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.match :refer [match]]
             [clojure.set :as set]
             [clojure.string :as str]

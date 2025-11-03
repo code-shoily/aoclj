@@ -8,7 +8,7 @@
     :stars      1,
     :tags       [:topological-sort]}
   aoclj.year-2018.day-07
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.data.priority-map :as pm]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))

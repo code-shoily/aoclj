@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:graph :combinatorics :travelling-salesman :brute-force]}
   aoclj.year-2015.day-09
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.math.combinatorics :as combinatorics]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf :refer [tests]]))

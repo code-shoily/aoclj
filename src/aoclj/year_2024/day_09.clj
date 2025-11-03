@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:revisit :two-pointer]}
   aoclj.year-2024.day-09
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [medley.core :as m]
             [hyperfiddle.rcf :refer [tests]]))

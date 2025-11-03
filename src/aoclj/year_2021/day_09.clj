@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:flood-fill :grid]}
   aoclj.year-2021.day-09
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.string :as str]
             [clojure.math.combinatorics :refer [cartesian-product]]
             [hyperfiddle.rcf :refer [tests]]))

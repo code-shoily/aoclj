@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:time :nil-issue :revisit :groups]}
   aoclj.year-2018.day-04
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.core.match :refer [match]]
             [clojure.instant :as instant]
             [clojure.string :as str]

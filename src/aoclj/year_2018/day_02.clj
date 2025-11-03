@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:set :match]}
     aoclj.year-2018.day-02
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as utils]
             [clojure.set :as set]
             [clojure.string :as str]
             [clojure.core.match :refer [match]]
