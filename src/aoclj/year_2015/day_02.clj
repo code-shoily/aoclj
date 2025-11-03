@@ -9,14 +9,13 @@
     aoclj.year-2015.day-02
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "Parse wxhxl as [w h l] for all inputs given"
   [input]
   (letfn [(extract-dims [s] (mapv parse-long (str/split s #"x")))]
-    (->> (str/split-lines input)
-         (mapv extract-dims))))
+    (io/lines extract-dims input)))
 
 (defn area-calculator
   [f g input]
@@ -55,8 +54,8 @@
   (time (solve raw-input))
   "</Explore>")
 
-(tests
+;!zprint {:format :off}
+#_(rcf/enable!)
+(rcf/tests
  (def input (io/read-input-data 2015 2))
- (solve input)
- :=
- [1606483 3842356])
+ (solve input) := [1606483 3842356])

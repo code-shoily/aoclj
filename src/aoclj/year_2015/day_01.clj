@@ -8,7 +8,7 @@
       :tags       [:sequence :reduction]}
     aoclj.year-2015.day-01
   (:require [aoclj.helpers.io :as io]
-            [hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn parse
   "( means climbing up (+1) while ) means moving down (-1)"
@@ -41,7 +41,7 @@
   (time (solve raw-input))
   "End Repl Exploration")
 
-(tests
- (solve (io/read-input-data 2015 1))
- :=
- [232 1783])
+;!zprint {:format :off}
+#_(rcf/enable!)
+(rcf/tests
+ (solve (io/read-input-data 2015 1)) := [232 1783])
