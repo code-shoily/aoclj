@@ -11,7 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [medley.core :as m]
             [clojure.string :as str]
-            #_[hyperfiddle.rcf :as rcf :refer [tests]]))
+            [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn parse
   "Parse raw string input into a processable data structure"
@@ -89,7 +89,6 @@
   (time (solve raw-input))
   "</Explore>")
 
-#_(tests
-   (solve (io/read-input-data 2015 11))
-   :=
-   ["cqjxxyzz" "cqkaabcc"])
+;!zprint {:format :off}
+(tests
+ (solve (io/read-input-data 2015 11)) := ["cqjxxyzz" "cqkaabcc"])
