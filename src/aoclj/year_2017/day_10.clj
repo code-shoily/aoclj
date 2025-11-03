@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:revisit :hash :array]}
   aoclj.year-2017.day-10
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -63,12 +63,12 @@
 
 (def part-2 (comp dense-hash sparse-hash second))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2017 10))
+    (io/read-input-data 2017 10))
 
   (def input (parse raw-input))
 
@@ -78,7 +78,7 @@
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2017 10))
+ (def input (io/read-input-data 2017 10))
  (solve input)
  :=
  [9656 "20b7b54c92bf73cf3e5631458a715149"])

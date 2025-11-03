@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:array :slow]}
   aoclj.year-2015.day-06
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.async :as async]
             [clojure.spec.alpha :as s]
             [clojure.string :as str]
@@ -95,7 +95,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2015 6))
+    (io/read-input-data 2015 6))
 
   (def input (parse raw-input))
 
@@ -104,7 +104,7 @@
   "</Explore>")
 
 #_(tests
-   (def input (utils/read-input-data 2015 6))
+   (def input (io/read-input-data 2015 6))
    (solve input)
    :=
    [377891 14110788])

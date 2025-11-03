@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:geometry]}
     aoclj.year-2015.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
 
@@ -45,18 +45,18 @@
                  (* 2)))]
     (area-calculator bow-ribbon present-ribbon input)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2015 2))
+  (def raw-input (io/read-input-data 2015 2))
   (def input (parse raw-input))
   input
   (time (solve raw-input))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2015 2))
+ (def input (io/read-input-data 2015 2))
  (solve input)
  :=
  [1606483 3842356])

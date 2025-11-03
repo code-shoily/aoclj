@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:parse-heavy]}
   aoclj.year-2023.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]
             [instaparse.core :as insta]))
@@ -80,10 +80,10 @@
        (map power)
        (reduce +)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2023 2))
+ (def input-data (io/read-input-data 2023 2))
  (solve input-data)
  :=
  [2085 79315])
@@ -91,7 +91,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2023 2))
+    (io/read-input-data 2023 2))
 
   (def input (parse raw-input))
 

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:graph :partition :non-deterministic :revisit]}
   aoclj.year-2023.day-25
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [medley.core :refer [queue]]
             [clojure.string :as str]
             #_[hyperfiddle.rcf :refer [tests]]))
@@ -94,7 +94,7 @@
 
 ;; Flaky Test! See `non-deterministic` tag above
 #_(tests
-   (def input-data (utils/read-input-data 2023 25))
+   (def input-data (io/read-input-data 2023 25))
    (solve input-data)
    :=
    [558376 :🎉])
@@ -102,7 +102,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2023 25))
+    (io/read-input-data 2023 25))
 
   (def graph (parse raw-input))
 

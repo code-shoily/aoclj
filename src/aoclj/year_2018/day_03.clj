@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:brute-force :range-math :grid]}
   aoclj.year-2018.day-03
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -56,12 +56,12 @@
                     (recur rst-x input)
                     (recur xs rst-y)))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2018 3))
+    (io/read-input-data 2018 3))
 
   (def input (parse raw-input))
 
@@ -70,6 +70,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2018 3))
+ (solve (io/read-input-data 2018 3))
  :=
  [110389 552])

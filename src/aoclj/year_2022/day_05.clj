@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:parse-heavy :stack :string-result]}
   aoclj.year-2022.day-05
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -95,12 +95,12 @@
        top-crates))
 
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2022 5))
+    (io/read-input-data 2022 5))
 
   (def input (parse raw-input))
 
@@ -108,6 +108,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2022 5))
+ (solve (io/read-input-data 2022 5))
  :=
  ["VPCDMSLWJ" "TPWCGNCCG"])

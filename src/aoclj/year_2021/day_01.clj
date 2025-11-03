@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:sequence]}
     aoclj.year-2021.day-01
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -36,16 +36,16 @@
        (map (juxt first last))
        count-increasing))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2021 1))
+  (def input-data (io/read-input-data 2021 1))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2021 1))
+ (solve (io/read-input-data 2021 1))
  :=
  [1139 1103])

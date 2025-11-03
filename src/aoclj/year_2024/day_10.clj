@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:graph-traversal :map-grid]}
     aoclj.year-2024.day-10
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -73,17 +73,17 @@
        (map count)
        (reduce +)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2024 10))
+ (def input-data (io/read-input-data 2024 10))
  (solve input-data)
  :=
  [617 1477])
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2024 10))
+  (def raw-input (io/read-input-data 2024 10))
 
   (parse raw-input)
   (time (solve raw-input))

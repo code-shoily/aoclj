@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:set]}
   aoclj.year-2021.day-08
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.set :refer [difference subset?]]
             [hyperfiddle.rcf :refer [tests]]))
@@ -72,12 +72,12 @@
 
 (defn part-2 [input] (reduce + (map get-display-digit input)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 8))
+    (io/read-input-data 2021 8))
 
   (def input (parse raw-input))
 
@@ -85,6 +85,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2021 8))
+ (solve (io/read-input-data 2021 8))
  :=
  [534 1070188])

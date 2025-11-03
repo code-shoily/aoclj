@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:regex :pattern-matching]}
   aoclj.year-2016.day-09
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.core.match :refer [match]]
             [hyperfiddle.rcf :refer [tests]]))
@@ -45,14 +45,14 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2016 9))
+    (io/read-input-data 2016 9))
 
   (time (solve raw-input))
   "</Explore>"
 )
 
 (tests
- (def input (utils/read-input-data 2016 9))
+ (def input (io/read-input-data 2016 9))
  (solve input)
  :=
  [102239 10780403063])

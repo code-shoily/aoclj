@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:set :partition]}
     aoclj.year-2016.day-07
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.set :as set]
             [hyperfiddle.rcf :refer [tests]]))
@@ -65,17 +65,17 @@
        (filter ssl?)
        count))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2016 7))
+  (def input-data (io/read-input-data 2016 7))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2016 7))
+ (def input (io/read-input-data 2016 7))
  (solve input)
  :=
  [105 258])

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid :parse-heavy :visual-output]}
   aoclj.year-2016.day-08
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [clojure.spec.alpha :as s]
@@ -113,7 +113,7 @@
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2016 8))
+  (def raw-input (io/read-input-data 2016 8))
 
   (def input (parse raw-input))
 
@@ -124,7 +124,7 @@
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2016 8))
+ (def input (io/read-input-data 2016 8))
  (solve input)
  :=
  [115 :👀])

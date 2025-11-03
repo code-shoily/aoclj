@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:map :recursion]}
   aoclj.year-2023.day-04
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -65,10 +65,10 @@
                   (into {})
                   (merge-with + tally))))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2023 4))
+ (def input-data (io/read-input-data 2023 4))
  (solve input-data)
  :=
  [24542 8736438])
@@ -76,7 +76,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2023 4))
+    (io/read-input-data 2023 4))
 
   (def input (parse raw-input))
 

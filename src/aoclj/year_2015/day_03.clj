@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:set]}
     aoclj.year-2015.day-03
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
 
@@ -53,17 +53,17 @@
         [(deliver-presents santa) (deliver-presents robot)]]
     (count (set/union santa-visits robo-visits))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2015 3))
+  (def raw-input (io/read-input-data 2015 3))
   (def input (parse raw-input))
   (time (solve raw-input))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2015 3))
+ (def input (io/read-input-data 2015 3))
  (solve input)
  :=
  [2081 2341])

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:graph-traversal]}
   aoclj.year-2020.day-07
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -98,12 +98,12 @@
   [input]
   (count-children-dfs :shiny-gold input))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2020 7))
+    (io/read-input-data 2020 7))
 
   (def input (parse raw-input))
 
@@ -112,6 +112,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2020 7))
+ (solve (io/read-input-data 2020 7))
  :=
  [355 5312])

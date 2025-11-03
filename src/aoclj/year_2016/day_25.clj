@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:assembly :pen-and-paper]}
   aoclj.year-2016.day-25
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [hyperfiddle.rcf :refer [tests]]))
 
 #_{:clojure-lsp/ignore [:clojure-lsp/unused-public-var]}
@@ -53,14 +53,14 @@
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2016 25))
+  (def raw-input (io/read-input-data 2016 25))
 
   (time (solve raw-input))
   "</Explore>"
 )
 
 (tests
- (def input (utils/read-input-data 2016 25))
+ (def input (io/read-input-data 2016 25))
  (solve input)
  :=
  [158 :🎉])

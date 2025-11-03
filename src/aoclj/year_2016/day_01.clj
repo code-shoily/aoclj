@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:grid :set]}
     aoclj.year-2016.day-01
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -92,16 +92,16 @@
        first
        distance-from-origin))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "Repl Exploration"
-  (def raw-input (utils/read-input-data 2016 1))
+  (def raw-input (io/read-input-data 2016 1))
   (time (solve raw-input))
   "End Repl Exploration")
 
 (tests
- (def input (utils/read-input-data 2016 1))
+ (def input (io/read-input-data 2016 1))
  (solve input)
  :=
  [253 126])

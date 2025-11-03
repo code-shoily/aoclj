@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:json :walk]}
   aoclj.year-2015.day-12
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [cheshire.core :as json]
             [clojure.string :as str]
             [clojure.walk :refer [postwalk]]
@@ -34,12 +34,12 @@
        (filter number?)
        (reduce +)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2015 12))
+    (io/read-input-data 2015 12))
 
   (def input (parse raw-input))
 
@@ -48,6 +48,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2015 12))
+ (solve (io/read-input-data 2015 12))
  :=
  [119433 68466])

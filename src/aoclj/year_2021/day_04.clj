@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid :reduction :parse-heavy]}
   aoclj.year-2021.day-04
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))
@@ -108,12 +108,12 @@
                        (partial update-board-state winners))
                  boards))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 4))
+    (io/read-input-data 2021 4))
 
   (def input (parse raw-input))
 
@@ -122,6 +122,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2021 4))
+ (solve (io/read-input-data 2021 4))
  :=
  [11774 4495])

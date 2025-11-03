@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:graph :combinatorics :travelling-salesman :brute-force]}
   aoclj.year-2015.day-09
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.math.combinatorics :as combinatorics]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
@@ -55,7 +55,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2015 9))
+    (io/read-input-data 2015 9))
 
   (def input (parse raw-input))
 
@@ -68,7 +68,7 @@
 
 
 (tests
- (def input (utils/read-input-data 2015 9))
+ (def input (io/read-input-data 2015 9))
  (solve input)
  :=
  [117 909])

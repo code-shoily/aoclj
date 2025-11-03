@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:algebra]}
   aoclj.year-2023.day-06
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [clojure.core.reducers :as r]
@@ -50,10 +50,10 @@
        (mapv parse-long)
        ways-to-win))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2023 6))
+ (def input-data (io/read-input-data 2023 6))
  (solve input-data)
  :=
  [440000 26187338])
@@ -62,7 +62,7 @@
   "<Explore>"
 
   (def raw-input
-    (utils/read-input-data 2023 6))
+    (io/read-input-data 2023 6))
 
   (def input (parse raw-input))
 

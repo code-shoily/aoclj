@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:tabular]}
   aoclj.year-2022.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -98,12 +98,12 @@
        (map (partial get-score-by opponent->outcome outcome-strategy))
        (reduce +)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2022 2))
+    (io/read-input-data 2022 2))
 
   (def input (parse raw-input))
 
@@ -114,6 +114,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2022 2))
+ (solve (io/read-input-data 2022 2))
  :=
  [12645 11756])

@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:infinite-sequence :set]}
     aoclj.year-2018.day-01
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -31,16 +31,16 @@
                    [x (conj visited x)]))
                [nil #{}])))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "REPL Explorations"
-  (def raw-input (utils/read-input-data 2018 1))
+  (def raw-input (io/read-input-data 2018 1))
   (def input (parse raw-input))
   (time (solve raw-input))
   "REPL Exploration end")
 
 (tests
- (solve (utils/read-input-data 2018 1))
+ (solve (io/read-input-data 2018 1))
  :=
  [590 83445])

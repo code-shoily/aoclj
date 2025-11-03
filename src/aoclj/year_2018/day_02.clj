@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:set :match]}
     aoclj.year-2018.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
             [clojure.core.match :refer [match]]
@@ -56,15 +56,15 @@
        (take 1)
        remove-difference))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2018 2))
+  (def input-data (io/read-input-data 2018 2))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2018 2))
+ (solve (io/read-input-data 2018 2))
  :=
  [7221 "mkcdflathzwsvjxrevymbdpoq"])

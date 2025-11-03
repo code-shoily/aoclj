@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:stack :brute-force]}
   aoclj.year-2018.day-05
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -45,12 +45,12 @@
 
 (defn part-2 [input] (apply min (pmap #(react input %) units)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2018 5))
+    (io/read-input-data 2018 5))
 
   (def input (parse raw-input))
 
@@ -61,6 +61,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2018 5))
+ (solve (io/read-input-data 2018 5))
  :=
  [10496 5774])

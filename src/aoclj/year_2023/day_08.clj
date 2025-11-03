@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:map :lcm :tricky]}
   aoclj.year-2023.day-08
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [fastmath.core :as math]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
@@ -48,12 +48,12 @@
             1
             srcs)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2023 8))
+    (io/read-input-data 2023 8))
 
   (def input (parse raw-input))
 
@@ -61,7 +61,7 @@
   "</Explore>"
 )
 (tests
- (def input (utils/read-input-data 2023 8))
+ (def input (io/read-input-data 2023 8))
  (solve input)
  :=
  [20093 22103062509257])

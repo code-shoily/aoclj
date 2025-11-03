@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:revisit :geometry]}
   aoclj.year-2024.day-08
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.math.combinatorics :as comb]
             [hyperfiddle.rcf :refer [tests]]))
@@ -120,10 +120,10 @@
          (filter some?)
          count)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2024 8))
+ (def input-data (io/read-input-data 2024 8))
  (solve input-data)
  :=
  [291 1015])
@@ -131,7 +131,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2024 8))
+    (io/read-input-data 2024 8))
 
   (time (solve raw-input))
   "</Explore>")

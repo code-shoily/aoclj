@@ -8,13 +8,13 @@
     :stars      2,
     :tags       [:graph :topological-sort :revisit]}
   aoclj.year-2015.day-07
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [medley.core :as m]
             [clojure.core.match :refer [match]]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
 
-;;----------------------------------------- Evaluation Utils & Helpers
+;;----------------------------------------- Evaluation io & Helpers
 
 (defn numeric-string? [s] (boolean (re-matches #"\d+" s)))
 
@@ -32,7 +32,7 @@
         [f a b]     (f (at table a)
                        (at table b))))))
 
-;;----------------------------------------------------- Parse Utils
+;;----------------------------------------------------- Parse io
 
 (defn parse-rule
   [tokens]
@@ -67,7 +67,7 @@
         (map (fn [[k [_ v]]] [k (count (remove numeric-string? v))])
              graph)))
 
-;;----------------------------------------------------- Graph Utils
+;;----------------------------------------------------- Graph io
 
 (defn build-dependent-graph
   "Build a graph with outgoing wires"
@@ -135,7 +135,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2015 7))
+    (io/read-input-data 2015 7))
 
   (def input (parse raw-input))
 
@@ -144,7 +144,7 @@
 )
 
 (tests
- (def input (utils/read-input-data 2015 7))
+ (def input (io/read-input-data 2015 7))
  (solve input)
  :=
  [46065 14134])

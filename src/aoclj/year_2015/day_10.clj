@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:brute-force :count]}
   aoclj.year-2015.day-10
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
 
@@ -38,13 +38,13 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2015 10))
+    (io/read-input-data 2015 10))
   (time (solve raw-input))
   "</Explore>"
 )
 
 (tests
- (def input (utils/read-input-data 2015 10))
+ (def input (io/read-input-data 2015 10))
  (solve input)
  :=
  [360154 5103798])

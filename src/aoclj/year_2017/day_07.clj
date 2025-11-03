@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:complected :tree :frequency]}
   aoclj.year-2017.day-07
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -155,7 +155,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2017 7))
+    (io/read-input-data 2017 7))
 
   (def input (parse raw-input))
 
@@ -164,7 +164,7 @@
 )
 
 (tests
- (def input (utils/read-input-data 2017 7))
+ (def input (io/read-input-data 2017 7))
  (solve input)
  :=
  ["hmvwl" 1853])

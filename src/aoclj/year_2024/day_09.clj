@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:revisit :two-pointer]}
   aoclj.year-2024.day-09
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [medley.core :as m]
             [hyperfiddle.rcf :refer [tests]]))
@@ -105,10 +105,10 @@
   [input]
   (calc-checksum-2 (defragment-2 input)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2024 9))
+ (def input-data (io/read-input-data 2024 9))
  (solve input-data)
  :=
  [6446899523367 6478232739671])
@@ -116,7 +116,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2024 9))
+    (io/read-input-data 2024 9))
 
   (def input (parse raw-input))
 

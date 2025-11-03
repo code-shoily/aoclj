@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:arithmetic]}
     aoclj.year-2017.day-01
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [hyperfiddle.rcf :refer [tests]]))
 
 (defn parse [input] (mapv (comp parse-long str) input))
@@ -34,17 +34,17 @@
        captcha
        (* 2)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "REPL Explorations"
-  (def raw-input (utils/read-input-data 2017 1))
+  (def raw-input (io/read-input-data 2017 1))
   (def input (parse raw-input))
   (time (solve input))
   "End REPL Explorations")
 
 (tests
- (def input (utils/read-input-data 2017 1))
+ (def input (io/read-input-data 2017 1))
  (solve input)
  :=
  [1089 1156])

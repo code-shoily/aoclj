@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:schema :validation]}
   aoclj.year-2020.day-04
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.spec.alpha :as s]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -83,17 +83,17 @@
 
 (def part-2 (validate-all-for ::passport-v2))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2020 4))
+  (def input-data (io/read-input-data 2020 4))
   (def input (parse input-data))
   input
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2020 4))
+ (solve (io/read-input-data 2020 4))
  :=
  [233 111])

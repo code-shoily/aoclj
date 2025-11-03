@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:set :partition]}
     aoclj.year-2022.day-03
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -37,16 +37,16 @@
        (map (comp get-priority first #(reduce set/intersection %) #(map set %)))
        (reduce +)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2022 3))
+  (def input-data (io/read-input-data 2022 3))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2022 3))
+ (solve (io/read-input-data 2022 3))
  :=
  [8233 2821])

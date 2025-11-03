@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:transpose :geometry]}
     aoclj.year-2016.day-03
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -39,17 +39,17 @@
       transpose-triplets
       count-triangles))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2016 3))
+  (def input-data (io/read-input-data 2016 3))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2016 3))
+ (def input (io/read-input-data 2016 3))
  (solve input)
  :=
  [993 1849])

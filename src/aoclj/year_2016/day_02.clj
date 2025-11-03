@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:grid :decode]}
     aoclj.year-2016.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -43,17 +43,17 @@
 (def part-1 (partial decode-keypad [2 2] keypad1))
 (def part-2 (partial decode-keypad [2 0] keypad2))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2016 2))
+  (def input-data (io/read-input-data 2016 2))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2016 2))
+ (def input (io/read-input-data 2016 2))
  (solve input)
  :=
  ["76792" "A7AC3"])

@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:section-parse :take-n]}
     aoclj.year-2022.day-01
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -29,15 +29,15 @@
        (take 3)
        (reduce +)))
 
-(def solve (utils/generic-solver part-1 part-2 calories-per-elf))
+(def solve (io/generic-solver part-1 part-2 calories-per-elf))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2022 1))
+  (def input-data (io/read-input-data 2022 1))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2022 1))
+ (solve (io/read-input-data 2022 1))
  :=
  [70720 207148])

@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:checksum]}
     aoclj.year-2017.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -33,17 +33,17 @@
 (def part-1 (compute-checksum checksum-1))
 (def part-2 (compute-checksum checksum-2))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2017 2))
+  (def input-data (io/read-input-data 2017 2))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2017 2))
+ (def input (io/read-input-data 2017 2))
  (solve input)
  :=
  [32020 236])

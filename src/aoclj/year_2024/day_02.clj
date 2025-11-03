@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:brute-force :revisit]}
     aoclj.year-2024.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -52,17 +52,17 @@
 
 (def part-2 (count-safe safe-after-removal?))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2024 2))
+ (def input-data (io/read-input-data 2024 2))
  (solve input-data)
  :=
  [486 540])
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2024 2))
+  (def input-data (io/read-input-data 2024 2))
   (def input (parse input-data))
   input
   (part-2 input)

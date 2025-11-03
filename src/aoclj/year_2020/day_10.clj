@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:dynamic-programming]}
   aoclj.year-2020.day-10
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -48,12 +48,12 @@
 
 (def part-2 count-arrangements)
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2020 10))
+    (io/read-input-data 2020 10))
 
   (def input (parse raw-input))
 
@@ -62,6 +62,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2020 10))
+ (solve (io/read-input-data 2020 10))
  :=
  [2030 42313823813632])

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid :traversal]}
   aoclj.year-2024.day-06
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -102,10 +102,10 @@
 
 (def part-2 count-loops)
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2024 6))
+ (def input-data (io/read-input-data 2024 6))
  (solve input-data)
  :=
  [4982 1663])
@@ -114,7 +114,7 @@
   "<Explore>"
 
   (def raw-input
-    (utils/read-input-data 2024 6))
+    (io/read-input-data 2024 6))
 
   (def input (parse raw-input))
 

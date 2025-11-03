@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:partition]}
     aoclj.year-2015.day-05
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
 
@@ -60,16 +60,16 @@
        (filter is-nice-v2?)
        count))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2015 5))
+  (def raw-input (io/read-input-data 2015 5))
   (time (solve raw-input))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2015 5))
+ (def input (io/read-input-data 2015 5))
  (solve input)
  :=
  [255 55])

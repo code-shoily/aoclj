@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:sliding-window :two-sum]}
   aoclj.year-2020.day-09
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 (defn parse
@@ -79,7 +79,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2020 9))
+    (io/read-input-data 2020 9))
 
   (def input (parse raw-input))
 
@@ -87,6 +87,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2020 9))
+ (solve (io/read-input-data 2020 9))
  :=
  [15353384 2466556])

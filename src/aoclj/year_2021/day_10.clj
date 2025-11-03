@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:stack :parens]}
   aoclj.year-2021.day-10
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -61,12 +61,12 @@
        (map (comp completion-score complete-syntax))
        middle-score))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 10))
+    (io/read-input-data 2021 10))
 
   (def input (parse raw-input))
 
@@ -76,6 +76,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2021 10))
+ (solve (io/read-input-data 2021 10))
  :=
  [339411 2289754624])

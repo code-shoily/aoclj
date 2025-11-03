@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:transpose :frequency]}
     aoclj.year-2016.day-06
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -31,12 +31,12 @@
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2016 6))
+  (def input-data (io/read-input-data 2016 6))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2016 6))
+ (def input (io/read-input-data 2016 6))
  (solve input)
  :=
  ["qzedlxso" "ucmifjae"])

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid]}
   aoclj.year-2024.day-04
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -79,10 +79,10 @@
          :when (x-mas? input [r c])]
      true)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2024 4))
+ (def input-data (io/read-input-data 2024 4))
  (solve input-data)
  :=
  [2575 2041])
@@ -90,7 +90,7 @@
 (comment
   "<Explore>"
   (def input-data
-    (utils/read-input-data 2024 4))
+    (io/read-input-data 2024 4))
 
   (def input (parse input-data))
 

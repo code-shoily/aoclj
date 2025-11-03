@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:number-system]}
   aoclj.year-2020.day-05
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))
@@ -43,12 +43,12 @@
        first
        inc))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def input-data
-    (utils/read-input-data 2020 5))
+    (io/read-input-data 2020 5))
 
   (def input (parse input-data))
 
@@ -58,6 +58,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2020 5))
+ (solve (io/read-input-data 2020 5))
  :=
  [930 515])

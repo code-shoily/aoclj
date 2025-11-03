@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:slow :partition :revisit]}
   aoclj.year-2016.day-18
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             #_[hyperfiddle.rcf :refer [tests]]))
 
@@ -50,12 +50,12 @@
 
 (def part-2 (partial count-safe-tiles 400000))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2016 18))
+    (io/read-input-data 2016 18))
 
   (def input (parse raw-input))
 
@@ -64,7 +64,7 @@
 )
 
 #_(tests
-   (def input (utils/read-input-data 2016 18))
+   (def input (io/read-input-data 2016 18))
    (solve input)
    :=
    [1951 20002936])

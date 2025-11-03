@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:slow :md5 :memoization]}
   aoclj.year-2016.day-14
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.algorithms.hash :refer [md5]]
             [medley.core :as m]
             [clojure.string :as str]
@@ -59,12 +59,12 @@
   [input]
   (get-result (make-index-pred (partial get-stretched-hash-idx input))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2016 14))
+    (io/read-input-data 2016 14))
 
   (def input (parse raw-input))
 
@@ -72,7 +72,7 @@
   "</Explore>")
 
 #_(tests
-   (def input (utils/read-input-data 2016 14))
+   (def input (io/read-input-data 2016 14))
    (solve input)
    :=
    [15168 20864])

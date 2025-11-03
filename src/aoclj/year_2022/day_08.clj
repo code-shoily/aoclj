@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:matrix]}
   aoclj.year-2022.day-08
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -65,7 +65,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2022 8))
+    (io/read-input-data 2022 8))
 
   (def input (parse raw-input))
 
@@ -73,6 +73,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2022 8))
+ (solve (io/read-input-data 2022 8))
  :=
  [1763 671160])

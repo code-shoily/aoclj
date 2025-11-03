@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:subseq]}
   aoclj.year-2022.day-06
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [hyperfiddle.rcf :refer [tests]]))
 
 (def parse vec)
@@ -27,12 +27,12 @@
 
 (def part-1 (partial start-of-packet 4))
 (def part-2 (partial start-of-packet 14))
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2022 6))
+    (io/read-input-data 2022 6))
 
   (def input (parse raw-input))
 
@@ -41,6 +41,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2022 6))
+ (solve (io/read-input-data 2022 6))
  :=
  [1651 3837])

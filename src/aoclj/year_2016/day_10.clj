@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:topological-sort :revisit]}
   aoclj.year-2016.day-10
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.set :as set]
             [clojure.string :as str]
@@ -163,7 +163,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2016 10))
+    (io/read-input-data 2016 10))
 
   (def input (parse raw-input))
 
@@ -175,7 +175,7 @@
 )
 
 (tests
- (def input (utils/read-input-data 2016 10))
+ (def input (io/read-input-data 2016 10))
  (solve input)
  :=
  [56 7847])

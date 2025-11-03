@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:iterative]}
   aoclj.year-2017.day-06
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]
             [medley.core :as m]))
@@ -72,7 +72,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2017 6))
+    (io/read-input-data 2017 6))
 
   (def input (parse raw-input))
 
@@ -83,7 +83,7 @@
 )
 
 (tests
- (def input (utils/read-input-data 2017 6))
+ (def input (io/read-input-data 2017 6))
  (solve input)
  :=
  [11137 1037])

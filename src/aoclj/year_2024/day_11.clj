@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:frequency :bignum :memoization]}
   aoclj.year-2024.day-11
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.math :refer [floor log10 pow]]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
@@ -75,10 +75,10 @@
 
 (def part-2 (partial blink-times 75))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2024 11))
+ (def input-data (io/read-input-data 2024 11))
  (solve input-data)
  :=
  [172484 205913561055242])
@@ -86,7 +86,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2024 11))
+    (io/read-input-data 2024 11))
 
   (def input (parse raw-input))
 

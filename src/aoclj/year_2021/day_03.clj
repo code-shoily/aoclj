@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:transpose]}
   aoclj.year-2021.day-03
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -71,12 +71,12 @@
         life-support-rating (* o2-generator co2-scrubber)]
     life-support-rating))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 3))
+    (io/read-input-data 2021 3))
 
   (def input (parse raw-input))
 
@@ -85,6 +85,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2021 3))
+ (solve (io/read-input-data 2021 3))
  :=
  [1540244 4203981])

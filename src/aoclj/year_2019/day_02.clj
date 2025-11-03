@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:intcode :array]}
   aoclj.year-2019.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -57,12 +57,12 @@
                      :move))
                  :start))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2019 2))
+    (io/read-input-data 2019 2))
 
   (def input (parse raw-input))
 
@@ -73,6 +73,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2019 2))
+ (solve (io/read-input-data 2019 2))
  :=
  [3562624 8298])

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:arithmetic]}
   aoclj.year-2019.day-04
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -72,12 +72,12 @@
 
 (def part-2 (count-valid-by valid-2?))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2019 4))
+    (io/read-input-data 2019 4))
 
   (def input (parse raw-input))
 
@@ -85,6 +85,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2019 4))
+ (solve (io/read-input-data 2019 4))
  :=
  [1099 710])

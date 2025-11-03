@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:op-code]}
     aoclj.year-2017.day-08
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -57,17 +57,17 @@
        (mapcat vals)
        (apply max)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2017 8))
+  (def raw-input (io/read-input-data 2017 8))
   (def input (parse raw-input))
   (time (solve raw-input))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2017 8))
+ (def input (io/read-input-data 2017 8))
  (solve input)
  :=
  [2971 4254])

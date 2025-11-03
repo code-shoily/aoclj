@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:sequence :reduction]}
     aoclj.year-2015.day-01
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [hyperfiddle.rcf :as rcf :refer [tests]]))
 
 (defn parse
@@ -33,15 +33,15 @@
           0
           input))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "Repl Exploration"
-  (def raw-input (utils/read-input-data 2015 1))
+  (def raw-input (io/read-input-data 2015 1))
   (time (solve raw-input))
   "End Repl Exploration")
 
 (tests
- (solve (utils/read-input-data 2015 1))
+ (solve (io/read-input-data 2015 1))
  :=
  [232 1783])

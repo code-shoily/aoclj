@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:reduction :grid :one-off]}
   aoclj.year-2015.day-25
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -47,7 +47,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2015 25))
+    (io/read-input-data 2015 25))
 
   (def input (parse raw-input))
 
@@ -58,6 +58,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2015 25))
+ (solve (io/read-input-data 2015 25))
  :=
  [19980801 :🎉])

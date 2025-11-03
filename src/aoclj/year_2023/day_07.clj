@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:pattern-matching :ranking]}
   aoclj.year-2023.day-07
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -112,10 +112,10 @@
        (map (fn [[rank hand bid]] [(jokered-rank-hand rank hand) hand bid]))
        (get-winnings card-rank-2)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2023 7))
+ (def input-data (io/read-input-data 2023 7))
  (solve input-data)
  :=
  [255048101 253718286])
@@ -123,7 +123,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2023 7))
+    (io/read-input-data 2023 7))
 
   (def input (parse raw-input))
 

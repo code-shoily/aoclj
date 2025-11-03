@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:nsum]}
     aoclj.year-2020.day-01
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -50,16 +50,16 @@
 
 (def part-1 (solver two-sum))
 (def part-2 (solver three-sum))
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2020 1))
+  (def input-data (io/read-input-data 2020 1))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2020 1))
+ (solve (io/read-input-data 2020 1))
  :=
  [1014624 80072256])

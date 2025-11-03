@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid]}
   aoclj.year-2020.day-03
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -64,12 +64,12 @@
          (map #(count-trees % terrain))
          (reduce *))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def input-data
-    (utils/read-input-data 2020 3))
+    (io/read-input-data 2020 3))
 
   (def input (parse input-data))
 
@@ -77,6 +77,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2020 3))
+ (solve (io/read-input-data 2020 3))
  :=
  [272 3898725600])

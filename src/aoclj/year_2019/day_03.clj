@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:geometry :grid]}
   aoclj.year-2019.day-03
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [fastmath.distance :as dist]
             [hyperfiddle.rcf :refer [tests]]))
@@ -115,12 +115,12 @@
                     (get-steps-to-point line-2 step-2 [x y])))))
        (apply min)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2019 3))
+    (io/read-input-data 2019 3))
 
   (def input (parse raw-input))
 
@@ -129,6 +129,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2019 3))
+ (solve (io/read-input-data 2019 3))
  :=
  [1195 91518])

@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:flood-fill :grid]}
   aoclj.year-2021.day-09
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [clojure.math.combinatorics :refer [cartesian-product]]
             [hyperfiddle.rcf :refer [tests]]))
@@ -81,12 +81,12 @@
        (map count)
        (reduce *)))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 9))
+    (io/read-input-data 2021 9))
 
   (def input (parse raw-input))
 
@@ -94,6 +94,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2021 9))
+ (solve (io/read-input-data 2021 9))
  :=
  [528 920448])

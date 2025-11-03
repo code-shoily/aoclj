@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:revisit :range]}
   aoclj.year-2023.day-05
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -111,10 +111,10 @@
        first
        :start))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (tests
- (def input-data (utils/read-input-data 2023 5))
+ (def input-data (io/read-input-data 2023 5))
  (solve input-data)
  :=
  [3374647 6082852])
@@ -122,7 +122,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2023 5))
+    (io/read-input-data 2023 5))
 
   (def input (parse raw-input))
 

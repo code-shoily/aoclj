@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:simulation :slow]}
   aoclj.year-2021.day-25
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.reducers :as r]
             [clojure.math.combinatorics :refer [cartesian-product]]
             [clojure.string :as str]
@@ -66,13 +66,13 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 25))
+    (io/read-input-data 2021 25))
 
   (time (solve raw-input))
 
   "</Explore>")
 
 #_(tests
-   (solve (utils/read-input-data 2021 25))
+   (solve (io/read-input-data 2021 25))
    :=
    [504 :🎉])

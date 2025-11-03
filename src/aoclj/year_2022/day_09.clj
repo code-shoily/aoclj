@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:grid :revisit]}
   aoclj.year-2022.day-09
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -114,12 +114,12 @@
        (simulate 10)
        count))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2022 9))
+    (io/read-input-data 2022 9))
 
   (def input (parse raw-input))
 
@@ -130,6 +130,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2022 9))
+ (solve (io/read-input-data 2022 9))
  :=
  [5907 2303])

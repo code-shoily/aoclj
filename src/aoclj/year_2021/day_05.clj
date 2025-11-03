@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:range-math]}
   aoclj.year-2021.day-05
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -75,7 +75,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 5))
+    (io/read-input-data 2021 5))
 
   (def input (parse raw-input))
 
@@ -83,6 +83,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2021 5))
+ (solve (io/read-input-data 2021 5))
  :=
  [4655 20500])

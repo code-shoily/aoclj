@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:frequency :string]}
     aoclj.year-2017.day-04
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -43,17 +43,17 @@
        (filter has-anagram?)
        count))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2017 4))
+  (def input-data (io/read-input-data 2017 4))
   (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2017 4))
+ (def input (io/read-input-data 2017 4))
  (solve input)
  :=
  [455 186])

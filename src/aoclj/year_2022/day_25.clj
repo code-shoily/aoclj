@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:number-system :modular-algebra]}
   aoclj.year-2022.day-25
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -47,7 +47,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2022 25))
+    (io/read-input-data 2022 25))
 
   (def input (parse raw-input))
 
@@ -59,6 +59,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2022 25))
+ (solve (io/read-input-data 2022 25))
  :=
  ["2-==10===-12=2-1=-=0" :🎉])

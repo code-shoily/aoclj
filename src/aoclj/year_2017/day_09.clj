@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:state-machine]}
     aoclj.year-2017.day-09
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -42,12 +42,12 @@
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2017 9))
+  (def input-data (io/read-input-data 2017 9))
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (def input (utils/read-input-data 2017 9))
+ (def input (io/read-input-data 2017 9))
  (solve input)
  :=
  [7616 3838])

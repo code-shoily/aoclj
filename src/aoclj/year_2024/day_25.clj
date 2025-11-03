@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:transpose]}
   aoclj.year-2024.day-25
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.seq :refer [transpose]]
             [clojure.math.combinatorics :as comb]
             [clojure.string :as str]
@@ -62,7 +62,7 @@
        fitting-pairs) :🎉])
 
 (tests
- (def input-data (utils/read-input-data 2024 25))
+ (def input-data (io/read-input-data 2024 25))
  (solve input-data)
  :=
  [3146 :🎉])
@@ -70,7 +70,7 @@
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2024 25))
+    (io/read-input-data 2024 25))
 
   (def input (parse raw-input))
 

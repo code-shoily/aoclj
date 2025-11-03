@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:md5 :slow]}
     aoclj.year-2015.day-04
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [aoclj.algorithms.hash :as hash]
             [clojure.string :as str]
             [medley.core :as m]
@@ -28,17 +28,17 @@
 
 (def part-2 (partial find-first-prefix 6))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def raw-input (utils/read-input-data 2015 4))
+  (def raw-input (io/read-input-data 2015 4))
   (def input (parse raw-input))
   (time (solve raw-input))
   "</Explore>")
 
 #_(tests
-   (def input (utils/read-input-data 2015 4))
+   (def input (io/read-input-data 2015 4))
    (solve input)
    :=
    ["254575" "1038736"])

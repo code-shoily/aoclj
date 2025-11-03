@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:navigation]}
   aoclj.year-2020.day-12
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [fastmath.distance :as dist]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -115,12 +115,12 @@
        (dist/manhattan [0 0])
        long))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2020 12))
+    (io/read-input-data 2020 12))
 
   (def input (parse raw-input))
 
@@ -128,6 +128,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2020 12))
+ (solve (io/read-input-data 2020 12))
  :=
  [439 12385])

@@ -7,7 +7,7 @@
       :stars      2,
       :tags       [:frequency :nil]}
     aoclj.year-2020.day-02
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -39,17 +39,17 @@
 
 (def part-1 (check-with valid-by-frequency?))
 (def part-2 (check-with valid-by-position?))
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
-  (def input-data (utils/read-input-data 2020 2))
+  (def input-data (io/read-input-data 2020 2))
   (def input (parse input-data))
   input
   (time (solve input-data))
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2020 2))
+ (solve (io/read-input-data 2020 2))
  :=
  [607 321])

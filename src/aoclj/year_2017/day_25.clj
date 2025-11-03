@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:parse-heavy :slow :state-machine]}
   aoclj.year-2017.day-25
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             #_[hyperfiddle.rcf :refer [tests]]))
 
@@ -96,12 +96,12 @@
 
 (defn part-2 [_] :🎉)
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2017 25))
+    (io/read-input-data 2017 25))
 
   (def input (parse raw-input))
 
@@ -110,7 +110,7 @@
 )
 
 #_(tests
-   (def input (utils/read-input-data 2017 25))
+   (def input (io/read-input-data 2017 25))
    (solve input)
    :=
    [4287 :🎉])

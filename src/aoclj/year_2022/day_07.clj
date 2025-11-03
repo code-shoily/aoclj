@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:tree :file-system]}
   aoclj.year-2022.day-07
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -70,12 +70,12 @@
          (filter #(>= % excess))
          (reduce min))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   " <Explore> "
   (def raw-input
-    (utils/read-input-data 2022 7))
+    (io/read-input-data 2022 7))
 
   (def input (parse raw-input))
 
@@ -84,6 +84,6 @@
 )
 
 (tests
- (solve (utils/read-input-data 2022 7))
+ (solve (io/read-input-data 2022 7))
  :=
  [1297159 3866390])

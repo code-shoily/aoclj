@@ -8,7 +8,7 @@
     :stars      2,
     :tags       [:statistics :formulaic]}
   aoclj.year-2021.day-07
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -42,12 +42,12 @@
             (reduce + (map #(triangular-number (abs (- % target))) positions))))
          (apply min))))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 (comment
   "<Explore>"
   (def raw-input
-    (utils/read-input-data 2021 7))
+    (io/read-input-data 2021 7))
 
   (def input (parse raw-input))
 
@@ -55,6 +55,6 @@
   "</Explore>")
 
 (tests
- (solve (utils/read-input-data 2021 7))
+ (solve (io/read-input-data 2021 7))
  :=
  [344138 94862124])
