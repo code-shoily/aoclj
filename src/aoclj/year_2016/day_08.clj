@@ -9,7 +9,7 @@
     :tags       [:grid :parse-heavy :visual-output]}
   aoclj.year-2016.day-08
   (:require [aoclj.helpers.io :as io]
-            [aoclj.helpers.seq :refer [transpose]]
+            [aoclj.helpers.matrix :refer [transpose]]
             [clojure.string :as str]
             [clojure.spec.alpha :as s]
             [clojure.core.match :refer [match]]

@@ -2,7 +2,7 @@
   (:require [aoclj.meta.stats :as stats]
             [aoclj.helpers.meta :refer
              [aoc-years get-padded-day total-stars total-trophies]]
-            [aoclj.helpers.seq :refer [transpose]]
+            [aoclj.helpers.matrix :refer [transpose]]
             [selmer.parser :as parser]
             [clojure.string :as str]))
 

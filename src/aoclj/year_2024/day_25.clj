@@ -9,7 +9,7 @@
     :tags       [:transpose]}
   aoclj.year-2024.day-25
   (:require [aoclj.helpers.io :as io]
-            [aoclj.helpers.seq :refer [transpose]]
+            [aoclj.helpers.matrix :refer [transpose]]
             [clojure.math.combinatorics :as comb]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))

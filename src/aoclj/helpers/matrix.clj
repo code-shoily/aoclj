@@ -1,4 +1,4 @@
-(ns aoclj.helpers.seq
+(ns aoclj.helpers.matrix
   (:require [hyperfiddle.rcf :refer [tests]]))
 
 (defn transpose
