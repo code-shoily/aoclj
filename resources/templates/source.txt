@@ -9,33 +9,24 @@
    :tags       []}
  aoclj.year-{{year}}.day-{{padded-day}}
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn parse
-  "Parse raw string input into a processable data structure"
   [raw-input]
   (->> raw-input
-       str/split-lines))
+       io/lines))
 
-(defn part-1 
-  "Solve part 1 -"
+(defn part-1
   [input]
   (->> input 
        count))
 
-(defn part-2 
-  "Solve part 2 -"
+(defn part-2
   [input]
   (->> input 
        count))
 
 (def solve (io/generic-solver part-1 part-2 parse))
-
-;!zprint {:format :off}
-(rcf/tests
-  (solve (io/read-input-data {{year}} {{day}})) := [0 0])
-;!zprint {:format :on}
 
 (comment 
   "<Explore>"
@@ -48,3 +39,8 @@
          
   (time (solve raw-input))
   "</Explore>")
+
+;!zprint {:format :off}
+(rcf/enabled! false)
+(rcf/tests
+  (solve (io/read-input-data {{year}} {{day}})) := [0 0])
