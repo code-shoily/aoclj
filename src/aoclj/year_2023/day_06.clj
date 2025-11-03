@@ -9,7 +9,7 @@
     :tags       [:algebra]}
   aoclj.year-2023.day-06
   (:require [aoclj.helpers.io :as io]
-            [aoclj.helpers.matrix :refer [transpose]]
+            [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
             [clojure.core.reducers :as r]
             [hyperfiddle.rcf :refer [tests]]))
@@ -45,7 +45,7 @@
 
 (defn part-2
   [input]
-  (->> (transpose input)
+  (->> (mat/transpose input)
        (map (partial apply str))
        (mapv parse-long)
        ways-to-win))

@@ -9,7 +9,7 @@
     :tags       [:grid :parse-heavy :visual-output]}
   aoclj.year-2016.day-08
   (:require [aoclj.helpers.io :as io]
-            [aoclj.helpers.matrix :refer [transpose]]
+            [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
             [clojure.spec.alpha :as s]
             [clojure.core.match :refer [match]]
@@ -79,9 +79,9 @@
 (defn rot-col
   [screen col amount]
   (-> screen
-      transpose
+      mat/transpose
       (rot-row col amount)
-      transpose))
+      mat/transpose))
 
 (defn transform
   [screen input]

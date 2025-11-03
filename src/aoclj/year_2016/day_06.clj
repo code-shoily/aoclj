@@ -8,7 +8,7 @@
       :tags       [:transpose :frequency]}
     aoclj.year-2016.day-06
   (:require [aoclj.helpers.io :as io]
-            [aoclj.helpers.matrix :refer [transpose]]
+            [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -23,9 +23,9 @@
 (defn solve
   [input]
   (let [[min-freq max-freq] (->> (str/split-lines input)
-                                 transpose
+                                 mat/transpose
                                  (map (comp get-min-max frequencies))
-                                 transpose
+                                 mat/transpose
                                  (map (partial apply str)))]
     [max-freq min-freq]))
 

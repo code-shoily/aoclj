@@ -9,7 +9,7 @@
     :tags       [:transpose]}
   aoclj.year-2024.day-25
   (:require [aoclj.helpers.io :as io]
-            [aoclj.helpers.matrix :refer [transpose]]
+            [aoclj.helpers.matrix :as mat]
             [clojure.math.combinatorics :as comb]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
@@ -18,7 +18,7 @@
   [line]
   (let [parts (->> (str/split-lines line)
                    (mapv vec)
-                   transpose)
+                   mat/transpose)
         lock? (= \. (get-in parts [0 0]))]
     [lock?
      (mapv (comp dec

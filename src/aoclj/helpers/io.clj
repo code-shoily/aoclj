@@ -19,8 +19,5 @@
 
 ;!zprint {:format :off}
 (tests
- (read-input-data 2015 1 "test_inputs")
- :=
- "data for 2015_01"
- (read-input-data 2024 12 "test_inputs")
- := "data for 2024_12")
+ (read-input-data 2015 1 "test_inputs") := "data for 2015_01"
+ (read-input-data 2024 12 "test_inputs") := "data for 2024_12")

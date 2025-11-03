@@ -9,7 +9,7 @@
     :tags       [:transpose]}
   aoclj.year-2021.day-03
   (:require [aoclj.helpers.io :as io]
-            [aoclj.helpers.matrix :refer [transpose]]
+            [aoclj.helpers.matrix :as mat]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -39,9 +39,9 @@
   "Solve part 1 - calculate power consumption (gamma x epsilon)"
   [input]
   (->> input
-       transpose
+       mat/transpose
        (map get-commons)
-       transpose
+       mat/transpose
        (map binvec->int)
        (apply *)))
 
@@ -51,7 +51,7 @@
   [co2? init]
   (loop [position 0
          bits     init]
-    (let [[min max]     (-> (transpose bits)
+    (let [[min max]     (-> (mat/transpose bits)
                             (nth position)
                             get-commons)
           del-val       (if co2? min max)
