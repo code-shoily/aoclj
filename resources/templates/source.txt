@@ -8,7 +8,7 @@
    :stars      0
    :tags       []}
  aoclj.year-{{year}}.day-{{padded-day}}
-  (:require [aoclj.utils :as utils]
+  (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
             [hyperfiddle.rcf :refer [tests]]))
 
@@ -30,17 +30,17 @@
   (->> input 
        count))
 
-(def solve (utils/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 parse))
 
 ;!zprint {:format :off}
 (tests
-  (solve (utils/read-input-data {{year}} {{day}})) := [0 0])
+  (solve (io/read-input-data {{year}} {{day}})) := [0 0])
 ;!zprint {:format :on}
 
 (comment 
   "<Explore>"
   (def raw-input 
-    (utils/read-input-data {{year}} {{day}}))
+    (io/read-input-data {{year}} {{day}}))
 
   (def input (parse raw-input))
 

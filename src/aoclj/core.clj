@@ -1,5 +1,5 @@
 (ns aoclj.core
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.meta :refer [valid-year-day?]]
             [aoclj.meta.code-org :as g]
             [aoclj.meta.doc-renderer :as renderer]
             [aoclj.year-2015.solver :as solver-2015]
@@ -17,7 +17,7 @@
   "Solve the Advent of Code problem for a given year and day and 
    return the solution as a string."
   [year day]
-  {:pre [(utils/valid-year-day? year day)]}
+  {:pre [(valid-year-day? year day)]}
   (case year
     2015 (solver-2015/solve day)
     2016 (solver-2016/solve day)

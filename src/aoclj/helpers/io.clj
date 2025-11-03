@@ -17,11 +17,6 @@
   (fn [input]
     (vec (pmap #(% (parse input)) [part-1 part-2]))))
 
-(defn transpose
-  "Transposes vector `mat`"
-  [mat]
-  (apply mapv vector mat))
-
 ;!zprint {:format :off}
 (tests
  (read-input-data 2015 1 "test_inputs")

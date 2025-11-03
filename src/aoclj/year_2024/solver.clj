@@ -1,5 +1,6 @@
 (ns aoclj.year-2024.solver
-  (:require [aoclj.helpers.io :as utils]
+  (:require [aoclj.helpers.io :refer [read-input-data]]
+            [aoclj.helpers.meta :refer [get-ns-string]]
             [aoclj.year-2024.day-01 :as day-01]
             [aoclj.year-2024.day-02 :as day-02]
             [aoclj.year-2024.day-03 :as day-03]
@@ -17,7 +18,7 @@
 
 (defn solve
   [day]
-  (let [read-input (partial utils/read-input-data year)]
+  (let [read-input (partial read-input-data year)]
     (case day
       1  (day-01/solve (read-input day))
       2  (day-02/solve (read-input day))
@@ -37,7 +38,7 @@
 (defn stats
   "Returns the stats for the problem of `day` for 2024"
   [day]
-  (-> (utils/get-ns-string year day)
+  (-> (get-ns-string year day)
       read-string
       find-ns
       meta))
