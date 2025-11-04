@@ -6,10 +6,9 @@
     :year       2016,
     :day        9,
     :stars      2,
-    :tags       [:regex :pattern-matching]}
+    :tags       [:pattern]}
   aoclj.year-2016.day-09
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [clojure.core.match :refer [match]]
             [hyperfiddle.rcf :as rcf]))
 
@@ -40,7 +39,7 @@
 
 (defn solve
   [raw-input]
-  (mapv (partial decompress (str/trim raw-input)) [false true]))
+  (mapv (partial decompress (io/line raw-input)) [false true]))
 
 (comment
   "<Explore>"
@@ -51,8 +50,8 @@
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 9))
- (solve input)
- :=
- [102239 10780403063])
+ (solve input) := [102239 10780403063])

@@ -5,15 +5,12 @@
       :year       2016,
       :day        5,
       :stars      2,
-      :tags       [:slow :md5]}
+      :tags       [:md5 :slow]}
     aoclj.year-2016.day-05
   (:require [aoclj.algorithms.hash :as hash]
             [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             #_[hyperfiddle.rcf :as rcf]
             [medley.core :as m]))
-
-(def parse str/trim)
 
 (defn find-password-1
   [code]
@@ -53,17 +50,16 @@
        find-password-2
        result-2))
 
-(def solve (io/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 io/line))
 
 (comment
   "<Explore>"
   (def input-data (io/read-input-data 2016 5))
-  (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+#_(rcf/enable! false)
 #_(rcf/tests
-   (def input (io/read-input-data 2016 5))
-   (solve input)
-   :=
-   ["f77a0e6e" "999828ec"])
+  (def input (io/read-input-data 2016 5))
+  (solve input) := ["f77a0e6e" "999828ec"])

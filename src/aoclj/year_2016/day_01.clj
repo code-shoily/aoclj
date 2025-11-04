@@ -5,7 +5,7 @@
       :day        1,
       :difficulty :s,
       :stars      2,
-      :tags       [:grid :set]}
+      :tags       [:grid :navigation]}
     aoclj.year-2016.day-01
   (:require [aoclj.helpers.io :as io]
             [clojure.set :as set]
@@ -100,8 +100,8 @@
   (time (solve raw-input))
   "End Repl Exploration")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 1))
- (solve input)
- :=
- [253 126])
+ (solve input) := [253 126])

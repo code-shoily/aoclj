@@ -9,10 +9,9 @@
     :tags       [:arithmetic :bit-math :needs-improvement]}
   aoclj.year-2016.day-19
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
-(def parse (comp parse-long str/trim))
+(def parse (partial io/line parse-long))
 
 (defn part-1
   [input]
@@ -43,8 +42,8 @@
   (time (solve raw-input))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 19))
- (solve input)
- :=
- [1842613 1424135])
+ (solve input) := [1842613 1424135])

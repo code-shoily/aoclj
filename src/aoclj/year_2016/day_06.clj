@@ -5,11 +5,10 @@
       :year       2016,
       :day        6,
       :stars      2,
-      :tags       [:transpose :frequency]}
+      :tags       [:frequency :matrix]}
     aoclj.year-2016.day-06
   (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.matrix :as mat]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn get-min-max
@@ -22,7 +21,7 @@
 
 (defn solve
   [input]
-  (let [[min-freq max-freq] (->> (str/split-lines input)
+  (let [[min-freq max-freq] (->> (io/lines input)
                                  mat/transpose
                                  (map (comp get-min-max frequencies))
                                  mat/transpose
@@ -35,8 +34,8 @@
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 6))
- (solve input)
- :=
- ["qzedlxso" "ucmifjae"])
+ (solve input) := ["qzedlxso" "ucmifjae"])

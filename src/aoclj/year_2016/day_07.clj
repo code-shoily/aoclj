@@ -5,7 +5,7 @@
       :year       2016,
       :day        7,
       :stars      2,
-      :tags       [:set :partition]}
+      :tags       [:set :partitioning]}
     aoclj.year-2016.day-07
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
@@ -22,8 +22,7 @@
 (defn parse
   [input]
   (->> input
-       str/split-lines
-       (map parse-ip)))
+       (io/lines parse-ip)))
 
 (defn abba?
   [sequence]
@@ -74,8 +73,8 @@
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 7))
- (solve input)
- :=
- [105 258])
+ (solve input) := [105 258])

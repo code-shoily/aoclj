@@ -5,7 +5,7 @@
       :year       2016,
       :day        3,
       :stars      2,
-      :tags       [:transpose :geometry]}
+      :tags       [:geometry :matrix]}
     aoclj.year-2016.day-03
   (:require [aoclj.helpers.io :as io]
             [aoclj.helpers.matrix :as mat]
@@ -14,10 +14,16 @@
 
 (defn parse
   [input]
-  (->> (str/split-lines input)
-       (mapv (comp #(mapv parse-long %) #(str/split % #"\s+") str/trim))))
+  (->> input
+       (io/lines (comp #(mapv parse-long %)
+                       #(str/split % #"\s+")
+                       io/line))))
 
-(defn triangle? [[a b c]] (and (> (+ a b) c) (> (+ b c) a) (> (+ c a) b)))
+(defn triangle?
+  [[a b c]]
+  (and (> (+ a b) c)
+       (> (+ b c) a)
+       (> (+ c a) b)))
 
 (defn transpose-triplets
   [triplets]
@@ -48,8 +54,8 @@
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 3))
- (solve input)
- :=
- [993 1849])
+ (solve input) := [993 1849])

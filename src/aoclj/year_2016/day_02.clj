@@ -5,16 +5,21 @@
       :year       2016,
       :day        2,
       :stars      2,
-      :tags       [:grid :decode]}
+      :tags       [:grid :decoding]}
     aoclj.year-2016.day-02
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
-(def keypad1 [[1 2 3] [4 5 6] [7 8 9]])
+(def keypad1
+  [[1 2 3]
+   [4 5 6]
+   [7 8 9]])
 
 (def keypad2
-  [[nil nil \1 nil nil] [nil \2 \3 \4 nil] [\5 \6 \7 \8 \9] [nil \A \B \C nil]
+  [[nil nil \1 nil nil]
+   [nil \2 \3 \4 nil]
+   [\5 \6 \7 \8 \9]
+   [nil \A \B \C nil]
    [nil nil \D nil nil]])
 
 (defn move
@@ -39,21 +44,19 @@
          (map decode-key)
          (apply str))))
 
-(def parse str/split-lines)
 (def part-1 (partial decode-keypad [2 2] keypad1))
 (def part-2 (partial decode-keypad [2 0] keypad2))
 
-(def solve (io/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 io/lines))
 
 (comment
   "<Explore>"
   (def input-data (io/read-input-data 2016 2))
-  (def input (parse input-data))
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 2))
- (solve input)
- :=
- ["76792" "A7AC3"])
+ (solve input) := ["76792" "A7AC3"])

@@ -11,10 +11,7 @@
   (:require [aoclj.helpers.io :as io]
             [aoclj.algorithms.hash :refer [md5]]
             [medley.core :as m]
-            [clojure.string :as str]
             #_[hyperfiddle.rcf :as rcf]))
-
-(def parse str/trim)
 
 (defn get-hash-idx
   [salt idx]
@@ -59,20 +56,18 @@
   [input]
   (get-result (make-index-pred (partial get-stretched-hash-idx input))))
 
-(def solve (io/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 io/line))
 
 (comment
   "<Explore>"
   (def raw-input
     (io/read-input-data 2016 14))
 
-  (def input (parse raw-input))
-
   (time (solve raw-input))
   "</Explore>")
 
+;!zprint {:format :off}
+#_(rcf/enable! false)
 #_(rcf/tests
-   (def input (io/read-input-data 2016 14))
-   (solve input)
-   :=
-   [15168 20864])
+ (def input (io/read-input-data 2016 14))
+ (solve input) := [15168 20864])

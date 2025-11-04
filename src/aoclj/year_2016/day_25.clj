@@ -59,8 +59,8 @@
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 25))
- (solve input)
- :=
- [158 :🎉])
+ (solve input) := [158 :🎉])

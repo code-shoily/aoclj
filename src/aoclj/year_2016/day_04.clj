@@ -5,7 +5,7 @@
       :year       2016,
       :day        4,
       :stars      2,
-      :tags       [:checksum :ascii]}
+      :tags       [:checksum :string]}
     aoclj.year-2016.day-04
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
@@ -43,8 +43,7 @@
 
 (defn parse
   [input]
-  (->> (str/split-lines input)
-       (map parse-room)))
+  (io/lines parse-room input))
 
 (defn part-1
   [input]
@@ -70,8 +69,8 @@
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 4))
- (solve input)
- :=
- [158835 993])
+ (solve input) := [158835 993])

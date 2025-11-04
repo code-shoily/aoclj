@@ -6,7 +6,7 @@
     :year       2016,
     :day        10,
     :stars      2,
-    :tags       [:topological-sort :needs-improvement]}
+    :tags       [:graph :needs-improvement :topological-sort]}
   aoclj.year-2016.day-10
   (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
@@ -68,9 +68,7 @@
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
-  (let [events     (->> raw-input
-                        str/split-lines
-                        (mapv parse-line))
+  (let [events     (io/lines parse-line raw-input)
         graph      (build-graph events)
         in-degrees (get-in-degrees graph)
         first-bot  (get-first-bot graph in-degrees)]

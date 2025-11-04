@@ -50,10 +50,9 @@
   [raw-input]
   {:post [(s/valid? ::instruction-set %)]}
   (->> raw-input
-       str/split-lines
-       (map (comp extract-info
-                  transform-numbers
-                  parser))))
+       (io/lines (comp extract-info
+                       transform-numbers
+                       parser))))
 
 (defn make-screen
   "Create a screen that's width x height"
@@ -117,14 +116,12 @@
 
   (def input (parse raw-input))
 
-  (->> input)
-
   (time (solve raw-input))
 
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2016 8))
- (solve input)
- :=
- [115 :👀])
+ (solve input) := [115 :👀])

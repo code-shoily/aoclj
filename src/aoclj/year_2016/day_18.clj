@@ -6,18 +6,14 @@
     :year       2016,
     :day        18,
     :stars      2,
-    :tags       [:slow :partition :needs-improvement]}
+    :tags       [:slow :partitioning :needs-improvement]}
   aoclj.year-2016.day-18
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
-            #_[hyperfiddle.rcf :as rcf]))
+            [hyperfiddle.rcf :as rcf]))
 
 ;; This one is slow, should use the bit-math version
 ;; See:
 ;; https://github.com/code-shoily/advent-of-scala/blob/main/src/main/scala/advent_of_scala/year_2016/Day18.scala
-
-(def parse str/trim)
-
 (defn count-safe
   [tiles]
   (count (filter #(= \. %) tiles)))
@@ -50,21 +46,17 @@
 
 (def part-2 (partial count-safe-tiles 400000))
 
-(def solve (io/generic-solver part-1 part-2 parse))
+(def solve (io/generic-solver part-1 part-2 io/line))
 
 (comment
   "<Explore>"
   (def raw-input
     (io/read-input-data 2016 18))
-
-  (def input (parse raw-input))
-
   (time (solve raw-input))
-  "</Explore>"
-)
+  "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 #_(rcf/tests
-   (def input (io/read-input-data 2016 18))
-   (solve input)
-   :=
-   [1951 20002936])
+ (def input (io/read-input-data 2016 18))
+ (solve input) := [1951 20002936])
