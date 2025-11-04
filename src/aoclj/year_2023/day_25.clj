@@ -6,7 +6,7 @@
     :year       2023,
     :day        25,
     :stars      2,
-    :tags       [:graph :partition :non-deterministic :revisit]}
+    :tags       [:graph :partition :non-deterministic :needs-improvement]}
   aoclj.year-2023.day-25
   (:require [aoclj.helpers.io :as io]
             [medley.core :refer [queue]]

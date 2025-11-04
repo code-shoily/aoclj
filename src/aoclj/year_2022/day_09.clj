@@ -6,7 +6,7 @@
     :year       2022,
     :day        9,
     :stars      2,
-    :tags       [:grid :revisit]}
+    :tags       [:grid :needs-improvement]}
   aoclj.year-2022.day-09
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]

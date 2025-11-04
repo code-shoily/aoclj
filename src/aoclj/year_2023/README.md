@@ -10,9 +10,9 @@
 [Cube Conundrum](http://www.adventofcode.com/2023/day/2)|:snowflake: :snowflake:|:star2: :star2:|[day_02.clj](/src/aoclj/year_2023/day_02.clj)|parse-heavy
 [Gear Ratios](http://www.adventofcode.com/2023/day/3)|:snowflake: :snowflake:|:star2: :star2:|[day_03.clj](/src/aoclj/year_2023/day_03.clj)|reduction,regex,grid
 [Scratchcards](http://www.adventofcode.com/2023/day/4)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_04.clj](/src/aoclj/year_2023/day_04.clj)|map,recursion
-[If You Give A Seed A Fertilizer](http://www.adventofcode.com/2023/day/5)||:star2: :star2:|[day_05.clj](/src/aoclj/year_2023/day_05.clj)|revisit,range
+[If You Give A Seed A Fertilizer](http://www.adventofcode.com/2023/day/5)||:star2: :star2:|[day_05.clj](/src/aoclj/year_2023/day_05.clj)|needs-improvement,range
 [Wait For It](http://www.adventofcode.com/2023/day/6)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_06.clj](/src/aoclj/year_2023/day_06.clj)|algebra
 [Camel Cards](http://www.adventofcode.com/2023/day/7)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_07.clj](/src/aoclj/year_2023/day_07.clj)|pattern-matching,ranking
 [Haunted Wasteland](http://www.adventofcode.com/2023/day/8)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_08.clj](/src/aoclj/year_2023/day_08.clj)|map,lcm,tricky
 [Mirage Maintenance](http://www.adventofcode.com/2023/day/9)|:snowflake:|:star2: :star2:|[day_09.clj](/src/aoclj/year_2023/day_09.clj)|series
-[Snowverload](http://www.adventofcode.com/2023/day/25)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_25.clj](/src/aoclj/year_2023/day_25.clj)|graph,partition,non-deterministic,revisit
+[Snowverload](http://www.adventofcode.com/2023/day/25)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_25.clj](/src/aoclj/year_2023/day_25.clj)|graph,partition,non-deterministic,needs-improvement

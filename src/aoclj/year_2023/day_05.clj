@@ -6,7 +6,7 @@
     :year       2023,
     :day        5,
     :stars      2,
-    :tags       [:revisit :range]}
+    :tags       [:needs-improvement :range]}
   aoclj.year-2023.day-05
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]

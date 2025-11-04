@@ -6,7 +6,7 @@
     :year       2016,
     :day        19,
     :stars      2,
-    :tags       [:arithmetic :bit-math :revisit]}
+    :tags       [:arithmetic :bit-math :needs-improvement]}
   aoclj.year-2016.day-19
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]

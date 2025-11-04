@@ -14,6 +14,6 @@
 [Tuning Trouble](http://www.adventofcode.com/2022/day/6)|:snowflake: :snowflake:|:star2: :star2:|[day_06.clj](/src/aoclj/year_2022/day_06.clj)|subseq
 [No Space Left On Device](http://www.adventofcode.com/2022/day/7)|:snowflake: :snowflake:|:star2: :star2:|[day_07.clj](/src/aoclj/year_2022/day_07.clj)|tree,file-system
 [Treetop Tree House](http://www.adventofcode.com/2022/day/8)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_08.clj](/src/aoclj/year_2022/day_08.clj)|matrix
-[Rope Bridge](http://www.adventofcode.com/2022/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_09.clj](/src/aoclj/year_2022/day_09.clj)|grid,revisit
+[Rope Bridge](http://www.adventofcode.com/2022/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_09.clj](/src/aoclj/year_2022/day_09.clj)|grid,needs-improvement
 [Cathode-Ray Tube](http://www.adventofcode.com/2022/day/10)|:snowflake: :snowflake:|:star2: :star2:|[day_10.clj](/src/aoclj/year_2022/day_10.clj)|modular-algebra,grid,visual-output
 [Full of Hot Air](http://www.adventofcode.com/2022/day/25)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_25.clj](/src/aoclj/year_2022/day_25.clj)|number-system,modular-algebra

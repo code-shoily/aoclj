@@ -6,7 +6,7 @@
     :year       2016,
     :day        10,
     :stars      2,
-    :tags       [:topological-sort :revisit]}
+    :tags       [:topological-sort :needs-improvement]}
   aoclj.year-2016.day-10
   (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]

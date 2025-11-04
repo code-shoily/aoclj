@@ -6,7 +6,7 @@
     :year       2024,
     :day        7,
     :stars      2,
-    :tags       [:revisit :backtrack :equation]}
+    :tags       [:needs-improvement :backtrack :equation]}
   aoclj.year-2024.day-07
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]

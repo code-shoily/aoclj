@@ -6,7 +6,7 @@
     :year       2018,
     :day        4,
     :stars      2,
-    :tags       [:time :nil-issue :revisit :groups]}
+    :tags       [:time :nil-issue :needs-improvement :groups]}
   aoclj.year-2018.day-04
   (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]

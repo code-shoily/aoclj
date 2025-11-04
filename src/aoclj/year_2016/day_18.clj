@@ -6,7 +6,7 @@
     :year       2016,
     :day        18,
     :stars      2,
-    :tags       [:slow :partition :revisit]}
+    :tags       [:slow :partition :needs-improvement]}
   aoclj.year-2016.day-18
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]

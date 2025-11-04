@@ -6,7 +6,7 @@
     :year       2024,
     :day        9,
     :stars      2,
-    :tags       [:revisit :two-pointer]}
+    :tags       [:needs-improvement :two-pointer]}
   aoclj.year-2024.day-09
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]

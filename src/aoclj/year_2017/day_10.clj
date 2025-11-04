@@ -6,7 +6,7 @@
     :year       2017,
     :day        10,
     :stars      2,
-    :tags       [:revisit :hash :array]}
+    :tags       [:needs-improvement :hash :array]}
   aoclj.year-2017.day-10
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]

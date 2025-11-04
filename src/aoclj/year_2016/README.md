@@ -15,8 +15,8 @@
 [Internet Protocol Version 7](http://www.adventofcode.com/2016/day/7)|:snowflake: :snowflake:|:star2: :star2:|[day_07.clj](/src/aoclj/year_2016/day_07.clj)|set,partition
 [Two-Factor Authentication](http://www.adventofcode.com/2016/day/8)|:snowflake: :snowflake:|:star2: :star2:|[day_08.clj](/src/aoclj/year_2016/day_08.clj)|grid,parse-heavy,visual-output
 [Explosives in Cyberspace](http://www.adventofcode.com/2016/day/9)|:snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_09.clj](/src/aoclj/year_2016/day_09.clj)|regex,pattern-matching
-[Balance Bots](http://www.adventofcode.com/2016/day/10)|:snowflake: :snowflake:|:star2: :star2:|[day_10.clj](/src/aoclj/year_2016/day_10.clj)|topological-sort,revisit
+[Balance Bots](http://www.adventofcode.com/2016/day/10)|:snowflake: :snowflake:|:star2: :star2:|[day_10.clj](/src/aoclj/year_2016/day_10.clj)|topological-sort,needs-improvement
 [One-Time Pad](http://www.adventofcode.com/2016/day/14)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_14.clj](/src/aoclj/year_2016/day_14.clj)|slow,md5,memoization
-[Like a Rogue](http://www.adventofcode.com/2016/day/18)|:snowflake:|:star2: :star2:|[day_18.clj](/src/aoclj/year_2016/day_18.clj)|slow,partition,revisit
-[An Elephant Named Joseph](http://www.adventofcode.com/2016/day/19)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_19.clj](/src/aoclj/year_2016/day_19.clj)|arithmetic,bit-math,revisit
+[Like a Rogue](http://www.adventofcode.com/2016/day/18)|:snowflake:|:star2: :star2:|[day_18.clj](/src/aoclj/year_2016/day_18.clj)|slow,partition,needs-improvement
+[An Elephant Named Joseph](http://www.adventofcode.com/2016/day/19)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_19.clj](/src/aoclj/year_2016/day_19.clj)|arithmetic,bit-math,needs-improvement
 [Clock Signal](http://www.adventofcode.com/2016/day/25)|:snowflake: :snowflake: :snowflake: :snowflake:|:star2: :star2:|[day_25.clj](/src/aoclj/year_2016/day_25.clj)|assembly,pen-and-paper
