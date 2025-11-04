@@ -6,7 +6,7 @@
     :year       2017,
     :day        7,
     :stars      2,
-    :tags       [:complected :tree :frequency]}
+    :tags       [:frequency :tree]}
   aoclj.year-2017.day-07
   (:require [aoclj.helpers.io :as io]
             [clojure.core.match :refer [match]]
@@ -58,8 +58,7 @@
   "Return a triplet of tree, parent-map and leaves"
   [raw-input]
   (->> raw-input
-       str/split-lines
-       (mapv parse-discs)
+       (io/lines parse-discs)
        (into {})
        ((juxt identity build-parent-map))))
 
@@ -163,8 +162,8 @@
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 7))
- (solve input)
- :=
- ["hmvwl" 1853])
+ (solve input) := ["hmvwl" 1853])

@@ -43,8 +43,8 @@
   (time (solve input))
   "End REPL Explorations")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 1))
- (solve input)
- :=
- [1089 1156])
+ (solve input) := [1089 1156])

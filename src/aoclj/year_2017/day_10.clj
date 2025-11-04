@@ -6,7 +6,7 @@
     :year       2017,
     :day        10,
     :stars      2,
-    :tags       [:needs-improvement :hash :array]}
+    :tags       [:hash :needs-improvement]}
   aoclj.year-2017.day-10
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
@@ -48,11 +48,10 @@
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
-  (let [nums  (->> (str/split (str/trim raw-input) #",")
-                   (mapv parse-long))
-        bytes (->> (str/trim raw-input)
-                   (mapv int))]
-    [nums bytes]))
+  [(->> (str/split (str/trim raw-input) #",")
+        (mapv parse-long))
+   (->> (str/trim raw-input)
+        (mapv int))])
 
 (defn part-1
   [[nums _]]
@@ -77,8 +76,8 @@
   (time (solve raw-input))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 10))
- (solve input)
- :=
- [9656 "20b7b54c92bf73cf3e5631458a715149"])
+ (solve input) := [9656 "20b7b54c92bf73cf3e5631458a715149"])

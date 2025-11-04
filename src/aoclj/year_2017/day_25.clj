@@ -10,7 +10,7 @@
   aoclj.year-2017.day-25
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
-            #_[hyperfiddle.rcf :as rcf]))
+            [hyperfiddle.rcf :as rcf]))
 
 (defn partition-by-sections
   [lines]
@@ -103,14 +103,16 @@
   (def raw-input
     (io/read-input-data 2017 25))
 
+  raw-input
+
   (def input (parse raw-input))
 
   (time (solve raw-input))
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 #_(rcf/tests
    (def input (io/read-input-data 2017 25))
-   (solve input)
-   :=
-   [4287 :🎉])
+   (solve input) := [4287 :🎉])

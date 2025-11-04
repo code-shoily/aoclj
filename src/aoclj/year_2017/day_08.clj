@@ -36,8 +36,8 @@
 
 (defn parse
   [raw-input]
-  (->> (str/split-lines raw-input)
-       (map (comp parse-line #(str/split % #" ")))))
+  (->> raw-input
+       (io/lines (comp parse-line #(str/split % #" ")))))
 
 (defn part-1
   [input]
@@ -66,8 +66,8 @@
   (time (solve raw-input))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 8))
- (solve input)
- :=
- [2971 4254])
+ (solve input) := [2971 4254])

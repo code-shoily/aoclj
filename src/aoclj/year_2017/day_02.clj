@@ -14,8 +14,7 @@
 (defn parse
   [input]
   (->> input
-       str/split-lines
-       (mapv (comp #(mapv parse-long %) #(str/split % #"\t")))))
+       (io/lines (comp #(mapv parse-long %) #(str/split % #"\t")))))
 
 (defn checksum-1
   [coll]
@@ -42,8 +41,8 @@
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 2))
- (solve input)
- :=
- [32020 236])
+ (solve input) := [32020 236])

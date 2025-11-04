@@ -6,7 +6,7 @@
     :year       2017,
     :day        6,
     :stars      2,
-    :tags       [:iterative]}
+    :tags       [:reduction]}
   aoclj.year-2017.day-06
   (:require [aoclj.helpers.io :as io]
             [clojure.string :as str]
@@ -16,8 +16,7 @@
 (defn parse
   "Parse raw string input into a processable data structure"
   [raw-input]
-  (as-> raw-input _
-    (str/trim _)
+  (as-> (io/line raw-input) _
     (str/split _ #"\t")
     (mapv parse-long _)))
 
@@ -82,8 +81,8 @@
   "</Explore>"
 )
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 6))
- (solve input)
- :=
- [11137 1037])
+ (solve input) := [11137 1037])

@@ -6,10 +6,9 @@
     :year       2017,
     :day        3,
     :stars      2,
-    :tags       [:spiral-coords]}
+    :tags       [:grid :spiral]}
   aoclj.year-2017.day-03
   (:require [aoclj.helpers.io :as io]
-            [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
 (defn next-pos
@@ -50,7 +49,7 @@
         (map get-dir-at)))
   ([n] (take n (encoded-movements))))
 
-(def parse (comp parse-long str/trim))
+(def parse (comp parse-long io/line))
 
 (defn part-1
   [input]
@@ -91,8 +90,8 @@
   (time (solve raw-input))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 3))
- (solve input)
- :=
- [430 312453])
+ (solve input) := [430 312453])

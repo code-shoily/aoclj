@@ -14,8 +14,7 @@
 (defn parse
   [input]
   (->> input
-       str/split-lines
-       (map #(str/split % #" "))))
+       (io/lines #(str/split % #" "))))
 
 (defn valid?
   [word-freq]
@@ -52,8 +51,8 @@
   (time (solve input-data))
   "</Explore>")
 
+;!zpring {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 4))
- (solve input)
- :=
- [455 186])
+ (solve input) := [455 186])

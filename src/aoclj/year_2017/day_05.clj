@@ -49,8 +49,8 @@
   (time (solve input-data))
   "</Explore>")
 
+;!zprint {:format :off}
+(rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 5))
- (solve input)
- :=
- [372671 25608480])
+ (solve input) := [372671 25608480])
