@@ -51,7 +51,7 @@
   (time (solve input-data))
   "</Explore>")
 
-;!zpring {:format :off}
+;!zprint {:format :off}
 (rcf/enable! false)
 (rcf/tests
  (def input (io/read-input-data 2017 4))
