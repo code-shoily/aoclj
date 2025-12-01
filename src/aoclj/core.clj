@@ -11,7 +11,8 @@
             [aoclj.year-2021.solver :as solver-2021]
             [aoclj.year-2022.solver :as solver-2022]
             [aoclj.year-2023.solver :as solver-2023]
-            [aoclj.year-2024.solver :as solver-2024]))
+            [aoclj.year-2024.solver :as solver-2024]
+            [aoclj.year-2025.solver :as solver-2025]))
 
 (defn solve
   "Solve the Advent of Code problem for a given year and day and 
@@ -29,6 +30,7 @@
     2022 (solver-2022/solve day)
     2023 (solver-2023/solve day)
     2024 (solver-2024/solve day)
+    2025 (solver-2025/solve day)
     (throw (ex-info "Unsupported year/day" {:year year, :day day}))))
 
 (defn generate
