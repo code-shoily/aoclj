@@ -1,7 +1,7 @@
 (ns aoclj.helpers.meta
   (:require [hyperfiddle.rcf :as rcf]))
 
-(def current-year 2024)
+(def current-year 2025)
 (def total-stars 500)
 (def total-trophies 250)
 

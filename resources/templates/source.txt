@@ -41,6 +41,6 @@
   "</Explore>")
 
 ;!zprint {:format :off}
-(rcf/enabled! false)
+(rcf/enable! false)
 (rcf/tests
   (solve (io/read-input-data {{year}} {{day}})) := [0 0])
