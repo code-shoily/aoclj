@@ -22,9 +22,7 @@
   (let [mid (quot (count s) 2)]
     (= (subs s 0 mid) (subs s mid))))
 
-(defn comprised-of-repeats?
-  [s]
-  (some? (re-matches #"^(\d+)\1+$" s)))
+(def comprised-of-repeats? (partial re-matches #"^(\d+)\1+$"))
 
 (defn collect-invalid-ids
   [pred [i f]]
@@ -55,6 +53,6 @@
   "</Explore>")
 
 ;!zprint {:format :off}
-(rcf/enable! true)
+(rcf/enable! false)
 (rcf/tests
  (solve (io/read-input-data 2025 2)) := [44854383294 55647141923])
