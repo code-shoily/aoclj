@@ -67,6 +67,6 @@
   "</Explore>")
 
 ;!zprint {:format :off}
-(rcf/enable! true)
+(rcf/enable! false)
 (rcf/tests
  (solve (io/read-input-data 2025 3)) := [17343 172664333119298])
