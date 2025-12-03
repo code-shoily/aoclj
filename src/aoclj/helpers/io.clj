@@ -32,7 +32,8 @@
    Formats result as string of [part-1 part-2] in parallel"
   [part-1 part-2 parse]
   (fn [input]
-    (vec (pmap #(% (parse input)) [part-1 part-2]))))
+    (let [data (parse input)]
+      (vec (pmap #(% data) [part-1 part-2])))))
 
 ;!zprint {:format :off}
 (rcf/enable! false)
