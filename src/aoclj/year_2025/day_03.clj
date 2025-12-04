@@ -6,7 +6,7 @@
     :year       2025,
     :day        3,
     :stars      2,
-    :tags       [:greedy :sort]}
+    :tags       [:greedy :indexed :sort]}
   aoclj.year-2025.day-03
   (:require [aoclj.helpers.io :as io]
             [hyperfiddle.rcf :as rcf]))
