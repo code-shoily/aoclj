@@ -55,9 +55,9 @@
   (def raw-input
     (io/read-input-data 2025 4))
 
-  ;; It does give it a 1/3th speed boost but the non-parallel
-  ;; version is perfectly fine! Use it in lieu of `set/select`
-  ;; in part-2.
+  ;; parallel version is 3x faster than set/select for part-2.
+  ;; But at ~290ms it's perfectly fine (and readable too)! So I am
+  ;; keeping the non-parallel version and leaving it here instead.
   (defn pselect
     [pred coll]
     (let [chunk-size
