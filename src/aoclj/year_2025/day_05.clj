@@ -18,7 +18,7 @@
   (let [[from to] (str/split r #"\-")]
     [(parse-long from) (parse-long to)]))
 
-(defn merge
+(defn merge-range-pair
   [[i f] [i' f']]
   (when (or (= i i') (<= i' (inc f)))
     [i (max f f')]))
@@ -32,7 +32,7 @@
        (reduce (fn [acc x]
                  (if (empty? acc)
                    (conj acc x)
-                   (let [merged (merge (peek acc) x)]
+                   (let [merged (merge-range-pair (peek acc) x)]
                      (if (nil? merged)
                        (conj acc x)
                        (conj (pop acc) merged)))))
