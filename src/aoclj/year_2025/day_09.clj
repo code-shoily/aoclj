@@ -9,6 +9,7 @@
     :tags       [:geometry :polygon]}
   aoclj.year-2025.day-09
   (:require [aoclj.helpers.io :as io]
+            [aoclj.algorithms.geometry :as g]
             [clojure.string :as str]
             [hyperfiddle.rcf :as rcf]))
 
@@ -18,61 +19,6 @@
        io/lines
        (mapv (comp #(mapv parse-long %)
                    #(str/split % #",")))))
-
-(defn rectangle-area
-  [[x1 y1] [x2 y2]]
-  (let [width  (inc (abs (- x1 x2)))
-        height (inc (abs (- y1 y2)))]
-    (* width height)))
-
-(defn inside-interval?
-  "Checks if val is strictly between a and b."
-  [val a b]
-  (let [mn (min a b)
-        mx (max a b)]
-    (< mn val mx)))
-
-(defn overlaps?
-  "Checks if interval [a1, a2] overlaps with (b1, b2) strictly."
-  [a1 a2 b1 b2]
-  (let [start-a (min a1 a2)
-        end-a   (max a1 a2)
-        start-b (min b1 b2)
-        end-b   (max b1 b2)]
-    (and (< start-a end-b) (> end-a start-b))))
-
-(defn polygon-edges
-  [points]
-  (map vector points (concat (rest points) [(first points)])))
-
-(defn edge-intersects-rect?
-  "Returns true if a polygon edge slices through the rectangle interior."
-  [[x1 y1 x2 y2 :as _rect] [[ex1 ey1] [ex2 ey2] :as _edge]]
-  (cond
-    (= ex1 ex2)
-    (and (inside-interval? ex1 x1 x2)
-         (overlaps? ey1 ey2 y1 y2))
-    (= ey1 ey2)
-    (and (inside-interval? ey1 y1 y2)
-         (overlaps? ex1 ex2 x1 x2))
-
-    :else false))
-
-(defn point-in-polygon?
-  "Standard Ray Casting algorithm."
-  [[x y] edges]
-  (let [intersections
-        (reduce (fn [cnt [[x1 y1] [_ y2]]]
-                  (if (and
-                       (not= y1 y2)
-                       (<= (min y1 y2) y)
-                       (< y (max y1 y2))
-                       (> x1 x))
-                    (inc cnt)
-                    cnt))
-                0
-                edges)]
-    (odd? intersections)))
 
 (defn part-1
   [tiles]
@@ -84,14 +30,14 @@
         (let [current-tile
               (nth tiles i)
               local-max
-              (reduce #(max %1 (rectangle-area current-tile (nth tiles %2)))
+              (reduce #(max %1 (g/rectangle-area current-tile (nth tiles %2)))
                       0
                       (range (inc i) n))]
           (recur (inc i) (max max-area local-max)))))))
 
 (defn part-2
   [poly-points]
-  (let [edges (polygon-edges poly-points)
+  (let [edges (g/polygon-edges poly-points)
         n     (count poly-points)]
 
     (loop [i        0
@@ -112,9 +58,9 @@
                                   (inc (- ry-max ry-min)))]
                    (if (<= area best-a)
                      best-a
-                     (if (and (not-any? #(edge-intersects-rect? rect %)
+                     (if (and (not-any? #(g/edge-intersects-rect? rect %)
                                         edges)
-                              (point-in-polygon?
+                              (g/point-in-polygon?
                                [(+ rx-min 0.5) (+ ry-min 0.5)]
                                edges))
                        area
