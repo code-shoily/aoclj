@@ -27,6 +27,14 @@
    (by (str/trim s)))
   ([s] (line identity s)))
 
+(defn collect-ints
+  "Collects integers from a line into a vector"
+  [word]
+  (->> word
+       (re-seq #"\d+")
+       (map parse-long)
+       vec))
+
 (defn generic-solver
   "Generic template for solvers. 
    Formats result as string of [part-1 part-2] in parallel"
@@ -45,4 +53,5 @@
  (lines "a\nb\nc\n") := ["a" "b" "c"]
  (lines parse-long "1\n10\n100\n") := [1 10 100]
  (lines parse-long "a\n1\nb\n2") := [nil 1 nil 2]
+ (collect-ints "(888)-300-23232") := [888 300 23232]
  )
