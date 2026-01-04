@@ -28,7 +28,7 @@
       7  (day-07/solve (read-input day))
       8  (day-08/solve (read-input day))
       9  (day-09/solve (read-input day))
-      10  (day-10/solve (read-input day))
+      10 (day-10/solve (read-input day))
       11 (day-11/solve (read-input day))
       12 (day-12/solve (read-input day))
       (format "[ERROR] %s/%s was not solved" year day))))
