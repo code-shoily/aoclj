@@ -10,7 +10,7 @@
            :marginalia
            {:extra-deps {marginalia/marginalia {:mvn/version "0.9.2"}},
             :main-opts  ["-m" "marginalia.main" "-n"
-                         "Advent of Clojuire (aoclj)"
+                         "Advent of Clojure (aoclj)"
                          "src" "test"]}},
  :deps
  {org.clojure/clojure      {:mvn/version "1.12.2"},
