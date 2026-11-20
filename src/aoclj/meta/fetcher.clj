@@ -4,6 +4,10 @@
 
 (defonce session-key (System/getenv "AOC_SESSION_KEY"))
 
+(def user-agent
+  (or (System/getenv "AOC_USER_AGENT")
+      "github.com/code-shoily/aoclj by mafinar@gmail.com"))
+
 (defn fetch-problem-title
   "Fetches the title of the problem from advent of code page. `nil` if there
    was a problem fetching the title."
@@ -11,7 +15,7 @@
   (try (last (re-find #"--- Day \d+: (.+) ---"
                       (-> "https://www.adventofcode.com/%d/day/%d"
                           (format year day)
-                          http/get
+                          (http/get {:headers {"User-Agent" user-agent}})
                           :body
                           parse
                           (extract-from ".day-desc > h2" [] "h2" text)
@@ -22,7 +26,9 @@
   [year day]
   (try (-> "https://adventofcode.com/%d/day/%d/input"
            (format year day)
-           (http/get {:headers {:cookie (format "session=%s" session-key)}})
+           (http/get {:headers (merge {"User-Agent" user-agent}
+                                      (when session-key
+                                        {:cookie (format "session=%s" session-key)}))})
            :body)
        (catch Exception _ "[Could not fetch input]")))
 
