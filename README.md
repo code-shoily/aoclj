@@ -1,14 +1,14 @@
 # aoclj -- AdventOfCode with Clojure
 
-[Advent of Code](http://www.adventofcode.com) puzzle solutions in Clojure (2015 - 2024).
+[Advent of Code](https://adventofcode.com) puzzle solutions in Clojure (2015 - 2025).
 
 ## Commands
 
-* To run a solution: `lein run solve <year> <day>` Will display error if the day is not solved yet
-* To generate artifacts to solve a new problem:  `lein run gen <year> <day>` Will not over-write if file existed.
-* To update the READMEs with latest progress/stars: `lein run update-stats`
-* I've tried to document important pieces of the code, you can
-view the documentation in literate programming style with the command `lein marg -m`
+* To run a solution: `./bin/solve.sh <year> <day>` (or `clj -M -m aoclj.core solve <year> <day>`). Will display error if the day is not solved yet.
+* To generate artifacts to solve a new problem: `./bin/gen.sh <year> <day>` (or `clj -M -m aoclj.core gen <year> <day>`). Will not over-write if file existed.
+* To update the READMEs with latest progress/stars: `./bin/stats.sh` (or `clj -M -m aoclj.core update-stats`).
+* To run tests: `clj -M:test`
+* I've tried to document important pieces of the code, you can view the documentation in literate programming style with the command `clj -M:marginalia`.
 
 ## Progress
 ### :star: 231/500 :dart: 269 :trophy: 116/250 :dart: 134
