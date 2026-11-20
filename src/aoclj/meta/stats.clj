@@ -10,7 +10,8 @@
             [aoclj.year-2022.solver]
             [aoclj.year-2023.solver]
             [aoclj.year-2024.solver]
-            [aoclj.year-2025.solver]))
+            [aoclj.year-2025.solver]
+            [aoclj.year-2026.solver]))
 
 (defn get-stat-for
   "Get stat for a particular year/day challenge"

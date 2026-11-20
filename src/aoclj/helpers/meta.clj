@@ -1,11 +1,10 @@
 (ns aoclj.helpers.meta
   (:require [hyperfiddle.rcf :as rcf]))
 
-(def current-year 2025)
-(def total-stars 500)
-(def total-trophies 250)
-
+(def current-year 2026)
 (def aoc-years (range 2015 (inc current-year)))
+(def total-stars (* (count aoc-years) 50))
+(def total-trophies (* (count aoc-years) 25))
 
 (defn get-padded-day
   "Returns padded day, as represented in various codes/docs
@@ -22,7 +21,7 @@
 
 (defn valid-year-day?
   "Check if the year and day are valid.
-  Year should be between 2015 and 2024, and day should be between 1 and 25."
+  Year should be between 2015 and current-year, and day should be between 1 and 25."
   [year day]
   (and (<= 2015 year current-year) (<= 1 day 25)))
 
@@ -45,6 +44,8 @@
  (valid-year-day? 2015 1) := true
  (valid-year-day? 2024 12) := true
  (valid-year-day? 2024 13) := true
+ (valid-year-day? 2026 1) := true
+ (valid-year-day? 2027 1) := false
  (valid-year-day? 2011 1) := false
  (valid-year-day? 2015 1) := true
  (valid-year-day? 2024 0) := false)
